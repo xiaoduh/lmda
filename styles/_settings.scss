@@ -1,0 +1,82 @@
+$accent-black: #1E1E30;
+$black-contrast: #1f1f32;
+$gray: #575765;
+$gray-card: #413f4e;
+$primary: #1776FF;
+$dark-blue: #334D6E;
+$color-cancel: #FFB946;
+$color-cancel-2: #ffb84652;
+$color-confirm: #2ED47A;
+$color-confirm-2: #2ed4794d;
+$color-stop: #F7685B;
+$color-stop-2: #f7685b57;
+
+@font-face {
+    font-family: "poppins-sm";
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "poppins-b";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "poppins-m";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "poppins-l";
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+$semibold: "poppins-sm", sans-serif;
+$bold: "poppins-b", sans-serif;
+$medium: "poppins-m", sans-serif;
+$light: "poppins-l", sans-serif;
+$regular: "regular", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: $regular;
+    color: #fff;
+    background-color: $accent-black;
+
+    &::-webkit-scrollbar {
+     display: none;
+ }
+}
+
+.cta-secondary {
+    width: max-content;
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    transition: all .4s ease;
+    border-radius: 0.4rem;
+    border: 1px solid #fff;
+
+    &:hover {
+        background: #fff;
+        color: #161627;
+    }
+}
