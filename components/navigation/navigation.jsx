@@ -1,15 +1,26 @@
 "use client";
-import React, { useState } from "react";
-import PaddingContainer from "../layout/padding-container";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 
 const Navigation = () => {
-  const [scrollY, setScrollY] = useState("");
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+  });
 
   return (
-    <PaddingContainer>
-      <div className="navigation">
+      <div className={navbar ? "navigation active" : "navigation"}>
         <div className="logo">
           <Image src={logo} width={120} height={18} alt="logo de lambda" />
         </div>
@@ -25,7 +36,6 @@ const Navigation = () => {
           <div className="cta-secondary">Se renseigner</div>
         </div>
       </div>
-    </PaddingContainer>
   );
 };
 

@@ -10,6 +10,7 @@ $color-confirm: #2ED47A;
 $color-confirm-2: #2ed4794d;
 $color-stop: #F7685B;
 $color-stop-2: #f7685b57;
+$important: #FD6B3D;
 
 @font-face {
     font-family: "poppins-sm";
@@ -61,10 +62,15 @@ body {
     font-size: .8rem;
     color: #fff;
     background-color: $accent-black;
+    padding: 0 15rem;
 
     &::-webkit-scrollbar {
      display: none;
  }
+}
+
+.important {
+    color: $important;
 }
 
 .cta-secondary {

@@ -1,0 +1,12 @@
+.secondaryBtn {
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    font-family: $regular;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary;
+        font-weight: bold;
+    }
+}
