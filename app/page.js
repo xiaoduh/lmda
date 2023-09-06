@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "../styles/index.scss";
 
 export default function Home() {
