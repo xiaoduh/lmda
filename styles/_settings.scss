@@ -73,6 +73,100 @@ body {
     }
 }
 
+.section-container {
+    height: 100vh;
+    background: $accent-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 12rem 15rem 2rem;
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+
+            @media screen and (max-width: 1300px) {
+                font-size: 1.5rem;
+              }
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+    
+            @media screen and (max-width: 1300px) {
+                font-size: 1rem;
+              }
+        }
+
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8rem;
+
+        .card {
+            background: #3f3f6242;
+            border: 1px solid #7e7ebba9;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            width: 300px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover {
+                background: transparent;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                text-align: left;
+
+            @media screen and (max-width: 1300px) {
+                font-size: 1.4rem;
+              }
+            }
+
+            p {
+                font-size: 1rem;
+                text-align: left;
+        
+                @media screen and (max-width: 1300px) {
+                    font-size: .8rem;
+                  }
+            }
+        }
+    }
+}
+
+.label {
+    background: #3F3F62;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    color: #FD6B3D;
+    
+
+    p {
+        font-size: 1rem;
+
+        @media screen and (max-width: 1300px) {
+            font-size: .8rem;
+          }
+    }
+}
+
 p::selection, h1::selection, h2::selection, span::selection {
         background: #FD6B3D;
 }

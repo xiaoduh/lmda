@@ -20,22 +20,22 @@ const Navigation = () => {
   });
 
   return (
-      <div className={navbar ? "navigation active" : "navigation"}>
-        <div className="logo">
-          <Image src={logo} width={120} height={18} alt="logo de lambda" />
-        </div>
-        <nav>
-          <ul>
-            <li>Pourquoi Lambda ?</li>
-            <li>Notre mission</li>
-            <li>Nos membres</li>
-            <li>Nos contenus</li>
-          </ul>
-        </nav>
-        <div className="cta">
-          <div className="cta-secondary">Se renseigner</div>
-        </div>
+    <div className={navbar ? "navigation active" : "navigation"}>
+      <div className="logo">
+        <Image src={logo} width={120} height={18} alt="logo de lambda" />
       </div>
+      <nav>
+        <ul>
+          <li>Pourquoi Lambda ?</li>
+          <li>Notre mission</li>
+          <li>Nos membres</li>
+          <li>Nos contenus</li>
+        </ul>
+      </nav>
+      <div className="cta">
+        <div className="cta-secondary">Nous rejoindre</div>
+      </div>
+    </div>
   );
 };
 
