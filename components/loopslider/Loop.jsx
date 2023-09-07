@@ -1,17 +1,12 @@
 import React from "react";
-import PrimaryBtn from "../button/PrimaryBtn";
-import SecondaryBtn from "../button/SecondaryBtn";
-import Label from "../label/label";
+import InfiniteLoopSlider from "./InfiniteLoopSlider";
+import Tag from "./Tag";
 import cpp from "../../assets/images/cpp.png";
 import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
-import InfiniteScroll from "../loopslider/Loop";
 
-const Header = () => {
-  const contentBtnPrimary = "Voir les missions ouvertes";
-  const contentBtnSecondary = "Découvrir l'équipe Lambda";
-  const txtLabel = "La confiance fondée sur la transparence";
+const InfiniteScroll = () => {
 
   const labels = [
     {
@@ -160,28 +155,67 @@ const Header = () => {
     },
   ];
 
+  const TAGS = [
+    "SCOP",
+    "Démocratie",
+    "Justice",
+    "Epanouissement",
+    "Bonheur",
+    "Horizontal",
+    "Equité",
+    "Intéressement",
+    "Coopératif",
+    "Participatif",
+    "Zéro Manager",
+    "Actionnariat",
+    "Dividende",
+    "Participation",
+    "Equitable",
+    "Responsabilité",
+    "Liberté",
+    "Autonomie",
+    "Vote",
+    "Gouvernance",
+    "Décision",
+    "Intrapreunariat",
+    "Transparence",
+    "Confiance",
+    "Sénérité",
+    "Confort",
+    "Collectif",
+    "Partage",
+    "Humain",
+    "Voix",
+    "Capital",
+    "Autonomie",
+    "Objectif Commun",
+  ];
+
+  const DURATION = 180000;
+  const ROWS = 1;
+  const TAGS_PER_ROW = 100;
+  const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   return (
-    <header className="main-header">
-      <Label content={txtLabel} />
-      <h1>
-        Embarquez dans une (<span className="important">C</span>)arrière
-        <span className="important">++</span> en intégrant le collectif Lambda.
-      </h1>
-      <p>
-        Nous croyons au neo-management,<br></br> bienveillant et transparent
-        pour que chaque programme soit « propre » et efficace.
-      </p>
-      <PrimaryBtn content={contentBtnPrimary} />
-      <SecondaryBtn content={contentBtnSecondary} />
-      <InfiniteScroll Tags={labels}/>
-      <div className="labels-container">
-        
-        {/* {labels.map((label) => {
-          return <LabelWithPicto picto={label.picto} content={label.content} />;
-        })} */}
+    <div className="infinite-scroll">
+      <div className="tag-list">
+        {[...new Array(ROWS)].map((_, i) => (
+          <InfiniteLoopSlider
+            key={i}
+            duration={random(DURATION - 2000, DURATION + 2000)}
+            reverse={i % 2}
+          >
+            {shuffle(labels)
+              .slice(0, TAGS_PER_ROW)
+              .map((tag) => (
+                <Tag text={tag.content} picto={tag.picto} key={tag} />
+              ))}
+          </InfiniteLoopSlider>
+        ))}
+        <div className="fade" />
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default InfiniteScroll;

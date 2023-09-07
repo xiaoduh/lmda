@@ -45,49 +45,4 @@
               }
         }
     }
-
-    .labels-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-top: 10rem;
-        width: 10000px;
-        overflow-x: hidden;
-        animation: scroll 60s linear infinite;
-        transition: animation-play-state .3s ease;
-
-        @media screen and (max-width: 1300px) {
-            margin-top: 5rem;
-          }
-
-        &:hover {
-            animation-play-state: paused;
-          }
-        
-
-        .picto {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: .5rem 1rem;
-            transition: all .4s ease;
-            border: 1px solid #3F3F62;
-            min-width: fit-content;
-
-            p {
-                font-size: .8rem;
-                margin-left: .5rem;
-            }
-
-            &:hover {
-                background: transparent;
-                border: 1px solid #FD6B3D;
-            }
-        }
-    }
-}
-
-@keyframes scroll {
-	0% { transform: translateX(-5%) ; }
-	100% { transform: translateX(calc((0px - 2500px) - 5%))}
 }

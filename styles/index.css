@@ -39,8 +39,21 @@ body {
   background-color: #1E1E30;
   padding: 0 15rem;
 }
+@media screen and (max-width: 1300px) {
+  body {
+    padding: 0 7rem;
+  }
+}
 body::-webkit-scrollbar {
   display: none;
+}
+
+p::-moz-selection, h1::-moz-selection, h2::-moz-selection, span::-moz-selection {
+  background: #FD6B3D;
+}
+
+p::selection, h1::selection, h2::selection, span::selection {
+  background: #FD6B3D;
 }
 
 .important {
@@ -66,15 +79,19 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   height: auto;
-  padding: 20px;
+  padding: 20px 14rem;
   align-items: center;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   background: #1E1E30;
-  margin: 0 14rem;
   z-index: 999;
+}
+@media screen and (max-width: 1300px) {
+  .navigation {
+    padding: 0.5rem 7rem;
+  }
 }
 .navigation .logo {
   cursor: pointer;
@@ -108,14 +125,29 @@ body::-webkit-scrollbar {
   width: 100%;
   padding: 12rem 15rem 2rem;
 }
+@media screen and (max-width: 1300px) {
+  .main-header {
+    padding: 6rem 0 2rem;
+  }
+}
 .main-header h1 {
   font-size: 2.5rem;
   text-align: center;
   margin: 4rem 0 1rem;
 }
+@media screen and (max-width: 1300px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+}
 .main-header p {
   font-size: 1.2rem;
   text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  .main-header p {
+    font-size: 1rem;
+  }
 }
 .main-header .label {
   background: #3F3F62;
@@ -126,46 +158,12 @@ body::-webkit-scrollbar {
 .main-header .label p {
   font-size: 1rem;
 }
-.main-header .labels-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin-top: 10rem;
-  width: 10000px;
-  overflow-x: hidden;
-  animation: scroll 60s linear infinite;
-  transition: animation-play-state 0.3s ease;
-}
-.main-header .labels-container:hover {
-  animation-play-state: paused;
-}
-.main-header .labels-container .picto {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: all 0.4s ease;
-  border: 1px solid #3F3F62;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.main-header .labels-container .picto p {
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-}
-.main-header .labels-container .picto:hover {
-  background: transparent;
-  border: 1px solid #FD6B3D;
+@media screen and (max-width: 1300px) {
+  .main-header .label p {
+    font-size: 0.8rem;
+  }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(-5%);
-  }
-  100% {
-    transform: translateX(calc(-2500px - 5%));
-  }
-}
 .primaryBtn {
   border: none;
   background: #1776FF;
@@ -180,6 +178,11 @@ body::-webkit-scrollbar {
   margin: 2rem 0 1rem;
   border: 1px solid #1776FF;
 }
+@media screen and (max-width: 1300px) {
+  .primaryBtn {
+    font-size: 0.8rem;
+  }
+}
 .primaryBtn:hover {
   border: 1px solid #1776FF;
   color: #1776FF;
@@ -193,7 +196,78 @@ body::-webkit-scrollbar {
   font-family: "regular", sans-serif;
   cursor: pointer;
 }
+@media screen and (max-width: 1300px) {
+  .secondaryBtn {
+    font-size: 0.8rem;
+  }
+}
 .secondaryBtn:hover {
   color: #1776FF;
   font-weight: bold;
+}
+
+.infinite-scroll {
+  display: flex;
+  min-width: 100%;
+  margin-top: 10rem;
+}
+.infinite-scroll .tag-list {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+.infinite-scroll .loop-slider .inner {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+.infinite-scroll .loop-slider .inner:hover {
+  animation: paused;
+}
+.infinite-scroll .tag {
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  background-color: #3F3F62;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.infinite-scroll .tag:hover {
+  background: transparent;
+}
+.infinite-scroll .tag p {
+  font-size: 1rem;
+  color: #FD6B3D;
+}
+.infinite-scroll .fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #1E1E30, transparent 50%, transparent 50%, #1E1E30);
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=index.css.map */

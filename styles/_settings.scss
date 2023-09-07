@@ -70,7 +70,11 @@ body {
 
     &::-webkit-scrollbar {
      display: none;
- }
+    }
+}
+
+p::selection, h1::selection, h2::selection, span::selection {
+        background: #FD6B3D;
 }
 
 .important {
