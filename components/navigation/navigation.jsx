@@ -31,7 +31,9 @@ const Navigation = () => {
           <li>
             <a href="#why">Pourquoi Lambda ?</a>
           </li>
-          <li>Notre mission</li>
+          <li>
+            <a href="#mission">Notre mission</a>
+          </li>
           <li>Nos membres</li>
           <li>Nos contenus</li>
         </ul>

@@ -109,10 +109,11 @@ body {
     }
 
     .cards-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 8rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
 
         .card {
             background: #3f3f6242;
