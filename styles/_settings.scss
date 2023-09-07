@@ -64,6 +64,10 @@ body {
     background-color: $accent-black;
     padding: 0 15rem;
 
+    @media screen and (max-width: 1300px) {
+        padding: 0 7rem;
+      }
+
     &::-webkit-scrollbar {
      display: none;
  }

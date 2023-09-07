@@ -5,6 +5,10 @@
     font-family: $regular;
     cursor: pointer;
 
+    @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+
     &:hover {
         color: $primary;
         font-weight: bold;

@@ -2,15 +2,18 @@
         display: grid;
         grid-template-columns: 25% 50% 25%;
         height: auto;
-        padding: 20px;
+        padding: 20px 14rem;
         align-items: center;
         position: fixed;
         left: 0;
         top: 0;
         right: 0;
         background: $accent-black;
-        margin: 0 14rem;
         z-index: 999;
+
+        @media screen and (max-width: 1300px) {
+            padding: .5rem 7rem;
+          }
         
 
         .logo {

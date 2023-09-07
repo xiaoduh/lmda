@@ -12,6 +12,10 @@
     margin: 2rem 0 1rem;
     border: 1px solid $primary;
 
+    @media screen and (max-width: 1300px) {
+        font-size: .8rem;
+      }
+
     &:hover {
         border: 1px solid $primary;
         color: $primary;
