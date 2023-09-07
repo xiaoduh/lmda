@@ -8,7 +8,7 @@ import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 
-const Header = () => {
+const Header = ({ id }) => {
   const contentBtnPrimary = "Voir les missions ouvertes";
   const contentBtnSecondary = "Découvrir l'équipe Lambda";
   const txtLabel = "La confiance fondée sur la transparence";
@@ -161,7 +161,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="main-header">
+    <header className="main-header" id="header">
       <Label content={txtLabel} />
       <h1>
         Embarquez dans une (<span className="important">C</span>)arrière
@@ -173,9 +173,8 @@ const Header = () => {
       </p>
       <PrimaryBtn content={contentBtnPrimary} />
       <SecondaryBtn content={contentBtnSecondary} />
-      <InfiniteScroll Tags={labels}/>
+      <InfiniteScroll Tags={labels} />
       <div className="labels-container">
-        
         {/* {labels.map((label) => {
           return <LabelWithPicto picto={label.picto} content={label.content} />;
         })} */}

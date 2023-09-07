@@ -1,7 +1,11 @@
 import React from "react";
 
-const SectionWrapper = ({ children }) => {
-  return <section className="section-container">{children}</section>;
+const SectionWrapper = ({ children, id }) => {
+  return (
+    <section className="section-container" id={id}>
+      {children}
+    </section>
+  );
 };
 
 export default SectionWrapper;

@@ -22,11 +22,15 @@ const Navigation = () => {
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
-        <Image src={logo} width={120} height={18} alt="logo de lambda" />
+        <a href="#header">
+          <Image src={logo} width={120} height={18} alt="logo de lambda" />
+        </a>
       </div>
       <nav>
         <ul>
-          <li>Pourquoi Lambda ?</li>
+          <li>
+            <a href="#why">Pourquoi Lambda ?</a>
+          </li>
           <li>Notre mission</li>
           <li>Nos membres</li>
           <li>Nos contenus</li>

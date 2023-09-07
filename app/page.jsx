@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <SectionWrapper>
+      <SectionWrapper id={"why"}>
         <Label content={txtLabel} />
         <ContentSection
           title={firstSection.title}
