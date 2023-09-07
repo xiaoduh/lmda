@@ -211,6 +211,11 @@ p::selection, h1::selection, h2::selection, span::selection {
   min-width: 100%;
   margin-top: 10rem;
 }
+@media screen and (max-width: 1300px) {
+  .infinite-scroll {
+    margin-top: 5rem;
+  }
+}
 .infinite-scroll .tag-list {
   width: 100%;
   display: flex;
