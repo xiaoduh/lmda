@@ -8,6 +8,7 @@ import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
+import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
   const firstSection = {

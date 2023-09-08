@@ -1,3 +1,4 @@
+import Footer from "@/components/navigation/Footer";
 import Navigation from "@/components/navigation/navigation";
 import { Inter } from "next/font/google";
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
