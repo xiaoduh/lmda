@@ -29,7 +29,7 @@ const Footer = () => {
             <Link href="/">Politique des cookies</Link>
           </li>
           <li>
-            <Link href="/">Conditions générales d'utilisation</Link>
+            <Link href="/">CGU</Link>
           </li>
         </ul>
         <ul>
