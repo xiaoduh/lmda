@@ -9,6 +9,10 @@ const CardMember = ({ img, title, content, link }) => {
 
   return (
     <div className="card-member">
+      <div className="available">
+        <div className="pastille"></div>
+        <p>disponible</p>
+      </div>
       <img src="/pp.png" className="pp" />
       <h4>{title}</h4>
       <p>{content}</p>

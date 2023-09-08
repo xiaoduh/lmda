@@ -6,16 +6,36 @@
     cursor: pointer;
     padding: 2rem 1rem;
     border-radius: 20px;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
+    border: 1px solid #7e7ebba9;
+    background: #3f3f6242;
 
     &:hover {
         border: 1px solid #7e7ebba9;
-        background: #3f3f6242;
+        background: transparent;
+    }
+
+    .available {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+
+        .pastille {
+            width: 15px;
+            height: 15px;
+            background: #2ED47A;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: .7rem;
+        }
     }
 
     .pp {
         max-width: 120px;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
 
         @media screen and (max-width: 1300px) {
             max-width: 100px;
@@ -32,6 +52,10 @@
         @media screen and (max-width: 1300px) {
             font-size: .8rem;
           }
+    }
+
+    button {
+        font-size: .8rem;
     }
 
 }

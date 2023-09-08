@@ -8,21 +8,21 @@ import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
-import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
     content:
-      "Nous croyons au nouveau management, aux antipodes du management actuel. La transparence est pour nous le facteur clé pour grandir en toute confiance.",
+      "Nous ne croyons plus au management pyramidale fondé sur l'opacité, nous croyons à l'innovation sociétale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
   };
 
   const secondSection = {
     txtLabel: "Spécialiste du C++ et ses mises en pratique",
-    title: "Nous croyons aux logiciels robustes, performants et efficaces",
+    title:
+      "Nous sommes amoureux des logiciels robustes, performants et efficaces",
     content:
-      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi poppulaire que complexe, et, est sans doute l’un des langages des plus complexes à manipuler pour développer des programmes « proprement » et efficacement.",
+      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi poppulaire que complexe. Il est sans doute l’un des langages des plus complexes à maitriser pour développer des programmes « propres » et efficaces.",
   };
 
   const thirdSection = {
