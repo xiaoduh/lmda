@@ -14,7 +14,7 @@ export default function Home() {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
     content:
-      "Nous ne croyons plus au management pyramidale fondé sur l'opacité, nous croyons à l'innovation sociétale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
+      "Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation sociétale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
   };
 
   const secondSection = {
@@ -22,7 +22,7 @@ export default function Home() {
     title:
       "Nous sommes amoureux des logiciels robustes, performants et efficaces",
     content:
-      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi poppulaire que complexe. Il est sans doute l’un des langages des plus complexes à maitriser pour développer des programmes « propres » et efficaces.",
+      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces.",
   };
 
   const thirdSection = {
@@ -36,7 +36,7 @@ export default function Home() {
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est le l’unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
     },
     {
       title: "Spécialiste",

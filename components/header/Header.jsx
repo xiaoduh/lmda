@@ -169,9 +169,9 @@ const Header = () => {
       </h1>
       <p>
         Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
-        et transparent pour que chaque programme soit « propres » et efficaces.
+        et transparent pour que chaque programme soit « propre » et efficace.
         Bjarne Stroustrup a créé le langage C++ pour produire des logiciels «
-        propre » et efficace. Nous avons créé Lambda pour former un collectif
+        propres » et efficaces. Nous avons créé Lambda pour former un collectif
         specialisé, épanouissant et transparent.
       </p>
       <PrimaryBtn content={contentBtnPrimary} />
