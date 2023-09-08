@@ -33,7 +33,7 @@ export default function Home() {
 
   const contentCardsFirstSection = [
     {
-      title: "Transparent",
+      title: "Transparence",
       content:
         "Nous sommes intimement convaincu que la transparence à tous les niveaux est le l’unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
     },
