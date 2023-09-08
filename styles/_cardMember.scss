@@ -16,6 +16,10 @@
     .pp {
         max-width: 120px;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: 1300px) {
+            max-width: 100px;
+          }
     }
 
     h4 {
@@ -24,6 +28,10 @@
 
     p {
         text-align: center;
+
+        @media screen and (max-width: 1300px) {
+            font-size: .8rem;
+          }
     }
 
 }
