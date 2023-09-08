@@ -1,14 +1,14 @@
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
-import Label from "../label/Label";
+import Label from "@/components/label/Label";
 import cpp from "../../assets/images/cpp.png";
 import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 
-const Header = ({ id }) => {
+const Header = () => {
   const contentBtnPrimary = "Voir les missions ouvertes";
   const contentBtnSecondary = "Découvrir l'équipe Lambda";
   const txtLabel = "La confiance fondée sur la transparence";
