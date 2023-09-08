@@ -5,6 +5,9 @@ import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSection";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
+import CardMember from "@/components/member/CardMember";
+import PrimaryBtn from "@/components/button/PrimaryBtn";
+import SecondaryBtn from "@/components/button/SecondaryBtn";
 
 export default function Home() {
   const firstSection = {
@@ -19,6 +22,13 @@ export default function Home() {
     title: "Nous croyons aux logiciels robustes, performants et efficaces",
     content:
       "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi poppulaire que complexe, et, est sans doute l’un des langages des plus complexes à manipuler pour développer des programmes « proprement » et efficacement.",
+  };
+
+  const thirdSection = {
+    txtLabel: "Une communauté dédiée au C++ et son ecosytème",
+    title: "Vous avez un projet qui requiert l'excellence en C++ ?",
+    content:
+      "Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.",
   };
 
   const contentCardsFirstSection = [
@@ -66,6 +76,42 @@ export default function Home() {
     },
   ];
 
+  const members = [
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+    {
+      img: "test",
+      name: "Mohamed-Amine",
+      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
+    },
+  ];
+
+  const contentBtnPrimary = "Voir tous de membres";
+  const contentBtnSecondary = "Rejoindre le collectif Lambda";
+
   return (
     <main>
       <Header />
@@ -104,6 +150,26 @@ export default function Home() {
             );
           })}
         </CardsContainer>
+      </SectionWrapper>
+      <SectionWrapper id={"member"}>
+        <Label content={thirdSection.txtLabel} />
+        <ContentSection
+          title={thirdSection.title}
+          content={thirdSection.content}
+        />
+        <CardsContainer>
+          {members.slice(0, 3).map((member) => {
+            return (
+              <CardMember
+                key={member.index}
+                title={member.name}
+                content={member.desc}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn content={contentBtnPrimary} />
+        <SecondaryBtn content={contentBtnSecondary} />
       </SectionWrapper>
     </main>
   );

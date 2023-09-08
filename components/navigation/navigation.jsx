@@ -5,6 +5,11 @@ import logo from "../../public/logo.png";
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState(false);
+  const [selected, setSelected] = useState(false);
+  const [why, setWhy] = useState(false);
+  const [mission, setMission] = useState(false);
+  const [member, setMember] = useState(false);
+  const [blog, setBlog] = useState(false);
 
   const changeBackground = () => {
     console.log(window.scrollY);
@@ -12,6 +17,30 @@ const Navigation = () => {
       setNavbar(true);
     } else {
       setNavbar(false);
+    }
+  };
+
+  const handleModals = (e) => {
+    if (e.target.id === "1") {
+      setWhy(true);
+      setMission(false);
+      setMember(false);
+      setBlog(false);
+    } else if (e.target.id === "2") {
+      setWhy(false);
+      setMission(true);
+      setMember(false);
+      setBlog(false);
+    } else if (e.target.id === "3") {
+      setWhy(false);
+      setMission(false);
+      setMember(true);
+      setBlog(false);
+    } else if (e.target.id === "4") {
+      setWhy(false);
+      setMission(false);
+      setMember(false);
+      setBlog(true);
     }
   };
 
@@ -28,14 +57,40 @@ const Navigation = () => {
       </div>
       <nav>
         <ul>
-          <li>
-            <a href="#why">Pourquoi Lambda ?</a>
+          <li onClick={(e) => handleModals(e)}>
+            {why ? (
+              <a href="#why" className="selected" id="1">
+                Pourquoi Lambda ?
+              </a>
+            ) : (
+              <a href="#why" id="1">
+                Pourquoi Lambda ?
+              </a>
+            )}
           </li>
-          <li>
-            <a href="#mission">Notre mission</a>
+          <li onClick={(e) => handleModals(e)}>
+            {mission ? (
+              <a href="#mission" className="selected" id="2">
+                Notre mission
+              </a>
+            ) : (
+              <a href="#mission" id="2">
+                Notre mission
+              </a>
+            )}
           </li>
-          <li>Nos membres</li>
-          <li>Nos contenus</li>
+          <li onClick={(e) => handleModals(e)}>
+            {member ? (
+              <a href="#member" className="selected" id="3">
+                Nos membres
+              </a>
+            ) : (
+              <a href="#member" id="3">
+                Nos membres
+              </a>
+            )}
+          </li>
+          <li onClick={(e) => handleModals(e)}>Nos contenus</li>
         </ul>
       </nav>
       <div className="cta">
