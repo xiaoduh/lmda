@@ -26,7 +26,6 @@ footer {
 
         p {
             font-size: .8rem;
-
             font-weight: 100;
         }
     }
@@ -47,6 +46,10 @@ footer {
     
                 a {
                     color: #fff;
+
+                    &:hover {
+                        color: #FD6B3D;
+                    }
                 }
             }
     
