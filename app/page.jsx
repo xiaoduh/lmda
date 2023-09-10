@@ -8,6 +8,7 @@ import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
+import ArticleContainer from "@/components/blog/ArticleContainer";
 
 export default function Home() {
   const firstSection = {
@@ -30,6 +31,15 @@ export default function Home() {
     title: "Vous avez un projet qui requiert l'excellence en C++ ?",
     content:
       "Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.",
+  };
+
+  const fourthSection = {
+    txtLabel:
+      "Nos contenus sur l'écosystème C++, le recrutement et le management",
+    title:
+      "Parcourez nos articles sur l'écosystème C++, le recrutement et le management.",
+    content:
+      "Chaque mois retrouvez des articles pour nourrir votre veille sur le recrutement, le managemment et toutes les actualités de l'écosystème C++.",
   };
 
   const contentCardsFirstSection = [
@@ -79,39 +89,81 @@ export default function Home() {
 
   const members = [
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "test",
+      img: "/pp.png",
       name: "Mohamed-Amine",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
   ];
 
-  const contentBtnPrimary = "Voir tous de membres";
-  const contentBtnSecondary = "Rejoindre le collectif Lambda";
+  const articles = [
+    {
+      img: "/cpp.jpg",
+      title: "Comment éviter les bugs avec le C++ modern ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["C++"],
+      author: "John Doe",
+    },
+    {
+      img: "/cpp.jpg",
+      title: "Pourquoi les entreprises échouent à définir leur culture ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["Recrutement"],
+      author: "John Doe",
+    },
+    {
+      img: "/cpp.jpg",
+      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["Management"],
+      author: "John Doe",
+    },
+    {
+      img: "/cpp.jpg",
+      title: "Comment éviter les bugs avec le C++ modern ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["C++"],
+      author: "John Doe",
+    },
+    {
+      img: "/cpp.jpg",
+      title: "Pourquoi les entreprises échouent à définir leur culture ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["Recrutement"],
+      author: "John Doe",
+    },
+    {
+      img: "/cpp.jpg",
+      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      category: ["Management"],
+      author: "John Doe",
+    },
+  ];
 
   return (
     <main>
@@ -122,7 +174,7 @@ export default function Home() {
           title={firstSection.title}
           content={firstSection.content}
         />
-        <CardsContainer>
+        <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
             return (
               <Card
@@ -140,7 +192,7 @@ export default function Home() {
           title={secondSection.title}
           content={secondSection.content}
         />
-        <CardsContainer>
+        <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
             return (
               <Card
@@ -158,19 +210,42 @@ export default function Home() {
           title={thirdSection.title}
           content={thirdSection.content}
         />
-        <CardsContainer>
-          {members.slice(0, 3).map((member) => {
+        <CardsContainer style={"cards-container"}>
+          {members.slice(0, 6).map((member) => {
             return (
               <CardMember
                 key={member.index}
+                img={member.img}
                 title={member.name}
                 content={member.desc}
               />
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={contentBtnPrimary} />
-        <SecondaryBtn content={contentBtnSecondary} />
+        <PrimaryBtn content={"Voir tous de membres"} />
+        <SecondaryBtn content={"Rejoindre le collectif Lambda"} />
+      </SectionWrapper>
+      <SectionWrapper id={"blog"}>
+        <Label content={fourthSection.txtLabel} />
+        <ContentSection
+          title={fourthSection.title}
+          content={fourthSection.content}
+        />
+        <CardsContainer style={"articles-container"}>
+          {articles.slice(0, 6).map((article) => {
+            return (
+              <ArticleContainer
+                key={article.index}
+                img={article.img}
+                title={article.title}
+                content={article.desc}
+                category={article.category}
+                author={article.author}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn content={"Parcourir le blog"} />
       </SectionWrapper>
     </main>
   );

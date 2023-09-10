@@ -6,8 +6,15 @@ footer {
     background: $accent-black;
     padding: 20rem 0;
 
-    @media screen and (max-width: 1300px) {
-        padding: .5rem 7rem;
+    // @media screen and (max-width: 1300px) {
+    //     padding: 0;
+    //   }
+
+    @media screen and (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 50px;
+        padding: 0;
       }
 
       img {
@@ -34,12 +41,21 @@ footer {
         display: flex;
         justify-content: center;
 
+        @media screen and (max-width: 1000px) {
+            justify-content: start;
+          }
+
         ul {
             display: flex;
             flex-direction: column;
             align-items: left;
             gap: .5rem;
             margin: 0 2rem;
+
+            @media screen and (max-width: 1000px) {
+                margin: 0 2rem 0 0;
+              }
+            
     
             li {
                 cursor: pointer;
@@ -62,5 +78,9 @@ footer {
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+          }
     }
 }

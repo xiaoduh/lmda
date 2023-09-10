@@ -13,7 +13,7 @@ const CardMember = ({ img, title, content, link }) => {
         <div className="pastille"></div>
         <p>disponible</p>
       </div>
-      <img src="/pp.png" className="pp" />
+      <img src={img} className="pp" alt={title} />
       <h4>{title}</h4>
       <p>{content}</p>
       <PrimaryBtn content={contentBtnPrimary} />

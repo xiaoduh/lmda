@@ -11,13 +11,58 @@
         background: $accent-black;
         z-index: 999;
 
+        
+
         @media screen and (max-width: 1300px) {
             padding: .5rem 7rem;
           }
+
+          @media screen and (max-width: 950px) {
+            padding: 1rem 5rem;
+        }
+
+        @media screen and (max-width: 850px) {
+            padding: 1rem 2rem;
+        }
         
 
         .logo {
             cursor: pointer;
+        }
+
+        .menu-responsive {
+            display: flex;
+    
+            ul {
+                position: fixed;
+                left: -100%;
+                top: 10%;
+                flex-direction: column;
+                background: $accent-black;
+                width: 100%;
+                text-align: center;
+                transition: .25s;
+    
+                li {
+                    padding: 4px 0;
+                    cursor: pointer;
+    
+                    &:hover {
+                        color: #FD6B3D;;
+                    }
+                }
+            }
+    
+            @media screen and (max-width: 750px) {
+                display: block;
+            }
+        }
+    
+        .active {
+    
+            ul {
+                left: 0;
+            }
         }
 
         ul {
@@ -25,14 +70,38 @@
             justify-content: space-between;
             align-items: center;
 
+            @media (max-width: 750px) {
+                position: fixed;
+                left: -100%;
+                top: 10%;
+                flex-direction: column;
+                background: $accent-black;
+                width: 100%;
+                text-align: center;
+                transition: .25s;
+            }
+
             li {
                 cursor: pointer;
+
+                @media (max-width: 750px) {
+                    padding: 5px 0;
+
+                    &:hover {
+                        color: #FD6B3D;
+                    }
+                }
 
                 a {
                     color: #fff;
                 }
             }
 
+        }
+
+        .open {
+            left: 0;
+            border: none;
         }
 
         .selected {
@@ -43,7 +112,36 @@
             display: flex;
             justify-content: flex-end;
             cursor: pointer;
+
+            @media (max-width: 750px) {
+                display: none;
+            }
         }
+
+        .burger-menu {
+            cursor: pointer;
+            display: none;
+
+            &::before {
+                content: "\2630";
+                font-size: 1.5rem;
+            }
+
+            @media screen and (max-width: 750px) {
+                        display: inline-block;
+                        text-align: right;
+                    }
+        }
+
+        .active {
+
+            &::before {
+                content:'\2613';
+                font-size: 1.5rem;
+            }
+
+        }
+
     }
 
 

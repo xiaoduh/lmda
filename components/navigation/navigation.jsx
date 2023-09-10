@@ -10,6 +10,7 @@ const Navigation = () => {
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
   const [blog, setBlog] = useState(false);
+  const [active, setActive] = useState(false);
 
   const changeBackground = () => {
     console.log(window.scrollY);
@@ -18,6 +19,10 @@ const Navigation = () => {
     } else {
       setNavbar(false);
     }
+  };
+
+  const handleActive = () => {
+    setActive(!active);
   };
 
   const handleModals = (e) => {
@@ -56,46 +61,118 @@ const Navigation = () => {
         </a>
       </div>
       <nav>
-        <ul>
-          <li onClick={(e) => handleModals(e)}>
-            {why ? (
-              <a href="#why" className="selected" id="1">
-                Pourquoi Lambda ?
-              </a>
-            ) : (
-              <a href="#why" id="1">
-                Pourquoi Lambda ?
-              </a>
-            )}
-          </li>
-          <li onClick={(e) => handleModals(e)}>
-            {mission ? (
-              <a href="#mission" className="selected" id="2">
-                Notre mission
-              </a>
-            ) : (
-              <a href="#mission" id="2">
-                Notre mission
-              </a>
-            )}
-          </li>
-          <li onClick={(e) => handleModals(e)}>
-            {member ? (
-              <a href="#member" className="selected" id="3">
-                Nos membres
-              </a>
-            ) : (
-              <a href="#member" id="3">
-                Nos membres
-              </a>
-            )}
-          </li>
-          <li onClick={(e) => handleModals(e)}>Nos contenus</li>
-        </ul>
+        {active ? (
+          <ul className="open">
+            <li onClick={(e) => handleModals(e)}>
+              {why ? (
+                <a href="#why" className="selected" id="1">
+                  Pourquoi Lambda ?
+                </a>
+              ) : (
+                <a href="#why" id="1">
+                  Pourquoi Lambda ?
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {mission ? (
+                <a href="#mission" className="selected" id="2">
+                  Notre mission
+                </a>
+              ) : (
+                <a href="#mission" id="2">
+                  Notre mission
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {member ? (
+                <a href="#member" className="selected" id="3">
+                  Nos membres
+                </a>
+              ) : (
+                <a href="#member" id="3">
+                  Nos membres
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {blog ? (
+                <a href="#blog" className="selected" id="4">
+                  Blog
+                </a>
+              ) : (
+                <a href="#blog" id="4">
+                  Blog
+                </a>
+              )}
+            </li>
+          </ul>
+        ) : (
+          <ul>
+            <li onClick={(e) => handleModals(e)}>
+              {why ? (
+                <a href="#why" className="selected" id="1">
+                  Pourquoi Lambda ?
+                </a>
+              ) : (
+                <a href="#why" id="1">
+                  Pourquoi Lambda ?
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {mission ? (
+                <a href="#mission" className="selected" id="2">
+                  Notre mission
+                </a>
+              ) : (
+                <a href="#mission" id="2">
+                  Notre mission
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {member ? (
+                <a href="#member" className="selected" id="3">
+                  Nos membres
+                </a>
+              ) : (
+                <a href="#member" id="3">
+                  Nos membres
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {blog ? (
+                <a href="#blog" className="selected" id="4">
+                  Blog
+                </a>
+              ) : (
+                <a href="#blog" id="4">
+                  Blog
+                </a>
+              )}
+            </li>
+          </ul>
+        )}
       </nav>
       <div className="cta">
         <div className="cta-secondary">Nous rejoindre</div>
       </div>
+      {active ? (
+        <div
+          className="burger-menu active"
+          id="burger"
+          onClick={() => setActive(!active)}
+        ></div>
+      ) : (
+        <div
+          className="burger-menu"
+          id="burger"
+          onClick={() => setActive(!active)}
+        ></div>
+      )}
     </div>
   );
 };

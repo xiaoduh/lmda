@@ -53,6 +53,9 @@ const Footer = () => {
           <li>
             <a href="#member">Nos articles sur le management</a>
           </li>
+          <li>
+            <a href="#member">Nos articles sur le recrutement</a>
+          </li>
         </ul>
         <ul>
           <li>

@@ -165,7 +165,8 @@ const Header = () => {
       <Label content={txtLabel} />
       <h1>
         Embarquez dans une (<span className="important">C</span>)arrière
-        <span className="important">++</span> en grâce au collectif Lambda.
+        <span className="important">++</span> grâce à notre collectif
+        spécialisé.
       </h1>
       <p>
         Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
