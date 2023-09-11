@@ -178,11 +178,6 @@ const Header = () => {
       <PrimaryBtn content={contentBtnPrimary} />
       <SecondaryBtn content={contentBtnSecondary} />
       <InfiniteScroll Tags={labels} />
-      <div className="labels-container">
-        {/* {labels.map((label) => {
-          return <LabelWithPicto picto={label.picto} content={label.content} />;
-        })} */}
-      </div>
     </header>
   );
 };

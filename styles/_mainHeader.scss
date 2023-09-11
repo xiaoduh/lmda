@@ -23,6 +23,10 @@
         @media screen and (max-width: 1300px) {
             font-size: 2rem;
           }
+
+        @media screen and (max-width: 414px) {
+            font-size: 1.2rem;
+        }
     }
 
     p {
@@ -32,6 +36,10 @@
         @media screen and (max-width: 1300px) {
             font-size: 1rem;
           }
+
+          @media screen and (max-width: 414px) {
+            font-size: .8rem;
+        }
     }
 
     .label {
@@ -39,14 +47,20 @@
         padding: .5rem 1rem;
         border-radius: 20px;
         color: #FD6B3D;
+        display: flex;
         
 
         p {
-            font-size: 1rem;
+            font-size: 1rem; 
+            text-align: center;
 
             @media screen and (max-width: 1300px) {
                 font-size: .8rem;
               }
+
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
         }
     }
 }

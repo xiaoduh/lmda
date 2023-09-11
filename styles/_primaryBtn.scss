@@ -16,6 +16,10 @@
         font-size: .8rem;
       }
 
+      @media screen and (max-width: 414px) {
+        font-size: .6rem;
+    }
+
     &:hover {
         border: 1px solid $primary;
         color: $primary;

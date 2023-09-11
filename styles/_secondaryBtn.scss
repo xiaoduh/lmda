@@ -6,8 +6,12 @@
     cursor: pointer;
 
     @media screen and (max-width: 1300px) {
-                font-size: .8rem;
-              }
+        font-size: .8rem;
+    }
+
+    @media screen and (max-width: 414px) {
+        font-size: .6rem;
+    }
 
     &:hover {
         color: $primary;
