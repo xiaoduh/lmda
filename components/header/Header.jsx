@@ -175,8 +175,8 @@ const Header = () => {
         propres » et efficaces. Nous avons créé Lambda pour former un collectif
         specialisé, épanouissant et transparent.
       </p>
-      <PrimaryBtn content={contentBtnPrimary} />
-      <SecondaryBtn content={contentBtnSecondary} />
+      <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
+      <SecondaryBtn content={contentBtnSecondary} link={"/membres"} />
       <InfiniteScroll Tags={labels} />
     </header>
   );

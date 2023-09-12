@@ -16,8 +16,8 @@ const CardMember = ({ img, title, content, link }) => {
       <img src={img} className="pp" alt={title} />
       <h4>{title}</h4>
       <p>{content}</p>
-      <PrimaryBtn content={contentBtnPrimary} />
-      <SecondaryBtn content={contentBtnSecondary} />
+      <PrimaryBtn content={contentBtnPrimary} link={"/membres"} />
+      <SecondaryBtn content={contentBtnSecondary} link={"/membres"} />
     </div>
   );
 };

@@ -1,7 +1,13 @@
+"use client";
+import Link from "next/link";
 import React from "react";
 
-const PrimaryBtn = ({ content }) => {
-  return <button className="primaryBtn">{content}</button>;
+const PrimaryBtn = ({ content, link }) => {
+  return (
+    <Link href={link}>
+      <button className="primaryBtn">{content}</button>
+    </Link>
+  );
 };
 
 export default PrimaryBtn;

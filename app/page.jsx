@@ -9,6 +9,8 @@ import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ArticleContainer from "@/components/blog/ArticleContainer";
+import Navigation from "@/components/navigation/Navigation";
+import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
   const firstSection = {
@@ -167,6 +169,7 @@ export default function Home() {
 
   return (
     <main>
+      <Navigation />
       <Header />
       <SectionWrapper id={"why"}>
         <Label content={firstSection.txtLabel} />
@@ -222,8 +225,11 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Voir tous de membres"} />
-        <SecondaryBtn content={"Rejoindre le collectif Lambda"} />
+        <PrimaryBtn content={"Voir tous de membres"} link={"/membres"} />
+        <SecondaryBtn
+          content={"Rejoindre le collectif Lambda"}
+          link={"/carriere"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"blog"}>
         <Label content={fourthSection.txtLabel} />
@@ -245,8 +251,9 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Parcourir le blog"} />
+        <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
       </SectionWrapper>
+      <Footer />
     </main>
   );
 }

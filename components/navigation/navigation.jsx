@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
+import Link from "next/link";
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState(false);
-  const [selected, setSelected] = useState(false);
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
@@ -19,10 +19,6 @@ const Navigation = () => {
     } else {
       setNavbar(false);
     }
-  };
-
-  const handleActive = () => {
-    setActive(!active);
   };
 
   const handleModals = (e) => {
@@ -157,9 +153,11 @@ const Navigation = () => {
           </ul>
         )}
       </nav>
-      <div className="cta">
-        <div className="cta-secondary">Nous rejoindre</div>
-      </div>
+      <Link href="/carriere">
+        <div className="cta">
+          <div className="cta-secondary">Nous rejoindre</div>
+        </div>
+      </Link>
       {active ? (
         <div
           className="burger-menu active"
