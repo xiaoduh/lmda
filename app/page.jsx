@@ -9,7 +9,7 @@ import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ArticleContainer from "@/components/blog/ArticleContainer";
-import Navigation from "@/components/navigation/Navigation";
+import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/navigation/Footer";
 
 export default function Home() {
