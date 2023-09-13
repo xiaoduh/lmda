@@ -20,16 +20,16 @@ const Footer = () => {
       <nav className="footer-menu">
         <ul>
           <li>
-            <Link href="/">Mentions legales</Link>
+            <Link href="/legal">Mentions legales</Link>
           </li>
           <li>
-            <Link href="/">Politique de confidentialité</Link>
+            <Link href="/confidentialite">Politique de confidentialité</Link>
           </li>
           <li>
-            <Link href="/">Politique des cookies</Link>
+            <Link href="/cookies">Politique des cookies</Link>
           </li>
           <li>
-            <Link href="/">CGU</Link>
+            <Link href="/cgu">CGU</Link>
           </li>
         </ul>
         <ul>
@@ -45,32 +45,23 @@ const Footer = () => {
         </ul>
         <ul>
           <li>
-            <a href="#why">Blog</a>
+            <Link href="/blog">Le Blog</Link>
           </li>
           <li>
-            <a href="#mission">Nos articles tech</a>
+            <a href="#mission">On recrute !</a>
           </li>
           <li>
-            <a href="#member">Nos articles sur le management</a>
+            <a href="#member">Nos missions pour Freelance</a>
           </li>
           <li>
-            <a href="#member">Nos articles sur le recrutement</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#why">Faire carrière chez Lambda</a>
-          </li>
-          <li>
-            <a href="#mission">On recrute</a>
-          </li>
-          <li>
-            <a href="#member">Nos offres pour freelance</a>
+            <a href="#member">Proposer une mission</a>
           </li>
         </ul>
       </nav>
       <div className="cta">
-        <div className="cta-secondary">Nous rejoindre</div>
+        <Link className="cta" href="/carriere">
+          <button className="btn-blue">Recevoir nos missions par email</button>
+        </Link>
       </div>
     </footer>
   );

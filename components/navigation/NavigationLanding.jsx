@@ -4,12 +4,13 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const Navigation = () => {
+const NavigationLanding = () => {
   const [navbar, setNavbar] = useState(false);
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
   const [blog, setBlog] = useState(false);
+  const [job, setJob] = useState(false);
   const [active, setActive] = useState(false);
 
   const changeBackground = () => {
@@ -27,21 +28,31 @@ const Navigation = () => {
       setMission(false);
       setMember(false);
       setBlog(false);
+      setJob(false);
     } else if (e.target.id === "2") {
       setWhy(false);
       setMission(true);
       setMember(false);
       setBlog(false);
+      setJob(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
       setBlog(false);
+      setJob(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
       setBlog(true);
+      setJob(false);
+    } else if (e.target.id === "5") {
+      setWhy(false);
+      setMission(false);
+      setMember(false);
+      setBlog(false);
+      setJob(true);
     }
   };
 
@@ -93,6 +104,17 @@ const Navigation = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
+              {job ? (
+                <a href="#jobs" className="selected" id="5">
+                  Nos missions
+                </a>
+              ) : (
+                <a href="#jobs" id="5">
+                  Nos missions
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
               {blog ? (
                 <a href="#blog" className="selected" id="4">
                   Blog
@@ -109,54 +131,63 @@ const Navigation = () => {
             <li onClick={(e) => handleModals(e)}>
               {why ? (
                 <a href="#why" className="selected" id="1">
-                  Pourquoi Lambda ?
+                  Découvrir Lambda
                 </a>
               ) : (
                 <a href="#why" id="1">
-                  Pourquoi Lambda ?
+                  Découvrir Lambda
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a href="#mission" className="selected" id="2">
-                  Notre mission
+                  La mission de lambda
                 </a>
               ) : (
                 <a href="#mission" id="2">
-                  Notre mission
+                  La mission de lambda
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3">
-                  Nos membres
+                  Le collectif
                 </a>
               ) : (
                 <a href="#member" id="3">
-                  Nos membres
+                  Le collectif
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
+              {job ? (
+                <a href="#jobs" className="selected" id="5">
+                  Nos missions
+                </a>
+              ) : (
+                <a href="#jobs" id="5">
+                  Nos missions
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {blog ? (
                 <a href="#blog" className="selected" id="4">
-                  Blog
+                  Le Blog
                 </a>
               ) : (
                 <a href="#blog" id="4">
-                  Blog
+                  Le Blog
                 </a>
               )}
             </li>
           </ul>
         )}
       </nav>
-      <Link href="/carriere">
-        <div className="cta">
-          <div className="cta-secondary">Nous rejoindre</div>
-        </div>
+      <Link className="cta" href="#form">
+        <button className="btn-blue">Recevoir nos missions par email</button>
       </Link>
       {active ? (
         <div
@@ -175,4 +206,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationLanding;

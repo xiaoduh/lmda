@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <main>membres</main>;
+  return <main>partenaire</main>;
 };
 
 export default page;

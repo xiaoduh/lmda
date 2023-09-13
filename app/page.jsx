@@ -9,8 +9,8 @@ import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ArticleContainer from "@/components/blog/ArticleContainer";
-import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/navigation/Footer";
+import NavigationLanding from "@/components/navigation/NavigationLanding";
 
 export default function Home() {
   const firstSection = {
@@ -30,9 +30,10 @@ export default function Home() {
 
   const thirdSection = {
     txtLabel: "Une communauté dédiée au C++ et son ecosytème",
-    title: "Vous avez un projet qui requiert l'excellence en C++ ?",
-    content:
-      "Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.",
+    title:
+      "Nous sommes un collectif, une communauté et une plateforme de contenus spécialisé sur l'écosystème C++",
+    content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
+    Notre réseau rassemble plus de 2451 passionnés et experts du C++ prêts à vous accompagner.`,
   };
 
   const fourthSection = {
@@ -169,7 +170,7 @@ export default function Home() {
 
   return (
     <main>
-      <Navigation />
+      <NavigationLanding />
       <Header />
       <SectionWrapper id={"why"}>
         <Label content={firstSection.txtLabel} />
@@ -188,6 +189,8 @@ export default function Home() {
             );
           })}
         </CardsContainer>
+        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
+        <SecondaryBtn content={"Proposer une mission"} link={"/carriere"} />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <Label content={secondSection.txtLabel} />
@@ -206,6 +209,8 @@ export default function Home() {
             );
           })}
         </CardsContainer>
+        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
+        <SecondaryBtn content={"Proposer une mission"} link={"/carriere"} />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         <Label content={thirdSection.txtLabel} />
@@ -225,11 +230,36 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Voir tous de membres"} link={"/membres"} />
+        <PrimaryBtn
+          content={"Parcourir les membres Lambda"}
+          link={"/collectif"}
+        />
         <SecondaryBtn
           content={"Rejoindre le collectif Lambda"}
           link={"/carriere"}
         />
+      </SectionWrapper>
+      <SectionWrapper id={"jobs"}>
+        <Label content="Nos offres d'emplois et missions pour Freelance" />
+        <ContentSection
+          title="Plateforme spécilisée sur l'écosystème C++"
+          content="Parcourez nos dernières offres d'emplois et missions à pourvoir dans l'écosystème C++"
+        />
+        <CardsContainer style={"articles-container"}>
+          {articles.slice(0, 6).map((article) => {
+            return (
+              <ArticleContainer
+                key={article.index}
+                img={article.img}
+                title={article.title}
+                content={article.desc}
+                category={article.category}
+                author={article.author}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn content={"Parcourir toutes nos offres"} link={"/jobs"} />
       </SectionWrapper>
       <SectionWrapper id={"blog"}>
         <Label content={fourthSection.txtLabel} />
@@ -252,6 +282,14 @@ export default function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
+      </SectionWrapper>
+
+      <SectionWrapper id={"form"}>
+        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        <ContentSection
+          title="Recevez chaque semaine toutes les missions en C++"
+          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez chaque semaine par email les dernières missions en C++ sur le marché."
+        />
       </SectionWrapper>
       <Footer />
     </main>

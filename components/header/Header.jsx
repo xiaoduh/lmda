@@ -165,8 +165,8 @@ const Header = () => {
       <Label content={txtLabel} />
       <h1>
         Embarquez dans une (<span className="important">C</span>)arrière
-        <span className="important">++</span> grâce à notre collectif
-        spécialisé.
+        <span className="important">++</span> grâce à notre collectif spécialisé
+        et transparent.
       </h1>
       <p>
         Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
@@ -176,7 +176,7 @@ const Header = () => {
         specialisé, épanouissant et transparent.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
-      <SecondaryBtn content={contentBtnSecondary} link={"/membres"} />
+      <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
       <InfiniteScroll Tags={labels} />
     </header>
   );
