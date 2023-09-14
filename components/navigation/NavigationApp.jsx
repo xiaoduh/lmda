@@ -35,10 +35,10 @@ const NavigationApp = () => {
               <Link href="/collectif">Les membres du collectif</Link>
             </li>
             <li>
-              <Link href="/carriere">On recrute !</Link>
+              <Link href="/carriere">Notre modèle</Link>
             </li>
             <li>
-              <Link href="/freelance">Nos missions Freelance</Link>
+              <Link href="/jobs">Nos missions</Link>
             </li>
             <li>
               <Link href="/partenaire">Proposer une mission</Link>
@@ -53,10 +53,10 @@ const NavigationApp = () => {
               <Link href="/collectif">Les membres du collectif</Link>
             </li>
             <li>
-              <Link href="/carriere">On recrute !</Link>
+              <Link href="/carriere">Notre modèle</Link>
             </li>
             <li>
-              <Link href="/freelance">Nos missions Freelance</Link>
+              <Link href="/jobs">Nos missions</Link>
             </li>
             <li>
               <Link href="/partenaire">Proposer une mission</Link>
@@ -67,8 +67,8 @@ const NavigationApp = () => {
           </ul>
         )}
       </nav>
-      <Link className="cta" href="/carriere">
-        <button className="btn-blue">Recevoir nos missions par email</button>
+      <Link className="cta" href="/rejoindre">
+        <button className="btn-blue">On recrute !</button>
       </Link>
       {active ? (
         <div

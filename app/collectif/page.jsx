@@ -4,6 +4,7 @@ import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import CardMember from "@/components/member/CardMember";
+import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 
@@ -48,8 +49,8 @@ const page = () => {
           title="Grâce à Lambda, bénéficiez d'une visibilté auprès de 2154 passionnés par le C++"
           content="Lambda c'est aujourd'hui un réseau de 2154 passionés par le C++ prêts à relever vos défis logiciels."
         />
-        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/carriere"} />
+        <PrimaryBtn content={"Rejoindre le collectif"} link={"/rejoindre"} />
+        <SecondaryBtn content={"Découvrir Lambda"} link={"/carriere"} />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         <CardsContainer style={"cards-container"}>
@@ -65,6 +66,7 @@ const page = () => {
           })}
         </CardsContainer>
       </SectionWrapper>
+      <FooterApp />
     </main>
   );
 };

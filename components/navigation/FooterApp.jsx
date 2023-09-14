@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const Footer = () => {
+const FooterApp = () => {
   return (
     <footer>
       <div className="logo">
@@ -34,13 +34,13 @@ const Footer = () => {
         </ul>
         <ul>
           <li>
-            <a href="#why">Pourquoi Lambda ?</a>
+            <Link href="/">Découvrir Lambda</Link>
           </li>
           <li>
-            <a href="#mission">Notre mission</a>
+            <Link href="/blog">Le Blog</Link>
           </li>
           <li>
-            <a href="#member">Nos membres</a>
+            <Link href="/carriere">Notre modèle</Link>
           </li>
         </ul>
         <ul>
@@ -48,13 +48,13 @@ const Footer = () => {
             <Link href="/blog">Le Blog</Link>
           </li>
           <li>
-            <a href="#mission">On recrute !</a>
+            <Link href="/rejoindre">On recrute !</Link>
           </li>
           <li>
-            <a href="#member">Nos missions pour Freelance</a>
+            <Link href="/jobs">Nos missions</Link>
           </li>
           <li>
-            <a href="#member">Proposer une mission</a>
+            <Link href="/partenaire">Proposer une mission</Link>
           </li>
         </ul>
       </nav>
@@ -67,4 +67,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterApp;

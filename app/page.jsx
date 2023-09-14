@@ -190,7 +190,7 @@ export default function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/carriere"} />
+        <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <Label content={secondSection.txtLabel} />
@@ -210,7 +210,7 @@ export default function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/carriere"} />
+        <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         <Label content={thirdSection.txtLabel} />
