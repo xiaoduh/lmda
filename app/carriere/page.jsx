@@ -2,6 +2,7 @@ import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Card from "@/components/card/Card";
 import ContentSection from "@/components/content/ContentSection";
+import Subscriber from "@/components/form/Subscriber";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
@@ -115,9 +116,10 @@ const page = () => {
       <SectionWrapper id={"form"}>
         <Label content="Ne ratez plus aucunes opportunités en C++" />
         <ContentSection
-          title="Recevez chaque semaine toutes les missions en C++"
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez chaque semaine par email les dernières missions en C++ sur le marché."
+          title="Recevez toutes les missions en C++ dans votre boite mail"
+          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
+        <Subscriber />
       </SectionWrapper>
       <FooterApp />
     </main>

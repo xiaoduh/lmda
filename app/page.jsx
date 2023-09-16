@@ -11,8 +11,11 @@ import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ArticleContainer from "@/components/blog/ArticleContainer";
 import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
+import Subscriber from "@/components/form/Subscriber";
 
 export default function Home() {
+  const subscriber = "";
+
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
@@ -287,9 +290,10 @@ export default function Home() {
       <SectionWrapper id={"form"}>
         <Label content="Ne ratez plus aucunes opportunités en C++" />
         <ContentSection
-          title="Recevez chaque semaine toutes les missions en C++"
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez chaque semaine par email les dernières missions en C++ sur le marché."
+          title="Recevez toutes les missions en C++ dans votre boite mail"
+          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
+        <Subscriber />
       </SectionWrapper>
       <Footer />
     </main>
