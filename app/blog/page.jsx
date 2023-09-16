@@ -1,5 +1,4 @@
 import ArticleContainer from "@/components/blog/ArticleContainer";
-import PrimaryBtn from "@/components/button/PrimaryBtn";
 import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
@@ -83,7 +82,6 @@ const page = () => {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
       </SectionWrapper>
       <FooterApp />
     </main>
