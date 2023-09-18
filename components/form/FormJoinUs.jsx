@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const Form = () => {
+const FormJoinUs = () => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -23,7 +23,7 @@ const Form = () => {
         <input
           type="text"
           subject="subject"
-          placeholder="Objet de votre recherche"
+          placeholder="Objet"
           required
           autoComplete="disabled"
           value={subject}
@@ -50,7 +50,7 @@ const Form = () => {
         <textarea
           name="message"
           rows="10"
-          placeholder="Le contexte de votre recherche"
+          placeholder="Qu'avez-voous retenu de notre modèle et qu'est-ce qui vous intéresse dans celui-ci ?"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -66,4 +66,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormJoinUs;

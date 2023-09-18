@@ -1,0 +1,63 @@
+.card-job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 340px;
+    cursor: pointer;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    // border: 1px solid transparent;
+    // border: 1px solid #7e7ebba9;
+    background: #3f3f6242;
+
+    &:hover {
+        // border: 1px solid #7e7ebba9;
+        background: transparent;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .infos {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+
+        .info {
+            background: #3F3F62;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            color: #FD6B3D;
+    
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+
+        @media screen and (max-width: 1300px) {
+            font-size: .8rem;
+          }
+
+          @media screen and (max-width: 414px) {
+            font-size: .6rem;
+        }
+    }
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+
+        p {
+            font-size: .8rem;
+        }
+            
+    }
+
+    button {
+        font-size: .8rem;
+    }
+
+}

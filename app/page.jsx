@@ -12,6 +12,7 @@ import ArticleContainer from "@/components/blog/ArticleContainer";
 import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
+import JobCard from "@/components/job/JobCard";
 
 export default function Home() {
   const subscriber = "";
@@ -171,6 +172,51 @@ export default function Home() {
     },
   ];
 
+  const jobs = [
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+    {
+      title: "Développeur C++",
+      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
+      skills: ["C++"],
+      place: "78",
+      salary: "55K",
+    },
+  ];
+
   return (
     <main>
       <NavigationLanding />
@@ -249,15 +295,15 @@ export default function Home() {
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir dans l'écosystème C++"
         />
         <CardsContainer style={"articles-container"}>
-          {articles.slice(0, 6).map((article) => {
+          {jobs.map((card) => {
             return (
-              <ArticleContainer
-                key={article.index}
-                img={article.img}
-                title={article.title}
-                content={article.desc}
-                category={article.category}
-                author={article.author}
+              <JobCard
+                key={card.index}
+                title={card.title}
+                desc={card.desc}
+                skills={card.skills[0]}
+                place={card.place}
+                salary={card.salary}
               />
             );
           })}

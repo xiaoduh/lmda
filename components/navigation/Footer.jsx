@@ -13,8 +13,7 @@ const Footer = () => {
         <span>©2023 Lambda une marque de Lambda Labs</span>
         <p>
           Sans transparence, il ne peut y avoir de confiance. <br></br>Nous
-          croyons en une approche nouvelle basée sur la transparence avec nos
-          clients et nos consultants.
+          croyons en la transparence avec nos clients et nos consultants.
         </p>
       </div>
       <nav className="footer-menu">
