@@ -1,4 +1,4 @@
-import Card from "@/components/card/Card";
+"use client";
 import ContentSection from "@/components/content/ContentSection";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
