@@ -4,6 +4,7 @@ import Label from "@/components/label/Label";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
+import "../../styles/index.scss";
 
 const page = () => {
   return (

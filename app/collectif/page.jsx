@@ -7,6 +7,7 @@ import CardMember from "@/components/member/CardMember";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
+import "../../styles/index.scss";
 
 const page = () => {
   const members = [

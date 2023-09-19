@@ -5,6 +5,7 @@ import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
+import "../../styles/index.scss";
 
 const page = () => {
   const articles = [
