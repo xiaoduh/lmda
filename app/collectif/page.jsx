@@ -8,7 +8,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
-const page = () => {
+const collectif = () => {
   const members = [
     {
       img: "/pp.png",
@@ -69,4 +69,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default collectif;

@@ -275,6 +275,8 @@ export default function Home() {
                 img={member.img}
                 title={member.name}
                 content={member.desc}
+                profilName={member.name}
+                profilTitle={"Ingénieur logiciel C++"}
               />
             );
           })}
@@ -304,6 +306,8 @@ export default function Home() {
                 skills={card.skills[0]}
                 place={card.place}
                 salary={card.salary}
+                jobId={card.place}
+                jobTitle={card.title}
               />
             );
           })}

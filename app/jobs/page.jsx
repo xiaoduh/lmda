@@ -9,7 +9,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
-const page = () => {
+const postuler = () => {
   const jobs = [
     {
       title: "Développeur C++",
@@ -75,6 +75,8 @@ const page = () => {
                 skills={card.skills[0]}
                 place={card.place}
                 salary={card.salary}
+                jobId={card.place}
+                jobTitle={card.title}
               />
             );
           })}
@@ -86,4 +88,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default postuler;

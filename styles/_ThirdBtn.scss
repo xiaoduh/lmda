@@ -1,0 +1,28 @@
+.thirdBtn {
+    border: $primary;
+    background: none;
+    padding: 1rem;
+    border-radius: 8px;
+    color: $primary;
+    font-size: .8rem;
+    font-family: $regular;
+    cursor: pointer;
+    padding: 0.75rem 1.2rem;
+    transition: all .8s ease;
+    margin: 2rem 0 1rem;
+    border: 1px solid $primary;
+
+    @media screen and (max-width: 1300px) {
+        font-size: .8rem;
+      }
+
+      @media screen and (max-width: 414px) {
+        font-size: .6rem;
+    }
+
+    &:hover {
+        border: 1px solid $primary;
+        color: #fff;
+        background: $primary;
+    }
+}
