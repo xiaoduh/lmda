@@ -109,7 +109,7 @@ body {
         }
 }
 
-.section-container {
+.section-container-header {
     background: $accent-black;
     display: flex;
     flex-direction: column;
@@ -118,8 +118,183 @@ body {
     padding: 12rem 0 2rem;
 
     @media screen and (max-width: 1300px) {
-        padding: 6rem 0 2rem;
+        padding-top: 10rem;
+        padding-bottom: 0rem;
       }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+
+        h2 {
+            font-size: 1.8rem;
+            text-align: center;
+
+            @media screen and (max-width: 1300px) {
+                font-size: 1.5rem;
+              }
+
+              @media screen and (max-width: 414px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+            padding: 0 15rem;
+    
+            @media screen and (max-width: 1300px) {
+                font-size: 1rem;
+                padding: 0 10rem;
+              }
+              
+              @media screen and (max-width: 414px) {
+                font-size: .8rem;
+                padding: 0;
+            }
+        }
+
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+
+
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+        @media screen and (max-width: 740px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+        .card {
+            background: #3f3f6242;
+            // border: 1px solid #7e7ebba9;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            width: 340px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            &:hover {
+                background: transparent;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                text-align: left;
+
+            @media screen and (max-width: 1300px) {
+                font-size: 1rem;
+              }
+            }
+
+            p {
+                font-size: 1rem;
+                text-align: left;
+        
+                @media screen and (max-width: 1300px) {
+                    font-size: .8rem;
+                  }
+            }
+        }
+        
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+
+        @media screen and (max-width: 1300px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media screen and (max-width: 740px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .article-preview {
+            border-radius: 20px;
+            padding: 1rem 1rem;
+            width: 350px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+
+            &:hover {
+                background: #3f3f6242;
+            }
+
+            h3 {
+                font-size: 1rem;
+                text-align: left;
+
+            @media screen and (max-width: 1300px) {
+                font-size: 1rem;
+              }
+            }
+
+            p {
+                font-size: .8rem;
+                text-align: left;
+        
+                @media screen and (max-width: 1300px) {
+                    font-size: .8rem;
+                  }
+            }
+
+            .category {
+                background: #3F3F62;
+                padding: .5rem 1rem;
+                border-radius: 20px;
+                color: #FD6B3D;
+                max-width: fit-content;
+
+                p {
+                    font-size: 1rem;
+            
+                    @media screen and (max-width: 1300px) {
+                        font-size: .8rem;
+                      }
+                }
+            }
+
+            .preview-article-img {
+                border-radius: 20px;
+            }
+        }
+        
+    }
+
+}
+
+.section-container {
+    background: $accent-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 0 2rem;
 
     .content-wrapper {
         display: flex;

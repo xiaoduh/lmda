@@ -9,6 +9,7 @@ import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
+import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
 const page = () => {
   const secondSection = {
@@ -65,7 +66,7 @@ const page = () => {
   ];
   return (
     <main>
-      <SectionWrapper id={"collectif"}>
+      <SectionWrapperHeader id={"collectif"}>
         <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
           title="L'honnêteté passe par la transparence"
@@ -84,7 +85,7 @@ const page = () => {
         </CardsContainer>
         <PrimaryBtn content={"Rejoindre le collectif"} link={"/rejoindre"} />
         <SecondaryBtn content={"Recevoir nos missions"} link={"/#form"} />
-      </SectionWrapper>
+      </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
         <Label content={secondSection.txtLabel} />
         <ContentSection

@@ -6,6 +6,7 @@ import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
+import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
 const page = () => {
   const articles = [
@@ -63,7 +64,7 @@ const page = () => {
   };
   return (
     <main>
-      <SectionWrapper id={"blog"}>
+      <SectionWrapperHeader id={"blog"}>
         <Label content={fourthSection.txtLabel} />
         <ContentSection
           title={fourthSection.title}
@@ -83,7 +84,7 @@ const page = () => {
             );
           })}
         </CardsContainer>
-      </SectionWrapper>
+      </SectionWrapperHeader>
       <FooterApp />
     </main>
   );

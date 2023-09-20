@@ -1,5 +1,3 @@
-import PrimaryBtn from "@/components/button/PrimaryBtn";
-import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
@@ -8,6 +6,7 @@ import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
+import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
 const page = () => {
   const members = [
@@ -44,15 +43,13 @@ const page = () => {
   ];
   return (
     <main>
-      <SectionWrapper id={"collectif"}>
+      <SectionWrapperHeader id={"collectif"}>
         <Label content="Spécialiste et passionné par le C++" />
         <ContentSection
           title="Grâce à Lambda, bénéficiez d'une visibilté auprès de 2154 passionnés par le C++"
           content="Lambda c'est aujourd'hui un réseau de 2154 passionés par le C++ prêts à relever vos défis logiciels."
         />
-        <PrimaryBtn content={"Rejoindre le collectif"} link={"/rejoindre"} />
-        <SecondaryBtn content={"Découvrir Lambda"} link={"/carriere"} />
-      </SectionWrapper>
+      </SectionWrapperHeader>
       <SectionWrapper id={"member"}>
         <CardsContainer style={"cards-container"}>
           {members.map((member) => {

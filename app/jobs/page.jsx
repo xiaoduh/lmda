@@ -7,6 +7,7 @@ import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
+import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
 const page = () => {
   const jobs = [
@@ -55,13 +56,13 @@ const page = () => {
   ];
   return (
     <main>
-      <SectionWrapper id={"jobs"}>
+      <SectionWrapperHeader id={"jobs"}>
         <Label content="Lambda est un agrégateur de missions C++" />
         <ContentSection
           title="Nous vous connectons à l'écosystème C++"
           content="Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez et postulez simplement et rapidement aux missions qui vous intéressent."
         />
-      </SectionWrapper>
+      </SectionWrapperHeader>
       <Subscriber />
       <SectionWrapper>
         <CardsContainer style={"cards-container"}>

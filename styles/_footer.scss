@@ -6,16 +6,16 @@ footer {
     background: $accent-black;
     padding: 20rem 0;
 
-    // @media screen and (max-width: 1300px) {
-    //     padding: 0;
-    //   }
-
     @media screen and (max-width: 1000px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 50px;
         padding: 0;
       }
+
+      @media screen and (max-width: 414px) {
+        padding: 10rem 0;
+    }
 
       img {
         cursor: pointer;

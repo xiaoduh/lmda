@@ -50,7 +50,7 @@ const FormJoinUs = () => {
         <textarea
           name="message"
           rows="10"
-          placeholder="Qu'avez-voous retenu de notre modèle et qu'est-ce qui vous intéresse dans celui-ci ?"
+          placeholder="Qu'avez-vous retenu de notre modèle ? Qu'est-ce qui vous intéresse dans celui-ci ?"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
