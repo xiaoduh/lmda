@@ -12,7 +12,7 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 const postuler = () => {
   const jobs = [
     {
-      title: "Développeur C++/Qt",
+      title: "Développeur C++ Qt",
       desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
       skills: ["C++"],
       place: "78",

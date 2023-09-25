@@ -59,6 +59,8 @@ const collectif = () => {
                 img={member.img}
                 title={member.name}
                 content={member.desc}
+                profilName={member.name}
+                profilTitle={member.name}
               />
             );
           })}
