@@ -1,6 +1,6 @@
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
-import "../../../styles/index.scss";
+import "../../styles/";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
 const notFound = () => {
