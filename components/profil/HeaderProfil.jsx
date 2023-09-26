@@ -1,7 +1,8 @@
 import React from "react";
-import PrimaryBtn from "../button/PrimaryBtn";
+import Link from "next/link";
 
 const HeaderProfil = () => {
+  const profilName = "test";
   return (
     <div className="header-profil">
       <div className="pp">
@@ -12,9 +13,11 @@ const HeaderProfil = () => {
           <div className="title">
             <h2>Clément Lidar</h2>
             <p>Développeur NextJS</p>
-            <p>12 missions</p>
+            <p>12 missions réalisées</p>
           </div>
-          <button className="btn-contact">Contacter</button>
+          <Link href={`/contact/${profilName}`}>
+            <button className="btn-contact">Contacter</button>
+          </Link>
         </div>
         <div className="other-info">
           <div className="info">
