@@ -92,13 +92,13 @@ const profil = () => {
           <SkillsContainer>
             <h2 className="title-section">Compétences & Intérêts</h2>
             {skills.map((skill) => {
-              return <Skill title={skill.title} />;
+              return <Skill key={1 + Math.random()} title={skill.title} />;
             })}
             <h2 className="title-section">Avis & recommandations</h2>
             {references.map((reference) => {
               return (
                 <Reference
-                  key={Math.random()}
+                  key={1 + Math.random()}
                   name={reference.name}
                   company={reference.company}
                   content={reference.content}
@@ -109,7 +109,7 @@ const profil = () => {
           <ExperiencesContainer>
             {experiences.map((experience) => {
               return (
-                <Experience key={Math.random()} title={experience.title} />
+                <Experience key={1 + Math.random()} title={experience.title} />
               );
             })}
           </ExperiencesContainer>
