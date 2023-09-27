@@ -1,0 +1,102 @@
+.profil-content-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 0px;
+    width: calc(100% - 2rem);
+
+    @media screen and (max-width: 850px) {
+        display: flex;
+    }
+
+    @media screen and (max-width: 650px) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .title-section {
+        color: $primary;
+        margin-bottom: 2rem;
+    }
+
+    .infos { 
+        grid-area: 1 / 1 / 2 / 2;
+        background-color: #3f3f6242;
+        height: auto;
+        padding: 2rem 2rem;
+        border-radius: 20px;
+
+        .domain-skill {
+            margin-bottom: 4rem;
+
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            .skills-labels {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+            }
+        }
+
+        .reference {
+            margin-bottom: 4rem;
+            
+            .title {
+                display: flex;
+                align-items: center;
+                margin-bottom: .5rem;
+                gap: .5rem;
+                width: max-content;
+                color: #fff;
+            }
+        }
+
+     }
+
+     
+
+    .experience { 
+        grid-area: 1 / 2 / 2 / 3;
+        height: auto;
+        padding: 2rem 2rem;
+        border-radius: 20px;
+        background-color: #3f3f6242;
+
+        .dates {
+            display: flex;
+            gap: .5rem;
+
+            .date {
+                display: flex;
+                align-items: center;
+                margin: .5rem 0;
+
+                .picto {
+                    width: 12px;
+                    margin-right: .5rem;
+                }
+
+            }
+            
+        }
+
+        .techno {
+            display: flex;
+            gap: .5rem;
+            margin-top: 1rem;
+        }
+
+        .separator {
+            width: 100%;
+            margin: 2rem auto;
+            border-top: .5px solid #575765;
+            border-radius: 50%;
+        }
+
+     }
+}

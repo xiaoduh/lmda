@@ -11,6 +11,7 @@ $color-confirm-2: #2ed4794d;
 $color-stop: #F7685B;
 $color-stop-2: #f7685b57;
 $important: #FD6B3D;
+$orange: #FD6B3D;
 
 @font-face {
     font-family: "poppins-sm";
@@ -298,9 +299,12 @@ body {
     background: $accent-black;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     padding: 10rem 0rem 2rem;
+
+    @media screen and (max-width: 650px) {
+        padding: 6rem 0rem 2rem;
+    }
 
 }
 
@@ -500,6 +504,7 @@ body {
 
 p::selection, h1::selection, h2::selection, span::selection {
         background: #FD6B3D;
+        color: #fff;
 }
 
 .important {
