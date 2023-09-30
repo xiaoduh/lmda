@@ -320,6 +320,10 @@ body {
     width: 100%;
     padding: 4rem 0 2rem;
 
+    @media screen and (max-width: 414px) {
+        padding: 0 2rem;
+    }
+
     .content-wrapper {
         display: flex;
         flex-direction: column;
