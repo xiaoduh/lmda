@@ -9,6 +9,8 @@
     // border: 1px solid transparent;
     // border: 1px solid #7e7ebba9;
     background: #3f3f6242;
+    animation: fade linear;
+    animation-timeline: view();
 
     &:hover {
         // border: 1px solid #7e7ebba9;
@@ -65,4 +67,23 @@
         font-size: .8rem;
     }
 
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    } to {
+        opacity: 1;
+    }
+    0% {
+        opacity: 0;
+    } 
+    50% {
+        opacity: 1;
+        transform: translate();
+    } 
+    100% {
+        transform: translate();
+    }
+    
 }
