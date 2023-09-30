@@ -11,7 +11,7 @@ const JobDescription = ({ jobdesc }) => {
         <h3>Missions</h3>
         <ul>
           {jobdesc.missions.map((task) => {
-            return <li>{task}</li>;
+            return <li key={1 + Math.random()}>{task}</li>;
           })}
         </ul>
       </div>
