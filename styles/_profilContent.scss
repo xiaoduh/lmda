@@ -25,9 +25,22 @@
     .infos { 
         grid-area: 1 / 1 / 2 / 2;
         background-color: #3f3f6242;
-        height: auto;
+        height: max-content;
         padding: 2rem 2rem;
         border-radius: 20px;
+
+        .requirement {
+            margin-bottom: 4rem;
+
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            li {
+                margin-bottom: .5rem;
+                list-style: square;
+            }
+        }
 
         .domain-skill {
             margin-bottom: 4rem;
@@ -60,16 +73,61 @@
 
     .description {
         grid-area: 1 / 2 / 2 / 3;
-        height: auto;
+        height: max-content;
         padding: 2rem 2rem;
         border-radius: 20px;
         background-color: #3f3f6242;
+
+        .job-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 4rem;
+
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            li {
+                margin-bottom: .5rem;
+                list-style: square;
+            }
+
+        }
+
+        button {
+            border: none;
+            background: $primary;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #fff;
+            font-size: .8rem;
+            font-family: $regular;
+            cursor: pointer;
+            padding: 0.75rem 1.2rem;
+            transition: all .8s ease;
+            border: 1px solid $primary;
+        
+            @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+        
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
+        
+            &:hover {
+                border: 1px solid $primary;
+                color: $primary;
+                background: transparent;
+            }
+        }
     }
      
 
     .experience { 
         grid-area: 1 / 2 / 2 / 3;
-        height: auto;
+        height: max-content;
         padding: 2rem 2rem;
         border-radius: 20px;
         background-color: #3f3f6242;
