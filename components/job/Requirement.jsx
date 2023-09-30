@@ -7,7 +7,7 @@ const Requirement = ({ title, requirements }) => {
       <ul>
         {" "}
         {requirements.map((requirement) => {
-          return <li>{requirement}</li>;
+          return <li key={1 + Math.random()}>{requirement}</li>;
         })}
       </ul>
     </div>
