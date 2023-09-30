@@ -1,0 +1,49 @@
+.header-job {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 2rem 2rem;
+    border-radius: 20px;
+    // border: 1px solid transparent;
+    // border: 1px solid #7e7ebba9;
+    background: #3f3f6242;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+
+        .localisation {
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+
+            img {
+                width: 16px;
+            }
+        }
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        @media screen and (max-width: 900px) {
+            margin-top: 1rem;
+        }
+    }
+
+    
+}

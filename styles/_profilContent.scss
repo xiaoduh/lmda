@@ -58,6 +58,13 @@
 
      }
 
+    .description {
+        grid-area: 1 / 2 / 2 / 3;
+        height: auto;
+        padding: 2rem 2rem;
+        border-radius: 20px;
+        background-color: #3f3f6242;
+    }
      
 
     .experience { 
@@ -84,6 +91,8 @@
             }
             
         }
+
+        
 
         .techno {
             display: flex;

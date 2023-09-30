@@ -63,7 +63,6 @@ const postuler = () => {
           content="Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez et postulez simplement et rapidement aux missions qui vous intéressent."
         />
       </SectionWrapperHeader>
-      <Subscriber />
       <SectionWrapper>
         <CardsContainer style={"cards-container"}>
           {jobs.map((card) => {
@@ -82,7 +81,7 @@ const postuler = () => {
           })}
         </CardsContainer>
       </SectionWrapper>
-
+      <Subscriber />
       <FooterApp />
     </main>
   );

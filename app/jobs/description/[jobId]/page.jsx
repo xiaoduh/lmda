@@ -1,22 +1,26 @@
-import ContentSection from "@/components/content/ContentSection";
-import SectionWrapper from "@/components/section/SectionWrapper";
-import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import React from "react";
 import "../../../../styles/index.scss";
 import FooterApp from "@/components/navigation/FooterApp";
+import HeaderJob from "@/components/job/HeaderJob";
+import DescriptionContainer from "@/components/job/DescriptionContainer";
+import SectionWrapperProfil from "@/components/section/SectionWrapperProfil";
+import ContentContainer from "@/components/profil/ContentContainer";
+import SkillsContainer from "@/components/profil/SkillsContainer";
 
 const description = () => {
   return (
     <main>
-      <SectionWrapperHeader id={"postuler"}>
-        <ContentSection
-          title="Fiche de poste Développeur C++"
-          content="Ref: ergfiufvosdhfbvuiqhrvbqdfv54v85dqfv1651"
-        />
-      </SectionWrapperHeader>
-      <SectionWrapper>
-        <h2>detail de loffre</h2>
-      </SectionWrapper>
+      <SectionWrapperProfil>
+        <HeaderJob title="Développeur C++" localisation="Noisy-le-Grand" />
+        <ContentContainer>
+          <SkillsContainer>
+            <h2 className="title-section">Profil recherché</h2>
+          </SkillsContainer>
+          <DescriptionContainer>
+            <h2 className="title-section">Description</h2>
+          </DescriptionContainer>
+        </ContentContainer>
+      </SectionWrapperProfil>
       <FooterApp />
     </main>
   );
