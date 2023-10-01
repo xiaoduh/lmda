@@ -15,14 +15,22 @@
             font-family: $regular;
             font-size: .8rem;
             color: #fff;
-            transition: .2s;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            transition: all .8s ease;
         
             &:hover {
-                background: #3F3F62;
-                padding: .5rem 1rem;
-                border-radius: 20px;
-                color: #FD6B3D;
-                transform: scale(1.1);
+                    background: #3F3F62;
+                    padding: .5rem 1rem;
+                    border-radius: 20px;
+                    color: #FD6B3D;
+                
+
+                &:not(:last-child) {
+                    background: none;
+                    padding: .5rem 1rem;
+                }
+                
             }
         }
 

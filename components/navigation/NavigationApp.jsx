@@ -32,7 +32,7 @@ const NavigationApp = () => {
         {active ? (
           <ul className="open">
             <li>
-              <Link href="/collectif">Les membres du collectif</Link>
+              <Link href="/collectif">Nos membres</Link>
             </li>
             <li>
               <Link href="/carriere">Notre modèle</Link>
@@ -44,13 +44,13 @@ const NavigationApp = () => {
               <Link href="/partenaire">Proposer une mission</Link>
             </li>
             <li>
-              <Link href="/blog">Le blog</Link>
+              <Link href="/blog">Nos contenus</Link>
             </li>
           </ul>
         ) : (
           <ul>
             <li>
-              <Link href="/collectif">Les membres du collectif</Link>
+              <Link href="/collectif">Nos membres</Link>
             </li>
             <li>
               <Link href="/carriere">Notre modèle</Link>
@@ -62,7 +62,7 @@ const NavigationApp = () => {
               <Link href="/partenaire">Proposer une mission</Link>
             </li>
             <li>
-              <Link href="/blog">Le blog</Link>
+              <Link href="/blog">Nos contenus</Link>
             </li>
           </ul>
         )}
