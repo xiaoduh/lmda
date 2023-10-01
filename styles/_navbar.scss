@@ -11,6 +11,21 @@
         background: $accent-black;
         z-index: 999;
 
+        a {
+            font-family: $regular;
+            font-size: .8rem;
+            color: #fff;
+            transition: .2s;
+        
+            &:hover {
+                background: #3F3F62;
+                padding: .5rem 1rem;
+                border-radius: 20px;
+                color: #FD6B3D;
+                transform: scale(1.1);
+            }
+        }
+
         
 
         @media screen and (max-width: 1300px) {
@@ -49,10 +64,12 @@
                 li {
                     padding: 4px 0;
                     cursor: pointer;
-    
-                    &:hover {
-                        color: #FD6B3D;;
+
+                    a:hover {
+                        color: $orange;
+                        transform: scale(1.1);
                     }
+    
                 }
             }
     
@@ -90,26 +107,23 @@
                 @media (max-width: 750px) {
                     padding: 5px 0;
 
-                    &:hover {
-                        color: #FD6B3D;
-                    }
-                }
-
-                a {
-                    color: #fff;
-                }
             }
+        }
 
         }
 
         .open {
             left: 0;
             border: none;
-            min-height: calc(100vh);
-            justify-content: center;
+            min-height: 100vh;
+            justify-content: flex-start;
+            padding-top: 2rem;
         }
 
         .selected {
+            background: #3F3F62;
+            padding: .5rem 1rem;
+            border-radius: 20px;
             color: #FD6B3D;
         }
 

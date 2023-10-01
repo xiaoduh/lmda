@@ -1,9 +1,8 @@
-import ArticleContainer from "@/components/blog/ArticleContainer";
+import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
-import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
@@ -73,7 +72,7 @@ const page = () => {
         <CardsContainer style={"articles-container"}>
           {articles.slice(0, 6).map((article) => {
             return (
-              <ArticleContainer
+              <ArticleCardContainer
                 key={article.index}
                 img={article.img}
                 title={article.title}

@@ -58,11 +58,6 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
-    font-family: $regular;
-    font-size: .8rem;
-    color: #fff;
-}
   
 body {
     font-family: $regular;
@@ -208,6 +203,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
+                color: #fff;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -217,6 +213,7 @@ body {
             p {
                 font-size: 1rem;
                 text-align: left;
+                color: #fff;
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
@@ -266,6 +263,7 @@ body {
             h3 {
                 font-size: 1rem;
                 text-align: left;
+                color: #fff;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -275,10 +273,15 @@ body {
             p {
                 font-size: .8rem;
                 text-align: left;
+                color: #fff;
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
                   }
+            }
+
+            span {
+                color: #fff;
             }
 
             .category {
@@ -290,6 +293,7 @@ body {
 
                 p {
                     font-size: 1rem;
+                    color: #fff;
             
                     @media screen and (max-width: 1300px) {
                         font-size: .8rem;
@@ -353,7 +357,7 @@ body {
         p {
             font-size: 1rem;
             text-align: center;
-            padding: 0 15rem;
+            padding: 0 12rem;
     
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -464,6 +468,7 @@ body {
             h3 {
                 font-size: 1rem;
                 text-align: left;
+                color: #fff;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -473,11 +478,17 @@ body {
             p {
                 font-size: .8rem;
                 text-align: left;
+                color: #fff;
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
                   }
             }
+
+            span {
+                color: #fff;
+            }
+
 
             .category {
                 background: #3F3F62;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const ArticleContainer = ({ img, title, content, category, author }) => {
+const ArticleCardContainer = ({ img, title, content, category, author }) => {
   return (
     <Link href={`/blog/${title}`}>
       <div className="article-preview">
@@ -15,4 +15,4 @@ const ArticleContainer = ({ img, title, content, category, author }) => {
   );
 };
 
-export default ArticleContainer;
+export default ArticleCardContainer;

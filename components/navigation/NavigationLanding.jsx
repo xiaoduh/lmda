@@ -131,33 +131,33 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {why ? (
                 <a href="#why" className="selected" id="1">
-                  Découvrir Lambda
+                  Nos valeurs
                 </a>
               ) : (
                 <a href="#why" id="1">
-                  Découvrir Lambda
+                  Nos valeurs
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a href="#mission" className="selected" id="2">
-                  Notre mission
+                  Notre savoir-faire
                 </a>
               ) : (
                 <a href="#mission" id="2">
-                  Notre mission
+                  Notre savoir-faire
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3">
-                  Le collectif
+                  Notre collectif
                 </a>
               ) : (
                 <a href="#member" id="3">
-                  Le collectif
+                  Notre collectif
                 </a>
               )}
             </li>

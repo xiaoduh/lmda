@@ -8,7 +8,7 @@ import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
-import ArticleContainer from "@/components/blog/ArticleContainer";
+import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
@@ -323,7 +323,7 @@ export default function Home() {
         <CardsContainer style={"articles-container"}>
           {articles.slice(0, 6).map((article) => {
             return (
-              <ArticleContainer
+              <ArticleCardContainer
                 key={article.index}
                 img={article.img}
                 title={article.title}
