@@ -44,8 +44,8 @@ const page = () => {
       content: "Applicatifs, Simulation numérique",
     },
     {
-      title: "3D",
-      content: "OpenGL, UnReal Engine, Open3D",
+      title: "3D & Traitement d'images",
+      content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
     },
     {
       title: "Embarqué",
@@ -53,7 +53,7 @@ const page = () => {
     },
     {
       title: "Calcul Scientifique",
-      content: "Quaternions, Asymptotique",
+      content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
     },
     {
       title: "Low Latency",
@@ -69,8 +69,8 @@ const page = () => {
       <SectionWrapperHeader id={"collectif"}>
         <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
-          title="L'honnêteté passe par la transparence"
-          content="Ce n'est pas de nous mais de Jean pierre Szymaniak. Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation managériale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
+          title="« L'honnêteté passe par la transparence »"
+          content="Ce n'est pas de nous mais de Jean-Pierre Szymaniak et nous y adhérons à 100%. Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation managériale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {

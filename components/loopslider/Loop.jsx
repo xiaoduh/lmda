@@ -7,13 +7,16 @@ import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 
 const InfiniteScroll = () => {
-
   const labels = [
     {
       picto: cpp,
       content: "Software",
     },
     {
+      picto: cpp,
+      content: "Finance de marché",
+    },
+    {
       picto: ue5,
       content: "Simulation 3D",
     },
@@ -23,11 +26,23 @@ const InfiniteScroll = () => {
     },
     {
       picto: cpp,
+      content: "Signal Processing",
+    },
+    {
+      picto: cpp,
+      content: "Recherche Opérationnelle",
+    },
+    {
+      picto: cpp,
       content: "Low Latency",
     },
     {
       picto: linux,
       content: "Embedded",
+    },
+    {
+      picto: cpp,
+      content: "Computer Vision",
     },
     {
       picto: qt,
@@ -47,27 +62,7 @@ const InfiniteScroll = () => {
     },
     {
       picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
+      content: "Recherche Opérationnelle",
     },
     {
       picto: cpp,
@@ -78,28 +73,8 @@ const InfiniteScroll = () => {
       content: "Embedded",
     },
     {
-      picto: qt,
-      content: "IHM",
-    },
-    {
       picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
+      content: "Computer Vision",
     },
     {
       picto: qt,
@@ -107,88 +82,8 @@ const InfiniteScroll = () => {
     },
     {
       picto: cpp,
-      content: "Software",
+      content: "Modélisation",
     },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-  ];
-
-  const TAGS = [
-    "SCOP",
-    "Démocratie",
-    "Justice",
-    "Epanouissement",
-    "Bonheur",
-    "Horizontal",
-    "Equité",
-    "Intéressement",
-    "Coopératif",
-    "Participatif",
-    "Zéro Manager",
-    "Actionnariat",
-    "Dividende",
-    "Participation",
-    "Equitable",
-    "Responsabilité",
-    "Liberté",
-    "Autonomie",
-    "Vote",
-    "Gouvernance",
-    "Décision",
-    "Intrapreunariat",
-    "Transparence",
-    "Confiance",
-    "Sénérité",
-    "Confort",
-    "Collectif",
-    "Partage",
-    "Humain",
-    "Voix",
-    "Capital",
-    "Autonomie",
-    "Objectif Commun",
   ];
 
   const DURATION = 180000;

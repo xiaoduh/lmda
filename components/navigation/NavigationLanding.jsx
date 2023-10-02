@@ -114,7 +114,7 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            <li onClick={(e) => handleModals(e)}>
+            {/* <li onClick={(e) => handleModals(e)}>
               {blog ? (
                 <a href="#blog" className="selected" id="4">
                   Blog
@@ -124,7 +124,7 @@ const NavigationLanding = () => {
                   Blog
                 </a>
               )}
-            </li>
+            </li> */}
           </ul>
         ) : (
           <ul>
@@ -172,7 +172,7 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            <li onClick={(e) => handleModals(e)}>
+            {/* <li onClick={(e) => handleModals(e)}>
               {blog ? (
                 <a href="#blog" className="selected" id="4">
                   Le Blog
@@ -182,7 +182,7 @@ const NavigationLanding = () => {
                   Le Blog
                 </a>
               )}
-            </li>
+            </li> */}
           </ul>
         )}
       </nav>

@@ -15,8 +15,6 @@ import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 
 export default function Home() {
-  const subscriber = "";
-
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
@@ -73,8 +71,8 @@ export default function Home() {
       content: "Applicatifs, Simulation numérique",
     },
     {
-      title: "3D",
-      content: "OpenGL, UnReal Engine, Open3D",
+      title: "3D & Traitement d'images",
+      content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
     },
     {
       title: "Embarqué",
@@ -82,15 +80,15 @@ export default function Home() {
     },
     {
       title: "Calcul Scientifique",
-      content: "Quaternions, Asymptotique",
+      content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
     },
     {
       title: "Low Latency",
-      content: "STL, Boost, Asio",
+      content: "STL, Boost, Asio...",
     },
     {
       title: "IHM",
-      content: "Qt, QML, MFC, IlogViews",
+      content: "Qt, QML, MFC, IlogViews...",
     },
   ];
 
@@ -293,8 +291,8 @@ export default function Home() {
       <SectionWrapper id={"jobs"}>
         <Label content="Nos offres d'emplois et missions pour Freelance" />
         <ContentSection
-          title="Plateforme spécilisée sur l'écosystème C++"
-          content="Parcourez nos dernières offres d'emplois et missions à pourvoir dans l'écosystème C++"
+          title="Plateforme d'emplois spécialisée sur l'écosystème C++"
+          content="Parcourez nos dernières offres d'emplois et missions à pourvoir au sein de l'écosystème C++"
         />
         <CardsContainer style={"articles-container"}>
           {jobs.map((card) => {
@@ -314,7 +312,7 @@ export default function Home() {
         </CardsContainer>
         <PrimaryBtn content={"Parcourir toutes nos offres"} link={"/jobs"} />
       </SectionWrapper>
-      <SectionWrapper id={"blog"}>
+      {/* <SectionWrapper id={"blog"}>
         <Label content={fourthSection.txtLabel} />
         <ContentSection
           title={fourthSection.title}
@@ -335,7 +333,7 @@ export default function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
-      </SectionWrapper>
+      </SectionWrapper> */}
 
       <SectionWrapper id={"form"}>
         <Label content="Ne ratez plus aucunes opportunités en C++" />

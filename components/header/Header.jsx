@@ -164,16 +164,16 @@ const Header = () => {
     <header className="main-header" id="header">
       <Label content={txtLabel} />
       <h1>
-        Embarquez dans une (<span className="important">C</span>)arrière
-        <span className="important">++</span> grâce à notre collectif spécialisé
-        et transparent.
+        Nous connectons,<br></br>les Talents et les Entreprises
+        <span className="important"> de l'écosystème C++</span>,<br></br> en
+        toute <span className="important">transparence</span>.
       </h1>
       <p>
         Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
-        et transparent pour que chaque programme soit « propre » et efficace.
+        et transparent pour que chaque projet soit « propre » et efficace.
         Bjarne Stroustrup a créé le langage C++ pour produire des logiciels «
-        propres » et efficaces. Nous avons créé Lambda pour former un collectif
-        specialisé, épanouissant et transparent.
+        propres » et efficaces. Nous avons créé Lambda pour connecter Talents et
+        entreprises en toute confiance grâce à la transparence.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
