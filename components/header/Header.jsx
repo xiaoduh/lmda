@@ -165,8 +165,8 @@ const Header = () => {
       <Label content={txtLabel} />
       <h1>
         Nous connectons,<br></br>les Talents et les Entreprises
-        <span className="important"> de l&apos'écosystème C++</span>,<br></br>{" "}
-        en toute <span className="important">transparence</span>.
+        <span className="important"> de l&aposécosystème C++</span>,<br></br> en
+        toute <span className="important">transparence</span>.
       </h1>
       <p>
         Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
