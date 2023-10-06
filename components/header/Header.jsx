@@ -169,8 +169,10 @@ export default async function Header() {
       <h1>
         Nous connectons,<br></br>
         <span className="important">Experts du C++</span> avec les
-        <span className="important">Entreprises de l'écosystème C++</span>,
-        <br></br> en toute <span className="important">transparence</span>.
+        <span className="important">
+          Entreprises de l`&apos;`écosystème C++
+        </span>
+        ,<br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
         Nous croyons au management horizontal et en la transparence.<br></br>
