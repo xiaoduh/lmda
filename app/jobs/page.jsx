@@ -11,7 +11,7 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export default async function postuler() {
-  const resJobs = await axios.get("http://localhost:5000/jobs");
+  const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
   const jobs = [
     {
       title: "Développeur C++ Qt",

@@ -16,8 +16,8 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 
 export default async function Home() {
-  const resJobs = await axios.get("http://localhost:5000/jobs");
-  const resProfils = await axios.get("http://localhost:5000/users");
+  const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
+  const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
