@@ -167,9 +167,10 @@ export default async function Header() {
     <header className="main-header" id="header">
       <Label content={txtLabel} />
       <h1>
-        Nous connectons,<br></br>les Talents et les Entreprises
-        <span className="important"> de l &apos écosystème C++</span>,<br></br>{" "}
-        en toute <span className="important">transparence</span>.
+        Nous connectons,<br></br>
+        <span className="important">Experts du C++</span> avec les
+        <span className="important">Entreprises de l'écosystème C++</span>,
+        <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
         Nous croyons au management horizontal et en la transparence.<br></br>
