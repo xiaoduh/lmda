@@ -14,7 +14,7 @@ export default async function Header() {
   const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
   const contentBtnPrimary = `Voir les ${resJobs.data.length} missions ouvertes`;
   const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.length})`;
-  const txtLabel = "La confiance fondée sur la transparence";
+  const txtLabel = "La confiance est indissociable de la transparence";
 
   const labels = [
     {
