@@ -187,7 +187,7 @@ const NavigationLanding = () => {
         )}
       </nav>
       <Link className="cta" href="#form">
-        <button className="btn-blue">Recevoir nos missions par email</button>
+        <button className="btn-blue">Recevoir nos missions</button>
       </Link>
       {active ? (
         <div
