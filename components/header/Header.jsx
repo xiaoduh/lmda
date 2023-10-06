@@ -168,13 +168,13 @@ export default async function Header() {
       <Label content={txtLabel} />
       <h1>
         Nous connectons,<br></br>les Talents et les Entreprises
-        <span className="important"> de l&aposécosystème C++</span>,<br></br> en
-        toute <span className="important">transparence</span>.
+        <span className="important"> de l &apos écosystème C++</span>,<br></br>{" "}
+        en toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Nous croyons au management horizontal et en la transparence.<br></br>{" "}
-        C'est pourquoi nous avons créé Lambda pour connecter Talents et
-        entreprises en toute confiance grâce à la transparence.
+        Nous croyons au management horizontal et en la transparence.<br></br>
+        Nous crééons Lambda pour connecter Talents et entreprises en toute
+        confiance grâce à la transparence.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
