@@ -7,8 +7,10 @@ import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
+import axios from "axios";
 
-const collectif = () => {
+export default async function collectif() {
+  const resProfils = await axios.get("http://localhost:5000/users");
   const members = [
     {
       img: "/pp.png",
@@ -46,8 +48,8 @@ const collectif = () => {
       <SectionWrapperHeader id={"collectif"}>
         <Label content="Spécialiste et passionné par le C++" />
         <ContentSection
-          title="Grâce à Lambda, bénéficiez d'une visibilté auprès de 2154 passionnés par le C++"
-          content="Lambda c'est aujourd'hui un réseau de 2154 passionés par le C++ prêts à relever vos défis logiciels."
+          title={`Recherchez votre profil idéal au sein de notre réseau de + ${resProfils.data.length} Freelances ou salariés`}
+          content={`Nous vous connectons en toute transparence à + ${resProfils.data.length} développeurs ou spécialistes de l'écosystème C++.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper id={"member"}>
@@ -69,6 +71,4 @@ const collectif = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default collectif;
+}

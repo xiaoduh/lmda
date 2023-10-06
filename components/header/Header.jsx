@@ -7,10 +7,13 @@ import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
+import axios from "axios";
 
-const Header = () => {
-  const contentBtnPrimary = "Voir les missions ouvertes";
-  const contentBtnSecondary = "Découvrir l'équipe Lambda";
+export default async function Header() {
+  const resJobs = await axios.get("http://localhost:5000/jobs");
+  const resProfils = await axios.get("http://localhost:5000/users");
+  const contentBtnPrimary = `Voir les ${resJobs.data.length} missions ouvertes`;
+  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.length})`;
   const txtLabel = "La confiance fondée sur la transparence";
 
   const labels = [
@@ -169,10 +172,8 @@ const Header = () => {
         toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Nous croyons au neo-management,<br></br> bienveillant, responsabilisant
-        et transparent pour que chaque projet soit « propre » et efficace.
-        Bjarne Stroustrup a créé le langage C++ pour produire des logiciels «
-        propres » et efficaces. Nous avons créé Lambda pour connecter Talents et
+        Nous croyons au management horizontal et en la transparence.<br></br>{" "}
+        C'est pourquoi nous avons créé Lambda pour connecter Talents et
         entreprises en toute confiance grâce à la transparence.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
@@ -180,6 +181,4 @@ const Header = () => {
       <InfiniteScroll Tags={labels} />
     </header>
   );
-};
-
-export default Header;
+}

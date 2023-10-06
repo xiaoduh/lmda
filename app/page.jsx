@@ -13,8 +13,11 @@ import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
+import axios from "axios";
 
-export default function Home() {
+export default async function Home() {
+  const resJobs = await axios.get("http://localhost:5000/jobs");
+  const resProfils = await axios.get("http://localhost:5000/users");
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
@@ -35,7 +38,7 @@ export default function Home() {
     title:
       "Nous sommes un collectif, une communauté et une plateforme de contenus spécialisé sur l'écosystème C++",
     content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-    Notre réseau rassemble plus de 2451 passionnés et experts du C++ prêts à vous accompagner.`,
+    Notre réseau rassemble plus de ${resProfils.data.length} passionnés et experts du C++ prêts à vous accompagner.`,
   };
 
   const fourthSection = {
@@ -236,8 +239,14 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
+        <PrimaryBtn
+          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          link={"/jobs"}
+        />
+        <SecondaryBtn
+          content={`Rechercher votre profil (${resProfils.data.length})`}
+          link={"/collectif"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <Label content={secondSection.txtLabel} />
@@ -256,8 +265,14 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
+        <PrimaryBtn
+          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          link={"/jobs"}
+        />
+        <SecondaryBtn
+          content={`Rechercher votre profil (${resProfils.data.length})`}
+          link={"/collectif"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         <Label content={thirdSection.txtLabel} />
@@ -280,12 +295,12 @@ export default function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={"Parcourir les membres Lambda"}
+          content={` Rechercher votre profil (${resProfils.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={"Rejoindre le collectif Lambda"}
-          link={"/carriere"}
+          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          link={"/jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
@@ -310,7 +325,10 @@ export default function Home() {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Parcourir toutes nos offres"} link={"/jobs"} />
+        <PrimaryBtn
+          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          link={"/jobs"}
+        />
       </SectionWrapper>
       {/* <SectionWrapper id={"blog"}>
         <Label content={fourthSection.txtLabel} />
