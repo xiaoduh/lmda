@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-export const Metadata = {
+export const metadata = {
   title: "Lambda",
   description:
     "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
