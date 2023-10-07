@@ -1,16 +1,27 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const Metadata = {
   title: "Lambda",
   description:
-    "Nous croyons au neo-management, bienveillant et transparent pour que chacun trouve sa place.",
+    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
 };
 
 export default function RootLayout({ children }) {
+  const GA_MEASUREMENT_ID = "G-VDW70GZK1S";
+
   return (
     <html lang="fr">
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-VDW70GZK1S"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VDW70GZK1S');
+        `}
+      </Script>
       <body>{children}</body>
     </html>
   );
