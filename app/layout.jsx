@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export const Metadata = {
   title: "Lambda",
   description:
@@ -11,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-VDW70GZK1S"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
 
       <Script id="google-analytics" strategy="afterInteractive">
@@ -19,7 +21,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-VDW70GZK1S');
+            gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
       <body>{children}</body>
