@@ -62,7 +62,7 @@ export default async function postuler() {
         <Label content="Lambda est un agrégateur de missions C++" />
         <ContentSection
           title="Nous vous connectons à l'écosystème C++"
-          content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez nos ${resJobs.data.length} missions et postulez un clic aux missions qui vous intéressent.`}
+          content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Postulez en un clic aux missions qui vous intéressent.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper>
