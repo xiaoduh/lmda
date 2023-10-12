@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const HeaderProfil = () => {
-  const profilName = "test";
+const HeaderProfil = ({ profilName }) => {
   return (
     <div className="header-profil">
       <div className="pp">
@@ -11,7 +10,7 @@ const HeaderProfil = () => {
       <div className="content-container">
         <div className="content">
           <div className="title">
-            <h2>Clément Lidar</h2>
+            <h2>{profilName}</h2>
             <p>Développeur NextJS</p>
             <p>12 missions réalisées</p>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import axios from "axios";
 
 const Subscriber = () => {
   const [subscriber, setSubscriber] = useState("");
@@ -7,10 +8,29 @@ const Subscriber = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
+    await axios
+      .post("http://localhost:5000/subscribers", {
+        email: subscriber,
+      })
+      .then(function (response) {
+        console.log(response.data);
+        formMess.innerHTML =
+          "<p class='success'>Inscription à la liste de diffusion validée !</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      })
+      .catch(function (error) {
+        console.log(error);
+        formMess.innerHTML =
+          "<p class='failed'>Une erreur s'est produite, veuillez réessayer</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      });
     setSubscriber("");
-    formMess.innerHTML = "<p class='success'>Inscription validée !</p>";
-    formMess.innerHTML =
-      "<p class='failed'>Une erreur s'est produite, veuillez réessayer</p>";
   };
 
   return (
