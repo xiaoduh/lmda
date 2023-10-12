@@ -168,8 +168,8 @@ export default async function Header() {
       <Label content={txtLabel} />
       <h1>
         Nous connectons,<br></br>
-        <span className="important">les développeurs C++</span> et{" "}
-        <span className="important">Entreprises de l&apos;écosystème C++</span>,
+        <span className="important">les Talents du C++</span> et{" "}
+        <span className="important">Entreprises</span>,
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
