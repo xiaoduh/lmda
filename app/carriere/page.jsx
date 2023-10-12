@@ -83,8 +83,8 @@ const page = () => {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Rejoindre le collectif"} link={"/rejoindre"} />
-        <SecondaryBtn content={"Recevoir nos missions"} link={"/#form"} />
+        <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
+        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
       </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
         <Label content={secondSection.txtLabel} />
@@ -103,8 +103,8 @@ const page = () => {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Recevoir nos missions"} link={"/collectif"} />
-        <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
+        <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
+        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <Label content="Devenez actionnaire de Lambda" />
@@ -112,14 +112,14 @@ const page = () => {
           title="La réussite de Lambda est surtout votre réussite"
           content="Lambda a pour vocation de grandir grâce aux réussites de chacun. L'actionnariat vise à associer les collaborateurs Lambda au développement et à la performance de Lambda."
         />
-        <PrimaryBtn content={"Rejoindre Lambda"} link={"/rejoindre"} />
-        <SecondaryBtn content={"Voir les missions"} link={"/jobs"} />
+         <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
+        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        <Label content="Soyez alerté des nouvelles missions" />
         <ContentSection
-          title="Recevez toutes les missions en C++ dans votre boite mail"
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
+          title="Ne ratez plus aucunes nouvelles opportunités"
+          content="Faites comme +1547 développeurs et abonnez-vous à notre newsletter emploi pour recevoir chaque semaine les nouvelles missions."
         />
         <Subscriber />
       </SectionWrapper>
