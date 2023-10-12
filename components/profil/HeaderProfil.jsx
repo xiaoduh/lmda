@@ -5,7 +5,7 @@ const HeaderProfil = ({ profilName }) => {
   return (
     <div className="header-profil">
       <div className="pp">
-        <img src="/pp.png" className="pp" alt="profil-pricture" />
+        <img src="/utilisateur.png" className="pp" alt="profil-pricture" />
       </div>
       <div className="content-container">
         <div className="content">

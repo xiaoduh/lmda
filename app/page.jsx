@@ -98,32 +98,32 @@ export default async function Home() {
   const members = [
     {
       img: "/pp.png",
-      name: "Mohamed-Amine",
+      name: "JC",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "/pp.png",
-      name: "Mohamed-Amine",
+      img: "/utilisateur.png",
+      name: "OU",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "/pp.png",
-      name: "Mohamed-Amine",
+      img: "/utilisateur.png",
+      name: "TE",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "/pp.png",
-      name: "Mohamed-Amine",
+      img: "/utilisateur.png",
+      name: "BA",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "/pp.png",
-      name: "Mohamed-Amine",
+      img: "/utilisateur.png",
+      name: "MA",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
     {
-      img: "/pp.png",
-      name: "Mohamed-Amine",
+      img: "/utilisateur.png",
+      name: "CL",
       desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
     },
   ];
