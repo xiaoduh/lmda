@@ -169,7 +169,7 @@ export default async function Header() {
       <h1>
         Nous connectons,<br></br>
         <span className="important">Talents</span> et{" "}
-        <span className="important">Entreprises</span> de l'écosystème C++,
+        <span className="important">Entreprises</span> de l&apos;écosystème C++,
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
