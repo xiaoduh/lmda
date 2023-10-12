@@ -9,7 +9,7 @@ import Label from "@/components/label/Label";
 import HeaderProfil from "@/components/profil/HeaderProfil";
 import { useParams } from "next/navigation";
 
-const contactProfil = () => {
+const ContactProfil = () => {
   const param = useParams();
 
   return (
@@ -28,4 +28,4 @@ const contactProfil = () => {
   );
 };
 
-export default contactProfil;
+export default ContactProfil;
