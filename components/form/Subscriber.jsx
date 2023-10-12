@@ -15,7 +15,7 @@ const Subscriber = () => {
       .then(function (response) {
         console.log(response.data);
         formMess.innerHTML =
-          "<p class='success'>Inscription à la liste de diffusion validée !</p>";
+          "<p class='success'>Inscription à la liste de diffusion validée ! 🚀</p>";
 
         setTimeout(() => {
           formMess.innerHTML = "";
@@ -24,7 +24,7 @@ const Subscriber = () => {
       .catch(function (error) {
         console.log(error);
         formMess.innerHTML =
-          "<p class='failed'>Une erreur s'est produite, veuillez réessayer</p>";
+          "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
 
         setTimeout(() => {
           formMess.innerHTML = "";
