@@ -12,7 +12,7 @@ const Form = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:5000/mission", {
+      .post("https://lmdaapi.onrender.com/mission", {
         looking_for: subject,
         email: email,
         phone_number: phone,
