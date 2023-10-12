@@ -10,7 +10,7 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export default async function collectif() {
-  const resProfils = await axios.get("http://localhost:5000/users");
+  const resProfils = await axios.get("http://localhost:10000/users");
   const members = [
     {
       img: "/pp.png",

@@ -9,7 +9,7 @@ const Subscriber = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:5000/subscribers", {
+      .post("http://localhost:10000/subscribers", {
         email: subscriber,
       })
       .then(function (response) {

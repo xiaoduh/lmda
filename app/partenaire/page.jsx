@@ -8,7 +8,7 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export default async function page() {
-  const resProfils = await axios.get("http://localhost:5000/users");
+  const resProfils = await axios.get("http://localhost:10000/users");
   return (
     <main>
       <SectionWrapperHeader id={"form"}>

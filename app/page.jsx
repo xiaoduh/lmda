@@ -16,9 +16,10 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 
 export default async function Home() {
-  const resJobs = await axios.get("http://localhost:5000/jobs");
-  const resProfils = await axios.get("http://localhost:5000/users");
-  const resSubscribers = await axios.get("http://localhost:5000/subscribers");
+  const resJobs = await axios.get("http://localhost:10000/jobs");
+  const resProfils = await axios.get("http://localhost:10000/users");
+  const resSubscribers = await axios.get("http://localhost:10000/subscribers");
+  console.log(resSubscribers)
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
@@ -357,7 +358,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         <Label content="Restez connecté" />
         <ContentSection
-          title="Comme {resSubscribers.length + 100}, Recevez chaque lundi toutes les missions en C++ dans votre boite mail"
+          title={`Comme ${resSubscribers.data.length + 100} Techs, recevez chaque lundi toutes les missions en C++ dans votre boite mail`}
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />

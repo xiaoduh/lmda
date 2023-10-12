@@ -10,8 +10,8 @@ import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
 export default async function Header() {
-  const resJobs = await axios.get("http://localhost:5000/jobs");
-  const resProfils = await axios.get("http://localhost:5000/users");
+  const resJobs = await axios.get("http://localhost:10000/jobs");
+  const resProfils = await axios.get("http://localhost:10000/users");
   const contentBtnPrimary = `Voir les ${resJobs.data.length} missions ouvertes`;
   const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.length})`;
   const txtLabel = "La confiance est indissociable de la transparence";

@@ -12,7 +12,7 @@ const FormJoinUs = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:5000/career", {
+      .post("http://localhost:10000/career", {
         subject: subject,
         email: email,
         phone_number: phone,
