@@ -10,23 +10,29 @@ const FooterApp = () => {
         <div class="row">
           <ul>
             <li>
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image
                 src="/facebook.png"
                 width={32}
                 height={32}
                 alt="facebook"
               />
+              </Link>
             </li>
             <li>
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image
                 src="/linkedin.png"
                 width={32}
                 height={32}
                 alt="linkedin"
               />
+              </Link>
             </li>
             <li>
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image src="/github.png" width={32} height={32} alt="github" />
+               </Link>
             </li>
           </ul>
         </div>
