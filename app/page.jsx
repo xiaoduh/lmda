@@ -305,10 +305,10 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
-        <Label content="Nos offres d'emplois et missions pour Freelance" />
+        <Label content="Ne ratez plus aucunes opportunités en C++" />
         <ContentSection
-          title="Plateforme d'emplois spécialisée sur l'écosystème C++"
-          content="Parcourez nos dernières offres d'emplois et missions à pourvoir au sein de l'écosystème C++"
+          title="Votre prochaine mission se trouve ici"
+          content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
         />
         <CardsContainer style={"articles-container"}>
           {jobs.map((card) => {
