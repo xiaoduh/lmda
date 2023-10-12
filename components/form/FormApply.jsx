@@ -13,7 +13,7 @@ const FormApply = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:5000/jobs/apply", {
+      .post("https://lmdaapi.onrender.com/jobs/apply", {
         jobId: "Job_id_to_be_dynamic",
         name: name,
         email: email,
