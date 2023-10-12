@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import axios from "axios";
 
 const FormApply = () => {
   const [name, setName] = useState("");
@@ -11,8 +12,33 @@ const FormApply = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
-    formMess.innerHTML = "<p class='success'>connected</p>";
-    setSubject("");
+    await axios
+      .post("http://localhost:5000/jobs/apply", {
+        jobId: "Job_id_to_be_dynamic",
+        name: name,
+        email: email,
+        phone_number: phone,
+        motivation: message,
+      })
+      .then(function (response) {
+        console.log(response.data);
+        formMess.innerHTML =
+          "<p class='success'>Votre candidature pour le poste XXX a bien été envoyée ! 🚀</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      })
+      .catch(function (error) {
+        console.log(error);
+        formMess.innerHTML =
+          "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      });
+    setName("");
     setEmail("");
     setPhone("");
     setMessage("");
