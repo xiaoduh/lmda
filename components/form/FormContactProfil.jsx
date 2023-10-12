@@ -9,7 +9,10 @@ const FormContactProfil = () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
-    await axios.post("https://lmdaapi.onrender.com/users/contact", {
+    e.preventDefault();
+    const formMess = document.querySelector(".output-mess");
+    await axios
+      .post("https://lmdaapi.onrender.com/users/contact", {
         profilId: "id_to_be_dynamic",
         subject: subject,
         email: email,
