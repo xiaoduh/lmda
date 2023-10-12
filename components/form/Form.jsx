@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import axios from "axios";
 
 const Form = () => {
   const [subject, setSubject] = useState("");
@@ -10,7 +11,31 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
-    formMess.innerHTML = "<p class='success'>connected</p>";
+    await axios
+      .post("http://localhost:5000/mission", {
+        looking_for: subject,
+        email: email,
+        phone_number: phone,
+        context: message,
+      })
+      .then(function (response) {
+        console.log(response.data);
+        formMess.innerHTML =
+          "<p class='success'>Votre besoin a bien été envoyé ! 🚀</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      })
+      .catch(function (error) {
+        console.log(error);
+        formMess.innerHTML =
+          "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
+
+        setTimeout(() => {
+          formMess.innerHTML = "";
+        }, 3500);
+      });
     setSubject("");
     setEmail("");
     setPhone("");
