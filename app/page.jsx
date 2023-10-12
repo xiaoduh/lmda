@@ -23,7 +23,7 @@ export default async function Home() {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
     content:
-      "Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
+      "Nous sommes l'alternative au management pyramidal guru de l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
   };
 
   const secondSection = {
