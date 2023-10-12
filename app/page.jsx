@@ -357,7 +357,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         <Label content="Restez connecté à l'écosystème C++" />
         <ContentSection
-          title="Comme {resSubscribers.length + 100}, recevez toutes les missions en C++ dans votre boite mail"
+          title="Comme ${resSubscribers.length + 100}, recevez toutes les missions en C++ dans votre boite mail"
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
