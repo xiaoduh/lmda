@@ -173,9 +173,9 @@ export default async function Header() {
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Lambda connecte Talents spécialisés en C++ et Entreprises en toute
+        Lambda connecte Talents du C++ et Entreprises en toute
         confiance grâce à la transparence.<br></br>
-        NOtre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille. 
+        Notre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille. 
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
