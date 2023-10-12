@@ -10,7 +10,7 @@ const Footer = () => {
         <div class="row">
           <ul>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/">
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image
                 src="/facebook.png"
                 width={32}
@@ -20,7 +20,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/">
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image
                 src="/linkedin.png"
                 width={32}
@@ -30,7 +30,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/">
+              <Link href="https://www.linkedin.com/company/lambda-fr/ target="_blank"">
               <Image src="/github.png" width={32} height={32} alt="github" />
                </Link>
             </li>
