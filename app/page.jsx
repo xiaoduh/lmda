@@ -18,17 +18,18 @@ import axios from "axios";
 export default async function Home() {
   const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
   const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
+  const resSubscribers = await axios.get("https://lmdaapi.onrender.com/subscribers");
   const firstSection = {
     txtLabel: "Un écosystème spécialisé au management nouveau",
     title: "La confiance forgée par la transparence",
     content:
-      "Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation sociétale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
+      "Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
   };
 
   const secondSection = {
     txtLabel: "Spécialiste du C++ et ses mises en pratique",
     title:
-      "Nous sommes amoureux des logiciels robustes, performants et efficaces",
+      "Nous développons des logiciels robustes, performants et efficaces",
     content:
       "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces.",
   };
@@ -36,9 +37,9 @@ export default async function Home() {
   const thirdSection = {
     txtLabel: "Une communauté dédiée au C++ et son ecosytème",
     title:
-      "Nous sommes un collectif, une communauté et une plateforme de contenus spécialisé sur l'écosystème C++",
+      "Nous sommes un collectif spécialisé sur l'écosystème C++",
     content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-    Notre réseau rassemble plus de ${resProfils.data.length} passionnés et experts du C++ prêts à vous accompagner.`,
+    Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`,
   };
 
   const fourthSection = {
@@ -54,7 +55,7 @@ export default async function Home() {
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable.",
     },
     {
       title: "Spécialiste",
@@ -64,7 +65,7 @@ export default async function Home() {
     {
       title: "Efficacité",
       content:
-        "L'efficacité n’est pas un moyen. C’est un résultat. Lambda a pour vocation d’explorer tous les leviers pour cultiver l'efficacité.",
+        "L'efficacité n’est pas un moyen. C’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre colelctif.",
     },
   ];
 
@@ -354,9 +355,9 @@ export default async function Home() {
       </SectionWrapper> */}
 
       <SectionWrapper id={"form"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        <Label content="Restez connecté à l'écosystème C++" />
         <ContentSection
-          title="Recevez toutes les missions en C++ dans votre boite mail"
+          title="Comme {resSubscribers.length + 100}, recevez toutes les missions en C++ dans votre boite mail"
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
