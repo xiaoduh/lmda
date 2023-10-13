@@ -37,7 +37,7 @@ export default async function Home() {
   const thirdSection = {
     txtLabel: "Une communauté dédiée au C++ et son ecosytème",
     title:
-      "Nous sommes un collectif spécialisé sur l'écosystème C++",
+      "Trouvez les compétences qu'il vous manque au sein de notre écosystème",
     content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
     Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`,
   };
