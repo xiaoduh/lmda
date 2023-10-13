@@ -17,40 +17,12 @@ import axios from "axios";
 
 export default async function Home() {
   const resJobs = await axios.get("http://localhost:10000/jobs");
-  const resProfils = await axios.get("http://localhost:10000/users");
+  const resProfils = await axios.get(
+    "http://localhost:1337/api/profils?populate=*"
+  );
+  console.log(resProfils.data.data[0].profil_id);
+
   const resSubscribers = await axios.get("http://localhost:10000/subscribers");
-  console.log(resSubscribers)
-  const firstSection = {
-    txtLabel: "Un écosystème spécialisé au management nouveau",
-    title: "La confiance forgée par la transparence",
-    content:
-      "Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
-  };
-
-  const secondSection = {
-    txtLabel: "Spécialiste du C++ et ses mises en pratique",
-    title:
-      "Notre paradigme sont les logiciels robustes, performants et efficaces",
-    content:
-      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces.",
-  };
-
-  const thirdSection = {
-    txtLabel: "Une communauté dédiée au C++ et son ecosytème",
-    title:
-      "Nous sommes un collectif spécialisé sur l'écosystème C++",
-    content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-    Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`,
-  };
-
-  const fourthSection = {
-    txtLabel:
-      "Nos contenus sur l'écosystème C++, le recrutement et le management",
-    title:
-      "Parcourez nos articles sur l'écosystème C++, le recrutement et le management.",
-    content:
-      "Chaque mois retrouvez des articles pour nourrir votre veille sur le recrutement, le managemment et toutes les actualités de l'écosystème C++.",
-  };
 
   const contentCardsFirstSection = [
     {
@@ -94,84 +66,6 @@ export default async function Home() {
     {
       title: "IHM",
       content: "Qt, QML, MFC, IlogViews...",
-    },
-  ];
-
-  const members = [
-    {
-      img: "/pp.png",
-      name: "JC",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "OU",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "TE",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "BA",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "MA",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "CL",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-  ];
-
-  const articles = [
-    {
-      img: "/cpp.jpg",
-      title: "Comment éviter les bugs avec le C++ modern ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["C++"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Pourquoi les entreprises échouent à définir leur culture ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Recrutement"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Management"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Comment éviter les bugs avec le C++ modern ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["C++"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Pourquoi les entreprises échouent à définir leur culture ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Recrutement"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Management"],
-      author: "John Doe",
     },
   ];
 
@@ -225,10 +119,10 @@ export default async function Home() {
       <NavigationLanding />
       <Header />
       <SectionWrapper id={"why"}>
-        <Label content={firstSection.txtLabel} />
+        <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
-          title={firstSection.title}
-          content={firstSection.content}
+          title="La confiance forgée par la transparence"
+          content="Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -251,10 +145,10 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content={secondSection.txtLabel} />
+        <Label content="Spécialiste du C++ et ses mises en pratique" />
         <ContentSection
-          title={secondSection.title}
-          content={secondSection.content}
+          title="Nous développons des logiciels robustes, performants et efficaces"
+          content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -277,21 +171,25 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content={thirdSection.txtLabel} />
+        <Label content="Une communauté dédiée au C++ et son ecosytème" />
         <ContentSection
-          title={thirdSection.title}
-          content={thirdSection.content}
+          title="Nous sommes un collectif spécialisé sur l'écosystème C++"
+          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
+          Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
         <CardsContainer style={"cards-container"}>
-          {members.slice(0, 6).map((member) => {
+          {resProfils.data.data.slice(0, 6).map((member) => {
+            console.log(member.attributes);
             return (
               <CardMember
-                key={member.index}
-                img={member.img}
-                title={member.name}
-                content={member.desc}
-                profilName={member.name}
-                profilTitle={"Ingénieur logiciel C++"}
+                key={member.attributes.profil_id}
+                id={member.attributes.profil_id}
+                img={"/utilisateur.png"}
+                available={member.attributes.available}
+                first_name={member.attributes.first_name}
+                last_name={member.attributes.last_name}
+                title={member.attributes.title}
+                bio={member.attributes.bio}
               />
             );
           })}
@@ -358,7 +256,9 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         <Label content="Restez connecté" />
         <ContentSection
-          title={`Comme ${resSubscribers.data.length + 100} Techs, recevez chaque lundi toutes les missions en C++ dans votre boite mail`}
+          title={`Comme ${
+            resSubscribers.data.length + 100
+          } Techs, recevez chaque lundi toutes les missions en C++ dans votre boite mail`}
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
