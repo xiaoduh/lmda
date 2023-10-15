@@ -1,3 +1,4 @@
+"use client";
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../../../../styles/index.scss";
@@ -9,8 +10,18 @@ import SkillsContainer from "@/components/profil/SkillsContainer";
 import Skill from "@/components/profil/Skill";
 import Experience from "@/components/profil/Experience";
 import Reference from "@/components/profil/Reference";
+import axios from "axios";
+import { useParams } from "next/navigation";
 
-const profil = () => {
+export default async function profil() {
+  const param = useParams();
+  console.log(param);
+  const data = await axios.get(
+    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
+  );
+
+  console.log(data.data.data[0].attributes);
+
   const experiences = [
     {
       title: "Ingénieur Logiciel C++",
@@ -87,7 +98,7 @@ const profil = () => {
   return (
     <main>
       <SectionWrapperProfil>
-        <HeaderProfil />
+        <HeaderProfil data={data.data.data[0].attributes} />
         <ContentContainer>
           <SkillsContainer>
             <h2 className="title-section">Compétences & Intérêts</h2>
@@ -118,6 +129,4 @@ const profil = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default profil;
+}

@@ -115,13 +115,22 @@
                 .container-statut {
                     margin-top: .5rem;
                     display: flex;
-    
-                    .pastille {
-                        width: 15px;
-                        height: 15px;
-                        background: #2ED47A;
-                        border-radius: 50%;
-                        margin-right: .5rem;
+
+                    .available {
+                        display: flex;
+
+                        .pastille {
+                            width: 15px;
+                            height: 15px;
+                            background: #2ED47A;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+                
+                        .red {
+                            background: $color-stop !important;
+                        }
+
                     }
     
                 }

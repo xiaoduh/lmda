@@ -20,7 +20,6 @@ export default async function Home() {
   const resProfils = await axios.get(
     "http://localhost:1337/api/profils?populate=*"
   );
-  console.log(resProfils.data.data[0].profil_id);
 
   const resSubscribers = await axios.get("http://localhost:10000/subscribers");
 
