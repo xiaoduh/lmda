@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const FormContactProfil = () => {
+const FormContactProfil = ({ id }) => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -13,7 +13,7 @@ const FormContactProfil = () => {
     const formMess = document.querySelector(".output-mess");
     await axios
       .post("https://lmdaapi.onrender.com/users/contact", {
-        profilId: "id_to_be_dynamic",
+        profilId: id,
         subject: subject,
         email: email,
         phone_number: phone,
