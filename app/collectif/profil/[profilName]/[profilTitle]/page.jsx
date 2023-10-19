@@ -1,3 +1,4 @@
+"use client";
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../../../../styles/index.scss";
@@ -9,107 +10,38 @@ import SkillsContainer from "@/components/profil/SkillsContainer";
 import Skill from "@/components/profil/Skill";
 import Experience from "@/components/profil/Experience";
 import Reference from "@/components/profil/Reference";
+import axios from "axios";
+import { useParams } from "next/navigation";
 
-const profil = () => {
-  const experiences = [
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-  ];
+export default async function profil() {
+  const param = useParams();
+  console.log(param);
+  const data = await axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
+  );
 
-  const skills = [
-    {
-      title: "Software development",
-    },
-    {
-      title: "Simulation 3D",
-    },
-    {
-      title: "Intérêts",
-    },
-    {
-      title: "Software development",
-    },
-    {
-      title: "Simulation 3D",
-    },
-    {
-      title: "Intérêts",
-    },
-  ];
-  const references = [
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-  ];
   return (
     <main>
       <SectionWrapperProfil>
-        <HeaderProfil />
+        <HeaderProfil data={data.data.data[0].attributes} />
         <ContentContainer>
           <SkillsContainer>
             <h2 className="title-section">Compétences & Intérêts</h2>
-            {skills.map((skill) => {
-              return <Skill key={1 + Math.random()} title={skill.title} />;
-            })}
+            <Skill
+              title={"Compétences logicielles"}
+              data={data.data.data[0].attributes.software_skills.data}
+            />
             <h2 className="title-section">Avis & recommandations</h2>
-            {references.map((reference) => {
-              return (
-                <Reference
-                  key={1 + Math.random()}
-                  name={reference.name}
-                  company={reference.company}
-                  content={reference.content}
-                />
-              );
-            })}
+
+            <Reference name="Fonctionnalité à venir 🚧" />
           </SkillsContainer>
           <ExperiencesContainer>
-            {experiences.map((experience) => {
+            {data.data.data[0].attributes.experiences.data.map((experience) => {
               return (
-                <Experience key={1 + Math.random()} title={experience.title} />
+                <Experience
+                  key={experience.attributes.createdAt}
+                  data={experience}
+                />
               );
             })}
           </ExperiencesContainer>
@@ -118,6 +50,4 @@ const profil = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default profil;
+}

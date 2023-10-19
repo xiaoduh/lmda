@@ -16,40 +16,15 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 
 export default async function Home() {
-  const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
-  const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
-  const resSubscribers = await axios.get("https://lmdaapi.onrender.com/subscribers");
-  const firstSection = {
-    txtLabel: "Un écosystème spécialisé au management nouveau",
-    title: "La confiance forgée par la transparence",
-    content:
-      "Nous sommes l'alternative au management pyramidal guru de l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance.",
-  };
-
-  const secondSection = {
-    txtLabel: "Spécialiste du C++ et ses mises en pratique",
-    title:
-      "Nous développons des logiciels robustes, performants et efficaces",
-    content:
-      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces.",
-  };
-
-  const thirdSection = {
-    txtLabel: "Une communauté dédiée au C++ et son ecosytème",
-    title:
-      "Trouvez les compétences qu'il vous manque au sein de notre écosystème",
-    content: `Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-    Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`,
-  };
-
-  const fourthSection = {
-    txtLabel:
-      "Nos contenus sur l'écosystème C++, le recrutement et le management",
-    title:
-      "Parcourez nos articles sur l'écosystème C++, le recrutement et le management.",
-    content:
-      "Chaque mois retrouvez des articles pour nourrir votre veille sur le recrutement, le managemment et toutes les actualités de l'écosystème C++.",
-  };
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+  );
+  const resProfils = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
+  );
+  const resSubscribers = await axios.get(
+    "https://lmdaapi.onrender.com/subscribers"
+  );
 
   const contentCardsFirstSection = [
     {
@@ -96,138 +71,15 @@ export default async function Home() {
     },
   ];
 
-  const members = [
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-    {
-      img: "/utilisateur.png",
-      name: "Mohamed-Amine",
-      desc: "Ingénieur logiciel sénior, Mohamed-Amine compte 10 ans d’expérience en développement logiciel C++. Il est notamment intervenu pour RATP Smart Systems, AVSimulation, SITA, Exail, Thales.",
-    },
-  ];
-
-  const articles = [
-    {
-      img: "/cpp.jpg",
-      title: "Comment éviter les bugs avec le C++ modern ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["C++"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Pourquoi les entreprises échouent à définir leur culture ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Recrutement"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Management"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Comment éviter les bugs avec le C++ modern ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["C++"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "Pourquoi les entreprises échouent à définir leur culture ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Recrutement"],
-      author: "John Doe",
-    },
-    {
-      img: "/cpp.jpg",
-      title: "C’est quoi la matrice RACI et comment la mettre en place ?",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      category: ["Management"],
-      author: "John Doe",
-    },
-  ];
-
-  const jobs = [
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-  ];
-
   return (
     <main>
       <NavigationLanding />
       <Header />
       <SectionWrapper id={"why"}>
-        <Label content={firstSection.txtLabel} />
+        <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
-          title={firstSection.title}
-          content={firstSection.content}
+          title="La confiance forgée par la transparence"
+          content="Nous sommes l'alternative au management pyramidal guru de l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -241,19 +93,19 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.length})`}
+          content={`Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content={secondSection.txtLabel} />
+        <Label content="Spécialiste du C++ et ses mises en pratique" />
         <ContentSection
-          title={secondSection.title}
-          content={secondSection.content}
+          title="Nous développons des logiciels robustes, performants et efficaces"
+          content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -267,40 +119,43 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.length})`}
+          content={`Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content={thirdSection.txtLabel} />
+        <Label content="Une communauté dédiée au C++ et son ecosytème" />
         <ContentSection
-          title={thirdSection.title}
-          content={thirdSection.content}
+          title="Trouvez les compétences qu'il vous manque au sein de notre écosystème"
+          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
+          Notre réseau rassemble plus de ${resProfils.data.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
         <CardsContainer style={"cards-container"}>
-          {members.slice(0, 6).map((member) => {
+          {resProfils.data.data.slice(0, 6).map((member) => {
             return (
               <CardMember
-                key={member.index}
-                img={member.img}
-                title={member.name}
-                content={member.desc}
-                profilName={member.name}
-                profilTitle={"Ingénieur logiciel C++"}
+                key={member.attributes.profil_id}
+                id={member.attributes.profil_id}
+                img={"/utilisateur.png"}
+                available={member.attributes.available}
+                first_name={member.attributes.first_name}
+                last_name={member.attributes.last_name}
+                title={member.attributes.title}
+                bio={member.attributes.bio}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Rechercher votre profil (${resProfils.data.length})`}
+          content={` Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
       </SectionWrapper>
@@ -311,53 +166,34 @@ export default async function Home() {
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
         />
         <CardsContainer style={"articles-container"}>
-          {jobs.map((card) => {
+          {resJobs.data.data.map((card) => {
             return (
               <JobCard
-                key={card.index}
-                title={card.title}
-                desc={card.desc}
-                skills={card.skills[0]}
-                place={card.place}
-                salary={card.salary}
-                jobId={card.place}
-                jobTitle={card.title}
+                key={card.attributes.job_id}
+                title={card.attributes.title}
+                desc={card.attributes.short_desc}
+                skills={card.attributes.software_skills}
+                place={card.attributes.localisation}
+                salary={card.attributes.salary}
+                daily_rate={card.attributes.daily_rate}
+                jobId={card.attributes.job_id}
+                jobTitle={card.attributes.title}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
       </SectionWrapper>
-      {/* <SectionWrapper id={"blog"}>
-        <Label content={fourthSection.txtLabel} />
-        <ContentSection
-          title={fourthSection.title}
-          content={fourthSection.content}
-        />
-        <CardsContainer style={"articles-container"}>
-          {articles.slice(0, 6).map((article) => {
-            return (
-              <ArticleCardContainer
-                key={article.index}
-                img={article.img}
-                title={article.title}
-                content={article.desc}
-                category={article.category}
-                author={article.author}
-              />
-            );
-          })}
-        </CardsContainer>
-        <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
-      </SectionWrapper> */}
 
       <SectionWrapper id={"form"}>
         <Label content="Restez connecté à l'écosystème C++" />
         <ContentSection
-          title={`Comme ${resSubscribers.data.length + 100} développeurs, recevez toutes les missions de l'écosystème C++ dans votre boite mail`}
+          title={`Aujourd'hui, il y a  ${
+            resSubscribers.data.length + 100
+          } développeurs abonnés à nos alertes missions.`}
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />

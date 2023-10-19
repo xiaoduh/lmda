@@ -11,73 +11,32 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export default async function postuler() {
-  const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
-  const jobs = [
-    {
-      title: "Développeur C++ Qt",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-  ];
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+  );
   return (
     <main>
       <SectionWrapperHeader id={"jobs"}>
         <Label content="Lambda est un agrégateur de missions C++" />
         <ContentSection
           title="Nous vous connectons à l'écosystème C++"
-          content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Postulez en un clic aux missions qui vous intéressent.`}
+          content={`Ne ratez plus aucunes opportunités. Postulez en un clic aux missions qui vous intéressent.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper>
         <CardsContainer style={"cards-container"}>
-          {jobs.map((card) => {
+          {resJobs.data.data.map((card) => {
             return (
               <JobCard
-                key={card.index}
-                title={card.title}
-                desc={card.desc}
-                skills={card.skills[0]}
-                place={card.place}
-                salary={card.salary}
-                jobId={card.place}
-                jobTitle={card.title}
+                key={card.attributes.job_id}
+                title={card.attributes.title}
+                desc={card.attributes.short_desc}
+                skills={card.attributes.software_skills}
+                place={card.attributes.localisation}
+                salary={card.attributes.salary}
+                daily_rate={card.attributes.daily_rate}
+                jobId={card.attributes.job_id}
+                jobTitle={card.attributes.title}
               />
             );
           })}

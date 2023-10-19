@@ -9,7 +9,6 @@ const NavigationApp = () => {
   const [active, setActive] = useState(false);
 
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 80) {
       setNavbar(true);
     } else {

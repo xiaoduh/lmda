@@ -10,29 +10,38 @@ const FooterApp = () => {
         <div class="row">
           <ul>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/" target="_blank">
-              <Image
-                src="/facebook.png"
-                width={32}
-                height={32}
-                alt="facebook"
-              />
+              <Link
+                href="https://www.linkedin.com/company/lambda-fr/"
+                target="_blank"
+              >
+                <Image
+                  src="/facebook.png"
+                  width={32}
+                  height={32}
+                  alt="facebook"
+                />
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/" target="_blank">
-              <Image
-                src="/linkedin.png"
-                width={32}
-                height={32}
-                alt="linkedin"
-              />
+              <Link
+                href="https://www.linkedin.com/company/lambda-fr/"
+                target="_blank"
+              >
+                <Image
+                  src="/linkedin.png"
+                  width={32}
+                  height={32}
+                  alt="linkedin"
+                />
               </Link>
             </li>
             <li>
-              <Link href="https://www.linkedin.com/company/lambda-fr/" target="_blank">
-              <Image src="/github.png" width={32} height={32} alt="github" />
-               </Link>
+              <Link
+                href="https://www.linkedin.com/company/lambda-fr/"
+                target="_blank"
+              >
+                <Image src="/github.png" width={32} height={32} alt="github" />
+              </Link>
             </li>
           </ul>
         </div>
@@ -44,9 +53,6 @@ const FooterApp = () => {
             </li>
             <li>
               <Link href="/confidentialite">Politique de confidentialité</Link>
-            </li>
-            <li>
-              <Link href="/cookies">Cookies</Link>
             </li>
             <li>
               <Link href="/cgu">CGU</Link>

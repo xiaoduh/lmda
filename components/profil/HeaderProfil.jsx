@@ -1,20 +1,29 @@
 import React from "react";
 import Link from "next/link";
 
-const HeaderProfil = ({ profilName }) => {
+const HeaderProfil = ({ data }) => {
+  const calcTime = (graduationData) => {
+    let dateNow = new Date();
+    let dateFrom = new Date(graduationData);
+    let time = dateNow - dateFrom;
+
+    return time;
+  };
   return (
     <div className="header-profil">
       <div className="pp">
-        <img src="/pp.png" className="pp" alt="profil-pricture" />
+        <img src="/utilisateur.png" className="pp" alt="profil-pricture" />
       </div>
       <div className="content-container">
         <div className="content">
           <div className="title">
-            <h2>{profilName}</h2>
-            <p>Développeur NextJS</p>
-            <p>12 missions réalisées</p>
+            <h2>
+              {data.first_name} {data.last_name}
+            </h2>
+            <p>{data.title}</p>
+            <p>{data.bio}</p>
           </div>
-          <Link href={`/contact/${profilName}`}>
+          <Link href={`/contact/${data.profil_id}`}>
             <button className="btn-contact">Contacter</button>
           </Link>
         </div>
@@ -22,20 +31,31 @@ const HeaderProfil = ({ profilName }) => {
           <div className="info">
             <p className="title">Statut</p>
             <div className="container-statut">
-              <div className="pastille"></div>
-              <p>disponible</p>
+              {data.available ? (
+                <div className="available">
+                  <div className="pastille"></div>
+                  <p>disponible</p>
+                </div>
+              ) : (
+                <div className="available">
+                  <div className="pastille red"></div>
+                  <p>indisponible</p>
+                </div>
+              )}
             </div>
           </div>
           <div className="info">
             <p className="title">Expérience</p>
             <div className="container-statut">
-              <p>7-9 ans</p>
+              <p>
+                {Math.floor(calcTime(data.date_graduation) / 31536000000)} ans
+              </p>
             </div>
           </div>
           <div className="info">
             <p className="title">Tarif</p>
             <div className="container-statut">
-              <p>450 €/jour</p>
+              <p>{data.price} €/jour</p>
             </div>
           </div>
         </div>

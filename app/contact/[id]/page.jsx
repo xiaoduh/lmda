@@ -7,25 +7,28 @@ import FormContactProfil from "@/components/form/FormContactProfil";
 import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import HeaderProfil from "@/components/profil/HeaderProfil";
+import axios from "axios";
 import { useParams } from "next/navigation";
 
-const ContactProfil = () => {
+export default async function ContactProfil() {
   const param = useParams();
+  console.log(param);
+  const data = await axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
+  );
 
   return (
     <main>
       <SectionWrapperHeader>
-        <Label content="Prendre contact avec un de nos experts" />
+        <Label content="Prendre contact avec nos experts" />
         <ContentSection
-          title={`Vous êtes intéressé par ${param.profilName} ?`}
+          title={`Vous êtes intéressé par ${data.data.data[0].attributes.first_name} ?`}
           content="Completez le formulaire de prise de contact ci dessous."
         />
-        <HeaderProfil profilName={param.profilName} />
+        <HeaderProfil data={data.data.data[0].attributes} />
       </SectionWrapperHeader>
-      <FormContactProfil />
+      <FormContactProfil id={param.id} />
       <FooterApp />
     </main>
   );
-};
-
-export default ContactProfil;
+}

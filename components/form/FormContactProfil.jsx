@@ -18,6 +18,7 @@ const FormContactProfil = ({ id }) => {
         email: email,
         phone_number: phone,
         context: message,
+        id: id,
       })
       .then(function (response) {
         console.log(response.data);
