@@ -37,7 +37,7 @@ export default function Description() {
               <ul>
                 {data.data.data[0].attributes.skills_required.requirement.map(
                   (requirement) => {
-                    return <li>👉 {requirement}</li>;
+                    return <li key={requirement}>👉 {requirement}</li>;
                   }
                 )}
               </ul>
@@ -47,7 +47,7 @@ export default function Description() {
               <ul>
                 {data.data.data[0].attributes.technical_stack.stack.map(
                   (stack) => {
-                    return <li>👉 {stack}</li>;
+                    return <li key={stack}>👉 {stack}</li>;
                   }
                 )}
               </ul>
