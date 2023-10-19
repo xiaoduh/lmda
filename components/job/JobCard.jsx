@@ -22,7 +22,7 @@ const JobCard = ({
           <p className="info">{place}</p>
           {skills.data.map((skill) => {
             return (
-              <p key={Math.random() + 1} className="info">
+              <p key={skill.attributes.name} className="info">
                 {skill.attributes.name}
               </p>
             );
