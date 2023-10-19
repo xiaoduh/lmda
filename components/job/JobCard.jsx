@@ -21,7 +21,11 @@ const JobCard = ({
         <div className="infos">
           <p className="info">{place}</p>
           {skills.data.map((skill) => {
-            return <p className="info">{skill.attributes.name}</p>;
+            return (
+              <p key={Math.random() + 1} className="info">
+                {skill.attributes.name}
+              </p>
+            );
           })}
           <p className="info">
             {salary}K ou {daily_rate}€/j
