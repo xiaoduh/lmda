@@ -13,7 +13,7 @@ import Reference from "@/components/profil/Reference";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-export default async function profil() {
+export default async function Profil() {
   const param = useParams();
   console.log(param);
   const data = await axios.get(
