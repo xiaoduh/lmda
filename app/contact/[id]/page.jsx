@@ -10,10 +10,10 @@ import HeaderProfil from "@/components/profil/HeaderProfil";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-export default async function ContactProfil() {
+export default function ContactProfil() {
   const param = useParams();
   console.log(param);
-  const data = await axios.get(
+  const data = axios.get(
     `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
   );
 

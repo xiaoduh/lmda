@@ -13,10 +13,10 @@ import Reference from "@/components/profil/Reference";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-export default async function Profil() {
+export default function Profil() {
   const param = useParams();
   console.log(param);
-  const data = await axios.get(
+  const data = axios.get(
     `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
   );
 

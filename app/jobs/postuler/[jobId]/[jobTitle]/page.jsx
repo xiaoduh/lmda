@@ -10,11 +10,11 @@ import FooterApp from "@/components/navigation/FooterApp";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-export default async function ApplyJob() {
+export default function ApplyJob() {
   const param = useParams();
   console.log(param);
-  const data = await axios.get(
-    `http://localhost:1337/api/jobs?filters[job_id][$eq]=${param.jobId}&populate=*`
+  const data = axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${param.jobId}&populate=*`
   );
 
   return (
