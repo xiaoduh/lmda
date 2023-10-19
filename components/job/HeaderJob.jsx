@@ -17,7 +17,7 @@ const HeaderJob = ({ title, localisation, work_organisation, id, date }) => {
       </div>
       <div className="tags">
         <p className="label">{work_organisation}</p>
-        <p className="label">4 ans d'exp minimum</p>
+        <p className="label">4 ans d&apos;exp minimum</p>
         <p className="label">publié le {date}</p>
       </div>
       <PrimaryBtn content={"postuler"} link={`/jobs/postuler/${id}/${title}`} />
