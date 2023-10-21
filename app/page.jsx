@@ -26,6 +26,8 @@ export default async function Home() {
     "https://lmdaapi.onrender.com/subscribers"
   );
 
+  console.log(resProfils);
+
   const contentCardsFirstSection = [
     {
       title: "Transparence",

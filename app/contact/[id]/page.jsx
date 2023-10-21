@@ -22,10 +22,10 @@ export default function ContactProfil() {
       <SectionWrapperHeader>
         <Label content="Prendre contact avec nos experts" />
         <ContentSection
-          title={`Vous êtes intéressé par ${data.data.data[0].attributes.first_name} ?`}
+          title={`Vous êtes intéressé par ${data.data[0].attributes.first_name} ?`}
           content="Completez le formulaire de prise de contact ci dessous."
         />
-        <HeaderProfil data={data.data.data[0].attributes} />
+        <HeaderProfil data={data.data[0].attributes} />
       </SectionWrapperHeader>
       <FormContactProfil id={param.id} />
       <FooterApp />
