@@ -30,24 +30,24 @@ export default async function Home() {
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur un transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
     },
     {
       title: "Spécialiste",
       content:
-        "Choisir d’être expert sur les applications du C++, c’est nécessairement reconnaitre qu’on ne peut pas être expert en tout. Il y a tant à faire avec le C++.",
+        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils et l'assistance techniques sur l'écosystème C++.",
     },
     {
       title: "Efficacité",
       content:
-        "L'efficacité n’est pas un moyen. C’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre colelctif.",
+        "L'efficacité n’est pas un moyen, c’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre collectif.",
     },
   ];
 
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
-      content: "Applicatifs, Simulation numérique",
+      content: "Applicatifs, Frameworks, Simulation numérique, DLL",
     },
     {
       title: "3D & Traitement d'images",
@@ -55,7 +55,8 @@ export default async function Home() {
     },
     {
       title: "Embarqué",
-      content: "Linux, µC, Windows SE",
+      content:
+        "Linux, µC, Windows SE, Embededd Software, Middleware, Firmware, Drivers",
     },
     {
       title: "Calcul Scientifique",
@@ -63,11 +64,11 @@ export default async function Home() {
     },
     {
       title: "Low Latency",
-      content: "STL, Boost, Asio...",
+      content: "Quantlib, Concurrency, Décodage/encodage, STL, Boost, Asio...",
     },
     {
-      title: "IHM",
-      content: "Qt, QML, MFC, IlogViews...",
+      title: "Graphique",
+      content: "Qt, QML, MFC, WxWidgets, ImGui, Nana, NanoGui, IlogViews...",
     },
   ];
 
@@ -78,8 +79,8 @@ export default async function Home() {
       <SectionWrapper id={"why"}>
         <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
-          title="La confiance forgée par la transparence"
-          content="Nous sommes l'alternative au management pyramidal guru de l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
+          title="Management horizontal et transparence totale"
+          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts..."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {

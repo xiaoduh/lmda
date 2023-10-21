@@ -10,10 +10,14 @@ import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
 export default async function Header() {
-  const resJobs = await axios.get("https://lmdaapi.onrender.com/jobs");
-  const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
-  const contentBtnPrimary = `Voir les ${resJobs.data.length} missions ouvertes`;
-  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.length})`;
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
+  );
+  const resProfils = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
+  );
+  const contentBtnPrimary = `Voir les ${resJobs.data.data.length} missions ouvertes`;
+  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.data.length})`;
   const txtLabel = "La confiance est indissociable de la transparence";
 
   const labels = [
@@ -173,9 +177,10 @@ export default async function Header() {
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Lambda connecte Talents du C++ et Entreprises en toute
-        confiance grâce à la transparence.<br></br>
-        Notre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille. 
+        Lambda connecte Talents du C++ et Entreprises en toute confiance grâce à
+        la transparence.<br></br>
+        Notre modèle repose sur moins de manager pour plus de responsabilité et
+        surtout une totale transparence pour une confiance sans faille.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />

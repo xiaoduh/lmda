@@ -12,10 +12,10 @@ export default async function page() {
   return (
     <main>
       <SectionWrapperHeader id={"form"}>
-        <Label content="Connectez-vous à notre réseau de développeurs C++" />
+        <Label content="Connectez-vous à la seule plateforme spécialisée sur l'écosystème C++" />
         <ContentSection
-          title={`+ ${resProfils.data.length} développeurs C++ attendent votre projet`}
-          content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Bénéficiez d'une visibilité auprès du plus large réseau de compétences C++."
+          title={`+ de ${resProfils.data.length} développeurs C++ attendent votre projet`}
+          content="Bénéficiez d'une visibilité auprès du plus large réseau de compétences C++. Diminuez les temps recrutement et augmentez la pertinence de vos candidatures grâce à notre spécialisation et notre expertise en qualification de votre besoin. "
         />
       </SectionWrapperHeader>
       <Form />

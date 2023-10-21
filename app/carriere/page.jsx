@@ -10,38 +10,35 @@ import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
+import axios from "axios";
 
-const page = () => {
-  const secondSection = {
-    txtLabel: "Choisir c'est renoncer. Nous sommes spécialiste du C++",
-    title:
-      "Nous sommes amoureux des logiciels robustes, performants et efficaces",
-    content:
-      "Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces.",
-  };
+export default async function Career() {
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/"
+  );
 
   const contentCardsFirstSection = [
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur un transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
     },
     {
       title: "Spécialiste",
       content:
-        "Choisir d’être expert sur les applications du C++, c’est nécessairement reconnaitre qu’on ne peut pas être expert en tout. Il y a tant à faire avec le C++.",
+        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils et l'assistance techniques sur l'écosystème C++.",
     },
     {
       title: "Efficacité",
       content:
-        "L'efficacité n’est pas un moyen. C’est un résultat. Lambda a pour vocation d’explorer tous les leviers pour cultiver l'efficacité.",
+        "L'efficacité n’est pas un moyen, c’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre collectif.",
     },
   ];
 
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
-      content: "Applicatifs, Simulation numérique",
+      content: "Applicatifs, Frameworks, Simulation numérique, DLL",
     },
     {
       title: "3D & Traitement d'images",
@@ -49,7 +46,8 @@ const page = () => {
     },
     {
       title: "Embarqué",
-      content: "Linux, µC, Windows SE",
+      content:
+        "Linux, µC, Windows SE, Embededd Software, Middleware, Firmware, Drivers",
     },
     {
       title: "Calcul Scientifique",
@@ -57,11 +55,11 @@ const page = () => {
     },
     {
       title: "Low Latency",
-      content: "STL, Boost, Asio",
+      content: "Quantlib, Concurrency, Décodage/encodage, STL, Boost, Asio...",
     },
     {
-      title: "IHM",
-      content: "Qt, QML, MFC, IlogViews",
+      title: "Graphique",
+      content: "Qt, QML, MFC, WxWidgets, ImGui, Nana, NanoGui, IlogViews...",
     },
   ];
   return (
@@ -70,7 +68,7 @@ const page = () => {
         <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
           title="« L'honnêteté passe par la transparence »"
-          content="Ce n'est pas de nous mais de Jean-Pierre Szymaniak et nous y adhérons à 100%. Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation managériale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
+          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts... La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -83,14 +81,20 @@ const page = () => {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
-        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
+        <PrimaryBtn
+          content={`Rejoindre Lambda m'intéresse`}
+          link={"/rejoindre"}
+        />
+        <SecondaryBtn
+          content={`Trouver sa prochaine mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
       </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
-        <Label content={secondSection.txtLabel} />
+        <Label content="Spécialiste du C++ et ses mises en pratique" />
         <ContentSection
-          title={secondSection.title}
-          content={secondSection.content}
+          title="Nous développons des logiciels robustes, performants et efficaces"
+          content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -103,29 +107,39 @@ const page = () => {
             );
           })}
         </CardsContainer>
-        <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
-        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
+        <PrimaryBtn
+          content={`Rejoindre Lambda m'intéresse`}
+          link={"/rejoindre"}
+        />
+        <SecondaryBtn
+          content={`Trouver sa prochaine mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <Label content="Devenez actionnaire de Lambda" />
         <ContentSection
-          title="La réussite de Lambda est surtout votre réussite"
-          content="Lambda a pour vocation de grandir grâce aux réussites de chacun. L'actionnariat vise à associer les collaborateurs Lambda au développement et à la performance de Lambda."
+          title="« Réussir, c’est s’aimer, aimer ce que l’on fait et la manière dont on le fait. »"
+          content="La réussite de Lambda est surtout votre réussite. Lambda a pour vocation de grandir grâce aux réussites de chacun. L'actionnariat salarié vise à associer les collaborateurs Lambda au développement et à la performance de Lambda. 20% du capital de Lambda est ouvert à l'actionnariat salarié sur un horizon à 3 ans."
         />
-         <PrimaryBtn content={"Nous rejoindre"} link={"/rejoindre"} />
-        <SecondaryBtn content={"S'abonner à l'alerte mission"} link={"/#form"} />
+        <PrimaryBtn
+          content={`Rejoindre Lambda m'intéresse`}
+          link={"/rejoindre"}
+        />
+        <SecondaryBtn
+          content={`Trouver sa prochaine mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        <Label content="Soyez alerté des nouvelles missions" />
+        <Label content="Ne ratez plus aucunes opportunités en C++" />
         <ContentSection
-          title="Ne ratez plus aucunes nouvelles opportunités"
-          content="Faites comme +1547 développeurs et abonnez-vous à notre newsletter emploi pour recevoir chaque semaine les nouvelles missions."
+          title="Votre prochaine mission se trouve ici"
+          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
       </SectionWrapper>
       <FooterApp />
     </main>
   );
-};
-
-export default page;
+}
