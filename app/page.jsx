@@ -100,7 +100,7 @@ export default async function Home() {
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
+          content={`Recruter un prestataire (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -126,7 +126,7 @@ export default async function Home() {
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
+          content={`Recruter un prestataire (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -154,7 +154,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Rechercher votre profil (${resProfils.data.data.length})`}
+          content={` Recruter un prestataire (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn

@@ -17,7 +17,7 @@ export default async function Header() {
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
   );
   const contentBtnPrimary = `Voir les ${resJobs.data.data.length} missions ouvertes`;
-  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.data.length})`;
+  const contentBtnSecondary = `Recruter un prestataire (${resProfils.data.data.length})`;
   const txtLabel = "La confiance est indissociable de la transparence";
 
   const labels = [
