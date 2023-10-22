@@ -23,7 +23,7 @@ const FormApply = () => {
       .then(function (response) {
         console.log(response.data);
         formMess.innerHTML =
-          "<p class='success'>Votre candidature pour le poste XXX a bien été envoyée ! 🚀</p>";
+          "<p class='success'>Votre candidature a bien été envoyée ! 🚀</p>";
 
         setTimeout(() => {
           formMess.innerHTML = "";
@@ -82,7 +82,7 @@ const FormApply = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <input
+        {/* <input
           type="file"
           id="cv"
           name="cv"
@@ -90,7 +90,7 @@ const FormApply = () => {
           placeholder="Joindre mon CV"
           value={file}
           onChange={(e) => setFile(e.target.value)}
-        />
+        /> */}
         <div className="output-message">
           <button type="submit" className="primaryBtn">
             Postuler
