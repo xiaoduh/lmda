@@ -3,7 +3,6 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 
 const JobDescription = ({ jobData }) => {
-  console.log(jobData);
   return (
     <div className="job-description">
       <div className="header">
