@@ -64,7 +64,8 @@ const Footer = () => {
         </div>
 
         <div class="row">
-          Lambda Labs © 2023 Lambda - All rights reserved || Designed By Lambda
+          Lambda Labs © 2023 Lambda - All rights reserved || Made with ❤️ by
+          Lambda's crew.
         </div>
       </div>
     </footer>

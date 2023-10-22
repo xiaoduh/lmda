@@ -10,7 +10,7 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
-export default async function postuler() {
+export default async function Postuler() {
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
   );
