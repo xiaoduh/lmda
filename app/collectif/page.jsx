@@ -20,7 +20,7 @@ export default async function collectif() {
         <Label content="Spécialiste et passionné par le C++" />
         <ContentSection
           title={`+ ${resProfils.data.data.length} profils référencés sur notre plateforme`}
-          content={`Recherchez et contactez le spécialiste qu'il vous manque parmis notre réseau`}
+          content={`Recherchez et contactez le spécialiste qu'il vous manque parmis notre réseau.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper id={"member"}>
