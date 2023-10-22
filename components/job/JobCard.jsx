@@ -3,7 +3,16 @@ import PrimaryBtn from "../button/PrimaryBtn";
 import ThirdBtn from "../button/ThirdBtn";
 import Link from "next/link";
 
-const JobCard = ({ title, desc, skills, place, salary, jobId, jobTitle }) => {
+const JobCard = ({
+  title,
+  desc,
+  skills,
+  place,
+  salary,
+  daily_rate,
+  jobId,
+  jobTitle,
+}) => {
   return (
     <Link href={`/jobs/description/${jobId}`}>
       <div className="card-job">
@@ -11,8 +20,12 @@ const JobCard = ({ title, desc, skills, place, salary, jobId, jobTitle }) => {
         <p>{desc}</p>
         <div className="infos">
           <p className="info">{place}</p>
-          <p className="info">{skills}</p>
-          <p className="info">{salary}</p>
+          {skills.data.map((skill) => {
+            return <p className="info">{skill.attributes.name}</p>;
+          })}
+          <p className="info">
+            {salary}K ou {daily_rate}€/j
+          </p>
         </div>
         <div className="cta">
           <PrimaryBtn

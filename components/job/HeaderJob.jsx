@@ -1,7 +1,7 @@
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 
-const HeaderJob = ({ title, localisation }) => {
+const HeaderJob = ({ title, localisation, work_organisation, id, date }) => {
   return (
     <div className="header-job">
       <div className="info">
@@ -16,14 +16,11 @@ const HeaderJob = ({ title, localisation }) => {
         </div>
       </div>
       <div className="tags">
-        <p className="label">C++</p>
-        <p className="label">Qt</p>
-        <p className="label">QML</p>
-        <p className="label">Télétravail 2J</p>
-        <p className="label">Mission de 24 mois</p>
-        <p className="label">Exp 4 ans</p>
+        <p className="label">{work_organisation}</p>
+        <p className="label">4 ans d'exp minimum</p>
+        <p className="label">publié le {date}</p>
       </div>
-      <PrimaryBtn content={"postuler"} link={"/"} />
+      <PrimaryBtn content={"postuler"} link={`/jobs/postuler/${id}/${title}`} />
     </div>
   );
 };

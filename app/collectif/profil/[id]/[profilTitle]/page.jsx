@@ -1,6 +1,6 @@
 "use client";
 import FooterApp from "@/components/navigation/FooterApp";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../../../styles/index.scss";
 import HeaderProfil from "@/components/profil/HeaderProfil";
 import SectionWrapperProfil from "@/components/section/SectionWrapperProfil";
@@ -13,118 +13,57 @@ import Reference from "@/components/profil/Reference";
 import axios from "axios";
 import { useParams } from "next/navigation";
 
-export default async function profil() {
+export default function Profil() {
+  const [isLoaded, setisLoaded] = useState(false);
+  const [data, setData] = useState(null);
   const param = useParams();
-  console.log(param);
-  const data = await axios.get(
-    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
-  );
+  useEffect(() => {
+    // declare the data fetching function
+    const fetchData = async () => {
+      const data = await axios.get(
+        `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
+      );
+      if (data.data.data[0]) {
+        setData(data.data.data[0]);
+        setisLoaded(true);
+      }
+    };
 
-  console.log(data.data.data[0].attributes);
+    fetchData().catch(console.error);
+  }, []);
 
-  const experiences = [
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-    {
-      title: "Ingénieur Logiciel C++",
-    },
-    {
-      title: "Développeur C++ Qt",
-    },
-  ];
-
-  const skills = [
-    {
-      title: "Software development",
-    },
-    {
-      title: "Simulation 3D",
-    },
-    {
-      title: "Intérêts",
-    },
-    {
-      title: "Software development",
-    },
-    {
-      title: "Simulation 3D",
-    },
-    {
-      title: "Intérêts",
-    },
-  ];
-  const references = [
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-    {
-      name: "Julien",
-      company: "Euronext",
-      content:
-        "Bonne expérience avec Antonin, qui a très bien collaboré avec notre équipe de développement.",
-    },
-  ];
   return (
     <main>
       <SectionWrapperProfil>
-        <HeaderProfil data={data.data.data[0].attributes} />
-        <ContentContainer>
-          <SkillsContainer>
-            <h2 className="title-section">Compétences & Intérêts</h2>
-            {skills.map((skill) => {
-              return <Skill key={1 + Math.random()} title={skill.title} />;
-            })}
-            <h2 className="title-section">Avis & recommandations</h2>
-            {references.map((reference) => {
-              return (
-                <Reference
-                  key={1 + Math.random()}
-                  name={reference.name}
-                  company={reference.company}
-                  content={reference.content}
+        {isLoaded ? (
+          <>
+            <HeaderProfil data={data.attributes} />
+            <ContentContainer>
+              <SkillsContainer>
+                <h2 className="title-section">Compétences & Intérêts</h2>
+                <Skill
+                  title={"Compétences logicielles"}
+                  data={data.attributes.software_skills.data}
                 />
-              );
-            })}
-          </SkillsContainer>
-          <ExperiencesContainer>
-            {experiences.map((experience) => {
-              return (
-                <Experience key={1 + Math.random()} title={experience.title} />
-              );
-            })}
-          </ExperiencesContainer>
-        </ContentContainer>
+                <h2 className="title-section">Avis & recommandations</h2>
+
+                <Reference name="Fonctionnalité à venir 🚧" />
+              </SkillsContainer>
+              <ExperiencesContainer>
+                {data.attributes.experiences.data.map((experience) => {
+                  return (
+                    <Experience
+                      key={experience.attributes.createdAt}
+                      data={experience}
+                    />
+                  );
+                })}
+              </ExperiencesContainer>
+            </ContentContainer>
+          </>
+        ) : (
+          "Chargement des données"
+        )}
       </SectionWrapperProfil>
       <FooterApp />
     </main>

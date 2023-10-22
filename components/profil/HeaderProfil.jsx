@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 
 const HeaderProfil = ({ data }) => {
-  const calculateDate = (graduationData) => {
+  const calcTime = (graduationData) => {
     let dateNow = new Date();
-    let time_diff = dateNow.getTime() - graduationData.getTime();
-    let days_diff = time_diff / (1000 * 3600 * 24);
+    let dateFrom = new Date(graduationData);
+    let time = dateNow - dateFrom;
 
-    return days_diff;
+    return time;
   };
   return (
     <div className="header-profil">
@@ -23,7 +23,7 @@ const HeaderProfil = ({ data }) => {
             <p>{data.title}</p>
             <p>{data.bio}</p>
           </div>
-          <Link href={`/contact/${data.first_name}`}>
+          <Link href={`/contact/${data.profil_id}`}>
             <button className="btn-contact">Contacter</button>
           </Link>
         </div>
@@ -47,7 +47,9 @@ const HeaderProfil = ({ data }) => {
           <div className="info">
             <p className="title">Expérience</p>
             <div className="container-statut">
-              <p> ans</p>
+              <p>
+                {Math.floor(calcTime(data.date_graduation) / 31536000000)} ans
+              </p>
             </div>
           </div>
           <div className="info">

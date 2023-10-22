@@ -1,22 +1,28 @@
+"use client";
 import React from "react";
+import PrimaryBtn from "../button/PrimaryBtn";
 
-const JobDescription = ({ jobdesc }) => {
+const JobDescription = ({ jobData }) => {
+  console.log(jobData);
   return (
     <div className="job-description">
       <div className="header">
         <h3>Contexte de la mission</h3>
-        <p>{jobdesc.context}</p>
+        <p>{jobData.context}</p>
       </div>
       <div className="content">
         <h3>Missions</h3>
         <ul>
-          {jobdesc.missions.map((task) => {
-            return <li key={1 + Math.random()}>{task}</li>;
+          {jobData.missions.missions.map((task) => {
+            return <li key={1 + Math.random()}>👉 {task}</li>;
           })}
         </ul>
       </div>
       <div className="cta">
-        <button className="btn-postuler">Postuler</button>
+        <PrimaryBtn
+          content={"postuler"}
+          link={`/jobs/postuler/${jobData.job_id}/${jobData.title}`}
+        />
       </div>
     </div>
   );

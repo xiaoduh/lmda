@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const FormContactProfil = () => {
+const FormContactProfil = ({ id }) => {
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -18,6 +18,7 @@ const FormContactProfil = () => {
         email: email,
         phone_number: phone,
         context: message,
+        id: id,
       })
       .then(function (response) {
         console.log(response.data);

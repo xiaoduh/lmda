@@ -16,9 +16,9 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 
 export default async function Home() {
-  const resJobs = await axios.get("http://localhost:10000/jobs");
+  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
   const resProfils = await axios.get(
-    "http://localhost:1337/api/profils?populate=*"
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
   );
 
   const resSubscribers = await axios.get("http://localhost:10000/subscribers");
@@ -68,50 +68,7 @@ export default async function Home() {
     },
   ];
 
-  const jobs = [
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-    {
-      title: "Développeur C++",
-      desc: "Homines quot eligendi non parandis diligentiores de quod amicitia dicere haberet difficile querebatur ad enim penuria eligendis diligentiores signa neglegentis est Sunt erat cuius stabiles amicis qui quisque sermo Scipionem quaedam non qui homines constantes amicitia capras et Scipionem eligendi.",
-      skills: ["C++"],
-      place: "78",
-      salary: "55K",
-    },
-  ];
+  console.log(resJobs.data.data);
 
   return (
     <main>
@@ -135,11 +92,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.length})`}
+          content={`Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -161,11 +118,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.length})`}
+          content={`Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -178,7 +135,6 @@ export default async function Home() {
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
-            console.log(member.attributes);
             return (
               <CardMember
                 key={member.attributes.profil_id}
@@ -194,11 +150,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Rechercher votre profil (${resProfils.data.length})`}
+          content={` Rechercher votre profil (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
       </SectionWrapper>
@@ -209,23 +165,24 @@ export default async function Home() {
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
         />
         <CardsContainer style={"articles-container"}>
-          {jobs.map((card) => {
+          {resJobs.data.data.map((card) => {
             return (
               <JobCard
-                key={card.index}
-                title={card.title}
-                desc={card.desc}
-                skills={card.skills[0]}
-                place={card.place}
-                salary={card.salary}
-                jobId={card.place}
-                jobTitle={card.title}
+                key={card.attributes.job_id}
+                title={card.attributes.title}
+                desc={card.attributes.short_desc}
+                skills={card.attributes.software_skills}
+                place={card.attributes.localisation}
+                salary={card.attributes.salary}
+                daily_rate={card.attributes.daily_rate}
+                jobId={card.attributes.job_id}
+                jobTitle={card.attributes.title}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.length} missions ouvertes`}
+          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
           link={"/jobs"}
         />
       </SectionWrapper>
