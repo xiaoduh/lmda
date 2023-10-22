@@ -17,11 +17,11 @@ export default function Legal() {
       <div className="legal">
         <h3>Edition du site</h3>
         <p>
-          Le présent site, accessible à l’URL www.lambda.fr (le « Site »), est
-          édité par : Lambda-Labs , société au capital de 3000 euros, inscrite
-          au R.C.S.de BOBIGNY sous le numéro 980 507 008, dont le siège social
-          est situé au 2 Esplanade Ferdinand-Magellan 93160 Noisy-le-Grand,
-          représenté(e) par Mohamed-Amine ABIDI dûment habilité.
+          Le présent site, accessible à l&apos;URL www.lambda.fr (le « Site »),
+          est édité par : Lambda-Labs , société au capital de 3000 euros,
+          inscrite au R.C.S.de BOBIGNY sous le numéro 980 507 008, dont le siège
+          social est situé au 2 Esplanade Ferdinand-Magellan 93160
+          Noisy-le-Grand, représentée par Mohamed-Amine ABIDI dûment habilité.
         </p>
         <h3>Hébergement</h3>
         <p>

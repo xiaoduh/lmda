@@ -9,14 +9,14 @@ export default function CGU() {
     <main>
       <SectionWrapperHeader>
         <ContentSection
-          title={`Conditions générales d'utilisation`}
+          title={`Conditions générales d&apos;utilisation`}
           content="En vigueur au 23/10/2023. 
-          Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par Lambda-Labs  et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».
+          Les présentes conditions générales d&apos;utilisation (dites « CGU ») ont pour objet l&apos;encadrement juridique des modalités de mise à disposition du site et des services par Lambda-Labs  et de définir les conditions d’accès et d’utilisation des services par « l&apos;Utilisateur ».
 
           Les présentes CGU sont accessibles sur le site à la rubrique «CGU».
           
-          Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « Je reconnais avoir lu et compris les CGU et je les accepte ».
-          En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à l'accès des services proposés par le site.
+          Toute inscription ou utilisation du site implique l&apos;acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l&apos;inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « Je reconnais avoir lu et compris les CGU et je les accepte ».
+          En cas de non-acceptation des CGU stipulées dans le présent contrat, l&apos;Utilisateur se doit de renoncer à l&apos;accès des services proposés par le site.
           www.lambda-labs.fr  se réserve le droit de modifier unilatéralement et à tout moment le contenu des présentes CGU.
           "
         />
@@ -24,63 +24,63 @@ export default function CGU() {
       <div className="legal">
         <h3>Article 1 : Les mentions légales</h3>
         <p>
-          L'édition du site www.lambda-labs.fr est assurée par la Société SAS
+          L&apos;édition du site www.lambda-labs.fr est assurée par la Société SAS
           Lambda-Labs au capital de 3000 euros, immatriculée au RCS de Bobigny
           sous le numéro 980 507 008, dont le siège social est situé au 2
           Esplanade Ferdinand-Magellan 93160 Noisy-le-Grand Numéro de téléphone
           +33668670457 Adresse e-mail : hello@lambda-labs.fr. Le Directeur de la
-          publication est : Mohamed-Amine ABIDI L'hébergeur du site
+          publication est : Mohamed-Amine ABIDI L&apos;hébergeur du site
           www.lambda-labs.fr est la société Lambda-Labs, dont le siège social
           est situé au 2 Esplanade Ferdinand-Magellan 93160 Noisy-le-Grand, avec
           le numéro de téléphone : +33668670457.
         </p>
         <h3>ARTICLE 2 : Accès au site</h3>
         <p>
-          Le site www.lambda-labs.fr permet à l'Utilisateur un accès gratuit aux
+          Le site www.lambda-labs.fr permet à l&apos;Utilisateur un accès gratuit aux
           services suivants : Le site internet propose les services suivants :
           Plateforme de mise en relation, Plateforme de référencement, Annuaire
-          de référencement, Plateforme d'emplois Le site est accessible
+          de référencement, Plateforme d&apos;emplois Le site est accessible
           gratuitement en tout lieu à tout Utilisateur ayant un accès à
-          Internet. Tous les frais supportés par l'Utilisateur pour accéder au
+          Internet. Tous les frais supportés par l&apos;Utilisateur pour accéder au
           service (matériel informatique, logiciels, connexion Internet, etc.)
-          sont à sa charge. L’Utilisateur non membre n'a pas accès aux services
+          sont à sa charge. L’Utilisateur non membre n&apos;a pas accès aux services
           réservés. Pour cela, il doit s’inscrire en remplissant le formulaire.
           En acceptant de s’inscrire aux services réservés, l’Utilisateur membre
           s’engage à fournir des informations sincères et exactes concernant son
           état civil et ses coordonnées, notamment son adresse email. Pour
-          accéder aux services, l’Utilisateur doit ensuite s'identifier à l'aide
+          accéder aux services, l’Utilisateur doit ensuite s&apos;identifier à l&apos;aide
           de son identifiant et de son mot de passe qui lui seront communiqués
           après son inscription. Tout Utilisateur membre régulièrement inscrit
           pourra également solliciter sa désinscription en se rendant à la page
           dédiée sur son espace personnel. Celle-ci sera effective dans un délai
           raisonnable. Tout événement dû à un cas de force majeure ayant pour
           conséquence un dysfonctionnement du site ou serveur et sous réserve de
-          toute interruption ou modification en cas de maintenance, n'engage pas
+          toute interruption ou modification en cas de maintenance, n&apos;engage pas
           la responsabilité de www.lambda-labs.fr. Dans ces cas, l’Utilisateur
           accepte ainsi ne pas tenir rigueur à l’éditeur de toute interruption
-          ou suspension de service, même sans préavis. L'Utilisateur a la
+          ou suspension de service, même sans préavis. L&apos;Utilisateur a la
           possibilité de contacter le site par messagerie électronique à
           l’adresse email de l’éditeur communiqué à l’ARTICLE 1.
         </p>
         <h3>ARTICLE 3 : Collecte des données</h3>
         <p>
-          Le site assure à l'Utilisateur une collecte et un traitement
-          d'informations personnelles dans le respect de la vie privée
+          Le site assure à l&apos;Utilisateur une collecte et un traitement
+          d&apos;informations personnelles dans le respect de la vie privée
           conformément à la loi n°78-17 du 6 janvier 1978 relative à
-          l'informatique, aux fichiers et aux libertés. En vertu de la loi
-          Informatique et Libertés, en date du 6 janvier 1978, l'Utilisateur
-          dispose d'un droit d'accès, de rectification, de suppression et
-          d'opposition de ses données personnelles. L'Utilisateur exerce ce
-          droit : · par mail à l'adresse email hello@lambda-labs.fr﻿
+          l&apos;informatique, aux fichiers et aux libertés. En vertu de la loi
+          Informatique et Libertés, en date du 6 janvier 1978, l&apos;Utilisateur
+          dispose d&apos;un droit d&apos;accès, de rectification, de suppression et
+          d&apos;opposition de ses données personnelles. L&apos;Utilisateur exerce ce
+          droit : · par mail à l&apos;adresse email hello@lambda-labs.fr﻿
         </p>
         <h3>ARTICLE 4 : Propriété intellectuelle</h3>
         <p>
           Les marques, logos, signes ainsi que tous les contenus du site
-          (textes, images, son…) font l'objet d'une protection par le Code de la
+          (textes, images, son…) font l&apos;objet d&apos;une protection par le Code de la
           propriété intellectuelle et plus particulièrement par le droit
-          d'auteur. L'Utilisateur doit solliciter l'autorisation préalable du
+          d&apos;auteur. L&apos;Utilisateur doit solliciter l&apos;autorisation préalable du
           site pour toute reproduction, publication, copie des différents
-          contenus. Il s'engage à une utilisation des contenus du site dans un
+          contenus. Il s&apos;engage à une utilisation des contenus du site dans un
           cadre strictement privé, toute utilisation à des fins commerciales et
           publicitaires est strictement interdite. Toute représentation totale
           ou partielle de ce site par quelque procédé que ce soit, sans
@@ -102,16 +102,16 @@ export default function CGU() {
           des dispositions administratives et juridiques survenant après la
           publication. De même, le site ne peut être tenue responsable de
           l’utilisation et de l’interprétation de l’information contenue dans ce
-          site. L'Utilisateur s'assure de garder son mot de passe secret. Toute
+          site. L&apos;Utilisateur s&apos;assure de garder son mot de passe secret. Toute
           divulgation du mot de passe, quelle que soit sa forme, est interdite.
-          Il assume les risques liés à l'utilisation de son identifiant et mot
+          Il assume les risques liés à l&apos;utilisation de son identifiant et mot
           de passe. Le site décline toute responsabilité. Le site
           www.lambda-labs.fr ne peut être tenu pour responsable d’éventuels
           virus qui pourraient infecter l’ordinateur ou tout matériel
           informatique de l’Internaute, suite à une utilisation, à l’accès, ou
           au téléchargement provenant de ce site. La responsabilité du site ne
           peut être engagée en cas de force majeure ou du fait imprévisible et
-          insurmontable d'un tiers.
+          insurmontable d&apos;un tiers.
         </p>
         <h3>ARTICLE 6 : Liens hypertextes</h3>
         <p>
@@ -140,8 +140,8 @@ export default function CGU() {
         </p>
         <h3>ARTICLE 8 : Droit applicable et juridiction compétente</h3>
         <p>
-          La législation française s'applique au présent contrat. En cas
-          d'absence de résolution amiable d'un litige né entre les parties, les
+          La législation française s&apos;applique au présent contrat. En cas
+          d&apos;absence de résolution amiable d&apos;un litige né entre les parties, les
           tribunaux français seront seuls compétents pour en connaître. Pour
           toute question relative à l’application des présentes CGU, vous pouvez
           joindre l’éditeur aux coordonnées inscrites à l’ARTICLE 1.
