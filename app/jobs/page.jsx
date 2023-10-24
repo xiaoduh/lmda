@@ -11,7 +11,9 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export async function generateMetadata() {
-  const data = await axios.get(`http://localhost:1337/api/jobs`);
+  const data = await axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs`
+  );
   return {
     title: `${data.data.length} missions ouvertes sur notre plateforme | Lambda`,
     description: `Grâce à notr eplateforme spécialisée sur l'écosystème C++, nous vous facilitions la recherche de votre prochaine mission. Nous sommes un agrégateur de toutes les missions C++ du marché.`,
