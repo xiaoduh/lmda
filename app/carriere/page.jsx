@@ -12,6 +12,13 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
+export const metadata = {
+  title:
+    "Décourvrez notre modèle unique basée sur la spécialisation C++ et la transparence | Lambda",
+  description:
+    "Découvrez notre modèle unique fondé sur la transparence, l'horizontalité et la spécialisation. Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Nous recrutons des développeurs C++.",
+};
+
 export default async function Career() {
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/"

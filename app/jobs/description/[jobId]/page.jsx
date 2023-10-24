@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import "../../../../styles/index.scss";
 import FooterApp from "@/components/navigation/FooterApp";
 import HeaderJob from "@/components/job/HeaderJob";
@@ -9,70 +7,59 @@ import ContentContainer from "@/components/profil/ContentContainer";
 import SkillsContainer from "@/components/profil/SkillsContainer";
 import JobDescription from "@/components/job/JobDescription";
 import axios from "axios";
-import { useParams } from "next/navigation";
 
-export default function Description() {
-  const [isLoaded, setisLoaded] = useState(false);
-  const [data, setData] = useState(null);
-  const param = useParams();
-  useEffect(() => {
-    // declare the data fetching function
-    const fetchData = async () => {
-      const data = await axios.get(
-        `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${param.jobId}&populate=*`
-      );
-      if (data.data.data[0]) {
-        setData(data.data.data[0]);
-        setisLoaded(true);
-      }
-    };
+export async function generateMetadata({ params }) {
+  const data = await axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
+  );
+  return {
+    title: `Mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation} | Lambda`,
+    description: `Mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation}`,
+  };
+}
 
-    fetchData().catch(console.error);
-  }, []);
+export default async function Description({ params }) {
+  const data = await axios.get(
+    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
+  );
 
   return (
     <main>
       <SectionWrapperProfil>
-        {isLoaded ? (
-          <>
-            <HeaderJob
-              title={data.attributes.title}
-              localisation={data.attributes.localisation}
-              work_organisation={data.attributes.work_organisation}
-              id={param.jobId}
-              date={data.attributes.createdAt}
-            />
-            <ContentContainer>
-              <SkillsContainer>
-                <h2 className="title-section">Profil recherché</h2>
-                <div className="requirement">
-                  <h3>Compétences attendues</h3>
-                  <ul>
-                    {data.attributes.skills_required.requirement.map(
-                      (requirement) => {
-                        return <li key={requirement}>👉 {requirement}</li>;
-                      }
-                    )}
-                  </ul>
-                </div>
-                <div className="requirement">
-                  <h3>Environnement technique</h3>
-                  <ul>
-                    {data.attributes.technical_stack.stack.map((stack) => {
-                      return <li key={stack}>👉 {stack}</li>;
-                    })}
-                  </ul>
-                </div>
-              </SkillsContainer>
-              <DescriptionContainer>
-                <h2 className="title-section">Description</h2>
-                <JobDescription jobData={data.attributes} />
-              </DescriptionContainer>
-            </ContentContainer>
-          </>
-        ) : (
-          "Chargement des données"
-        )}
+        <HeaderJob
+          title={data.data.data[0].attributes.title}
+          localisation={data.data.data[0].attributes.localisation}
+          work_organisation={data.data.data[0].attributes.work_organisation}
+          id={params.jobId}
+          date={data.data.data[0].attributes.createdAt}
+        />
+        <ContentContainer>
+          <SkillsContainer>
+            <h2 className="title-section">Profil recherché</h2>
+            <div className="requirement">
+              <h3>Compétences attendues</h3>
+              <ul>
+                {data.data.data[0].attributes.skills_required.requirement.map(
+                  (requirement) => {
+                    return <li key={requirement}>👉 {requirement}</li>;
+                  }
+                )}
+              </ul>
+            </div>
+            <div className="requirement">
+              <h3>Environnement technique</h3>
+              <ul>
+                {data.data.data[0].attributes.technical_stack.stack.map((stack) => {
+                  return <li key={stack}>👉 {stack}</li>;
+                })}
+              </ul>
+            </div>
+          </SkillsContainer>
+          <DescriptionContainer>
+            <h2 className="title-section">Description</h2>
+            <JobDescription jobData={data.data.data[0].attributes} />
+          </DescriptionContainer>
+        </ContentContainer>
       </SectionWrapperProfil>
       <FooterApp />
     </main>

@@ -5,6 +5,12 @@ import ContentSection from "@/components/content/ContentSection";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Lambda | Mentions légales",
+  description:
+    "Le présent site, accessible à l'URL www.lambda.fr,est édité par : Lambda-Labs, société au capital de 3000 euros, inscrite au R.C.S.de BOBIGNY sous le numéro 980 507 008, dont le siège social est situé au 2 Esplanade Ferdinand-Magellan 93160 Noisy-le-Grand, représentée par Mohamed-Amine ABIDI dûment habilité.",
+};
+
 export default function Legal() {
   return (
     <main>

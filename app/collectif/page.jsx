@@ -9,6 +9,12 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
+export const metadata = {
+  title: "Recrutez rapipdement vos compétences sur l'écosystème C++ | Lambda",
+  description:
+    "Vous recherchez un développeur C++ ? Recherchez parmis nos centaines de membres le candidat idéal pour que votre projet soit une réussite.",
+};
+
 export default async function collectif() {
   const resProfils = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"

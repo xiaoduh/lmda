@@ -7,7 +7,13 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
-export default async function page() {
+export const metadata = {
+  title: "Proposer une mission sur la plateforme | Lambda",
+  description:
+    "Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre plateforme spécialisée sur l'écosystème C++",
+};
+
+export default async function Partner() {
   const resProfils = await axios.get("https://lmdaapi.onrender.com/users");
   return (
     <main>

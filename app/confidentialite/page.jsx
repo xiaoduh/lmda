@@ -4,6 +4,12 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import ContentSection from "@/components/content/ContentSection";
 
+export const metadata = {
+  title: "Politique de confidentialité | Lambda",
+  description:
+    "Le site web www.lambda-labs.fr est détenu par Lambda, qui est un contrôleur de données de vos données personnelles.",
+};
+
 export default function Privacy() {
   return (
     <main>
