@@ -10,7 +10,7 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
 export const metadata = {
-  title: "Recrutez rapipdement vos compétences sur l'écosystème C++ | Lambda",
+  title: "Recrutez rapidement vos compétences grâce à notre réseau | Lambda",
   description:
     "Vous recherchez un développeur C++ ? Recherchez parmis nos centaines de membres le candidat idéal pour que votre projet soit une réussite.",
 };
