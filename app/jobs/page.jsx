@@ -47,6 +47,7 @@ export default async function Postuler() {
                 daily_rate={card.attributes.daily_rate}
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
+                workplace={card.attributes.work_organisation}
               />
             );
           })}

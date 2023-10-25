@@ -12,6 +12,7 @@ const JobCard = ({
   daily_rate,
   jobId,
   jobTitle,
+  workplace,
 }) => {
   return (
     <Link href={`/jobs/description/${jobId}`}>
@@ -30,6 +31,7 @@ const JobCard = ({
           <p className="info">
             {salary}K ou {daily_rate}€/j
           </p>
+          <p className="info">{workplace}</p>
         </div>
         <div className="cta">
           <PrimaryBtn
