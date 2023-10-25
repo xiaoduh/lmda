@@ -39,7 +39,7 @@ export default async function Description({ params }) {
             <div className="requirement">
               <h3>Compétences attendues</h3>
               <ul>
-                {data.data.data[0].attributes.skills_required.requirement.map(
+                {data.data.data[0].attributes.skills_required.skills_required.map(
                   (requirement) => {
                     return <li key={requirement}>👉 {requirement}</li>;
                   }
@@ -49,9 +49,11 @@ export default async function Description({ params }) {
             <div className="requirement">
               <h3>Environnement technique</h3>
               <ul>
-                {data.data.data[0].attributes.technical_stack.stack.map((stack) => {
-                  return <li key={stack}>👉 {stack}</li>;
-                })}
+                {data.data.data[0].attributes.technical_stack.technical_stack.map(
+                  (stack) => {
+                    return <li key={stack}>👉 {stack}</li>;
+                  }
+                )}
               </ul>
             </div>
           </SkillsContainer>
