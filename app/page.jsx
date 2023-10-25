@@ -79,7 +79,7 @@ export default async function Home() {
       <NavigationLanding />
       <Header />
       <SectionWrapper id={"why"}>
-        <Label content="Un écosystème spécialisé au management nouveau" />
+        <Label content="Un écosystème spécialisé au management horizontal" />
         <ContentSection
           title="Management horizontal et transparence totale"
           content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts..."
