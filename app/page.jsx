@@ -96,7 +96,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
         <SecondaryBtn
@@ -122,7 +122,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
         <SecondaryBtn
@@ -158,7 +158,7 @@ export default async function Home() {
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
       </SectionWrapper>
@@ -186,7 +186,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
       </SectionWrapper>
