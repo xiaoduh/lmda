@@ -185,9 +185,14 @@ const NavigationLanding = () => {
           </ul>
         )}
       </nav>
-      <Link className="cta" href="#form">
-        <button className="btn-blue">Recevoir nos missions</button>
-      </Link>
+      <div className="cta-container">
+        <Link className="cta-secondary" href="#form">
+          Mettre en ligne son CV
+        </Link>
+        <Link className="btn-blue" href="#form">
+          Recevoir nos missions
+        </Link>
+      </div>
       {active ? (
         <div
           className="burger-menu active"

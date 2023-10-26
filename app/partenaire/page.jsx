@@ -11,6 +11,16 @@ export const metadata = {
   title: "Proposer une mission sur la plateforme | Lambda",
   description:
     "Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre plateforme spécialisée sur l'écosystème C++",
+  keywords: [
+    "Recrutement développeur C++",
+    "Plateforme de recrutement",
+    "Sourcing développeur C++",
+    "ESN C++",
+    "ESN alternative",
+    "SSII",
+    "Regie",
+    "Assistance technique C++",
+  ],
 };
 
 export default async function Partner() {

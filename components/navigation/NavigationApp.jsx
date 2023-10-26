@@ -66,9 +66,14 @@ const NavigationApp = () => {
           </ul>
         )}
       </nav>
-      <Link className="cta" href="/rejoindre">
-        <button className="btn-blue">On recrute !</button>
-      </Link>
+      <div className="cta-container">
+        <Link className="cta-secondary" href="/partenaire">
+          Proposer une mission
+        </Link>
+        <Link className="btn-blue" href="/rejoindre">
+          Trouver une mission
+        </Link>
+      </div>
       {active ? (
         <div
           className="burger-menu active"
