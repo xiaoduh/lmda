@@ -1,9 +1,9 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
-  title: "Lambda",
+  title: "Lambda | Proposer une mission",
   description:
-    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    "Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre plateforme spécialisée sur l'écosystème C++",
 };
 
 export default function NavigationAppLayout({

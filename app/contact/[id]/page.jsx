@@ -1,6 +1,4 @@
-"use client";
 import FooterApp from "@/components/navigation/FooterApp";
-import React, { useEffect, useState } from "react";
 import "../../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import FormContactProfil from "@/components/form/FormContactProfil";
@@ -8,44 +6,33 @@ import ContentSection from "@/components/content/ContentSection";
 import Label from "@/components/label/Label";
 import HeaderProfil from "@/components/profil/HeaderProfil";
 import axios from "axios";
-import { useParams } from "next/navigation";
 
-export default function ContactProfil() {
-  const [isLoaded, setisLoaded] = useState(false);
-  const [data, setData] = useState(null);
-  const param = useParams();
-  useEffect(() => {
-    // declare the data fetching function
-    const fetchData = async () => {
-      const data = await axios.get(
-        `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${param.id}&populate=*`
-      );
-      if (data.data.data[0]) {
-        setData(data.data.data[0]);
-        setisLoaded(true);
-      }
-    };
+export async function generateMetadata({ params }) {
+  const data = await axios.get(
+    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+  );
+  return {
+    title: `Lambda | Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
+    description: `Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
+  };
+}
 
-    fetchData().catch(console.error);
-  }, []);
+export default async function ContactProfil({ params }) {
+  const data = await axios.get(
+    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+  );
 
   return (
     <main>
       <SectionWrapperHeader>
         <Label content="Prendre contact avec un de nos experts" />
-        {isLoaded ? (
-          <>
-            <ContentSection
-              title={`Vous êtes intéressé par ${data.attributes.first_name} ?`}
-              content="Completez le formulaire de prise de contact ci dessous."
-            />
-            <HeaderProfil data={data.attributes} />
-          </>
-        ) : (
-          "Chargement des données"
-        )}
+        <ContentSection
+          title={`Vous êtes intéressé par ${data.data.data[0].attributes.first_name} ?`}
+          content="Completez le formulaire de prise de contact ci dessous."
+        />
+        <HeaderProfil data={data.data.data[0].attributes} />
       </SectionWrapperHeader>
-      <FormContactProfil id={param.id} />
+      <FormContactProfil id={params.id} />
       <FooterApp />
     </main>
   );

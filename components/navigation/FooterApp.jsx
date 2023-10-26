@@ -12,26 +12,26 @@ const FooterApp = () => {
             <li>
               <Link href="https://www.linkedin.com/company/98544879">
                 <Image
-                src="/facebook.png"
-                width={32}
-                height={32}
-                alt="facebook"
-              />
+                  src="/facebook.png"
+                  width={32}
+                  height={32}
+                  alt="facebook"
+                />
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/company/98544879">
-              <Image
-                src="/linkedin.png"
-                width={32}
-                height={32}
-                alt="linkedin"
-              />
+                <Image
+                  src="/linkedin.png"
+                  width={32}
+                  height={32}
+                  alt="linkedin"
+                />
               </Link>
             </li>
             <li>
-               <Link href="https://www.linkedin.com/company/98544879">
-              <Image src="/github.png" width={32} height={32} alt="github" />
+              <Link href="https://www.linkedin.com/company/98544879">
+                <Image src="/github.png" width={32} height={32} alt="github" />
               </Link>
             </li>
           </ul>
@@ -55,7 +55,8 @@ const FooterApp = () => {
         </div>
 
         <div class="row">
-          Lambda Labs © 2023 Lambda - All rights reserved || Designed By Lambda
+          Lambda Labs © 2023 Lambda - All rights reserved || Made with ❤️ by
+          Lambda's crew.
         </div>
       </div>
     </footer>

@@ -11,7 +11,23 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
-const page = () => {
+export const metadata = {
+  title:
+    "Lambda | Décourvrez notre modèle unique basée sur la spécialisation C++ et la transparence",
+  description:
+    "Découvrez notre modèle unique fondé sur la transparence, l'horizontalité et la spécialisation. Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Nous recrutons des développeurs C++.",
+  keywords: [
+    "ESN",
+    "Recrutement de développeur C++",
+    "ESN alternative",
+    "Management horizontal",
+    "Valeurs",
+    "Transparence",
+    "Management horizontale",
+  ],
+};
+
+export default async function Career() {
   const secondSection = {
     txtLabel: "Choisir c'est renoncer. Nous sommes spécialiste du C++",
     title:
@@ -126,6 +142,4 @@ const page = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default page;
+}

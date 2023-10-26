@@ -9,6 +9,18 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
+export const metadata = {
+  title: "Lambda | Découvrez tous nos experts C++",
+  description:
+    "Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Découvrez et contactez nos experts réussir votre projet.",
+  keywords: [
+    "Recrutement de développeur C++",
+    "Dev C++",
+    "Ingénieur logiciel C++",
+    "Software engineer C++",
+  ],
+};
+
 export default async function collectif() {
   const resProfils = await axios.get(
     "http://localhost:1337/api/profils?populate=*"

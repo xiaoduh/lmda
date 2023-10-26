@@ -1,9 +1,9 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
-  title: "Lambda",
+  title: "Lambda | Politique de confidentialité",
   description:
-    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    "Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence.",
 };
 
 export default function NavigationAppLayout({

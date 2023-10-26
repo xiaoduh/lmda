@@ -10,7 +10,22 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
-export default async function postuler() {
+export const metadata = {
+  title: "Lambda | Nos missions",
+  description:
+    "Parcourez nos dernières offres d'emplois et missions à pourvoir sur l'écosystème C++.",
+  keywords: [
+    "emploi dev C++",
+    "mission freelance C++",
+    "emploi ingénieur logiciel C++",
+    "emploi Software engineer C++",
+    "recrutement développeur C++",
+    "trouver un poste en tant que développeur C++",
+    "offres d'emplois C++",
+  ],
+};
+
+export default async function Postuler() {
   const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
 
   return (
@@ -36,6 +51,7 @@ export default async function postuler() {
                 daily_rate={card.attributes.daily_rate}
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
+                workplace={card.attributes.work_organisation}
               />
             );
           })}

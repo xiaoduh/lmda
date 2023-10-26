@@ -2,7 +2,6 @@
 import React from "react";
 
 const Experience = ({ data }) => {
-  console.log(data.attributes);
   return (
     <div className="detail-experience">
       <div className="details">

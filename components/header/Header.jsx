@@ -10,10 +10,13 @@ import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
 export default async function Header() {
-  const resJobs = await axios.get("http://localhost:10000/jobs");
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
+  );
+  console.log(resJobs.data);
   const resProfils = await axios.get("http://localhost:10000/users");
-  const contentBtnPrimary = `Voir les ${resJobs.data.length} missions ouvertes`;
-  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.length})`;
+  const contentBtnPrimary = `Voir les offres de missions ouvertes (${resJobs.data.data.length})`;
+  const contentBtnSecondary = `Recruter votre prochain développeur C++ (${resProfils.data.length})`;
   const txtLabel = "La confiance est indissociable de la transparence";
 
   const labels = [

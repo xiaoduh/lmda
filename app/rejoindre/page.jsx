@@ -6,7 +6,13 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
-const page = () => {
+export const metadata = {
+  title: "Lambda | Rejoignez notre modèle innovant, transparent et win-win",
+  description:
+    "Nous recrutons des développeurs C++ en CDI ou en Freelance pour aider nos clients dans la réalisation de leurs projets. Rejoignez notre modèle unique fondé sur la transparence, l'horizontalité, et la spécialisation sur l'écosystème C++.",
+};
+
+export default async function Join() {
   return (
     <main>
       <SectionWrapperHeader id={"form"}>
@@ -20,6 +26,4 @@ const page = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default page;
+}

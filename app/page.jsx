@@ -16,7 +16,9 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 
 export default async function Home() {
-  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+  );
   const resProfils = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
   );
@@ -92,11 +94,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length}) `}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
+          content={`Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -118,11 +120,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
+          content={`Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -150,11 +152,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Rechercher votre profil (${resProfils.data.data.length})`}
+          content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
       </SectionWrapper>
@@ -177,12 +179,13 @@ export default async function Home() {
                 daily_rate={card.attributes.daily_rate}
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
+                workplace={card.attributes.work_organisation}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
       </SectionWrapper>
