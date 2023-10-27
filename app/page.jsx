@@ -26,8 +26,6 @@ export default async function Home() {
     "https://lmdaapi.onrender.com/subscribers"
   );
 
-  console.log(resProfils);
-
   const contentCardsFirstSection = [
     {
       title: "Transparence",
@@ -100,7 +98,9 @@ export default async function Home() {
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${resProfils.data.data.length})`}
+          content={`Recruter un prestataire (${
+            500 + resProfils.data.data.length
+          })`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -126,7 +126,9 @@ export default async function Home() {
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${resProfils.data.data.length})`}
+          content={`Recruter un prestataire (${
+            500 + resProfils.data.data.length
+          })`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -135,7 +137,9 @@ export default async function Home() {
         <ContentSection
           title="Trouvez les compétences qu'il vous manque au sein de notre écosystème"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${resProfils.data.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          Notre réseau rassemble plus de ${
+            500 + resProfils.data.data.length
+          } passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
@@ -154,7 +158,9 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter un prestataire (${resProfils.data.data.length})`}
+          content={` Recruter un prestataire (${
+            500 + resProfils.data.data.length
+          })`}
           link={"/collectif"}
         />
         <SecondaryBtn
@@ -196,7 +202,7 @@ export default async function Home() {
         <Label content="Restez connecté à l'écosystème C++" />
         <ContentSection
           title={`Aujourd'hui, il y a  ${
-            resSubscribers.data.length + 100
+            resSubscribers.data.length + 900
           } développeurs abonnés à nos alertes missions.`}
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />

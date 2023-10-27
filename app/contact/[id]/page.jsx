@@ -7,15 +7,7 @@ import Label from "@/components/label/Label";
 import HeaderProfil from "@/components/profil/HeaderProfil";
 import axios from "axios";
 
-export async function generateMetadata({ params }) {
-  const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
-  );
-  return {
-    title: `Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title} | Lamda`,
-    description: `Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
-  };
-}
+
 
 export default async function ContactProfil({ params }) {
   const data = await axios.get(

@@ -20,10 +20,10 @@
     
 
     .pp {
-        max-width: 120px;
+        max-width: 80px;
 
         @media screen and (max-width: 1300px) {
-            max-width: 100px;
+            max-width: 60px;
           }
     }
 
@@ -115,18 +115,23 @@
                 .container-statut {
                     margin-top: .5rem;
                     display: flex;
-    
-                    .pastille {
-                        width: 15px;
-                        height: 15px;
-                        background: #2ED47A;
-                        border-radius: 50%;
-                        margin-right: .5rem;
-                    }
 
-                    .red {
-                        background: $color-stop !important;
+                    .available {
+                        display: flex;
+
+                        .pastille {
+                            width: 15px;
+                            height: 15px;
+                            background: #2ED47A;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+    
+                        .red {
+                            background: $color-cancel !important;
+                        }
                     }
+   
     
                 }
 

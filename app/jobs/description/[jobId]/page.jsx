@@ -8,15 +8,7 @@ import SkillsContainer from "@/components/profil/SkillsContainer";
 import JobDescription from "@/components/job/JobDescription";
 import axios from "axios";
 
-export async function generateMetadata({ params }) {
-  const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
-  );
-  return {
-    title: `Mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation} | Lambda`,
-    description: `Mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation}`,
-  };
-}
+
 
 export default async function Description({ params }) {
   const data = await axios.get(

@@ -4,11 +4,7 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import ContentSection from "@/components/content/ContentSection";
 
-export const metadata = {
-  title: "CGU | Lambda",
-  description:
-    "Nos conditions d'utilisation applicables pour l'utilisation de notre plateforme spécialisée sur l'écosystème C++.",
-};
+
 
 export default function CGU() {
   return (

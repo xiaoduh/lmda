@@ -18,7 +18,7 @@ export default async function Header() {
   );
   const contentBtnPrimary = `Voir les missions ouvertes (${resJobs.data.data.length})`;
   const contentBtnSecondary = `Recruter un prestataire (${
-    340 + resProfils.data.data.length
+    500 + resProfils.data.data.length
   })`;
   const txtLabel = "La confiance est indissociable de la transparence";
 

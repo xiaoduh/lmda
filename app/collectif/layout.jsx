@@ -1,9 +1,16 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
-  title: "Lambda",
+  title:
+    "Recrutez rapidement vos compétences grâce au plus large réseau de développeurs C++ | Lambda",
   description:
-    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    "Vous recherchez un développeur C++ ? Recherchez parmis nos centaines de membres, le candidat idéal pour que votre projet soit une réussite.",
+  keywords: [
+    "Recrutement de développeur C++",
+    "Dev C++",
+    "Ingénieur logiciel C++",
+    "Software engineer C++",
+  ],
 };
 
 export default function NavigationAppLayout({

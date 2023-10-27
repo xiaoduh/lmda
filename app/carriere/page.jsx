@@ -12,21 +12,7 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
-export const metadata = {
-  title:
-    "Décourvrez notre modèle unique basée sur la spécialisation C++ et la transparence | Lambda",
-  description:
-    "Découvrez notre modèle unique fondé sur la transparence, l'horizontalité et la spécialisation. Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Nous recrutons des développeurs C++.",
-  keywords: [
-    "ESN",
-    "Recrutement de développeur C++",
-    "ESN alternative",
-    "Management horizontal",
-    "Valeurs",
-    "Transparence",
-    "Management horizontale",
-  ],
-};
+
 
 export default async function Career() {
   const resJobs = await axios.get(

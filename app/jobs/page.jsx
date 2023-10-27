@@ -10,24 +10,7 @@ import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
 
-export async function generateMetadata() {
-  const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs`
-  );
-  return {
-    title: `${data.data.length} missions ouvertes sur notre plateforme | Lambda`,
-    description: `Grâce à notre plateforme spécialisée sur l'écosystème C++, nous vous facilitions la recherche de votre prochaine mission. Nous sommes un agrégateur de toutes les missions C++ du marché.`,
-    keywords: [
-      "emploi dev C++",
-      "mission freelance C++",
-      "emploi ingénieur logiciel C++",
-      "emploi Software engineer C++",
-      "recrutement développeur C++",
-      "trouver un poste en tant que développeur C++",
-      "offres d'emplois C++",
-    ],
-  };
-}
+
 
 export default async function Postuler() {
   const resJobs = await axios.get(

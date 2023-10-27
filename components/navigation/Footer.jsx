@@ -19,6 +19,7 @@ const Footer = () => {
                   width={32}
                   height={32}
                   alt="facebook"
+                  title="facebook"
                 />
               </Link>
             </li>
@@ -32,6 +33,7 @@ const Footer = () => {
                   width={32}
                   height={32}
                   alt="linkedin"
+                  title="linkedin"
                 />
               </Link>
             </li>
@@ -40,7 +42,13 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/lambda-fr/"
                 target="_blank"
               >
-                <Image src="/github.png" width={32} height={32} alt="github" />
+                <Image
+                  src="/github.png"
+                  width={32}
+                  height={32}
+                  alt="github"
+                  title="github"
+                />
               </Link>
             </li>
           </ul>

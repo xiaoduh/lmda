@@ -10,15 +10,7 @@ import Experience from "@/components/profil/Experience";
 import Reference from "@/components/profil/Reference";
 import axios from "axios";
 
-export async function generateMetadata({ params }) {
-  const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
-  );
-  return {
-    title: `Profil de ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title} | Lambda`,
-    description: `Prendre contact avec ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
-  };
-}
+
 
 export default async function Profil({ params }) {
   const data = await axios.get(

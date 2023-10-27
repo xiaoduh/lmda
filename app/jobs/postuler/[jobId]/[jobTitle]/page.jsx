@@ -7,15 +7,7 @@ import "../../../../../styles/index.scss";
 import FooterApp from "@/components/navigation/FooterApp";
 import axios from "axios";
 
-export async function generateMetadata({ params }) {
-  const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
-  );
-  return {
-    title: `Postuler à la mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation} | Lambda`,
-    description: `Postuler à la mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation}`,
-  };
-}
+
 
 export default async function ApplyJob({ params }) {
   const data = await axios.get(

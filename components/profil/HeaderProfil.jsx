@@ -12,14 +12,20 @@ const HeaderProfil = ({ data }) => {
   return (
     <div className="header-profil">
       <div className="pp">
-        <img src="/utilisateur.png" className="pp" alt="profil-pricture" />
+        <img
+          src="/utilisateur.png"
+          className="pp"
+          alt="profil-pricture"
+          title="user"
+        />
       </div>
       <div className="content-container">
         <div className="content">
           <div className="title">
-            <h2>
-              {data.first_name} {data.last_name}
-            </h2>
+            <h1>
+              {data.first_name.slice(0, 3).toUpperCase() +
+                data.last_name.slice(0, 3).toUpperCase()}
+            </h1>
             <p>{data.title}</p>
             <p>{data.bio}</p>
           </div>
@@ -39,7 +45,7 @@ const HeaderProfil = ({ data }) => {
               ) : (
                 <div className="available">
                   <div className="pastille red"></div>
-                  <p>indisponible</p>
+                  <p>occupé</p>
                 </div>
               )}
             </div>
