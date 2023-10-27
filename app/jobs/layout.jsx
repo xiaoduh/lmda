@@ -1,4 +1,5 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
+import axios from "axios";
 
 export async function generateMetadata() {
   const data = await axios.get(
