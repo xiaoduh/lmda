@@ -1,9 +1,10 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Lambda, seule plateforme spécialisée sur l'écosystème C++",
+  title:
+    "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
   description:
-    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence. Notre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille.",
   keywords: [
     "ESN",
     "Plateforme de recrutement",
@@ -29,14 +30,16 @@ export const metadata = {
   creator: "Lambda Labs",
   publisher: "Lambda Labs",
   openGraph: {
-    title: "Lambda, seule plateforme spécialisée sur l'écosystème C++",
+    title:
+      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
     description:
       "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
     siteName: "Lambda",
     type: "website",
   },
   twitter: {
-    title: "Lambda, seule plateforme spécialisée sur l'écosystème C++",
+    title:
+      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
     description:
       "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
     site: "Lambda",

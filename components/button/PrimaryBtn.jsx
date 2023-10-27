@@ -2,9 +2,9 @@
 import Link from "next/link";
 import React from "react";
 
-const PrimaryBtn = ({ content, link }) => {
+const PrimaryBtn = ({ content, link, title }) => {
   return (
-    <Link href={link}>
+    <Link href={link} title={title}>
       <button className="primaryBtn">{content}</button>
     </Link>
   );

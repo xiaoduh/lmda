@@ -96,12 +96,14 @@ export default async function Home() {
         <PrimaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
           content={`Recruter un prestataire (${
             500 + resProfils.data.data.length
           })`}
           link={"/collectif"}
+          title={"prestataire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
@@ -124,12 +126,14 @@ export default async function Home() {
         <PrimaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
           content={`Recruter un prestataire (${
             500 + resProfils.data.data.length
           })`}
           link={"/collectif"}
+          title={"collectif"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
@@ -162,10 +166,12 @@ export default async function Home() {
             500 + resProfils.data.data.length
           })`}
           link={"/collectif"}
+          title={"collectif"}
         />
         <SecondaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
@@ -195,6 +201,7 @@ export default async function Home() {
         <PrimaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
 

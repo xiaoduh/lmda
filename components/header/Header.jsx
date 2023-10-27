@@ -184,8 +184,12 @@ export default async function Header() {
         Notre modèle repose sur moins de manager pour plus de responsabilité et
         surtout une totale transparence pour une confiance sans faille.
       </p>
-      <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
-      <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
+      <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} title={"jobs"} />
+      <SecondaryBtn
+        content={contentBtnSecondary}
+        link={"/collectif"}
+        title={"collectif"}
+      />
       <InfiniteScroll Tags={labels} />
     </header>
   );
