@@ -1,10 +1,9 @@
 import Script from "next/script";
 
 export const metadata = {
-  title:
-    "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
+  title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
   description:
-    "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence. Notre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille.",
+    "Nous connectons Experts du C++ et Entreprises, en toute transparence. Notre modèle repose sur moins de manager pour plus de responsabilité et surtout une totale transparence pour une confiance sans faille.",
   keywords: [
     "ESN",
     "Plateforme de recrutement",
