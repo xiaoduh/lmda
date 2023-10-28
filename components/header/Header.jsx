@@ -182,7 +182,7 @@ export default async function Header() {
         Lambda connecte Talents du C++ et Entreprises en toute confiance grâce à
         la transparence.<br></br>
         Notre vision de l&apos;ESN repose sur un modèle managérial horizontal
-        pour une meilleure maitrise des coûts, une meilleure répartition de la
+        pour une meilleure maîtrise des coûts, une meilleure répartition de la
         valeur créée, plus de responsabilité et surtout une totale transparence
         pour une confiance sans faille.
       </p>
