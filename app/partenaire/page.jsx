@@ -19,7 +19,7 @@ export default async function Partner() {
           title={`${
             540 + resProfils.data.data.length
           } Développeurs attendent votre projet`}
-          content="2 projets sur 3 sont en retard à cause du manque de talents. Ne passez plus vos journées à chercher les bonnes compétences. Bénéficiez d'une visibilité auprès du plus large réseau de compétences C++. Augmentez la pertinence de vos candidatures grâce à notre notre expertise sur l'écosystème C++."
+          content="2 projets sur 3 sont en retard à cause du manque de talents. Ne passez plus vos journées à chercher les bonnes compétences. Bénéficiez d'une visibilité auprès du plus large réseau de compétences C++. Augmentez la pertinence de vos candidatures grâce à notre experience et expertise sur l'écosystème C++."
         />
       </SectionWrapperHeader>
       <Form />
