@@ -13,6 +13,7 @@ const FooterApp = () => {
               <Link
                 href="https://www.linkedin.com/company/lambda-fr/"
                 target="_blank"
+                title="facebook"
               >
                 <Image
                   src="/facebook.png"
@@ -27,6 +28,7 @@ const FooterApp = () => {
               <Link
                 href="https://www.linkedin.com/company/lambda-fr/"
                 target="_blank"
+                title="linkedin"
               >
                 <Image
                   src="/linkedin.png"
@@ -41,6 +43,7 @@ const FooterApp = () => {
               <Link
                 href="https://www.linkedin.com/company/lambda-fr/"
                 target="_blank"
+                title="github"
               >
                 <Image
                   src="/github.png"
@@ -57,16 +60,27 @@ const FooterApp = () => {
         <div class="row">
           <ul>
             <li>
-              <Link href="/legal">Mentions legales</Link>
+              <Link href="/legal" title="Mentions legales">
+                Mentions legales
+              </Link>
             </li>
             <li>
-              <Link href="/confidentialite">Politique de confidentialité</Link>
+              <Link
+                href="/confidentialite"
+                title="Politique de confidentialité"
+              >
+                Politique de confidentialité
+              </Link>
             </li>
             <li>
-              <Link href="/cgu">CGU</Link>
+              <Link href="/cgu" title="CGU">
+                CGU
+              </Link>
             </li>
             <li>
-              <Link href="/carriere">Carrière</Link>
+              <Link href="/carriere" title="Carrière">
+                Carrière
+              </Link>
             </li>
           </ul>
         </div>

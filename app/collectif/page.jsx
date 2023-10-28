@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import CardMember from "@/components/member/CardMember";
@@ -8,8 +8,6 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
-
-
 
 export default async function collectif() {
   const resProfils = await axios.get(

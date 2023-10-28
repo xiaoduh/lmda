@@ -2,12 +2,10 @@ import FooterApp from "@/components/navigation/FooterApp";
 import "../../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import FormContactProfil from "@/components/form/FormContactProfil";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Label from "@/components/label/Label";
 import HeaderProfil from "@/components/profil/HeaderProfil";
 import axios from "axios";
-
-
 
 export default async function ContactProfil({ params }) {
   const data = await axios.get(

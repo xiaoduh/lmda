@@ -2,7 +2,7 @@ import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
 import Header from "@/components/header/Header";
 import Label from "@/components/label/Label";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
@@ -80,7 +80,7 @@ export default async function Home() {
         <Label content="Un écosystème spécialisé au management horizontal" />
         <ContentSection
           title="Management horizontal et transparence totale"
-          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts..."
+          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons à un management nouveau fondé sur la transparence et un management horizontal pour d'avantage de responsabilité. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {

@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import FormApply from "@/components/form/FormApply";
 import Label from "@/components/label/Label";
 import SectionWrapper from "@/components/section/SectionWrapper";
@@ -6,8 +6,6 @@ import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import "../../../../../styles/index.scss";
 import FooterApp from "@/components/navigation/FooterApp";
 import axios from "axios";
-
-
 
 export default async function ApplyJob({ params }) {
   const data = await axios.get(

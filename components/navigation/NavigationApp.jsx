@@ -23,7 +23,7 @@ const NavigationApp = () => {
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
-        <Link href="/">
+        <Link href="/" title="home">
           <Image
             src={logo}
             width={120}
@@ -37,16 +37,16 @@ const NavigationApp = () => {
         {active ? (
           <ul className="open">
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere" title="Notre modèle">Notre modèle</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif" title="Nos membres">Nos membres</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs" title="Nos missions">Nos missions</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/partenaire" title="Proposer une mission">Proposer une mission</Link>
             </li>
             {/* <li>
               <Link href="/blog">Nos contenus</Link>
@@ -55,16 +55,16 @@ const NavigationApp = () => {
         ) : (
           <ul>
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere" title="Notre modèle">Notre modèle</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif" title="Nos membres">Nos membres</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs" title="Nos missions">Nos missions</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/partenaire" title="Proposer une mission">Proposer une mission</Link>
             </li>
             {/* <li>
               <Link href="/blog">Nos contenus</Link>
@@ -73,10 +73,10 @@ const NavigationApp = () => {
         )}
       </nav>
       <div className="cta-container">
-        <Link className="cta-secondary" href="/partenaire">
+        <Link className="cta-secondary" href="/partenaire" title="Proposer une mission">
           Proposer une mission
         </Link>
-        <Link className="btn-blue" href="/rejoindre">
+        <Link className="btn-blue" href="/rejoindre" title="Trouver une mission">
           Trouver une mission
         </Link>
       </div>

@@ -6,7 +6,7 @@ export async function generateMetadata() {
     `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs`
   );
   return {
-    title: `${data.data.length} postes de développeurs C++ en ligne sur notre plateforme | Lambda`,
+    title: `Agrégateur d'emplois de développeurs C++ en ligne`,
     description: `Grâce à notre plateforme spécialisée sur l'écosystème C++, nous vous facilitions la recherche de votre prochaine mission. Nous sommes un agrégateur de toutes les missions C++ du marché.`,
     keywords: [
       "emploi dev C++",

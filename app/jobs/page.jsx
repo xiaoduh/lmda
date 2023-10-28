@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import Label from "@/components/label/Label";
@@ -9,8 +9,6 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
-
-
 
 export default async function Postuler() {
   const resJobs = await axios.get(

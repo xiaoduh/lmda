@@ -1,7 +1,7 @@
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Card from "@/components/card/Card";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
@@ -11,8 +11,6 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
-
-
 
 export default async function Career() {
   const resJobs = await axios.get(

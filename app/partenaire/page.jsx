@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Form from "@/components/form/Form";
 import Label from "@/components/label/Label";
 import FooterApp from "@/components/navigation/FooterApp";
@@ -6,8 +6,6 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
-
-
 
 export default async function Partner() {
   const resProfils = await axios.get(

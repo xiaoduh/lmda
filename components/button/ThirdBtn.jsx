@@ -4,7 +4,7 @@ import React from "react";
 
 const ThirdBtn = ({ content, link }) => {
   return (
-    <Link href={link}>
+    <Link href={link} title={content}>
       <button className="thirdBtn">{content}</button>
     </Link>
   );

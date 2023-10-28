@@ -1,11 +1,9 @@
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../styles/index.scss";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import Link from "next/link";
-
-
 
 export default function Legal() {
   return (
@@ -45,8 +43,10 @@ export default function Legal() {
         <p>
           Le traitement de vos données à caractère personnel est régi par notre
           Charte du respect de la vie privée, disponible depuis la section{" "}
-          <Link href={"/confidentialite"}>Politique de confidentialité</Link>,
-          conformément au Règlement Général sur la Protection des Données
+          <Link href={"/confidentialite"} title="politique de confidentialité">
+            Politique de confidentialité
+          </Link>
+          , conformément au Règlement Général sur la Protection des Données
           2016/679 du 27 avril 2016 («RGPD»).
         </p>
       </div>

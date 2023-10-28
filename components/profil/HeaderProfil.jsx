@@ -29,7 +29,13 @@ const HeaderProfil = ({ data }) => {
             <p>{data.title}</p>
             <p>{data.bio}</p>
           </div>
-          <Link href={`/contact/${data.profil_id}`}>
+          <Link
+            href={`/contact/${data.profil_id}`}
+            title={`contacter ${
+              data.first_name.slice(0, 3).toUpperCase() +
+              data.last_name.slice(0, 3).toUpperCase()
+            }`}
+          >
             <button className="btn-contact">Contacter</button>
           </Link>
         </div>

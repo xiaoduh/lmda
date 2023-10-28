@@ -1,5 +1,5 @@
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";

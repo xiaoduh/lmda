@@ -15,7 +15,7 @@ const JobCard = ({
   workplace,
 }) => {
   return (
-    <Link href={`/jobs/description/${jobId}`}>
+    <Link href={`/jobs/description/${jobId}`} title="job description">
       <div className="card-job">
         <h3>{title}</h3>
         <p>{desc}</p>

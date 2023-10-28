@@ -2,9 +2,9 @@ import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
   title:
-    "Décourvrez notre modèle unique basée sur la spécialisation C++ et la transparence | Lambda",
+    "Notre modèle d'ESN alternative fondé sur la Transparence et un management horizontal",
   description:
-    "Découvrez notre modèle unique fondé sur la transparence, l'horizontalité et la spécialisation. Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Nous recrutons des développeurs C++.",
+    "Découvrez notre modèle unique fondé sur la transparence, un management horizontale et une ultra spécialisation. Nous connectons, Talents et Entreprises de l'écosystème C++, en toute transparence. Nous recrutons des développeurs C++ en CDI ou en Freelance.",
   keywords: [
     "ESN",
     "Recrutement de développeur C++",

@@ -3,7 +3,7 @@ import React from "react";
 
 const ArticleCardContainer = ({ img, title, content, category, author }) => {
   return (
-    <Link href={`/blog/${title}`}>
+    <Link href={`/blog/${title}`} title="article de blog">
       <div className="article-preview">
         <img
           src={img}

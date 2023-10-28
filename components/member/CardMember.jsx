@@ -17,7 +17,7 @@ const CardMember = ({
   const contentBtnSecondary = "Voir son parcours";
 
   return (
-    <Link href={`/collectif/profil/${id}/${title}`}>
+    <Link href={`/collectif/profil/${id}/${title}`} title="collectif">
       <div className="card-member">
         {available ? (
           <div className="available">
@@ -31,7 +31,12 @@ const CardMember = ({
           </div>
         )}
 
-        <img src={img} className="pp" alt={first_name + last_name} title="user"/>
+        <img
+          src={img}
+          className="pp"
+          alt={first_name + last_name}
+          title="user"
+        />
         <h4>
           {first_name.slice(0, 3).toUpperCase() +
             last_name.slice(0, 3).toUpperCase()}
