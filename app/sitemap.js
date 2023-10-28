@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default async function sitemap() {
-  const baseUrl = "https://lmda-xiaoduh.vercel.app";
+  const baseUrl = "https://lambda-labs.fr";
 
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
