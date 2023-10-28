@@ -37,11 +37,11 @@ const CardMember = ({
           alt={first_name + last_name}
           title="user"
         />
-        <h4>
+        <h2>
           {first_name.slice(0, 3).toUpperCase() +
             last_name.slice(0, 3).toUpperCase()}
-        </h4>
-        <h4>{title}</h4>
+        </h2>
+        <h3>{title}</h3>
         <p>{bio}</p>
         <PrimaryBtn content="Contacter" link={`/contact/${id}`} />
         <SecondaryBtn
