@@ -211,7 +211,7 @@ export default async function Home() {
           title={`Aujourd'hui, il y a  ${
             resSubscribers.data.length + 900
           } développeurs abonnés à nos alertes missions.`}
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
+          content="Que vous soyez en veille ou en recherche active d'un poste de développeur ou une mission, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
       </SectionWrapper>
