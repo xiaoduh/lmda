@@ -17,10 +17,10 @@ export default async function Postuler() {
   return (
     <main>
       <SectionWrapperHeader id={"jobs"}>
-        <Label content="Lambda est un agrégateur de missions C++" />
+        <Label content="Agrégateur d'offres emplois et missions C++" />
         <ContentSection
-          title="Nous vous connectons à l'écosystème C++"
-          content={`Ne ratez plus aucunes opportunités. Postulez en un clic aux missions qui vous intéressent.`}
+          title="Rejoignez 500+ développeurs passionnés."
+          content={`Ne ratez plus aucunes opportunités. Nous vous connectons à l'écosystème C++. Postulez en un clic aux missions qui vous intéressent.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper>
