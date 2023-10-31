@@ -11,7 +11,7 @@ import axios from "axios";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
   );
   const resProfils = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
@@ -192,7 +192,26 @@ export default async function HeaderEngineer() {
         link={"/collectif"}
         title={"collectif"}
       />
-      <InfiniteScroll Tags={labels} />
+      <div className="track-slider">
+        {resJobs.data.data.map((card) => {
+          console.log(card.attributes);
+          return (
+            <TrackCard
+              key={card.attributes.job_id}
+              title={card.attributes.title}
+              desc={card.attributes.short_desc}
+              skills={card.attributes.software_skills}
+              place={card.attributes.localisation}
+              salary={card.attributes.salary}
+              daily_rate={card.attributes.daily_rate}
+              jobId={card.attributes.job_id}
+              jobTitle={card.attributes.title}
+              workplace={card.attributes.work_organisation}
+            />
+          );
+        })}
+      </div>
+      {/* <InfiniteScroll Tags={labels} /> */}
     </header>
   );
 }
