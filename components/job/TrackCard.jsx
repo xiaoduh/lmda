@@ -3,7 +3,7 @@ import Link from "next/link";
 import ThirdBtn from "../button/ThirdBtn";
 import PrimaryBtn from "../button/PrimaryBtn";
 
-const JobCard = ({
+const TrackCard = ({
   title,
   desc,
   skills,
@@ -49,4 +49,4 @@ const JobCard = ({
   );
 };
 
-export default JobCard;
+export default TrackCard;

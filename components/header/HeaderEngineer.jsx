@@ -8,6 +8,7 @@ import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
+import TrackCard from "../job/TrackCard";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
