@@ -37,46 +37,70 @@ const NavigationApp = () => {
         {active ? (
           <ul className="open">
             <li>
-              <Link href="/carriere" title="Notre modèle">Notre modèle</Link>
+              <Link href="/carriere" title="Notre modèle">
+                Notre modèle
+              </Link>
             </li>
             <li>
-              <Link href="/collectif" title="Nos membres">Nos membres</Link>
+              <Link href="/collectif" title="Nos membres">
+                Nos membres
+              </Link>
             </li>
             <li>
-              <Link href="/jobs" title="Nos missions">Nos missions</Link>
+              <Link href="/jobs" title="Nos missions">
+                Nos missions
+              </Link>
             </li>
             <li>
-              <Link href="/partenaire" title="Proposer une mission">Proposer une mission</Link>
+              <Link href="/partenaire" title="Proposer une mission">
+                Proposer une mission
+              </Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
+            <li>
+              <Link href="/entreprise">Entreprise</Link>
+            </li>
           </ul>
         ) : (
           <ul>
             <li>
-              <Link href="/carriere" title="Notre modèle">Notre modèle</Link>
+              <Link href="/carriere" title="Notre modèle">
+                Notre modèle
+              </Link>
             </li>
             <li>
-              <Link href="/collectif" title="Nos membres">Nos membres</Link>
+              <Link href="/collectif" title="Nos membres">
+                Nos membres
+              </Link>
             </li>
             <li>
-              <Link href="/jobs" title="Nos missions">Nos missions</Link>
+              <Link href="/jobs" title="Nos missions">
+                Nos missions
+              </Link>
             </li>
             <li>
-              <Link href="/partenaire" title="Proposer une mission">Proposer une mission</Link>
+              <Link href="/partenaire" title="Proposer une mission">
+                Proposer une mission
+              </Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
+            <li>
+              <Link href="/entreprise">Entreprise</Link>
+            </li>
           </ul>
         )}
       </nav>
       <div className="cta-container">
-        <Link className="cta-secondary" href="/partenaire" title="Proposer une mission">
+        <Link
+          className="cta-secondary"
+          href="/partenaire"
+          title="Proposer une mission"
+        >
           Proposer une mission
         </Link>
-        <Link className="btn-blue" href="/rejoindre" title="Trouver une mission">
+        <Link
+          className="btn-blue"
+          href="/rejoindre"
+          title="Trouver une mission"
+        >
           Trouver une mission
         </Link>
       </div>

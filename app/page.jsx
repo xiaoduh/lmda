@@ -1,6 +1,5 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
-import Header from "@/components/header/Header";
 import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
@@ -8,12 +7,12 @@ import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
-import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
+import HeaderEngineer from "@/components/header/HeaderEngineer";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -75,7 +74,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <Header />
+      <HeaderEngineer />
       <SectionWrapper id={"why"}>
         <Label content="Un écosystème spécialisé au management horizontal" />
         <ContentSection

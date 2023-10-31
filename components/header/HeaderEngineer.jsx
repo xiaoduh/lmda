@@ -9,7 +9,7 @@ import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
-export default async function Header() {
+export default async function HeaderEngineer() {
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
   );

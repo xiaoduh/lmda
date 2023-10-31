@@ -9,7 +9,7 @@ const NavigationLanding = () => {
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
-  const [blog, setBlog] = useState(false);
+  const [client, setClient] = useState(false);
   const [job, setJob] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -26,31 +26,31 @@ const NavigationLanding = () => {
       setWhy(true);
       setMission(false);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "2") {
       setWhy(false);
       setMission(true);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setBlog(true);
+      setClient(true);
       setJob(false);
     } else if (e.target.id === "5") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(true);
     }
   };
@@ -119,17 +119,15 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
-              {blog ? (
-                <a href="#blog" className="selected" id="4">
-                  Blog
-                </a>
-              ) : (
-                <a href="#blog" id="4">
-                  Blog
-                </a>
-              )}
-            </li> */}
+            {client ? (
+              <Link href="/entreprise" className="selected" id="4">
+                Entreprise
+              </Link>
+            ) : (
+              <Link href="/entreprise" id="4">
+                Entreprise
+              </Link>
+            )}
           </ul>
         ) : (
           <ul>
@@ -182,17 +180,15 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
-              {blog ? (
-                <a href="#blog" className="selected" id="4">
-                  Le Blog
-                </a>
-              ) : (
-                <a href="#blog" id="4">
-                  Le Blog
-                </a>
-              )}
-            </li> */}
+            {client ? (
+              <Link href="/entreprise" className="selected" id="4">
+                Entreprise
+              </Link>
+            ) : (
+              <Link href="/entreprise" id="4">
+                Entreprise
+              </Link>
+            )}
           </ul>
         )}
       </nav>
