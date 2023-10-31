@@ -21,8 +21,6 @@ export default async function Home() {
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
   );
 
-  const resSubscribers = await axios.get("http://localhost:10000/subscribers");
-
   const contentCardsFirstSection = [
     {
       title: "Freelance ou CDI",
