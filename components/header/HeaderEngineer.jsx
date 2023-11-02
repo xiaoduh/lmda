@@ -25,10 +25,10 @@ export default async function HeaderEngineer() {
         <br></br>
         La <span className="important">spécialisation</span>, rend visibile.
         <br></br>
-        Notre vision de l&apos;ESN, c'est faire mieux tout en réduisant les
+        Notre vision de l&apos;ESN, c&apos;est faire mieux tout en réduisant les
         coûts liés au fonctionnement de la structure pour offrir une meilleure
-        rémunération, plus de bonus dans le package et d'avantage de services à
-        nos collaborateurs.
+        rémunération, plus de bonus dans le package et d&apos;avantage de
+        services à nos collaborateurs.
       </p>
       <PrimaryBtn
         content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
