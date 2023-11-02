@@ -1,21 +1,12 @@
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
-import Label from "@/components/label/Label";
-import cpp from "../../assets/images/cpp.png";
-import ue5 from "../../assets/images/ue5.png";
-import qt from "../../assets/images/qt.png";
-import linux from "../../assets/images/linux.png";
-import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 import TrackCard from "../job/TrackCard";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
-  );
-  const resProfils = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
   );
   const contentBtnPrimary = `Voir les missions ouvertes (${resJobs.data.data.length})`;
 

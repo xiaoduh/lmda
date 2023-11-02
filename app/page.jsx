@@ -79,7 +79,7 @@ export default async function Home() {
         {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
           title="Management horizontal et transparence totale"
-          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons à un management nouveau fondé sur la transparence et un management horizontal pour d'avantage de responsabilité. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
+          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons en un management nouveau, fondé sur la transparence pour d'avantage de responsabilité et surtout une meilleure maîtrise des coûts de fonctionnement. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -136,11 +136,10 @@ export default async function Home() {
       <SectionWrapper id={"member"}>
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
-          title="Trouvez les compétences qu'il vous manque au sein de notre écosystème"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${
+          title="Soyez visible auprès des entreprises"
+          content={`Tout comme ${
             500 + resProfils.data.data.length
-          } passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
@@ -210,8 +209,8 @@ export default async function Home() {
         <ContentSection
           title={`Aujourd'hui, il y a  ${
             resSubscribers.data.length + 900
-          } développeurs abonnés à nos alertes missions.`}
-          content="Que vous soyez en veille ou en recherche active d'un poste de développeur ou une mission, recevez par email les dernières missions en C++ sur le marché."
+          }+ abonnés à notre Newsletter « Mission à pourvoir ».`}
+          content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />
       </SectionWrapper>
