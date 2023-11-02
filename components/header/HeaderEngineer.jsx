@@ -180,7 +180,7 @@ export default async function HeaderEngineer() {
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Lambda connecte Talents et Entreprises de l'écosystème C/C++ en toute
+        Lambda connecte Talents et Entreprises de l'écosystème C++ en toute
         confiance grâce à la transparence.<br></br>
         Notre vision de l&apos;ESN repose sur un modèle managérial horizontal
         pour une meilleure maîtrise des coûts, une meilleure répartition de la
@@ -189,9 +189,9 @@ export default async function HeaderEngineer() {
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} title={"jobs"} />
       <SecondaryBtn
-        content={`Mettre en ligne son CV)`}
-        link={"/rejoindre"}
-        title={"rejoindre"}
+        content={contentBtnSecondary}
+        link={"/collectif"}
+        title={"collectif"}
       />
       <div className="track-slider">
         {resJobs.data.data.map((card) => {
