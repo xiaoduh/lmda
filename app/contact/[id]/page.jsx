@@ -15,7 +15,7 @@ export default async function ContactProfil({ params }) {
   return (
     <main>
       <SectionWrapperHeader>
-        <Label content="Prendre contact avec nos experts" />
+        {/* <Label content="Prendre contact avec nos experts" /> */}
         <ContentSection
           title={`Vous êtes intéressé par ${data.data.data[0].attributes.first_name} ?`}
           content="Completez le formulaire de prise de contact ci dessous."

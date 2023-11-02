@@ -76,7 +76,7 @@ export default async function Home() {
       <NavigationLanding />
       <HeaderEngineer />
       <SectionWrapper id={"why"}>
-        <Label content="Un écosystème spécialisé au management horizontal" />
+        {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
           title="Management horizontal et transparence totale"
           content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons à un management nouveau fondé sur la transparence et un management horizontal pour d'avantage de responsabilité. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
@@ -106,7 +106,7 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Spécialiste du C++ et ses mises en pratique" />
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
           title="Nous développons des logiciels robustes, performants et efficaces"
           content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
@@ -136,7 +136,7 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content="Une communauté dédiée au C++ et son ecosytème" />
+        {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Trouvez les compétences qu'il vous manque au sein de notre écosystème"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
@@ -174,7 +174,7 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        {/* <Label content="Ne ratez plus aucunes opportunités en C++" /> */}
         <ContentSection
           title="Votre prochaine mission se trouve ici"
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
@@ -205,7 +205,7 @@ export default async function Home() {
       </SectionWrapper>
 
       <SectionWrapper id={"form"}>
-        <Label content="Restez connecté à l'écosystème C++" />
+        {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
           title={`Aujourd'hui, il y a  ${
             resSubscribers.data.length + 900

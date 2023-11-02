@@ -17,7 +17,7 @@ export default async function Postuler() {
   return (
     <main>
       <SectionWrapperHeader id={"jobs"}>
-        <Label content="Agrégateur d'offres emplois et missions C++" />
+        {/* <Label content="Agrégateur d'offres emplois et missions C++" /> */}
         <ContentSection
           title="Rejoignez 500+ développeurs passionnés."
           content={`Ne ratez plus aucunes opportunités. Nous vous connectons à l'écosystème C++. Postulez en un clic aux missions qui vous intéressent.`}

@@ -17,7 +17,7 @@ export default async function collectif() {
   return (
     <main>
       <SectionWrapperHeader id={"collectif"}>
-        <Label content="Spécialiste et passionné par le C++" />
+        {/* <Label content="Spécialiste et passionné par le C++" /> */}
         <ContentSection
           title={`Accéder aux meilleurs experts C++ n'a jamais été aussi facile.`}
           content={`Le plus grand réseau d'experts C++ se trouve ici. Recherchez et contactez le spécialiste qu'il vous manque parmis notre réseau.`}

@@ -14,7 +14,7 @@ export default async function Partner() {
   return (
     <main>
       <SectionWrapperHeader id={"form"}>
-        <Label content="Connectez-vous à la seule plateforme spécialisée sur l'écosystème C++" />
+        {/* <Label content="Connectez-vous à la seule plateforme spécialisée sur l'écosystème C++" /> */}
         <ContentSection
           title={`${
             540 + resProfils.data.data.length

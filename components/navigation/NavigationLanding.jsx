@@ -78,54 +78,54 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {why ? (
                 <a href="#why" className="selected" id="1" title="why">
-                  Pourquoi Lambda ?
+                  ADN
                 </a>
               ) : (
                 <a href="#why" id="1" title="why">
-                  Pourquoi Lambda ?
+                  ADN
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a href="#mission" className="selected" id="2" title="mission">
-                  Notre mission
+                  C/C++
                 </a>
               ) : (
                 <a href="#mission" id="2" title="mission">
-                  Notre mission
+                  C/C++
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  Nos membres
+                  Collectif
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  Nos membres
+                  Collectif
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
-                  Nos missions
+                  Jobs
                 </a>
               ) : (
                 <a href="#jobs" id="5" title="job">
-                  Nos missions
+                  Jobs
                 </a>
               )}
             </li>
             {client ? (
               <Link href="/entreprise" className="selected" id="4">
-                Entreprise
+                Partenaire
               </Link>
             ) : (
               <Link href="/entreprise" id="4">
-                Entreprise
+                Partenaire
               </Link>
             )}
           </ul>
@@ -134,11 +134,11 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {why ? (
                 <a href="#why" className="selected" id="1" title="values">
-                  Nos valeurs
+                  ADN
                 </a>
               ) : (
                 <a href="#why" id="1" title="values">
-                  Nos valeurs
+                  ADN
                 </a>
               )}
             </li>
@@ -150,43 +150,43 @@ const NavigationLanding = () => {
                   id="2"
                   title="expertise"
                 >
-                  Notre savoir-faire
+                  C/C++
                 </a>
               ) : (
                 <a href="#mission" id="2" title="expertise">
-                  Notre savoir-faire
+                  C/C++
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  Notre collectif
+                  Collectif
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  Notre collectif
+                  Collectif
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
-                  Nos missions
+                  Jobs
                 </a>
               ) : (
                 <a href="#jobs" id="5" title="job">
-                  Nos missions
+                  Jobs
                 </a>
               )}
             </li>
             {client ? (
               <Link href="/entreprise" className="selected" id="4">
-                Entreprise
+                Partenaire
               </Link>
             ) : (
               <Link href="/entreprise" id="4">
-                Entreprise
+                Partenaire
               </Link>
             )}
           </ul>
@@ -197,7 +197,7 @@ const NavigationLanding = () => {
           Mettre en ligne son CV
         </Link>
         <Link className="btn-blue" href="#form" title="recevoir nos missions">
-          Recevoir nos missions
+          Recevoir nos dernières missions
         </Link>
       </div>
       {active ? (

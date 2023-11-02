@@ -73,9 +73,9 @@ export default async function Home() {
       <NavigationApp />
       <HeaderEnterprise />
       <SectionWrapper id={"why"}>
-        <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" />
+        {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
-          title={`Spécialiste du C/C++ et ses usages`}
+          title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
           content="Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou CDI rapidement. Lambda c'est aujourd'hui, +1000 développeurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels."
         />
         <CardsContainer style={"cards-container"}>
@@ -96,7 +96,7 @@ export default async function Home() {
         <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Spécialiste du C++ et ses mises en pratique" />
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
           title="Une stratégie de spécialisation verticale"
           content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur les usages des langages C et C++."
@@ -119,7 +119,7 @@ export default async function Home() {
         <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content="La plus grande communauté dédiée au C++ et son ecosytème" />
+        {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Accedez aux meilleurs Freelance et CDI du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
@@ -151,7 +151,7 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        <Label content="Connectez-vous à notre réseau de développeurs C++" />
+        {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
           title={`Bénéficiez d'une visibilité auprès de + ${resProfils.data.data.length} développeurs C++`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."

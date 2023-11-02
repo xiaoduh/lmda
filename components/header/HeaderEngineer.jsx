@@ -172,7 +172,7 @@ export default async function HeaderEngineer() {
 
   return (
     <header className="main-header" id="header">
-      <Label content={txtLabel} />
+      {/* <Label content={txtLabel} /> */}
       <h1>
         Nous connectons,<br></br>
         <span className="important">Talents</span> et{" "}
