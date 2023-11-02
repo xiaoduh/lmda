@@ -66,21 +66,27 @@ export default async function Career() {
   return (
     <main>
       <HeaderADN />
-      <CardsContainer style={"cards-container"}>
-        {contentCardsFirstSection.map((card) => {
-          return (
-            <Card key={card.index} title={card.title} content={card.content} />
-          );
-        })}
-      </CardsContainer>
-      <PrimaryBtn
-        content={`Rejoindre Lambda m'intéresse`}
-        link={"/rejoindre"}
-      />
-      <SecondaryBtn
-        content={`Trouver sa prochaine mission (${resJobs.data.data.length})`}
-        link={"/jobs"}
-      />
+      <SectionWrapperHeader id={"collectif"}>
+        <CardsContainer style={"cards-container"}>
+          {contentCardsFirstSection.map((card) => {
+            return (
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Rejoindre Lambda m'intéresse`}
+          link={"/rejoindre"}
+        />
+        <SecondaryBtn
+          content={`Trouver sa prochaine mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
+      </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
