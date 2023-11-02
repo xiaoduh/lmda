@@ -15,10 +15,8 @@ export default async function collectif() {
 
   return (
     <main>
-      <SectionWrapperHeader id={"collectif"}>
-        {/* <Label content="Spécialiste et passionné par le C++" /> */}
-        <HeaderCollectif />
-      </SectionWrapperHeader>
+      {/* <Label content="Spécialiste et passionné par le C++" /> */}
+      <HeaderCollectif />
       <SectionWrapper id={"member"}>
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.map((member) => {
