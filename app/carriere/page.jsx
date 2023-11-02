@@ -3,7 +3,6 @@ import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Card from "@/components/card/Card";
 import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
-import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
