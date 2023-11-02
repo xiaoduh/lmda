@@ -108,8 +108,8 @@ export default async function Home() {
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Nous développons des logiciels robustes, performants et efficaces"
-          content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
+          title="Spécialiste de l'écosystème C/C++"
+          content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme notre mentor, Bjarne Stroustrup, nous aimons les logiciels robustes, performants et efficaces. L'écosystème C/C++ est aussi diversifié qu'éllitiste et nous sommes les spécialistes pour vous proposer les meilleurs projets de l'écosystème."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -128,11 +128,9 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${
-            500 + resProfils.data.data.length
-          })`}
-          link={"/collectif"}
-          title={"collectif"}
+          content={`Mettre en ligne son CV)`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
@@ -161,11 +159,9 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter un prestataire (${
-            500 + resProfils.data.data.length
-          })`}
-          link={"/collectif"}
-          title={"collectif"}
+          content={`Mettre en ligne son CV`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
         <SecondaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
@@ -201,6 +197,11 @@ export default async function Home() {
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
+        />
+        <SecondaryBtn
+          content={`Mettre en ligne son CV)`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
 
