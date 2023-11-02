@@ -98,7 +98,7 @@ export default async function Home() {
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Une stratégie de spécialisation verticale"
+          title="Une stratégie de spécialisation"
           content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur les usages des langages C et C++."
         />
         <CardsContainer style={"cards-container"}>
@@ -121,7 +121,7 @@ export default async function Home() {
       <SectionWrapper id={"member"}>
         {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
-          title="Accedez aux meilleurs Freelance et CDI du secteur"
+          title="Accedez aux meilleurs Freelances et Salariés du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
           Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
@@ -142,7 +142,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
+          content={` Recruter votre prochain développeur (${resProfils.data.data.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
@@ -153,7 +153,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de + ${resProfils.data.data.length} développeurs C++`}
+          title={`Bénéficiez d'une visibilité auprès de + ${resProfils.data.data.length} développeurs`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />

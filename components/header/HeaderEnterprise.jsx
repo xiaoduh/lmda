@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
-import Label from "@/components/label/Label";
 import cpp from "../../assets/images/cpp.png";
 import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
@@ -10,9 +9,6 @@ import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
 export default async function HeaderEnterprise() {
-  const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
-  );
 
   const labels = [
     {
@@ -163,7 +159,6 @@ export default async function HeaderEnterprise() {
 
   return (
     <header className="main-header" id="header">
-      <Label content="528 spécialistes C/C++ référencés" />
       <h1>
         Des spécialistes du <span className="important">C/C++</span> disponibles
         dès maintenant.
