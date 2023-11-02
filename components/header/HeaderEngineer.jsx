@@ -18,9 +18,6 @@ export default async function HeaderEngineer() {
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
   );
   const contentBtnPrimary = `Voir les missions ouvertes (${resJobs.data.data.length})`;
-  const contentBtnSecondary = `Recruter un prestataire (${
-    500 + resProfils.data.data.length
-  })`;
 
   return (
     <header className="main-header" id="header">
