@@ -61,9 +61,6 @@ const NavigationApp = () => {
               <Link href="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/entreprise">Client</Link>
-            </li>
-            <li>
               <Link href="/entreprise">Partenaire</Link>
             </li>
           </ul>

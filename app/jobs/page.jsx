@@ -1,4 +1,3 @@
-import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import Label from "@/components/label/Label";
@@ -7,8 +6,8 @@ import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";
 import "../../styles/index.scss";
-import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import HeaderJobs from "@/components/header/HeaderJobs";
 
 export default async function Postuler() {
   const resJobs = await axios.get(
@@ -16,13 +15,7 @@ export default async function Postuler() {
   );
   return (
     <main>
-      <SectionWrapperHeader id={"jobs"}>
-        {/* <Label content="Agrégateur d'offres emplois et missions C++" /> */}
-        <ContentSection
-          title="Rejoignez 500+ développeurs passionnés."
-          content={`Ne ratez plus aucunes opportunités. Nous vous connectons à l'écosystème C++. Postulez en un clic aux missions qui vous intéressent.`}
-        />
-      </SectionWrapperHeader>
+      <HeaderJobs />
       <SectionWrapper>
         <CardsContainer style={"cards-container"}>
           {resJobs.data.data.map((card) => {
