@@ -27,7 +27,7 @@ const CardMember = ({
           </div>
         )}
 
-        <img src={img} className="pp" alt={first_name + last_name} />
+        <img src={img} className="pp" alt={first_name + last_name} title="user"/>
         <h4>
           {first_name.slice(0, 3).toUpperCase() +
             last_name.slice(0, 3).toUpperCase()}

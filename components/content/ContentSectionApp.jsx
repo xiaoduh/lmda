@@ -3,8 +3,8 @@ import React from "react";
 const ContentSection = ({ title, content }) => {
   return (
     <div className="content-wrapper">
-      <h2>{title}</h2>
-      <p>Id: {content}</p>
+      <h1>{title}</h1>
+      <p>{content}</p>
     </div>
   );
 };

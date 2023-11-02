@@ -2,7 +2,7 @@ import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 
 export const metadata = {
   title: "Lambda | CGU",

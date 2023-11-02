@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import CardMember from "@/components/member/CardMember";
@@ -29,7 +29,7 @@ export default async function collectif() {
   return (
     <main>
       <SectionWrapperHeader id={"collectif"}>
-        <Label content="Spécialiste et passionné par le C++" />
+        {/* <Label content="Spécialiste et passionné par le C++" /> */}
         <ContentSection
           title={`+ ${resProfils.data.data.length} profils référencés sur notre plateforme`}
           content={`Recherchez et contactez le profil qu'il vous manque parmis notre réseau de spécialistes`}

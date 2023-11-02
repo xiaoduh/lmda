@@ -1,22 +1,78 @@
-export default function sitemap() {
+import axios from "axios";
+
+export default async function sitemap() {
+  const baseUrl = "http://localhost:3000/";
+
+  const resJobs = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+  );
+  const resProfils = await axios.get(
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
+  );
+
+  const jobsUrl = resJobs.data.data.map((job) => {
+    return {
+      url: `${baseUrl}/jobs/description/${job.attributes.id}`,
+      lastModified: new Date(),
+      priority: 0.8,
+    };
+  });
+
+  const profilsUrl = resProfils.data.data.map((profil) => {
+    return {
+      url: `${baseUrl}/collectif/profil/${profil.attributes.id}/${profil.attributes.title}`,
+      lastModified: new Date(),
+      priority: 0.8,
+    };
+  });
+
   return [
     {
-      url: "https://acme.com",
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: "https://acme.com/about",
+      url: `${baseUrl}/jobs`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://acme.com/blog",
+      url: `${baseUrl}/carriere`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/collectif`,
+      lastModified: new Date(),
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/partenaire`,
+      lastModified: new Date(),
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/rejoindre`,
+      lastModified: new Date(),
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/legal`,
+      lastModified: new Date(),
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/confidentialite`,
+      lastModified: new Date(),
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/cgu`,
+      lastModified: new Date(),
+      priority: 0.5,
+    },
+    ...jobsUrl,
+    ...profilsUrl,
   ];
 }

@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import Label from "@/components/label/Label";
@@ -31,7 +31,7 @@ export default async function Postuler() {
   return (
     <main>
       <SectionWrapperHeader id={"jobs"}>
-        <Label content="Lambda est un agrégateur de missions C++" />
+        {/* <Label content="Lambda est un agrégateur de missions C++" /> */}
         <ContentSection
           title="Nous vous connectons à l'écosystème C++"
           content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez nos ${resJobs.data.data.length} missions et postulez un clic aux missions qui vous intéressent.`}

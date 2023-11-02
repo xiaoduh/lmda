@@ -1,7 +1,7 @@
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../styles/index.scss";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import Link from "next/link";
 

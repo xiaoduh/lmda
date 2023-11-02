@@ -31,44 +31,43 @@ const NavigationApp = () => {
         {active ? (
           <ul className="open">
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere">Valeurs</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif">Collectif</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/entreprise">Entreprise</Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
           </ul>
         ) : (
           <ul>
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere">Valeurs</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif">Collectif</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/entreprise">Entreprise</Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
           </ul>
         )}
       </nav>
-      <Link className="cta" href="/rejoindre">
-        <button className="btn-blue">On recrute !</button>
-      </Link>
+      <div className="cta-container">
+        <Link className="cta-secondary" href="#form">
+          Mettre en ligne son CV
+        </Link>
+        <Link className="btn-blue" href="/partenaire">
+          Publier une mission
+        </Link>
+      </div>
       {active ? (
         <div
           className="burger-menu active"

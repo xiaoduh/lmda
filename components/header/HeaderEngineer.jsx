@@ -8,10 +8,11 @@ import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
+import TrackCard from "../job/TrackCard";
 
-export default async function Header() {
+export default async function HeaderEngineer() {
   const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
+    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
   );
   console.log(resJobs.data);
   const resProfils = await axios.get("http://localhost:10000/users");
@@ -168,7 +169,6 @@ export default async function Header() {
 
   return (
     <header className="main-header" id="header">
-      <Label content={txtLabel} />
       <h1>
         Nous connectons,<br></br>
         <span className="important">Experts du C++</span> avec les
@@ -182,7 +182,27 @@ export default async function Header() {
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
-      <InfiniteScroll Tags={labels} />
+      <div className="track-slider">
+        {resJobs.data.data.map((card) => {
+          console.log(card.attributes);
+          return (
+            <TrackCard
+              key={card.attributes.job_id}
+              title={card.attributes.title}
+              desc={card.attributes.short_desc}
+              skills={card.attributes.software_skills}
+              place={card.attributes.localisation}
+              salary={card.attributes.salary}
+              daily_rate={card.attributes.daily_rate}
+              jobId={card.attributes.job_id}
+              jobTitle={card.attributes.title}
+              workplace={card.attributes.work_organisation}
+            />
+          );
+        })}
+      </div>
+
+      {/* <InfiniteScroll Tags={labels} /> */}
     </header>
   );
 }

@@ -1,8 +1,7 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
-import Header from "@/components/header/Header";
 import Label from "@/components/label/Label";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
@@ -14,6 +13,7 @@ import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
+import HeaderEngineer from "@/components/header/HeaderEngineer";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -75,12 +75,11 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <Header />
+      <HeaderEngineer />
       <SectionWrapper id={"why"}>
-        <Label content="Un écosystème spécialisé au management nouveau" />
         <ContentSection
-          title="La confiance forgée par la transparence"
-          content="Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
+          title={`La confiance forgée par la transparence`}
+          content="Nous sommes l'alternative au management pyramidal fondé sur l'opacité. Nous croyons à un management nouveau fondé sur la transparence et un management horizontal pour d'avantage de responsabilité. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -103,7 +102,6 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Spécialiste du C++ et ses mises en pratique" />
         <ContentSection
           title="Nous développons des logiciels robustes, performants et efficaces"
           content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
@@ -129,7 +127,6 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content="Une communauté dédiée au C++ et son ecosytème" />
         <ContentSection
           title="Nous sommes un collectif spécialisé sur l'écosystème C++"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
@@ -161,13 +158,13 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
-        <Label content="Nos offres d'emplois et missions pour Freelance" />
         <ContentSection
           title="Votre prochaine mission se trouve ici"
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
         />
         <CardsContainer style={"articles-container"}>
           {resJobs.data.data.map((card) => {
+            console.log(card.attributes);
             return (
               <JobCard
                 key={card.attributes.job_id}
@@ -213,11 +210,8 @@ export default async function Home() {
       </SectionWrapper> */}
 
       <SectionWrapper id={"form"}>
-        <Label content="Restez connecté" />
         <ContentSection
-          title={`Comme ${
-            resSubscribers.data.length + 100
-          } Techs, recevez chaque lundi toutes les missions en C++ dans votre boite mail`}
+          title={`Abonnez vous à notre Newsletter pour recevoir les dernières missions`}
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />

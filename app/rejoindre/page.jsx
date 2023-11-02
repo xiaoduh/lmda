@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import FormJoinUs from "@/components/form/FormJoinUs";
 import Label from "@/components/label/Label";
 import FooterApp from "@/components/navigation/FooterApp";

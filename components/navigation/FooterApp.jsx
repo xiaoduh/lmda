@@ -16,6 +16,7 @@ const FooterApp = () => {
                   width={32}
                   height={32}
                   alt="facebook"
+                  title="facebook"
                 />
               </Link>
             </li>
@@ -26,12 +27,19 @@ const FooterApp = () => {
                   width={32}
                   height={32}
                   alt="linkedin"
+                  title="linkedin"
                 />
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/company/98544879">
-                <Image src="/github.png" width={32} height={32} alt="github" />
+                <Image
+                  src="/github.png"
+                  width={32}
+                  height={32}
+                  alt="github"
+                  title="github"
+                />
               </Link>
             </li>
           </ul>

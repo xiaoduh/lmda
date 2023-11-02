@@ -1,4 +1,4 @@
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import FormApply from "@/components/form/FormApply";
 import Label from "@/components/label/Label";
 import SectionWrapper from "@/components/section/SectionWrapper";

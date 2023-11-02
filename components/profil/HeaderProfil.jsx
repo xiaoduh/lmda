@@ -12,14 +12,19 @@ const HeaderProfil = ({ data }) => {
   return (
     <div className="header-profil">
       <div className="pp">
-        <img src="/utilisateur.png" className="pp" alt="profil-pricture" />
+        <img
+          src="/utilisateur.png"
+          className="pp"
+          alt="profil-pricture"
+          title="picto-user"
+        />
       </div>
       <div className="content-container">
         <div className="content">
           <div className="title">
-            <h2>
+            <h1>
               {data.first_name} {data.last_name}
-            </h2>
+            </h1>
             <p>{data.title}</p>
             <p>{data.bio}</p>
           </div>

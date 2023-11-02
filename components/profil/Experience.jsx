@@ -9,7 +9,7 @@ const Experience = ({ data }) => {
         <p>{data.attributes.job_title}</p>
         <div className="dates">
           <div className="date">
-            <img src="/calendrier.png" className="picto" alt="picto-calendar" />
+            <img src="/calendrier.png" className="picto" alt="picto-calendar" title="calendar"/>
             <small>{data.attributes.date_start}</small>
           </div>
           <div className="date">

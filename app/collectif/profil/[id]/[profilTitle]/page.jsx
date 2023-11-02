@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   );
   return {
     title: `Lambda | Membre ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
-    description: `Prendre contact avec notre membre ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
+    description: `Prendre contact avec ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}, ${data.data.data[0].attributes.bio}`,
   };
 }
 

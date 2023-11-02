@@ -1,7 +1,7 @@
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Card from "@/components/card/Card";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
@@ -83,7 +83,7 @@ export default async function Career() {
   return (
     <main>
       <SectionWrapperHeader id={"collectif"}>
-        <Label content="Un écosystème spécialisé au management nouveau" />
+        {/* <Label content="Un écosystème spécialisé au management nouveau" /> */}
         <ContentSection
           title="« L'honnêteté passe par la transparence »"
           content="Ce n'est pas de nous mais de Jean-Pierre Szymaniak et nous y adhérons à 100%. Nous ne croyons plus au management pyramidal fondé sur l'opacité, nous croyons à l'innovation managériale. Nous croyons à un management nouveau fondé sur la transparence, responsabilité et bienveillance. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
@@ -103,7 +103,7 @@ export default async function Career() {
         <SecondaryBtn content={"Recevoir nos missions"} link={"/#form"} />
       </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
-        <Label content={secondSection.txtLabel} />
+        {/* <Label content={secondSection.txtLabel} /> */}
         <ContentSection
           title={secondSection.title}
           content={secondSection.content}
@@ -123,7 +123,7 @@ export default async function Career() {
         <SecondaryBtn content={"Proposer une mission"} link={"/partenaire"} />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Devenez actionnaire de Lambda" />
+        {/* <Label content="Devenez actionnaire de Lambda" /> */}
         <ContentSection
           title="La réussite de Lambda est surtout votre réussite"
           content="Lambda a pour vocation de grandir grâce aux réussites de chacun. L'actionnariat vise à associer les collaborateurs Lambda au développement et à la performance de Lambda."
@@ -132,7 +132,7 @@ export default async function Career() {
         <SecondaryBtn content={"Voir les missions"} link={"/jobs"} />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        {/* <Label content="Ne ratez plus aucunes opportunités en C++" /> */}
         <ContentSection
           title="Recevez toutes les missions en C++ dans votre boite mail"
           content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."

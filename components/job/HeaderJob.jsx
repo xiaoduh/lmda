@@ -11,6 +11,7 @@ const HeaderJob = ({ title, localisation, work_organisation, id, date }) => {
             src="/localisation.png"
             className="picto"
             alt="picto-localisation"
+            title="localisation"
           />{" "}
           <p>{localisation}</p>
         </div>
