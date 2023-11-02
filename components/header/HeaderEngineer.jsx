@@ -21,154 +21,6 @@ export default async function HeaderEngineer() {
   const contentBtnSecondary = `Recruter un prestataire (${
     500 + resProfils.data.data.length
   })`;
-  const txtLabel = "La confiance est indissociable de la transparence";
-
-  const labels = [
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-    {
-      picto: cpp,
-      content: "Software",
-    },
-    {
-      picto: ue5,
-      content: "Simulation 3D",
-    },
-    {
-      picto: cpp,
-      content: "Calcul Scientifique",
-    },
-    {
-      picto: cpp,
-      content: "Low Latency",
-    },
-    {
-      picto: linux,
-      content: "Embedded",
-    },
-    {
-      picto: qt,
-      content: "IHM",
-    },
-  ];
 
   return (
     <header className="main-header" id="header">
@@ -189,9 +41,9 @@ export default async function HeaderEngineer() {
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} title={"jobs"} />
       <SecondaryBtn
-        content={contentBtnSecondary}
-        link={"/collectif"}
-        title={"collectif"}
+        content={"Mettre en ligne son CV"}
+        link={"/rejoindre"}
+        title={"rejoindre"}
       />
       <div className="track-slider">
         {resJobs.data.data.map((card) => {
