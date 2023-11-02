@@ -8,7 +8,6 @@ export default async function HeaderEngineer() {
   const resJobs = await axios.get(
     "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
   );
-  const contentBtnPrimary = `Voir les missions ouvertes (${resJobs.data.data.length})`;
 
   return (
     <header className="main-header" id="header">
@@ -20,14 +19,22 @@ export default async function HeaderEngineer() {
         <br></br> en toute <span className="important">transparence</span>.
       </h1>
       <p>
-        Lambda connecte Talents et Entreprises de l&apos;écosystème C++ en toute
-        confiance grâce à la transparence.<br></br>
-        Notre vision de l&apos;ESN repose sur un modèle managérial horizontal
-        pour une meilleure maîtrise des coûts, une meilleure répartition de la
-        valeur créée, plus de responsabilité et surtout une totale transparence
-        pour une confiance sans faille.
+        La <span className="important">transparence</span>, change la donne.
+        <br></br>Le <span className="important">management horizontal</span>,
+        réduit les coûts.
+        <br></br>
+        La <span className="important">spécialisation</span>, rend visibile.
+        <br></br>
+        Notre vision de l&apos;ESN, c'est faire mieux tout en réduisant les
+        coûts liés au fonctionnement de la structure pour offrir une meilleure
+        rémunération, plus de bonus dans le package et d'avantage de services à
+        nos collaborateurs.
       </p>
-      <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} title={"jobs"} />
+      <PrimaryBtn
+        content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+        link={"/jobs"}
+        title={"jobs"}
+      />
       <SecondaryBtn
         content={"Mettre en ligne son CV"}
         link={"/rejoindre"}

@@ -29,7 +29,7 @@ export default async function Home() {
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur un transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur une transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
     },
     {
       title: "Spécialiste",
