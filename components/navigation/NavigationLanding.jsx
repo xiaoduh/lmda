@@ -89,11 +89,11 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a href="#mission" className="selected" id="2" title="mission">
-                  Spécialiste
+                  Spécialisation
                 </a>
               ) : (
                 <a href="#mission" id="2" title="mission">
-                  Spécialiste
+                  Spécialisation
                 </a>
               )}
             </li>
