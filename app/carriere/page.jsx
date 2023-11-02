@@ -11,6 +11,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import HeaderADN from "@/components/header/HeaderADN";
 
 export default async function Career() {
   const resJobs = await axios.get(
@@ -65,11 +66,7 @@ export default async function Career() {
   return (
     <main>
       <SectionWrapperHeader id={"collectif"}>
-        {/* <Label content="Un écosystème spécialisé au management nouveau" /> */}
-        <ContentSection
-          title="« L'honnêteté passe par la transparence »"
-          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts... La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
-        />
+        <HeaderADN />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
             return (

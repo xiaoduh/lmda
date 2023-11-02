@@ -1,5 +1,3 @@
-import ContentSection from "@/components/content/ContentSectionApp";
-import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import CardMember from "@/components/member/CardMember";
 import FooterApp from "@/components/navigation/FooterApp";
@@ -8,6 +6,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import HeaderCollectif from "@/components/header/HeaderCollectif";
 
 export default async function collectif() {
   const resProfils = await axios.get(
@@ -18,10 +17,7 @@ export default async function collectif() {
     <main>
       <SectionWrapperHeader id={"collectif"}>
         {/* <Label content="Spécialiste et passionné par le C++" /> */}
-        <ContentSection
-          title={`Accéder aux meilleurs experts C++ n'a jamais été aussi facile.`}
-          content={`Le plus grand réseau d'experts C++ se trouve ici. Recherchez et contactez le spécialiste qu'il vous manque parmis notre réseau.`}
-        />
+        <HeaderCollectif />
       </SectionWrapperHeader>
       <SectionWrapper id={"member"}>
         <CardsContainer style={"cards-container"}>
