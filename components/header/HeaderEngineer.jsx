@@ -2,7 +2,7 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
 import axios from "axios";
-import TrackCard from "../job/TrackCard";
+import SwiperCard from "../swiperCard/SwiperCard";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
@@ -38,26 +38,8 @@ export default async function HeaderEngineer() {
         link={"/rejoindre"}
         title={"rejoindre"}
       />
-      <div className="track-slider">
-        {resJobs.data.data.map((card) => {
-          console.log(card.attributes);
-          return (
-            <TrackCard
-              key={card.attributes.job_id}
-              title={card.attributes.title}
-              desc={card.attributes.short_desc}
-              skills={card.attributes.software_skills}
-              place={card.attributes.localisation}
-              salary={card.attributes.salary}
-              daily_rate={card.attributes.daily_rate}
-              jobId={card.attributes.job_id}
-              jobTitle={card.attributes.title}
-              workplace={card.attributes.work_organisation}
-            />
-          );
-        })}
-      </div>
-      {/* <InfiniteScroll Tags={labels} /> */}
+
+      <SwiperCard data={resJobs.data.data} />
     </header>
   );
 }
