@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
@@ -63,13 +62,11 @@ const NavigationLanding = () => {
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
         <a href="#header" title="introduction">
-          <Image
-            src={logo}
-            width={120}
-            height={18}
-            alt="logo de lambda"
-            title="Lambda plateforme de recrutement spécialisée en C++"
-          />
+        <img
+          src={logo}
+          alt="logo_lambda"
+          title="logo_lambda"
+        />
         </a>
       </div>
       <nav>

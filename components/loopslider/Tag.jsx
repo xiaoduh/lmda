@@ -4,7 +4,7 @@ import React from "react";
 const Tag = ({ text, picto }) => {
   return (
     <div className="tag">
-      <Image src={picto} width={25} height={25} alt={text} title={text} />{" "}
+      <img src={picto} alt={text} title={text} />
       <p>{text}</p>
     </div>
   );

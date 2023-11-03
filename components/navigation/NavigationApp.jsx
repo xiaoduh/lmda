@@ -24,12 +24,10 @@ const NavigationApp = () => {
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
         <Link href="/" title="home">
-          <Image
+          <img
             src={logo}
-            width={120}
-            height={18}
-            alt="logo de lambda"
-            title="Lambda plateforme de recrutement spécialisée en C++"
+            alt="logo_lambda"
+            title="lambda_plateforme_services_numerique_c_cpp"
           />
         </Link>
       </div>
