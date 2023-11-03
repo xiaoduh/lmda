@@ -2,7 +2,6 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
 import axios from "axios";
-import TrackCard from "../job/TrackCard";
 import SwiperCard from "../swiperCard/SwiperCard";
 
 export default async function HeaderEngineer() {
