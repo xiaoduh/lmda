@@ -1,8 +1,9 @@
 .navigation {
-        display: grid;
-        grid-template-columns: 25% 50% 25%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         height: auto;
-        padding: 20px 14rem;
+        padding: 20px 7rem;
         align-items: center;
         position: fixed;
         left: 0;
@@ -11,29 +12,36 @@
         background: $accent-black;
         z-index: 999;
 
-        a {
-            font-family: $regular;
-            font-size: .8rem;
-            color: #fff;
-            padding: .5rem 1rem;
-            border-radius: 20px;
-            transition: all .8s ease;
+        nav {    
+
+            a {
+                font-family: $regular;
+                font-size: .8rem;
+                color: #fff;
+                padding: .5rem 1rem;
+                border-radius: 20px;
+                transition: all .8s ease;
+                margin-right: 1rem;
+    
+            
+                &:hover {
+                        background: #3F3F62;
+                        padding: .5rem 1rem;
+                        border-radius: 20px;
+                        color: #FD6B3D;
+                    
+    
+                    &:not(:last-child) {
+                        background: none;
+                        padding: .5rem 1rem;
+                    }
+                    
+                }
+            }
+
+        }
 
         
-            &:hover {
-                    background: #3F3F62;
-                    padding: .5rem 1rem;
-                    border-radius: 20px;
-                    color: #FD6B3D;
-                
-
-                &:not(:last-child) {
-                    background: none;
-                    padding: .5rem 1rem;
-                }
-                
-            }
-        }
 
 
         @media screen and (max-width: 1600px) {
@@ -54,6 +62,11 @@
 
         .logo {
             cursor: pointer;
+
+            img {
+                width: 120px;
+                height: 18px;
+            }
         }
 
         .menu-responsive {
@@ -135,15 +148,33 @@
             color: #FD6B3D;
         }
 
-        .cta {
+        .cta-container {
             display: flex;
-            justify-content: flex-end;
-            cursor: pointer;
 
-            @media (max-width: 750px) {
-                display: none;
+            a:first-child {
+                margin-right: 1rem;
+                color: #1776FF;
+                border: 1px solid #1776FF;
+
+                &:hover {
+                    background: #1776FF;
+                    color: #fff;
+                }
             }
+
+            .cta {
+                display: flex;
+                justify-content: flex-end;
+                cursor: pointer;
+    
+                @media (max-width: 750px) {
+                    display: none;
+                }
+            }
+
         }
+
+        
 
         .burger-menu {
             cursor: pointer;

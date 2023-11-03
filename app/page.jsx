@@ -1,19 +1,18 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
-import Header from "@/components/header/Header";
 import Label from "@/components/label/Label";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
-import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import Footer from "@/components/navigation/Footer";
 import NavigationLanding from "@/components/navigation/NavigationLanding";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
+import HeaderEngineer from "@/components/header/HeaderEngineer";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -26,13 +25,11 @@ export default async function Home() {
     "https://lmdaapi.onrender.com/subscribers"
   );
 
-  console.log(resProfils);
-
   const contentCardsFirstSection = [
     {
       title: "Transparence",
       content:
-        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur un transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
+        "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur une transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
     },
     {
       title: "Spécialiste",
@@ -77,12 +74,12 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <Header />
+      <HeaderEngineer />
       <SectionWrapper id={"why"}>
-        <Label content="Un écosystème spécialisé au management nouveau" />
+        {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
           title="Management horizontal et transparence totale"
-          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts..."
+          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons en un management nouveau, fondé sur la transparence pour d'avantage de responsabilité et surtout une meilleure maîtrise des coûts de fonctionnement. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -96,19 +93,23 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
+          content={`Recruter un prestataire (${
+            500 + resProfils.data.data.length
+          })`}
           link={"/collectif"}
+          title={"prestataire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Spécialiste du C++ et ses mises en pratique" />
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Nous développons des logiciels robustes, performants et efficaces"
-          content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
+          title="Spécialiste de l'écosystème C/C++"
+          content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme notre mentor, Bjarne Stroustrup, nous aimons les logiciels robustes, performants et efficaces. L'écosystème C/C++ est aussi diversifié qu'éllitiste et nous sommes les spécialistes pour vous proposer les meilleurs projets de l'écosystème."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -122,20 +123,23 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
-          content={`Rechercher votre profil (${resProfils.data.data.length})`}
-          link={"/collectif"}
+          content={`Mettre en ligne son CV)`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        <Label content="Une communauté dédiée au C++ et son ecosytème" />
+        {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
-          title="Trouvez les compétences qu'il vous manque au sein de notre écosystème"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${resProfils.data.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          title="Soyez visible auprès des entreprises"
+          content={`Tout comme ${
+            500 + resProfils.data.data.length
+          } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
@@ -154,16 +158,18 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Rechercher votre profil (${resProfils.data.data.length})`}
-          link={"/collectif"}
+          content={`Mettre en ligne son CV`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
         <SecondaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        {/* <Label content="Ne ratez plus aucunes opportunités en C++" /> */}
         <ContentSection
           title="Votre prochaine mission se trouve ici"
           content="Parcourez nos dernières offres d'emplois et missions à pourvoir"
@@ -181,23 +187,30 @@ export default async function Home() {
                 daily_rate={card.attributes.daily_rate}
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
+                workplace={card.attributes.work_organisation}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les ${resJobs.data.data.length} missions ouvertes`}
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
+          title={"jobs"}
+        />
+        <SecondaryBtn
+          content={`Mettre en ligne son CV)`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
 
       <SectionWrapper id={"form"}>
-        <Label content="Restez connecté à l'écosystème C++" />
+        {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
           title={`Aujourd'hui, il y a  ${
-            resSubscribers.data.length + 100
-          } développeurs abonnés à nos alertes missions.`}
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
+            resSubscribers.data.length + 900
+          }+ abonnés à notre Newsletter « Mission à pourvoir ».`}
+          content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />
       </SectionWrapper>

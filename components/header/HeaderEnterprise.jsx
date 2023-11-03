@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
-import Label from "@/components/label/Label";
 import cpp from "../../assets/images/cpp.png";
 import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
@@ -9,16 +8,7 @@ import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
-export default async function Header() {
-  const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
-  );
-  const resProfils = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
-  );
-  const contentBtnPrimary = `Voir les ${resJobs.data.data.length} missions ouvertes`;
-  const contentBtnSecondary = `Rechercher votre profil (${resProfils.data.data.length})`;
-  const txtLabel = "La confiance est indissociable de la transparence";
+export default async function HeaderEnterprise() {
 
   const labels = [
     {
@@ -169,21 +159,25 @@ export default async function Header() {
 
   return (
     <header className="main-header" id="header">
-      <Label content={txtLabel} />
       <h1>
-        Nous connectons,<br></br>
-        <span className="important">Talents</span> et{" "}
-        <span className="important">Entreprises</span> de l&apos;écosystème C++,
-        <br></br> en toute <span className="important">transparence</span>.
+        Des spécialistes du <span className="important">C/C++</span> disponibles
+        dès maintenant.
       </h1>
       <p>
-        Lambda connecte Talents du C++ et Entreprises en toute confiance grâce à
-        la transparence.<br></br>
-        Notre modèle repose sur moins de manager pour plus de responsabilité et
-        surtout une totale transparence pour une confiance sans faille.
+        Expert des technologies C/C++ et de ses mises en oeuvres, Lambda
+        rassemble <span className="important">+ 1000</span> de spécialistes prêt
+        à relever vos défis.<br></br> 2 projets sur 3 sont en retard à cause du
+        <span className="important"> manque de talents</span>. Ne passez plus
+        vos journées à chercher les bonnes compétences.
+        <br></br>Augmentez votre <span className="important">visibilité</span>,
+        gagne en <span className="important">pertinence</span> et diminuez le
+        <span className="important"> temps</span> de staffing de vos projets.
       </p>
-      <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
-      <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
+      <PrimaryBtn
+        content="Publier une mission sur Lambda"
+        link={"/partenaire"}
+      />
+      <SecondaryBtn content="Recruter un prestataire" link={"/collectif"} />
       <InfiniteScroll Tags={labels} />
     </header>
   );

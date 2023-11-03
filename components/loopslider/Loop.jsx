@@ -1,87 +1,83 @@
 import React from "react";
 import InfiniteLoopSlider from "./InfiniteLoopSlider";
 import Tag from "./Tag";
-import cpp from "../../assets/images/cpp.png";
-import ue5 from "../../assets/images/ue5.png";
-import qt from "../../assets/images/qt.png";
-import linux from "../../assets/images/linux.png";
 
 const InfiniteScroll = () => {
   const labels = [
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Software",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Finance de marché",
     },
     {
-      picto: ue5,
+      picto: "/ue5.png",
       content: "Simulation 3D",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Calcul Scientifique",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Signal Processing",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Recherche Opérationnelle",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Low Latency",
     },
     {
-      picto: linux,
+      picto: "/linux.png",
       content: "Embedded",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Computer Vision",
     },
     {
-      picto: qt,
+      picto: "/qt.png",
       content: "IHM",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Software",
     },
     {
-      picto: ue5,
+      picto: "/ue5.png",
       content: "Simulation 3D",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Calcul Scientifique",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Recherche Opérationnelle",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Low Latency",
     },
     {
-      picto: linux,
+      picto: "/linux.png",
       content: "Embedded",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Computer Vision",
     },
     {
-      picto: qt,
+      picto: "/qt.png",
       content: "IHM",
     },
     {
-      picto: cpp,
+      picto: "/cpp.png",
       content: "Modélisation",
     },
   ];

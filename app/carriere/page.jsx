@@ -1,9 +1,8 @@
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Card from "@/components/card/Card";
-import ContentSection from "@/components/content/ContentSection";
+import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
-import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
@@ -11,6 +10,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import HeaderADN from "@/components/header/HeaderADN";
 
 export default async function Career() {
   const resJobs = await axios.get(
@@ -64,12 +64,8 @@ export default async function Career() {
   ];
   return (
     <main>
+      <HeaderADN />
       <SectionWrapperHeader id={"collectif"}>
-        <Label content="Un écosystème spécialisé au management nouveau" />
-        <ContentSection
-          title="« L'honnêteté passe par la transparence »"
-          content="Nous sommes l'alternative au management pyramidal gardien de l'opacité. Nous croyons en un management nouveau fondé sur la transparence, responsabilité et bienveillance. Nos parties prenantes connaissances nos orientations stratégiques, nos marges, nos coûts... La transparence est notre pierre angulaire pour grandir ensemble en toute confiance."
-        />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
             return (
@@ -91,7 +87,7 @@ export default async function Career() {
         />
       </SectionWrapperHeader>
       <SectionWrapper id={"mission"}>
-        <Label content="Spécialiste du C++ et ses mises en pratique" />
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
           title="Nous développons des logiciels robustes, performants et efficaces"
           content="Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace. Le C++ est aussi populaire que complexe. Il est sans doute l’un des langages des plus complexes à maîtriser pour développer des programmes « propres » et efficaces."
@@ -117,7 +113,7 @@ export default async function Career() {
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
-        <Label content="Devenez actionnaire de Lambda" />
+        {/* <Label content="Devenez actionnaire de Lambda" /> */}
         <ContentSection
           title="« Réussir, c’est s’aimer, aimer ce que l’on fait et la manière dont on le fait. »"
           content="La réussite de Lambda est surtout votre réussite. Lambda a pour vocation de grandir grâce aux réussites de chacun. L'actionnariat salarié vise à associer les collaborateurs Lambda au développement et à la performance de Lambda. 20% du capital de Lambda est ouvert à l'actionnariat salarié sur un horizon à 3 ans."
@@ -132,10 +128,10 @@ export default async function Career() {
         />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        <Label content="Ne ratez plus aucunes opportunités en C++" />
+        {/* <Label content="Ne ratez plus aucunes opportunités" /> */}
         <ContentSection
           title="Votre prochaine mission se trouve ici"
-          content="Que vous soyez en veille ou en recherche active d'une mission sur l'écosystème C++, recevez par email les dernières missions en C++ sur le marché."
+          content="Que vous soyez en veille ou en recherche active d'un poste de développeur ou une mission, recevez par email les dernières missions en C++ sur le marché."
         />
         <Subscriber />
       </SectionWrapper>

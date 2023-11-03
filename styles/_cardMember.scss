@@ -30,7 +30,7 @@
         }
 
         .red {
-            background: $color-stop !important;
+            background: $color-cancel !important
         }
 
         p {
@@ -49,7 +49,11 @@
           }
     }
 
-    h4 {
+    h2 {
+        color: #FD6B3D;
+    }
+
+    h3 {
         margin-bottom: 1rem;
         color: #fff;
     }

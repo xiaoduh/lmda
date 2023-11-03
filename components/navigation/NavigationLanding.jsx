@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ const NavigationLanding = () => {
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
-  const [blog, setBlog] = useState(false);
+  const [client, setClient] = useState(false);
   const [job, setJob] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -26,31 +25,31 @@ const NavigationLanding = () => {
       setWhy(true);
       setMission(false);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "2") {
       setWhy(false);
       setMission(true);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
-      setBlog(false);
+      setClient(false);
       setJob(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setBlog(true);
+      setClient(true);
       setJob(false);
     } else if (e.target.id === "5") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setBlog(false);
+      setClient(false);
       setJob(true);
     }
   };
@@ -62,8 +61,8 @@ const NavigationLanding = () => {
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
-        <a href="#header">
-          <Image src={logo} width={120} height={18} alt="logo de lambda" />
+        <a href="#header" title="introduction">
+          <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
         </a>
       </div>
       <nav>
@@ -71,123 +70,129 @@ const NavigationLanding = () => {
           <ul className="open">
             <li onClick={(e) => handleModals(e)}>
               {why ? (
-                <a href="#why" className="selected" id="1">
-                  Pourquoi Lambda ?
+                <a href="#why" className="selected" id="1" title="why">
+                  ADN
                 </a>
               ) : (
-                <a href="#why" id="1">
-                  Pourquoi Lambda ?
+                <a href="#why" id="1" title="why">
+                  ADN
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
-                <a href="#mission" className="selected" id="2">
-                  Notre mission
+                <a href="#mission" className="selected" id="2" title="mission">
+                  Spécialisation
                 </a>
               ) : (
-                <a href="#mission" id="2">
-                  Notre mission
+                <a href="#mission" id="2" title="mission">
+                  Spécialisation
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
-                <a href="#member" className="selected" id="3">
-                  Nos membres
+                <a href="#member" className="selected" id="3" title="collectif">
+                  Collectif
                 </a>
               ) : (
-                <a href="#member" id="3">
-                  Nos membres
+                <a href="#member" id="3" title="collectif">
+                  Collectif
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
-                <a href="#jobs" className="selected" id="5">
-                  Nos missions
+                <a href="#jobs" className="selected" id="5" title="job">
+                  Jobs
                 </a>
               ) : (
-                <a href="#jobs" id="5">
-                  Nos missions
+                <a href="#jobs" id="5" title="job">
+                  Jobs
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
-              {blog ? (
-                <a href="#blog" className="selected" id="4">
-                  Blog
-                </a>
-              ) : (
-                <a href="#blog" id="4">
-                  Blog
-                </a>
-              )}
-            </li> */}
+            {client ? (
+              <Link href="/entreprise" className="selected" id="4">
+                Partenaire
+              </Link>
+            ) : (
+              <Link href="/entreprise" id="4">
+                Partenaire
+              </Link>
+            )}
           </ul>
         ) : (
           <ul>
             <li onClick={(e) => handleModals(e)}>
               {why ? (
-                <a href="#why" className="selected" id="1">
-                  Nos valeurs
+                <a href="#why" className="selected" id="1" title="values">
+                  ADN
                 </a>
               ) : (
-                <a href="#why" id="1">
-                  Nos valeurs
+                <a href="#why" id="1" title="values">
+                  ADN
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
-                <a href="#mission" className="selected" id="2">
-                  Notre savoir-faire
+                <a
+                  href="#mission"
+                  className="selected"
+                  id="2"
+                  title="expertise"
+                >
+                  Spécialiste
                 </a>
               ) : (
-                <a href="#mission" id="2">
-                  Notre savoir-faire
+                <a href="#mission" id="2" title="expertise">
+                  Spécialiste
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
-                <a href="#member" className="selected" id="3">
-                  Notre collectif
+                <a href="#member" className="selected" id="3" title="collectif">
+                  Collectif
                 </a>
               ) : (
-                <a href="#member" id="3">
-                  Notre collectif
+                <a href="#member" id="3" title="collectif">
+                  Collectif
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
-                <a href="#jobs" className="selected" id="5">
-                  Nos missions
+                <a href="#jobs" className="selected" id="5" title="job">
+                  Jobs
                 </a>
               ) : (
-                <a href="#jobs" id="5">
-                  Nos missions
+                <a href="#jobs" id="5" title="job">
+                  Jobs
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
-              {blog ? (
-                <a href="#blog" className="selected" id="4">
-                  Le Blog
-                </a>
-              ) : (
-                <a href="#blog" id="4">
-                  Le Blog
-                </a>
-              )}
-            </li> */}
+            {client ? (
+              <Link href="/entreprise" className="selected" id="4">
+                Partenaire
+              </Link>
+            ) : (
+              <Link href="/entreprise" id="4">
+                Partenaire
+              </Link>
+            )}
           </ul>
         )}
       </nav>
-      <Link className="cta" href="#form">
-        <button className="btn-blue">Recevoir nos missions</button>
-      </Link>
+      <div className="cta-container">
+        <Link className="cta-secondary" href="#form" title="créer son profil">
+          Mettre en ligne son CV
+        </Link>
+        <Link className="btn-blue" href="#form" title="recevoir nos missions">
+          Recevoir nos dernières missions
+        </Link>
+      </div>
       {active ? (
         <div
           className="burger-menu active"

@@ -23,52 +23,59 @@ const NavigationApp = () => {
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
-        <Link href="/">
-          <Image src={logo} width={120} height={18} alt="logo de lambda" />
+        <Link href="/" title="home">
+          <img
+            src="/logo.png"
+            alt="logo_lambda"
+            title="lambda_plateforme_services_numerique_c_cpp"
+          />
         </Link>
       </div>
       <nav>
         {active ? (
           <ul className="open">
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere">ADN</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif">Collectif</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/entreprise">Partenaire</Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
           </ul>
         ) : (
           <ul>
             <li>
-              <Link href="/carriere">Notre modèle</Link>
+              <Link href="/carriere">ADN</Link>
             </li>
             <li>
-              <Link href="/collectif">Nos membres</Link>
+              <Link href="/collectif">Collectif</Link>
             </li>
             <li>
-              <Link href="/jobs">Nos missions</Link>
+              <Link href="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/partenaire">Proposer une mission</Link>
+              <Link href="/entreprise">Partenaire</Link>
             </li>
-            {/* <li>
-              <Link href="/blog">Nos contenus</Link>
-            </li> */}
           </ul>
         )}
       </nav>
-      <Link className="cta" href="/rejoindre">
-        <button className="btn-blue">On recrute !</button>
-      </Link>
+      <div className="cta-container">
+        <Link
+          className="cta-secondary"
+          href="/entreprise"
+          title="Proposer une mission"
+        >
+          Proposer une mission
+        </Link>
+        <Link className="btn-blue" href="/jobs" title="Trouver une mission">
+          Trouver une mission
+        </Link>
+      </div>
       {active ? (
         <div
           className="burger-menu active"

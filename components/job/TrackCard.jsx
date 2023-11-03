@@ -1,9 +1,9 @@
 import React from "react";
-import PrimaryBtn from "../button/PrimaryBtn";
-import ThirdBtn from "../button/ThirdBtn";
 import Link from "next/link";
+import ThirdBtn from "../button/ThirdBtn";
+import PrimaryBtn from "../button/PrimaryBtn";
 
-const JobCard = ({
+const TrackCard = ({
   title,
   desc,
   skills,
@@ -14,16 +14,16 @@ const JobCard = ({
   jobTitle,
   workplace,
 }) => {
+  console.log(skills);
   return (
-    <Link href={`/jobs/description/${jobId}`} title="job description">
-      <div className="card-job">
+    <Link href={`/jobs/description/${jobId}`}>
+      <div className="card-job-trackslider">
         <h3>{title}</h3>
-        <p>{desc}</p>
         <div className="infos">
           <p className="info">{place}</p>
           {skills.data.map((skill) => {
             return (
-              <p key={skill.attributes.name} className="info">
+              <p className="info" key={skill.attributes.name}>
                 {skill.attributes.name}
               </p>
             );
@@ -33,6 +33,7 @@ const JobCard = ({
           </p>
           <p className="info">{workplace}</p>
         </div>
+        <p>{desc}</p>
         <div className="cta">
           <PrimaryBtn
             content={"Postuler"}
@@ -48,4 +49,4 @@ const JobCard = ({
   );
 };
 
-export default JobCard;
+export default TrackCard;

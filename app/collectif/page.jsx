@@ -1,5 +1,3 @@
-import ContentSection from "@/components/content/ContentSection";
-import Label from "@/components/label/Label";
 import CardsContainer from "@/components/layout/CardsContainer";
 import CardMember from "@/components/member/CardMember";
 import FooterApp from "@/components/navigation/FooterApp";
@@ -8,6 +6,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import HeaderCollectif from "@/components/header/HeaderCollectif";
 
 export default async function collectif() {
   const resProfils = await axios.get(
@@ -16,13 +15,8 @@ export default async function collectif() {
 
   return (
     <main>
-      <SectionWrapperHeader id={"collectif"}>
-        <Label content="Spécialiste et passionné par le C++" />
-        <ContentSection
-          title={`+ ${resProfils.data.data.length} profils référencés sur notre plateforme`}
-          content={`Recherchez et contactez le spécialiste qu'il vous manque parmis notre réseau`}
-        />
-      </SectionWrapperHeader>
+      {/* <Label content="Spécialiste et passionné par le C++" /> */}
+      <HeaderCollectif />
       <SectionWrapper id={"member"}>
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.map((member) => {
