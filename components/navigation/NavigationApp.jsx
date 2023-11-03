@@ -25,7 +25,7 @@ const NavigationApp = () => {
       <div className="logo">
         <Link href="/" title="home">
           <img
-            src={logo}
+            src="/logo.png"
             alt="logo_lambda"
             title="lambda_plateforme_services_numerique_c_cpp"
           />

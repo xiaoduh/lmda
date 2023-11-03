@@ -62,11 +62,7 @@ const NavigationLanding = () => {
     <div className={navbar ? "navigation active" : "navigation"}>
       <div className="logo">
         <a href="#header" title="introduction">
-        <img
-          src={logo}
-          alt="logo_lambda"
-          title="logo_lambda"
-        />
+          <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
         </a>
       </div>
       <nav>
