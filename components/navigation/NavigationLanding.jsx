@@ -9,7 +9,7 @@ const NavigationLanding = () => {
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
   const [member, setMember] = useState(false);
-  const [client, setClient] = useState(false);
+  const [blog, setBlog] = useState(false);
   const [job, setJob] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -32,25 +32,25 @@ const NavigationLanding = () => {
       setWhy(false);
       setMission(true);
       setMember(false);
-      setClient(false);
+      setBlog(false);
       setJob(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
-      setClient(false);
+      setBlog(false);
       setJob(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setClient(true);
+      setBlog(true);
       setJob(false);
     } else if (e.target.id === "5") {
       setWhy(false);
       setMission(false);
       setMember(false);
-      setClient(false);
+      setBlog(false);
       setJob(true);
     }
   };
@@ -115,12 +115,12 @@ const NavigationLanding = () => {
             </li>
             <li onClick={(e) => handleModals(e)}>
               {client ? (
-                <Link href="/entreprise" className="selected" id="4">
-                  Entreprise
+                <Link href="/blog" className="selected" id="4">
+                  Blog
                 </Link>
               ) : (
-                <Link href="/entreprise" id="4">
-                  Entreprise
+                <Link href="/blog" id="4">
+                  Blog
                 </Link>
               )}
             </li>
@@ -172,13 +172,13 @@ const NavigationLanding = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {client ? (
-                <Link href="/entreprise" className="selected" id="4">
-                  Entreprise
+              {blog ? (
+                <Link href="/blog" className="selected" id="4">
+                  Blog
                 </Link>
               ) : (
-                <Link href="/entreprise" id="4">
-                  Entreprise
+                <Link href="/blog" id="4">
+                  Blog
                 </Link>
               )}
             </li>

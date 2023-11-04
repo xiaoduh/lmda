@@ -146,6 +146,14 @@
         .cta-container {
             display: flex;
 
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
+            @media (max-width: 750px) {
+                display: none;
+            }
+
             a:first-child {
                 margin-right: 1rem;
                 color: #1776FF;

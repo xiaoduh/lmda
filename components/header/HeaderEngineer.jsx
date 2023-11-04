@@ -9,6 +9,7 @@ import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 import TrackCard from "../job/TrackCard";
+import SwiperCard from "../swiperCard/SwiperCard";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
@@ -182,8 +183,7 @@ export default async function HeaderEngineer() {
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
       <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
-      <div className="track-slider">
-        {resJobs.data.data.map((card) => {
+        {/* {resJobs.data.data.map((card) => {
           console.log(card.attributes);
           return (
             <TrackCard
@@ -199,8 +199,8 @@ export default async function HeaderEngineer() {
               workplace={card.attributes.work_organisation}
             />
           );
-        })}
-      </div>
+        })} */}
+      <SwiperCard data={resJobs.data.data} />
 
       {/* <InfiniteScroll Tags={labels} /> */}
     </header>
