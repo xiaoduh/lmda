@@ -7,7 +7,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 
-const page = () => {
+export default async function Blog() {
   const articles = [
     {
       img: "/cpp.jpg",
@@ -64,10 +64,9 @@ const page = () => {
   return (
     <main>
       <SectionWrapperHeader id={"blog"}>
-        <Label content={fourthSection.txtLabel} />
         <ContentSection
-          title={fourthSection.title}
-          content={fourthSection.content}
+          title="Notre blog"
+          content="Découvrez nos articles sur le management."
         />
         <CardsContainer style={"articles-container"}>
           {articles.slice(0, 6).map((article) => {
@@ -87,6 +86,4 @@ const page = () => {
       <FooterApp />
     </main>
   );
-};
-
-export default page;
+}

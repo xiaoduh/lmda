@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import TrackCard from "../job/TrackCard";
 
@@ -16,12 +16,17 @@ const SwiperCard = ({ data }) => {
   return (
     <>
       <Swiper
-        slidesPerView={1}
+        autoplay={{
+          delay: 6500,
+          disableOnInteraction: true,
+        }}
         spaceBetween={30}
+        navigation={true}
         pagination={{
+          // dynamicBullets: true,
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         {data.map((card) => {
