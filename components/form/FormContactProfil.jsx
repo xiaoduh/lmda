@@ -12,13 +12,12 @@ const FormContactProfil = ({ id }) => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:10000/users/contact", {
-        profilId: "id",
+      .post("api/profil", {
+        profilId: id,
         subject: subject,
         email: email,
         phone_number: phone,
         context: message,
-        id: id,
       })
       .then(function (response) {
         console.log(response.data);

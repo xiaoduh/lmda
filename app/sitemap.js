@@ -4,10 +4,10 @@ export default async function sitemap() {
   const baseUrl = "http://localhost:3000/";
 
   const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
   const resProfils = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
 
   const jobsUrl = resJobs.data.data.map((job) => {

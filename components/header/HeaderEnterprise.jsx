@@ -10,9 +10,7 @@ import InfiniteScroll from "../loopslider/Loop";
 import axios from "axios";
 
 export default async function HeaderEnterprise() {
-  const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs"
-  );
+  const resJobs = await axios.get("https://strapi-vvjo.onrender.com/api/jobs");
 
   const labels = [
     {

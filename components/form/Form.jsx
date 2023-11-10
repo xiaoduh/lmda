@@ -12,11 +12,11 @@ const Form = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("http://localhost:10000/mission", {
-        looking_for: subject,
-        email: email,
-        phone_number: phone,
-        context: message,
+      .post("/api/partenaire", {
+        subject,
+        email,
+        phone,
+        message,
       })
       .then(function (response) {
         console.log(response.data);
@@ -25,7 +25,7 @@ const Form = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       })
       .catch(function (error) {
         console.log(error);
@@ -34,7 +34,7 @@ const Form = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       });
     setSubject("");
     setEmail("");

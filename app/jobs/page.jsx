@@ -26,7 +26,9 @@ export const metadata = {
 };
 
 export default async function Postuler() {
-  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
+  const resJobs = await axios.get(
+    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
+  );
 
   return (
     <main>

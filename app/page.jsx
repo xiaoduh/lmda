@@ -17,10 +17,10 @@ import HeaderEngineer from "@/components/header/HeaderEngineer";
 
 export default async function Home() {
   const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
   const resProfils = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
 
   const resSubscribers = await axios.get("http://localhost:10000/subscribers");

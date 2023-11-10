@@ -9,7 +9,7 @@ import axios from "axios";
 
 export async function generateMetadata({ params }) {
   const data = await axios.get(
-    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
   return {
     title: `Lambda | Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ContactProfil({ params }) {
   const data = await axios.get(
-    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
 
   return (

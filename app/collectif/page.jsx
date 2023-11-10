@@ -23,7 +23,7 @@ export const metadata = {
 
 export default async function collectif() {
   const resProfils = await axios.get(
-    "http://localhost:1337/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
 
   return (
