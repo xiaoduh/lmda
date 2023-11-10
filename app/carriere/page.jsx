@@ -13,9 +13,7 @@ import axios from "axios";
 import HeaderADN from "@/components/header/HeaderADN";
 
 export default async function Career() {
-  const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/"
-  );
+  const resJobs = await axios.get("https://strapi-vvjo.onrender.com/api/jobs/");
 
   const contentCardsFirstSection = [
     {

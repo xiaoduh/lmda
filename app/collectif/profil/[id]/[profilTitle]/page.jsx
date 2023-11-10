@@ -10,11 +10,9 @@ import Experience from "@/components/profil/Experience";
 import Reference from "@/components/profil/Reference";
 import axios from "axios";
 
-
-
 export default async function Profil({ params }) {
   const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
 
   return (

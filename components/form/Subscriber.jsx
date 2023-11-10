@@ -9,7 +9,7 @@ const Subscriber = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("https://lmdaapi.onrender.com/subscribers", {
+      .post("/api/subscriber", {
         email: subscriber,
       })
       .then(function (response) {
@@ -19,7 +19,7 @@ const Subscriber = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       })
       .catch(function (error) {
         console.log(error);
@@ -28,7 +28,7 @@ const Subscriber = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       });
     setSubscriber("");
   };

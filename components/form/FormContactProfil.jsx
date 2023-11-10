@@ -12,13 +12,12 @@ const FormContactProfil = ({ id }) => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("https://lmdaapi.onrender.com/users/contact", {
+      .post("api/profil", {
         profilId: id,
         subject: subject,
         email: email,
         phone_number: phone,
         context: message,
-        id: id,
       })
       .then(function (response) {
         console.log(response.data);
@@ -27,7 +26,7 @@ const FormContactProfil = ({ id }) => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       })
       .catch(function (error) {
         console.log(error);
@@ -36,7 +35,7 @@ const FormContactProfil = ({ id }) => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       });
     setSubject("");
     setEmail("");

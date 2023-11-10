@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const FormApply = () => {
+const FormApply = ({ id }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -13,8 +13,8 @@ const FormApply = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("https://lmdaapi.onrender.com/jobs/apply", {
-        jobId: "Job_id_to_be_dynamic",
+      .post("/api/apply", {
+        jobID: id,
         name: name,
         email: email,
         phone_number: phone,
@@ -27,7 +27,7 @@ const FormApply = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       })
       .catch(function (error) {
         console.log(error);
@@ -36,7 +36,7 @@ const FormApply = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       });
     setName("");
     setEmail("");

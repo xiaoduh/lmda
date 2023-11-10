@@ -9,7 +9,7 @@ import axios from "axios";
 
 export default async function ApplyJob({ params }) {
   const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
   );
 
   return (

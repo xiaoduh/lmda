@@ -9,7 +9,7 @@ import axios from "axios";
 
 export default async function Partner() {
   const resProfils = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils"
+    "https://strapi-vvjo.onrender.com/api/profils"
   );
   return (
     <main>
