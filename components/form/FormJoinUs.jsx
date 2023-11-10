@@ -12,11 +12,11 @@ const FormJoinUs = () => {
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
-      .post("https://lmdaapi.onrender.com/career", {
-        subject: subject,
-        email: email,
-        phone_number: phone,
-        motivation: message,
+      .post("api/contactus", {
+        subject,
+        email,
+        phone,
+        message,
       })
       .then(function (response) {
         console.log(response.data);
@@ -25,7 +25,7 @@ const FormJoinUs = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       })
       .catch(function (error) {
         console.log(error);
@@ -34,7 +34,7 @@ const FormJoinUs = () => {
 
         setTimeout(() => {
           formMess.innerHTML = "";
-        }, 3500);
+        }, 6500);
       });
     setSubject("");
     setEmail("");
