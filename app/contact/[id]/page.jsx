@@ -9,7 +9,7 @@ import axios from "axios";
 
 export default async function ContactProfil({ params }) {
   const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
 
   return (

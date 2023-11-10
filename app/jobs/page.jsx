@@ -11,7 +11,7 @@ import HeaderJobs from "@/components/header/HeaderJobs";
 
 export default async function Postuler() {
   const resJobs = await axios.get(
-    "https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/jobs/?populate=*"
+    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
   return (
     <main>

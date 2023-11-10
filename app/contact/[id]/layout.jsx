@@ -3,7 +3,7 @@ import axios from "axios";
 
 export async function generateMetadata({ params }) {
   const data = await axios.get(
-    `https://unwavering-friendship-fd7ae40c66.strapiapp.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
   return {
     title: `Contacter ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title} | Lamda`,
