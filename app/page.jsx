@@ -19,7 +19,7 @@ export default async function Home() {
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
   const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profil?populate=*"
   );
   const resArticles = await axios.get(
     "https://strapi-vvjo.onrender.com/api/articles?populate=*"

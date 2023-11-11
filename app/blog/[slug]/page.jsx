@@ -48,7 +48,7 @@ export default async function Article({ params }) {
   );
 
   const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profil?populate=*"
   );
 
   return (

@@ -10,7 +10,7 @@ import HeaderCollectif from "@/components/header/HeaderCollectif";
 
 export default async function collectif() {
   const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profil?populate=*"
   );
 
   return (

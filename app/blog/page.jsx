@@ -20,7 +20,12 @@ export default async function Blog() {
         />
         <CardsContainer style={"articles-container"}>
           {resArticles.data.data.slice(0, 6).map((article) => {
-            return <ArticleCardContainer key={article.attributes.slug} data={article.attributes} />;
+            return (
+              <ArticleCardContainer
+                key={article.attributes.slug}
+                data={article.attributes}
+              />
+            );
           })}
         </CardsContainer>
       </SectionWrapperHeader>
