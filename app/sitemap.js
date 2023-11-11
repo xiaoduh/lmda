@@ -7,7 +7,7 @@ export default async function sitemap() {
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
   const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profil?populate=*"
+    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
 
   const jobsUrl = resJobs.data.data.map((job) => {
