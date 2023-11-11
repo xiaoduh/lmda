@@ -71,7 +71,12 @@ export default async function Article({ params }) {
                 data.data.data[0].attributes.related_articles.data[i].attributes
                   .slug == article.attributes.slug
               ) {
-                return <ArticleCardContainer data={article.attributes} />;
+                return (
+                  <ArticleCardContainer
+                    key={article.attributes.slug}
+                    data={article.attributes}
+                  />
+                );
               } else {
                 return null;
               }
