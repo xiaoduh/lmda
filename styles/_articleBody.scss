@@ -1,0 +1,47 @@
+.body-content {
+    padding: 0 6rem 6rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #dad9d9;
+
+    @media screen and (max-width: 1300px) {
+        padding: 6rem 2rem 0 2rem;
+      }
+
+    @media screen and (max-width: 1000px) {
+        padding: 6rem 0 0 0;
+      }
+
+      @media screen and (max-width: 700px) {
+        padding: 0;
+      }
+
+    .p-article {
+        margin: 1rem 0 2rem 0;
+    }
+
+    .article-h2 {
+        margin-top: 3rem;
+        color: $orange;
+
+        @media screen and (max-width: 700px) {
+            font-size: 1.2rem;
+          }
+    }
+
+    .ul-article {
+        font-style: italic;
+
+        .bullet-point {
+            // list-style-type: circle;
+            list-style: none;
+
+            &::before {
+                content: "•";
+                color: $orange;
+                margin-right: .5rem;
+            }
+        }
+    }
+}

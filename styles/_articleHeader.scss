@@ -1,26 +1,66 @@
 .header-article {
     display: flex;
     flex-direction: column;
-    padding: 6rem 6rem 0;
-    width: 100%;
+    padding: 6rem 6rem 0 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1300px) {
+        padding: 6rem 2rem 0 2rem;
+      }
+
+      @media screen and (max-width: 1000px) {
+        padding: 6rem 0 0 0;
+      }
 
     .img-wrapper {
         width: 100%;
         height: 300px;
         overflow: hidden;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
 
-        .inner-img {
+        @media screen and (max-width: 600px) {
+            height: 200px;
+        }
+
+        @media screen and (max-width: 414px) {
+            height: 150px;
+        }
+
+        .cover-image {
             width: 100%;
             height: 300px;
             object-fit: cover;
             border-radius: 8px;
             transition: 0.3s;
+
+            @media screen and (max-width: 600px) {
+                height: 200px;
+            }
+
+            @media screen and (max-width: 414px) {
+                height: 150px;
+            }
     
             &:hover {
                 object-fit: cover;
-                border-radius: 8px;
                 transform: scale(1.1);   
+            }
+        }
+
+        
+    }
+
+    .written-by {
+        margin-bottom: 3rem;
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+            
+
+            &:hover {
+                color: $orange;
             }
         }
     }
@@ -31,31 +71,55 @@
         flex-direction: column;
         justify-content: space-between;
 
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: .5rem;
-        }
+
 
         .author {
             display: flex;
-            align-items: center;
+            flex-direction: row;
+
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+              }
 
             .avatar {
                 width: 50px;
                 height: 50px;
+                border-radius: 50%;
+                border: 1px solid $orange;
             }
 
             .bio {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                margin-left: .5rem;
-                width: 30%;
+                margin-left: 1rem;
+                width: 100%;
+
+                @media screen and (max-width: 700px) {
+                    margin-left: 0;
+                    margin-top: 1rem;
+                  }
+
+                h4 {
+                    color: $orange;
+                    font-size: 1rem;
+                }
 
                 p {
-                    font-size: .6rem;
+                    font-size: .8rem;
                 }
             }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 5rem 0;
+            color: $orange;
+
+            @media screen and (max-width: 700px) {
+                font-size: 1.7rem;
+              }
+            
         }
     }
 
