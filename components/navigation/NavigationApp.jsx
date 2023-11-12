@@ -46,6 +46,9 @@ const NavigationApp = () => {
             <li>
               <Link href="/entreprise">Partenaire</Link>
             </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
           </ul>
         ) : (
           <ul>
@@ -60,6 +63,9 @@ const NavigationApp = () => {
             </li>
             <li>
               <Link href="/entreprise">Partenaire</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
             </li>
           </ul>
         )}
