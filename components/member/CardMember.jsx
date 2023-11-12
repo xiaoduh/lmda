@@ -13,8 +13,6 @@ const CardMember = ({
   title,
   bio,
 }) => {
-  const contentBtnPrimary = "Contacter";
-  const contentBtnSecondary = "Voir son parcours";
 
   return (
     <Link href={`/collectif/profil/${id}/${title}`} title="collectif">
