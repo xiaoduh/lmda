@@ -186,7 +186,11 @@ const NavigationLanding = () => {
         )}
       </nav>
       <div className="cta-container">
-        <Link className="cta-secondary" href="#form" title="créer son profil">
+        <Link
+          className="cta-secondary"
+          href="/rejoindre"
+          title="créer son profil"
+        >
           Mettre en ligne son CV
         </Link>
         <Link className="btn-blue" href="#form" title="recevoir nos missions">
