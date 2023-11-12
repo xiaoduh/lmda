@@ -24,7 +24,7 @@ export default async function Profil({ params }) {
             <h2 className="title-section">Compétences & Intérêts</h2>
             <Skill
               title={"Compétences logicielles"}
-              data={data.data.data[0].attributes.software_skills.data}
+              data={data.data.data[0].attributes.technical_skills.data}
             />
             <h2 className="title-section">Avis & recommandations</h2>
 

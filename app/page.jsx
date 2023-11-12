@@ -1,6 +1,5 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
-import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
@@ -13,6 +12,7 @@ import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
+import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -20,6 +20,9 @@ export default async function Home() {
   );
   const resProfils = await axios.get(
     "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+  );
+  const resArticles = await axios.get(
+    "https://strapi-vvjo.onrender.com/api/articles?populate=*"
   );
   const resSubscribers = await axios.get(
     "https://lmdaapi.onrender.com/subscribers"
@@ -46,7 +49,7 @@ export default async function Home() {
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
-      content: "Applicatifs, Frameworks, Simulation numérique, DLL",
+      content: "Applicatifs, Frameworks Qt, Simulation numérique, DLL",
     },
     {
       title: "3D & Traitement d'images",
@@ -55,7 +58,7 @@ export default async function Home() {
     {
       title: "Embarqué",
       content:
-        "Linux, µC, Windows SE, Embededd Software, Middleware, Firmware, Drivers",
+        "Linux, µC ARM, Windows SE, RTOS, Embededd Software, Middleware, Firmware, Drivers",
     },
     {
       title: "Calcul Scientifique",
@@ -181,7 +184,7 @@ export default async function Home() {
                 key={card.attributes.job_id}
                 title={card.attributes.title}
                 desc={card.attributes.short_desc}
-                skills={card.attributes.software_skills}
+                skills={card.attributes.technical_skills}
                 place={card.attributes.localisation}
                 salary={card.attributes.salary}
                 daily_rate={card.attributes.daily_rate}
@@ -202,6 +205,25 @@ export default async function Home() {
           link={"/rejoindre"}
           title={"rejoindre"}
         />
+      </SectionWrapper>
+      <SectionWrapper id={"blog"}>
+        <ContentSection
+          title={"Laboratoire de nouvelles tendances"}
+          content={
+            "Chez Lambda, nous croyons au pouvoir de la collaboration, de l'apprentissage et du partage des connaissances. C'est pourquoi nous avons créé nptre blog afin de partager nos expériences."
+          }
+        />
+        <CardsContainer style={"articles-container"}>
+          {resArticles.data.data.slice(0, 6).map((article) => {
+            return (
+              <ArticleCardContainer
+                key={article.attributes.slug}
+                data={article.attributes}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
       </SectionWrapper>
 
       <SectionWrapper id={"form"}>

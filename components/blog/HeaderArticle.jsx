@@ -1,27 +1,44 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const HeaderArticle = ({ img, title, author }) => {
+export default async function HeaderArticle({ data }) {
+  // console.log(data[0].attributes.categories.data[0].attributes.name);
   return (
     <div className="header-article">
       <div className="img-wrapper">
-        <img src={img} className="inner-img" alt={img} />
+        <Image
+          src={`/${data[0].attributes.cover_img.data.attributes.name}`}
+          width={500}
+          height={500}
+          alt={data[0].attributes.cover_img.data.attributes.alternativeText}
+          className="cover-image"
+        />
       </div>
+      <p className="written-by">
+        Publié le {data[0].attributes.publish_date} par{" "}
+        {data[0].attributes.author.data.attributes.name} ·{" "}
+        <Link href={"/"}>
+          {data[0].attributes.categories.data[0].attributes.name}
+        </Link>
+      </p>
 
       <div className="info">
-        <h2>{title}</h2>
         <div className="author">
-          <img src="/pp.png" className="avatar" alt={img} />
+          <Image
+            src="/logo-post.jpg"
+            width={500}
+            height={500}
+            alt="Auteur sur le blog lambda"
+            className="avatar"
+          />
           <div className="bio">
-            <h4>{author}</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto minima accusamus, dolores eveniet fuga corporis.
-            </p>
+            <h4>Publié par {data[0].attributes.author.data.attributes.name}</h4>
+            <p>{data[0].attributes.author.data.attributes.bio}</p>
           </div>
         </div>
+        <h1>{data[0].attributes.title}</h1>
       </div>
     </div>
   );
-};
-
-export default HeaderArticle;
+}
