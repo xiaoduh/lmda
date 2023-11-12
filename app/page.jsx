@@ -184,7 +184,7 @@ export default async function Home() {
                 key={card.attributes.job_id}
                 title={card.attributes.title}
                 desc={card.attributes.short_desc}
-                skills={card.attributes.technical_skill}
+                skills={card.attributes.technical_skills}
                 place={card.attributes.localisation}
                 salary={card.attributes.salary}
                 daily_rate={card.attributes.daily_rate}
