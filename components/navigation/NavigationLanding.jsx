@@ -121,6 +121,9 @@ const NavigationLanding = () => {
                 Partenaire
               </Link>
             )}
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
           </ul>
         ) : (
           <ul>
@@ -182,6 +185,9 @@ const NavigationLanding = () => {
                 Partenaire
               </Link>
             )}
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
           </ul>
         )}
       </nav>
