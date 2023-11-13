@@ -5,13 +5,12 @@ import DescriptionContainer from "@/components/job/DescriptionContainer";
 import SectionWrapperProfil from "@/components/section/SectionWrapperProfil";
 import ContentContainer from "@/components/profil/ContentContainer";
 import SkillsContainer from "@/components/profil/SkillsContainer";
-import Requirement from "@/components/job/Requirement";
 import JobDescription from "@/components/job/JobDescription";
 import axios from "axios";
 
 export async function generateMetadata({ params }) {
   const data = await axios.get(
-    `https://strapi-vvjo.onrender.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
+    `http://localhost:1337/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
   );
   return {
     title: `Lambda | Mission ${data.data.data[0].attributes.title} à ${data.data.data[0].attributes.localisation}`,
@@ -21,7 +20,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Description({ params }) {
   const data = await axios.get(
-    `https://strapi-vvjo.onrender.com/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
+    `http://localhost:1337/api/jobs?filters[job_id][$eq]=${params.jobId}&populate=*`
   );
 
   return (

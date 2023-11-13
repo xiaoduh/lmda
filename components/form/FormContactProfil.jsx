@@ -20,7 +20,6 @@ const FormContactProfil = ({ id }) => {
         context: message,
       })
       .then(function (response) {
-        console.log(response.data);
         formMess.innerHTML =
           "<p class='success'>Votre demande a bien été envoyée ! 🚀</p>";
 
@@ -29,7 +28,6 @@ const FormContactProfil = ({ id }) => {
         }, 3500);
       })
       .catch(function (error) {
-        console.log(error);
         formMess.innerHTML =
           "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
 

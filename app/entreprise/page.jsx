@@ -21,7 +21,6 @@ export default async function Home() {
     "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
 
-  const resSubscribers = await axios.get("http://localhost:10000/subscribers");
 
   const contentCardsFirstSection = [
     {
@@ -68,7 +67,6 @@ export default async function Home() {
     },
   ];
 
-  console.log(resJobs.data.data);
 
   return (
     <main>

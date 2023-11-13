@@ -16,14 +16,14 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 
 export default async function Home() {
-  const resJobs = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
-  );
+  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
   const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+    "http://localhost:1337/api/profils?populate=*"
   );
 
-  const resSubscribers = await axios.get("http://localhost:10000/subscribers");
+  const resArticles = await axios.get(
+    "http://localhost:1337/api/articles?populate=*"
+  );
 
   const contentCardsFirstSection = [
     {
@@ -54,7 +54,7 @@ export default async function Home() {
     },
     {
       title: "Embarqué",
-      content: "Linux, µC, Windows SE",
+      content: "Linux, µC ARM, Windows SE, FreeRTOS, VxWorks",
     },
     {
       title: "Calcul Scientifique",
@@ -69,8 +69,6 @@ export default async function Home() {
       content: "Qt, QML, MFC, IlogViews...",
     },
   ];
-
-  console.log(resJobs.data.data);
 
   return (
     <main>
@@ -164,13 +162,12 @@ export default async function Home() {
         />
         <CardsContainer style={"articles-container"}>
           {resJobs.data.data.map((card) => {
-            console.log(card.attributes);
             return (
               <JobCard
                 key={card.attributes.job_id}
                 title={card.attributes.title}
                 desc={card.attributes.short_desc}
-                skills={card.attributes.software_skills}
+                skills={card.attributes.technical_skills}
                 place={card.attributes.localisation}
                 salary={card.attributes.salary}
                 daily_rate={card.attributes.daily_rate}
@@ -186,28 +183,15 @@ export default async function Home() {
           link={"/jobs"}
         />
       </SectionWrapper>
-      {/* <SectionWrapper id={"blog"}>
-        <Label content={fourthSection.txtLabel} />
-        <ContentSection
-          title={fourthSection.title}
-          content={fourthSection.content}
-        />
+      <SectionWrapper id={"blog"}>
+        <ContentSection title={"Blog"} content={"Nos articles"} />
         <CardsContainer style={"articles-container"}>
-          {articles.slice(0, 6).map((article) => {
-            return (
-              <ArticleCardContainer
-                key={article.index}
-                img={article.img}
-                title={article.title}
-                content={article.desc}
-                category={article.category}
-                author={article.author}
-              />
-            );
+          {resArticles.data.data.slice(0, 6).map((article) => {
+            return <ArticleCardContainer data={article.attributes} />;
           })}
         </CardsContainer>
         <PrimaryBtn content={"Parcourir le blog"} link={"/blog"} />
-      </SectionWrapper> */}
+      </SectionWrapper>
 
       <SectionWrapper id={"form"}>
         <ContentSection

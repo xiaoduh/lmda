@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import ThirdBtn from "../button/ThirdBtn";
@@ -14,7 +15,7 @@ const JobCard = ({
   jobTitle,
   workplace,
 }) => {
-  console.log(skills);
+  console.log({ "compétences techniques": skills });
   return (
     <Link href={`/jobs/description/${jobId}`}>
       <div className="card-job-trackslider">

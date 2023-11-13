@@ -19,7 +19,6 @@ const Form = () => {
         message,
       })
       .then(function (response) {
-        console.log(response.data);
         formMess.innerHTML =
           "<p class='success'>Votre besoin a bien été envoyé ! 🚀</p>";
 
@@ -28,7 +27,6 @@ const Form = () => {
         }, 6500);
       })
       .catch(function (error) {
-        console.log(error);
         formMess.innerHTML =
           "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
 

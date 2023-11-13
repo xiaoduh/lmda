@@ -19,7 +19,6 @@ const FormJoinUs = () => {
         message,
       })
       .then(function (response) {
-        console.log(response.data);
         formMess.innerHTML =
           "<p class='success'>Votre candidature spontannée a bien été envoyée ! 🚀</p>";
 
@@ -28,7 +27,6 @@ const FormJoinUs = () => {
         }, 6500);
       })
       .catch(function (error) {
-        console.log(error);
         formMess.innerHTML =
           "<p class='failed'>Une erreur s'est produite, veuillez réessayer ❌</p>";
 

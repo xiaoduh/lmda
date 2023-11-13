@@ -1,23 +1,24 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
-const ArticleCardContainer = ({ img, title, content, category, author }) => {
+export default async function ArticleCardContainer({ data }) {
   return (
-    <Link href={`/blog/${title}`}>
+    <Link href={`/blog/${data.slug}`}>
       <div className="article-preview">
         <img
-          src={img}
+          src={`/${data.cover_img.data.attributes.name}`}
           className="preview-article-img"
-          alt={title}
-          title="article-image"
+          alt={data.title}
+          title={data.cover_img.data.attributes.alternativeText}
         />
-        <h3>{title}</h3>
-        <p className="preview">{content}</p>
-        <p className="category">{category}</p>
-        <span className="author">Publié par {author}</span>
+        <h3>{data.title}</h3>
+        <p className="preview">{data.sumary}</p>
+        <p className="category">{data.categories.data[0].attributes.name}</p>
+        <span className="author">
+          Publié par {data.author.data.attributes.name}
+        </span>
       </div>
     </Link>
   );
-};
-
-export default ArticleCardContainer;
+}

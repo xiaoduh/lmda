@@ -12,7 +12,7 @@ import axios from "axios";
 
 export async function generateMetadata({ params }) {
   const data = await axios.get(
-    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
   return {
     title: `Lambda | Membre ${data.data.data[0].attributes.first_name}, ${data.data.data[0].attributes.title}`,
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Profil({ params }) {
   const data = await axios.get(
-    `https://strapi-vvjo.onrender.com/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
+    `http://localhost:1337/api/profils?filters[profil_id][$eq]=${params.id}&populate=*`
   );
 
   return (
@@ -34,7 +34,7 @@ export default async function Profil({ params }) {
             <h2 className="title-section">Compétences & Intérêts</h2>
             <Skill
               title={"Compétences logicielles"}
-              data={data.data.data[0].attributes.software_skills.data}
+              data={data.data.data[0].attributes.technical_skills.data}
             />
             <h2 className="title-section">Avis & recommandations</h2>
 
