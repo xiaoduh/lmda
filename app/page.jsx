@@ -14,6 +14,52 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 
+export const metadata = {
+  title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
+  description:
+    "Nous connectons Experts du C++ et Entreprises, en toute transparence. Trouvez votre poste de développeur C++ Qt sur Lambda ou recrutez rapidement des développeurs C++ Qt grâce à Lambda.",
+  keywords: [
+    "ESN",
+    "Plateforme de recrutement",
+    "ESN alternative",
+    "Management horizontal",
+    "Développeur C++",
+    "Recrutement C++ et Qt",
+    "Emplois en programmation C++",
+    "Offres d'emploi C++ et QT",
+    "Développement logiciel avec C++",
+    "Ingénieur en développement C++ et Qt",
+    "Carrières en programmation C++",
+    "Spécialiste en langage C++ et Qt",
+    "Recrutement de programmeurs expérimentés C++",
+    "Opportunités pour experts en développement C++",
+    "Recrutement de développeurs Qt",
+    "Emplois dans le développement d'applications C++",
+    "C++ et Qt - Offres d'emploi spécialisées",
+    "Opportunités de carrière pour développeurs C++ avancés",
+    "Expertise en développement logiciel C++ et Qt",
+  ],
+  authors: [{ name: "Lambda Labs" }],
+  creator: "Lambda Labs",
+  publisher: "Lambda Labs",
+  openGraph: {
+    title:
+      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
+    description:
+      "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    siteName: "Lambda",
+    type: "website",
+  },
+  twitter: {
+    title:
+      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
+    description:
+      "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    site: "Lambda",
+    cardType: "summary_large_image",
+  },
+};
+
 export default async function Home() {
   const resJobs = await axios.get(
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
