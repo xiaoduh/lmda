@@ -47,7 +47,7 @@ export const metadata = {
   publisher: "Lambda Labs",
   openGraph: {
     title:
-      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
+      "Plateforme des services numériques spécialisée sur l'écosystème C++",
     description:
       "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
     siteName: "Lambda",
@@ -55,7 +55,7 @@ export const metadata = {
   },
   twitter: {
     title:
-      "Lambda, plateforme des services numériques spécialisée sur l'écosystème C++",
+      "Plateforme des services numériques spécialisée sur l'écosystème C++",
     description:
       "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
     site: "Lambda",

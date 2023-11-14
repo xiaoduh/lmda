@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://lmda-xiaoduh.vercel.app";
+  const baseUrl = "https://lambda-labs.fr";
   return {
     rules: {
       userAgent: "*",
