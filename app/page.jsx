@@ -41,6 +41,9 @@ export const metadata = {
   ],
   authors: [{ name: "Lambda Labs" }],
   creator: "Lambda Labs",
+  alternates: {
+    canonical: `https://lambda-labs.fr/`,
+  },
   publisher: "Lambda Labs",
   openGraph: {
     title:
