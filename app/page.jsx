@@ -13,6 +13,7 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
+import FilterProfil from "@/components/Filter/FilterProfil";
 
 export const metadata = {
   title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
@@ -193,21 +194,11 @@ export default async function Home() {
             500 + resProfils.data.data.length
           } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
-        <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
-            return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
-              />
-            );
-          })}
+        <CardsContainer style={"cards-container member"}>
+        <FilterProfil
+            filters={resTechnicalSkills.data.data}
+            profils={resProfils.data.data}
+          />
         </CardsContainer>
         <PrimaryBtn
           content={`Mettre en ligne son CV`}

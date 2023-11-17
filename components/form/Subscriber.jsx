@@ -4,8 +4,10 @@ import React, { useState } from "react";
 
 const Subscriber = () => {
   const [subscriber, setSubscriber] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
@@ -31,6 +33,7 @@ const Subscriber = () => {
         }, 6500);
       });
     setSubscriber("");
+    setLoading(false);
   };
 
   return (
@@ -46,9 +49,13 @@ const Subscriber = () => {
           onChange={(e) => setSubscriber(e.target.value)}
         />
         <div className="output-message">
-          <button type="submit" className="primaryBtn">
-            Envoyer
-          </button>
+          {!loading ? (
+            <button type="submit" className="primaryBtn">
+              Envoyer
+            </button>
+          ) : (
+            <button className="primaryBtn">Chargement....</button>
+          )}
           <div className="output-mess"></div>
         </div>
       </form>

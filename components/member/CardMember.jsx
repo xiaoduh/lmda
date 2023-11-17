@@ -13,7 +13,6 @@ const CardMember = ({
   title,
   bio,
 }) => {
-
   return (
     <Link href={`/collectif/profil/${id}/${title}`} title="collectif">
       <div className="card-member">
@@ -40,7 +39,7 @@ const CardMember = ({
             last_name.slice(0, 3).toUpperCase()}
         </h2>
         <h3>{title}</h3>
-        <p>{bio}</p>
+        <p>{bio.slice(0, 200)}</p>
         <PrimaryBtn content="Contacter" link={`/contact/${id}`} />
         <SecondaryBtn
           content="Voir son parcours"

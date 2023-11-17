@@ -66,8 +66,8 @@ const FooterApp = () => {
         </div>
 
         <div class="row">
-          Lambda Labs © 2023 Lambda - All rights reserved || Made with ❤️ by
-          Lambda&apos;s crew.
+          Lambda Labs © 2023 Lambda - Tous droits réservés || Fait avec ❤️ par
+          l'équipe Lambda.
         </div>
       </div>
     </footer>
