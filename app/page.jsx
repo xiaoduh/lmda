@@ -76,6 +76,9 @@ export default async function Home() {
   const resSubscribers = await axios.get(
     "https://lmdaapi.onrender.com/subscribers"
   );
+  const resTechnicalSkills = await axios.get(
+    "https://lmdaapi.onrender.com/api/technical-skills"
+  );
 
   const contentCardsFirstSection = [
     {
@@ -194,7 +197,7 @@ export default async function Home() {
           } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
         <CardsContainer style={"cards-container member"}>
-        <FilterProfil
+          <FilterProfil
             filters={resTechnicalSkills.data.data}
             profils={resProfils.data.data}
           />
