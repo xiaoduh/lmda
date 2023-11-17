@@ -13,9 +13,9 @@ export default async function HeaderEngineer() {
     <header className="main-header" id="header">
       {/* <Label content={txtLabel} /> */}
       <h1>
-        Nous vous <span className="important">connectons</span>,aux meilleures
+        Nous vous <span className="important">connectons</span>,<br></br>aux
         opportunités de <span className="important">l&apos;écosystème C++</span>
-        ,<br></br> en toute <span className="important">transparence</span>.
+        .
       </h1>
       <p>
         La <span className="important">transparence</span>, change la donne. Le{" "}
