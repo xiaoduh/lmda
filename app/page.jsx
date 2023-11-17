@@ -77,7 +77,7 @@ export default async function Home() {
     "https://lmdaapi.onrender.com/subscribers"
   );
   const resTechnicalSkills = await axios.get(
-    "https://lmdaapi.onrender.com/api/technical-skills"
+    "https://strapi-vvjo.onrender.com/api/technical-skills"
   );
 
   const contentCardsFirstSection = [
