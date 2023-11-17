@@ -3,7 +3,6 @@ import "../styles/index.scss";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
-import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Footer from "@/components/navigation/Footer";
