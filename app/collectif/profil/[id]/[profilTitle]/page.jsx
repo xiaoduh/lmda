@@ -43,7 +43,9 @@ export default async function Profil({ params }) {
                 }
               )
             ) : (
-              <h3>L'utilisateur n'a pas renseigné ses expériences ☹️</h3>
+              <h3>
+                L&apos;utilisateur n&apos;a pas renseigné ses expériences ☹️
+              </h3>
             )}
           </ExperiencesContainer>
         </ContentContainer>
