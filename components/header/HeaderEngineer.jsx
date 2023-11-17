@@ -18,10 +18,11 @@ export default async function HeaderEngineer() {
         .
       </h1>
       <p>
-        La <span className="important">transparence</span>, change la donne. Le{" "}
-        <span className="important">management horizontal</span>, réduit les
-        coûts. La <span className="important">spécialisation</span>, rend
-        visibile.<br></br>
+        La <span className="important">transparence</span>, change la donne. L'{" "}
+        <span className="important">horizontalilté</span>, réduit les coûts. La{" "}
+        <span className="important">spécialisation</span>, rend unique et
+        visible.
+        <br></br>
         Notre vision de l&apos;ESN, c&apos;est faire mieux tout en réduisant les
         coûts liés au fonctionnement de la structure pour offrir une meilleure
         rémunération, plus de bonus dans le package et d&apos;avantage de
