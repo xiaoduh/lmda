@@ -7,8 +7,10 @@ const FormContactProfil = ({ id }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const formMess = document.querySelector(".output-mess");
     await axios
@@ -39,6 +41,7 @@ const FormContactProfil = ({ id }) => {
     setEmail("");
     setPhone("");
     setMessage("");
+    setLoading(false);
   };
 
   return (
@@ -80,9 +83,13 @@ const FormContactProfil = ({ id }) => {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <div className="output-message">
-          <button type="submit" className="primaryBtn">
-            Envoyer
-          </button>
+          {!loading ? (
+            <button type="submit" className="primaryBtn">
+              Envoyer
+            </button>
+          ) : (
+            <button className="primaryBtn">Chargement....</button>
+          )}
           <div className="output-mess"></div>
         </div>
       </form>

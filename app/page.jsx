@@ -14,6 +14,8 @@ import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
+import SortProfil from "@/components/utils/SortProfil";
+import FilterProfil from "@/components/Filter/FilterProfil";
 
 export default async function Home() {
   const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
@@ -23,6 +25,10 @@ export default async function Home() {
 
   const resArticles = await axios.get(
     "http://localhost:1337/api/articles?populate=*"
+  );
+
+  const resTechnicalSkills = await axios.get(
+    "http://localhost:1337/api/technical-skills"
   );
 
   const contentCardsFirstSection = [
@@ -130,21 +136,11 @@ export default async function Home() {
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
           Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
-        <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
-            return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
-              />
-            );
-          })}
+        <CardsContainer style={"cards-container member"}>
+          <FilterProfil
+            filters={resTechnicalSkills.data.data}
+            profils={resProfils.data.data}
+          />
         </CardsContainer>
         <PrimaryBtn
           content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}

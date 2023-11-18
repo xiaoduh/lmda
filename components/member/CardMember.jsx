@@ -27,13 +27,18 @@ const CardMember = ({
           </div>
         )}
 
-        <img src={img} className="pp" alt={first_name + last_name} title="user"/>
+        <img
+          src={img}
+          className="pp"
+          alt={first_name + last_name}
+          title="user"
+        />
         <h4>
           {first_name.slice(0, 3).toUpperCase() +
             last_name.slice(0, 3).toUpperCase()}
         </h4>
         <h4>{title}</h4>
-        <p>{bio}</p>
+        <p>{bio.slice(0, 200)}</p>
         <PrimaryBtn content="Contacter" link={`/contact/${id}`} />
         <SecondaryBtn
           content="Voir son parcours"

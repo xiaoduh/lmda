@@ -241,6 +241,32 @@ body {
         
     }
 
+    // .member {
+    //     display: flex;
+    //     flex-direction: column;
+
+    //     .display-filter-profil {
+    //         width: 50%;
+    //         margin: 0 auto;
+    //         padding: 0.75rem 1.2rem;
+    //         cursor: pointer;
+    //         transition: all 0.4s ease;
+    //         border-radius: 0.4rem;
+    //     }
+
+    //     .wrapper-cards-members {
+    //         display: grid;
+    //         grid-template-columns: repeat(3, 1fr);
+    //         grid-template-rows: 1fr;
+    //         grid-column-gap: 40px;
+    //         grid-row-gap: 40px;
+    //         animation: fade linear both;
+    //         animation-timeline: view();
+    //         animation-range: entry 20% cover 50%;
+    //         margin-top: 4rem;
+    //     }
+    // }
+
     .articles-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -463,6 +489,71 @@ body {
             }
         }
         
+    }
+
+    .member {
+        display: flex;
+        flex-direction: column;
+
+
+        .filters-checkbox {
+            display: flex;
+            width: 100%;
+            gap: 2rem;
+            justify-content: center;
+            margin: 0 auto;
+
+            button {
+                margin: 0 !important;
+            }
+
+
+            .list-filter-skills {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+
+                
+                label {
+                    cursor: pointer;
+                    display: flex;
+                    padding: .5rem 1rem;
+
+                    &:hover {
+                        color: $orange;
+                        background: #3F3F62;
+                        padding: .5rem 1rem;
+                        border-radius: 20px;
+                        color: #FD6B3D;
+                    }
+                }
+
+                input {
+                    display: none;
+                }
+
+                .label-checked {
+                    color: $orange;
+                    background: #3F3F62;
+                    padding: .5rem 1rem;
+                    border-radius: 20px;
+                    color: #FD6B3D;
+                }
+            }
+        }
+
+        .wrapper-cards-members {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 40px;
+            grid-row-gap: 40px;
+            animation: fade linear both;
+            animation-timeline: view();
+            animation-range: entry 20% cover 50%;
+            margin-top: 4rem;
+        }
     }
 
     .articles-container {

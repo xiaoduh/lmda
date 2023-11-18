@@ -15,7 +15,6 @@ const JobCard = ({
   jobTitle,
   workplace,
 }) => {
-  console.log({ "compétences techniques": skills });
   return (
     <Link href={`/jobs/description/${jobId}`}>
       <div className="card-job-trackslider">
