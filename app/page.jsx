@@ -1,10 +1,8 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../styles/index.scss";
-import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
-import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
@@ -14,23 +12,10 @@ import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
-import SortProfil from "@/components/utils/SortProfil";
 import FilterProfil from "@/components/Filter/FilterProfil";
+import getCandidats from "./libs/getCandidats";
 
 export default async function Home() {
-  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
-  const resProfils = await axios.get(
-    "http://localhost:1337/api/profils?populate=*"
-  );
-
-  const resArticles = await axios.get(
-    "http://localhost:1337/api/articles?populate=*"
-  );
-
-  const resTechnicalSkills = await axios.get(
-    "http://localhost:1337/api/technical-skills"
-  );
-
   const contentCardsFirstSection = [
     {
       title: "Transparence",
@@ -48,7 +33,6 @@ export default async function Home() {
         "L'efficacité n’est pas un moyen. C’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre colelctif.",
     },
   ];
-
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
@@ -75,11 +59,22 @@ export default async function Home() {
       content: "Qt, QML, MFC, IlogViews...",
     },
   ];
+  const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
+  const resProfils = await axios.get(
+    "http://localhost:1337/api/profils?populate=*"
+  );
+  const resArticles = await axios.get(
+    "http://localhost:1337/api/articles?populate=*"
+  );
+  const resTechnicalSkills = await axios.get(
+    "http://localhost:1337/api/technical-skills"
+  );
+  const candidats = await getCandidats();
 
   return (
     <main>
       <NavigationLanding />
-      <HeaderEngineer />
+      <HeaderEngineer candidats={candidats} />
       <SectionWrapper id={"why"}>
         <ContentSection
           title={`La confiance forgée par la transparence`}
@@ -100,8 +95,9 @@ export default async function Home() {
           content={`Voir les offres de missions ouvertes (${resJobs.data.data.length}) `}
           link={"/jobs"}
         />
+
         <SecondaryBtn
-          content={`Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
+          content={`Recruter votre prochain développeur C++ (${candidats.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -126,7 +122,7 @@ export default async function Home() {
           link={"/jobs"}
         />
         <SecondaryBtn
-          content={`Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
+          content={`Recruter votre prochain développeur C++ (${candidats.length})`}
           link={"/collectif"}
         />
       </SectionWrapper>
@@ -143,7 +139,7 @@ export default async function Home() {
           />
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
+          content={` Recruter votre prochain développeur C++ (${candidats.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn

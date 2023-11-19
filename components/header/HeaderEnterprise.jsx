@@ -7,11 +7,8 @@ import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
-import axios from "axios";
 
-export default async function HeaderEnterprise() {
-  const resJobs = await axios.get("https://strapi-vvjo.onrender.com/api/jobs");
-
+export default async function HeaderEnterprise({ candidats }) {
   const labels = [
     {
       picto: cpp,
@@ -167,8 +164,9 @@ export default async function HeaderEnterprise() {
       </h1>
       <p>
         Expert des technologies C/C++ et de ses mises en oeuvres, Lambda
-        rassemble <span className="important">+ 1000</span> de spécialistes prêt
-        à relever vos défis.<br></br> 2 projets sur 3 sont en retard à cause du
+        rassemble <span className="important">+ {candidats.length} </span>
+        spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
+        retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
         vos journées à chercher les bonnes compétences.
         <br></br>Augmentez votre <span className="important">visibilité</span>,

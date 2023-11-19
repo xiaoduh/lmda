@@ -8,7 +8,7 @@ import linux from "../../assets/images/linux.png";
 import axios from "axios";
 import SwiperCard from "../swiperCard/SwiperCard";
 
-export default async function HeaderEngineer() {
+export default async function HeaderEngineer({ candidats }) {
   const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
   const contentBtnPrimary = `Voir les offres de missions ouvertes (${resJobs.data.data.length})`;
   const contentBtnSecondary = `Recruter votre prochain développeur C++ (1515)`;
@@ -27,7 +27,10 @@ export default async function HeaderEngineer() {
         confiance grâce à la transparence.
       </p>
       <PrimaryBtn content={contentBtnPrimary} link={"/jobs"} />
-      <SecondaryBtn content={contentBtnSecondary} link={"/collectif"} />
+      <SecondaryBtn
+        content={`Recruter votre prochain développeur C++ (${candidats.length})`}
+        link={"/collectif"}
+      />
 
       <SwiperCard data={resJobs.data.data} />
 

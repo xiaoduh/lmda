@@ -12,6 +12,7 @@ import NavigationApp from "@/components/navigation/NavigationApp";
 import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
+import getCandidats from "../libs/getCandidats";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -20,7 +21,7 @@ export default async function Home() {
   const resProfils = await axios.get(
     "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
-
+  const candidats = await getCandidats();
 
   const contentCardsFirstSection = [
     {
@@ -67,16 +68,15 @@ export default async function Home() {
     },
   ];
 
-
   return (
     <main>
       <NavigationApp />
-      <HeaderEnterprise />
+      <HeaderEnterprise candidats={candidats} />
       <SectionWrapper id={"why"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content="Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou CDI rapidement. Lambda c'est aujourd'hui, +1000 développeurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels."
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${candidats.length} développeurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -123,7 +123,7 @@ export default async function Home() {
         <ContentSection
           title="Accedez aux meilleurs Freelance et CDI du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          Notre réseau rassemble plus de ${candidats.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
@@ -142,7 +142,7 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
+          content={` Recruter votre prochain développeur C++ (${candidats.length})`}
           link={"/collectif"}
         />
         <SecondaryBtn
@@ -153,7 +153,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de + ${resProfils.data.data.length} développeurs C++`}
+          title={`Bénéficiez d'une visibilité auprès de ${candidats.length} développeurs C++`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />
