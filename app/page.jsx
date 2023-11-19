@@ -13,6 +13,7 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
+import getCandidats from "./libs/getCandidats";
 
 export const metadata = {
   title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
@@ -79,6 +80,7 @@ export default async function Home() {
   const resTechnicalSkills = await axios.get(
     "https://strapi-vvjo.onrender.com/api/technical-skills"
   );
+  const candidats = await getCandidats();
 
   const contentCardsFirstSection = [
     {
@@ -129,7 +131,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <HeaderEngineer />
+      <HeaderEngineer candidats={candidats} />
       <SectionWrapper id={"why"}>
         {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
@@ -153,9 +155,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${
-            500 + resProfils.data.data.length
-          })`}
+          content={`Recruter un prestataire (${candidats.length})`}
           link={"/collectif"}
           title={"prestataire"}
         />
@@ -192,9 +192,7 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${
-            500 + resProfils.data.data.length
-          } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
         <CardsContainer style={"cards-container member"}>
           <FilterProfil
@@ -271,9 +269,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  ${
-            resSubscribers.data.length + 900
-          }+ abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${candidats.length}+ abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />

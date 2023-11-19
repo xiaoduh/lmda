@@ -4,7 +4,7 @@ import SecondaryBtn from "../button/SecondaryBtn";
 import axios from "axios";
 import SwiperCard from "../swiperCard/SwiperCard";
 
-export default async function HeaderEngineer() {
+export default async function HeaderEngineer({ candidats }) {
   const resJobs = await axios.get(
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
