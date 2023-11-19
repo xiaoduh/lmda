@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     width: 340px;
-    height: 490px;
     cursor: pointer;
     padding: 2rem 1rem;
     border-radius: 20px;
@@ -31,7 +30,7 @@
         }
 
         .red {
-            background: $color-stop !important;
+            background: $color-cancel !important
         }
 
         p {
@@ -50,7 +49,11 @@
           }
     }
 
-    h4 {
+    h2 {
+        color: #FD6B3D;
+    }
+
+    h3 {
         margin-bottom: 1rem;
         color: #fff;
     }
