@@ -21,8 +21,8 @@ const recursiveFetchContacts = async (link) => {
       let res = await promise;
       res.data.results.map((candidat) => {
         contactsArr.push(candidat);
-      });
-      console.log(contactsArr.length);
+      }); 
+
       if (res.data.paging)
         return recursiveFetchContacts(res.data.paging.next.link);
       else {
