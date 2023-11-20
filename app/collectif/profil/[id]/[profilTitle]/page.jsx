@@ -31,14 +31,22 @@ export default async function Profil({ params }) {
             <Reference name="Fonctionnalité à venir 🚧" />
           </SkillsContainer>
           <ExperiencesContainer>
-            {data.data.data[0].attributes.experiences.data.map((experience) => {
-              return (
-                <Experience
-                  key={experience.attributes.createdAt}
-                  data={experience}
-                />
-              );
-            })}
+            {data.data.data[0].attributes.experiences.data[0] ? (
+              data.data.data[0].attributes.experiences.data.map(
+                (experience) => {
+                  return (
+                    <Experience
+                      key={experience.attributes.createdAt}
+                      data={experience}
+                    />
+                  );
+                }
+              )
+            ) : (
+              <h3>
+                L&apos;utilisateur n&apos;a pas renseigné ses expériences ☹️
+              </h3>
+            )}
           </ExperiencesContainer>
         </ContentContainer>
       </SectionWrapperProfil>

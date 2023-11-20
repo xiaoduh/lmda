@@ -3,7 +3,6 @@ import "../styles/index.scss";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
-import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Footer from "@/components/navigation/Footer";
@@ -13,6 +12,57 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
+import FilterProfil from "@/components/Filter/FilterProfil";
+import getCandidats from "./libs/getCandidats";
+
+export const metadata = {
+  title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
+  description:
+    "Nous connectons Experts du C++ et Entreprises, en toute transparence. Trouvez votre poste de développeur C++ Qt sur Lambda ou recrutez rapidement des développeurs C++ Qt grâce à Lambda.",
+  keywords: [
+    "ESN",
+    "Plateforme de recrutement",
+    "ESN alternative",
+    "Management horizontal",
+    "Développeur C++",
+    "Recrutement C++ et Qt",
+    "Emplois en programmation C++",
+    "Offres d'emploi C++ et QT",
+    "Développement logiciel avec C++",
+    "Ingénieur en développement C++ et Qt",
+    "Carrières en programmation C++",
+    "Spécialiste en langage C++ et Qt",
+    "Recrutement de programmeurs expérimentés C++",
+    "Opportunités pour experts en développement C++",
+    "Recrutement de développeurs Qt",
+    "Emplois dans le développement d'applications C++",
+    "C++ et Qt - Offres d'emploi spécialisées",
+    "Opportunités de carrière pour développeurs C++ avancés",
+    "Expertise en développement logiciel C++ et Qt",
+  ],
+  authors: [{ name: "Lambda Labs" }],
+  creator: "Lambda Labs",
+  alternates: {
+    canonical: `https://lambda-labs.fr/`,
+  },
+  publisher: "Lambda Labs",
+  openGraph: {
+    title:
+      "Plateforme des services numériques spécialisée sur l'écosystème C++",
+    description:
+      "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    siteName: "Lambda",
+    type: "website",
+  },
+  twitter: {
+    title:
+      "Plateforme des services numériques spécialisée sur l'écosystème C++",
+    description:
+      "Nous connectons, Experts du C++ et Entreprises de l'écosystème C++, en toute transparence.",
+    site: "Lambda",
+    cardType: "summary_large_image",
+  },
+};
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -27,6 +77,10 @@ export default async function Home() {
   const resSubscribers = await axios.get(
     "https://lmdaapi.onrender.com/subscribers"
   );
+  const resTechnicalSkills = await axios.get(
+    "https://strapi-vvjo.onrender.com/api/technical-skills"
+  );
+  const candidats = await getCandidats();
 
   const contentCardsFirstSection = [
     {
@@ -77,7 +131,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <HeaderEngineer />
+      <HeaderEngineer candidats={candidats} />
       <SectionWrapper id={"why"}>
         {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
@@ -101,9 +155,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${
-            500 + resProfils.data.data.length
-          })`}
+          content={`Recruter un prestataire (${candidats.length})`}
           link={"/collectif"}
           title={"prestataire"}
         />
@@ -140,25 +192,13 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${
-            500 + resProfils.data.data.length
-          } passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
-        <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
-            return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
-              />
-            );
-          })}
+        <CardsContainer style={"cards-container member"}>
+          <FilterProfil
+            filters={resTechnicalSkills.data.data}
+            profils={resProfils.data.data}
+          />
         </CardsContainer>
         <PrimaryBtn
           content={`Mettre en ligne son CV`}
@@ -201,7 +241,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV)`}
+          content={`Mettre en ligne son CV`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -229,9 +269,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  ${
-            resSubscribers.data.length + 900
-          }+ abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${candidats.length}+ abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />
