@@ -25,7 +25,7 @@ export default function Legal() {
         </p>
         <h3>Hébergement</h3>
         <p>
-          Le Site est hébergé par la société Lambda Labs, situé 2 Esplanade
+          Le Site est hébergé par la société Lambda, situé 2 Esplanade
           Ferdinand-Magellan 93160 Noisy-le-Grand, (contact téléphonique ou
           email : +33668670457).
         </p>
