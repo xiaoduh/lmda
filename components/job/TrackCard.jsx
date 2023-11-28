@@ -13,10 +13,12 @@ const TrackCard = ({
   jobId,
   jobTitle,
   workplace,
+  job_type,
 }) => {
   return (
     <Link href={`/jobs/description/${jobId}`}>
       <div className="card-job-trackslider">
+      <p className={`job-type`}>{job_type}</p>
         <h3>{title}</h3>
         <div className="infos">
           <p className="info">{place}</p>

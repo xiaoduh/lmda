@@ -92,6 +92,28 @@
               background: transparent;
           }
 
+          .job-type {
+            padding: 0.75rem 1.2rem;
+            max-width: max-content;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            }
+    
+            .cdi {
+                background: rgb(138, 241, 198);
+                color: rgb(9, 207, 125);
+            }
+    
+            .freelance {
+                background: rgb(241, 214, 138);
+                color: rgb(179, 134, 12);
+            }
+    
+            .cdi-prestation {
+                background: rgb(241, 138, 190);
+                color: rgb(223, 13, 118);
+            }
+
           h3 {
             font-size: 1rem;
             margin-bottom: 1rem;

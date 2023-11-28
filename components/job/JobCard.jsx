@@ -13,10 +13,12 @@ const JobCard = ({
   jobId,
   jobTitle,
   workplace,
+  job_type,
 }) => {
   return (
     <Link href={`/jobs/description/${jobId}`} title="job description">
       <div className="card-job">
+        <p className={`job-type`}>{job_type}</p>
         <h3>{title}</h3>
         <p>{desc}</p>
         <div className="infos">
