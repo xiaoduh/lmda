@@ -18,7 +18,29 @@ const TrackCard = ({
   return (
     <Link href={`/jobs/description/${jobId}`}>
       <div className="card-job-trackslider">
-      <p className={`job-type`}>{job_type}</p>
+        <p
+          className={`job-type`}
+          style={{
+            backgroundColor:
+              job_type === `Freelance`
+                ? `#334D6E`
+                : job_type === `CDI`
+                ? `#2ed4794d`
+                : `#7e3825e3`,
+            color:
+              job_type === `Freelance`
+                ? `#17b6ff`
+                : job_type === `CDI`
+                ? `#2ED47A`
+                : `#FD6B3D`,
+          }}
+        >
+          {job_type === `Freelance`
+            ? `Mission Freelance`
+            : job_type === `CDI`
+            ? `CDI Client Final`
+            : `CDI Lambda Labs`}
+        </p>
         <h3>{title}</h3>
         <div className="infos">
           <p className="info">{place}</p>

@@ -180,13 +180,13 @@ const NavigationLanding = () => {
       <div className="cta-container">
         <Link
           className="cta-secondary"
-          href="/rejoindre"
-          title="créer son profil"
+          href="/entreprise"
+          title="Proposer une mission"
         >
-          Mettre en ligne son CV
+          Proposer une mission
         </Link>
-        <Link className="btn-blue" href="#form" title="recevoir nos missions">
-          Recevoir nos dernières missions
+        <Link className="btn-blue" href="/jobs" title="Trouver une mission">
+          Trouver une mission
         </Link>
       </div>
       {active ? (
