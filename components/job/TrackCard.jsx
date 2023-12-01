@@ -52,7 +52,9 @@ const TrackCard = ({
             );
           })}
           <p className="info">
-            {salary}K ou {daily_rate}€/j
+            {job_type === `Freelance`
+              ? `${daily_rate}€/j`
+              : `à partir de ${salary}K`}
           </p>
           <p className="info">{workplace}</p>
         </div>
