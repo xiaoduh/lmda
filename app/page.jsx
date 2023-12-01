@@ -16,9 +16,9 @@ import FilterProfil from "@/components/Filter/FilterProfil";
 import getCandidats from "./libs/getCandidats";
 
 export const metadata = {
-  title: "Plateforme des services numériques spécialisée sur l'écosystème C++",
+  title: "ESN et Recrutement spécialiste de l'écosystème C++",
   description:
-    "Nous connectons Experts du C++ et Entreprises, en toute transparence. Trouvez votre poste de développeur C++ Qt sur Lambda ou recrutez rapidement des développeurs C++ Qt grâce à Lambda.",
+    "Pure player de l'écosystème C/C++ et Qt, nous facilitons la rencontre entre Talents et Entreprises grâce à notre réseau de +2000 spécialistes du C++.",
   keywords: [
     "ESN",
     "Plateforme de recrutement",
