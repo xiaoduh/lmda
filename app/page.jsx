@@ -203,7 +203,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV)`}
+          content={`Mettre en ligne son CV`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -231,7 +231,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV)`}
+          content={`Mettre en ligne son CV`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />

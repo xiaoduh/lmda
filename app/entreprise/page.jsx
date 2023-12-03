@@ -111,6 +111,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                style={card.className}
               />
             );
           })}
