@@ -127,6 +127,26 @@ export default async function Home() {
       content: "Qt, QML, MFC, WxWidgets, ImGui, Nana, NanoGui, IlogViews...",
     },
   ];
+  const contentCardsThirdSection = [
+    {
+      title: "CDI Client final",
+      content:
+        "Vous êtes salarié et recherchez un CDI chez une client final ? Nous vous proposons les meilleurs postes au sein de entreprises de l'écosystème C/C++.",
+      className: "final",
+    },
+    {
+      title: "CDI Lambda Labs",
+      content:
+        "Vous êtes salarié et recherchez un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement de votre société. Chaque collaborateur Lambda Labs est un associé en devenir.",
+      className: "lambda",
+    },
+    {
+      title: "Mission Freelance",
+      content:
+        "Vous êtes Freelance et en recherche de mission ? Nous vous portons commercialement chez notre client en toute transparence contre une commission journalière fixe et transparente elle aussi. Une relation commerciale limpide pour tout le monde.",
+      className: "freelance",
+    },
+  ];
 
   return (
     <main>
@@ -188,27 +208,32 @@ export default async function Home() {
           title={"rejoindre"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"member"}>
-        {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
+      <SectionWrapper id={"how"}>
         <ContentSection
-          title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          title={`Des opportunités pour tous`}
+          content="Que vous soyez salarié en recherche d'un CDI pour un client final ou Freelance à la recherche d'une nouvelle mission, en tant que spécialiste du recrutement sur l'écosystème C/C++ nous sommes le partenaire naturel des entreprises qui recrutent."
         />
-        <CardsContainer style={"cards-container member"}>
-          <FilterProfil
-            filters={resTechnicalSkills.data.data}
-            profils={resProfils.data.data}
-          />
+        <CardsContainer style={"cards-container"}>
+          {contentCardsThirdSection.map((card) => {
+            return (
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
+                style={card.className}
+              />
+            );
+          })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Mettre en ligne son CV`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
-        />
-        <SecondaryBtn
           content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
+        />
+        <SecondaryBtn
+          content={`Mettre en ligne son CV)`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
@@ -245,6 +270,29 @@ export default async function Home() {
           content={`Mettre en ligne son CV`}
           link={"/rejoindre"}
           title={"rejoindre"}
+        />
+      </SectionWrapper>
+      <SectionWrapper id={"member"}>
+        {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
+        <ContentSection
+          title="Soyez visible auprès des entreprises"
+          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+        />
+        <CardsContainer style={"cards-container member"}>
+          <FilterProfil
+            filters={resTechnicalSkills.data.data}
+            profils={resProfils.data.data}
+          />
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Mettre en ligne son CV`}
+          link={"/rejoindre"}
+          title={"rejoindre"}
+        />
+        <SecondaryBtn
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"blog"}>
