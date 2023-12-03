@@ -28,16 +28,19 @@ export default async function Home() {
       title: "Freelance ou CDI",
       content:
         "Au travers de notre réseau, vous avez accès aux deux types de statut sans coûts supplémentaires. À chaque candidature vous êtes au courant du statut du candidat et la tarification est transparente et la même pour les deux status.",
+      className: "final",
     },
     {
       title: "Assistance Technique",
       content:
         "Un nouveau projet ou une montagne de J/H pour votre équipe ? Grâce à notre immense réseau et notre visibilité dans l'écosystème (demain notre notoriété), nous vous proposons une shortlist de 3 candidats dans les 72h.",
+      className: "lambda",
     },
     {
       title: "Régie en pré-embauche",
       content:
         "Une démission ou des recrutements qui patinent ? Bénéficiez là aussi de notre réseau et de notre visibilité. Nous vous proposons des candidats en mission de pré-embauche.",
+      className: "freelance",
     },
   ];
 
@@ -85,6 +88,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                style={card.className}
               />
             );
           })}
