@@ -34,8 +34,8 @@ export default async function HeaderEngineer() {
         et visible.
         <br></br>
         Nous incarnons une vision horizontale, transparente et équitable de
-        l&apos;ESN, pour permettre à ceux qui en font la richesse d'en récolter
-        les fruits. Devenez propriétaire de votre entreprise.
+        l&apos;ESN, pour permettre à ceux qui en font la richesse d&apos;en
+        récolter les fruits. Devenez propriétaire de votre entreprise.
       </p>
       <PrimaryBtn
         content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
