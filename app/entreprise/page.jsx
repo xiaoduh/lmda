@@ -100,7 +100,7 @@ export default async function Home() {
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Une stratégie de spécialisation"
+          title="Spécialiste et expert de l'écosystème C/C++"
           content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur les usages des langages C et C++."
         />
         <CardsContainer style={"cards-container"}>
