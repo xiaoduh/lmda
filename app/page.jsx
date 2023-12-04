@@ -131,19 +131,19 @@ export default async function Home() {
     {
       title: "CDI Client final",
       content:
-        "Vous êtes salarié et recherchez un CDI chez une client final ? Nous vous proposons les meilleurs postes au sein de entreprises de l'écosystème C/C++.",
+        "Vous êtes salarié et en recherche d'un CDI pour un client final ? Pure player de l'écosystème C/C++, nous vous proposons un grand nombre de postes de l'écosystème.",
       className: "final",
     },
     {
       title: "CDI Lambda Labs",
       content:
-        "Vous êtes salarié et recherchez un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement de votre société. Chaque collaborateur Lambda Labs est un associé en devenir.",
+        "Vous êtes salarié et en recherche d'un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement d'une ESN horizontale où chaque collaborateur Lambda Labs est un associé en devenir. Travaillez pour votre boîte !",
       className: "lambda",
     },
     {
       title: "Mission Freelance",
       content:
-        "Vous êtes Freelance et en recherche de mission ? Nous vous portons commercialement chez notre client en toute transparence contre une commission journalière fixe et transparente elle aussi. Une relation commerciale limpide pour tout le monde.",
+        "Vous êtes Freelance et en recherche d'une mission ? Nous vous portons commercialement en toute transparence contre une commission journalière fixe et transparente. Une relation commerciale limpide pour vous et notre client.",
       className: "freelance",
     },
   ];
