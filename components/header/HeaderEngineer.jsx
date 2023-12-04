@@ -3,6 +3,8 @@ import PrimaryBtn from "../button/PrimaryBtn";
 import SecondaryBtn from "../button/SecondaryBtn";
 import axios from "axios";
 import SwiperCard from "../swiperCard/SwiperCard";
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function HeaderEngineer() {
   const resJobs = await axios.get(
@@ -11,7 +13,15 @@ export default async function HeaderEngineer() {
 
   return (
     <header className="main-header" id="header">
-      {/* <Label content={txtLabel} /> */}
+      <Link className="counter" href={"/jobs"}>
+        <p>7 missions à pourvoir</p>
+        <Image
+          src="/croissance.png"
+          width={20}
+          height={20}
+          alt="Nombre de missions disponibles"
+        />
+      </Link>
       <h1>
         Nous vous <span className="important">connectons</span>,<br></br>aux
         opportunités de <span className="important">l&apos;écosystème C++</span>

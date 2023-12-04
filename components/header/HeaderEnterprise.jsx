@@ -6,6 +6,8 @@ import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
+import Link from "next/link";
+import Image from "next/image";
 
 export default async function HeaderEnterprise() {
   const labels = [
@@ -157,6 +159,15 @@ export default async function HeaderEnterprise() {
 
   return (
     <header className="main-header" id="header">
+      <Link className="counter" href={"/entreprise"}>
+        <p>1303 CV référencés</p>
+        <Image
+          src="/croissance.png"
+          width={20}
+          height={20}
+          alt="Nombre CV disponible"
+        />
+      </Link>
       <h1>
         <span className="important">1303</span> spécialistes du{" "}
         <span className="important">C++</span> prêts à relever vos défis.
@@ -169,7 +180,7 @@ export default async function HeaderEnterprise() {
         vos journées à chercher les bonnes compétences.
         <br></br> Grâce à Lambda Labs, augmentez votre{" "}
         <span className="important">visibilité</span>, gagnez en{" "}
-        <span className="important">pertinence</span> et diminuez le
+        <span className="important">pertinence</span> et réduisez le
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
