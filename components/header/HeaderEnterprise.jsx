@@ -7,7 +7,7 @@ import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 
-export default async function HeaderEnterprise({ candidats }) {
+export default async function HeaderEnterprise() {
   const labels = [
     {
       picto: cpp,
@@ -158,12 +158,12 @@ export default async function HeaderEnterprise({ candidats }) {
   return (
     <header className="main-header" id="header">
       <h1>
-        <span className="important">{candidats.length}</span> spécialistes du{" "}
+        <span className="important">1303</span> spécialistes du{" "}
         <span className="important">C++</span> prêts à relever vos défis.
       </h1>
       <p>
         Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda
-        Labs rassemble <span className="important">{candidats.length}</span>{" "}
+        Labs rassemble <span className="important">1303</span>{" "}
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus

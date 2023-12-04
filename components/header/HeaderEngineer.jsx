@@ -4,7 +4,7 @@ import SecondaryBtn from "../button/SecondaryBtn";
 import axios from "axios";
 import SwiperCard from "../swiperCard/SwiperCard";
 
-export default async function HeaderEngineer({ candidats }) {
+export default async function HeaderEngineer() {
   const resJobs = await axios.get(
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
@@ -23,10 +23,8 @@ export default async function HeaderEngineer({ candidats }) {
         coûts. La <span className="important">spécialisation</span>, rend unique
         et visible.
         <br></br>
-        Notre vision de l&apos;ESN, c&apos;est faire mieux tout en réduisant les
-        coûts liés au fonctionnement de la structure pour offrir une meilleure
-        rémunération, plus de bonus dans le package et d&apos;avantage de
-        services à nos collaborateurs.
+        Nous avons une vision horizontale , transparente et équitable de
+        l&apos;ESN pour redonner du sens à celle-ci.
       </p>
       <PrimaryBtn
         content={`Voir les missions ouvertes (${resJobs.data.data.length})`}

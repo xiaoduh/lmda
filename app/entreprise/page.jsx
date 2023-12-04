@@ -26,7 +26,7 @@ export default async function Home() {
   const contentCardsFirstSection = [
     {
       title: "Partenaire de vos recrutement CDI",
-      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${candidats.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + 1303 profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
     },
     {
@@ -37,7 +37,7 @@ export default async function Home() {
     },
     {
       title: "Un vivier de Freelance spécialisés",
-      content: `Notre CVthèque de + ${candidats.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
+      content: `Notre CVthèque de + 1303 profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
     },
   ];
@@ -72,12 +72,12 @@ export default async function Home() {
   return (
     <main>
       <NavigationApp />
-      <HeaderEnterprise candidats={candidats} />
+      <HeaderEnterprise />
       <SectionWrapper id={"why"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${candidats.length} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + 1303 ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -125,7 +125,7 @@ export default async function Home() {
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${candidats.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          Notre réseau rassemble plus de 1303 passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
         <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
@@ -144,18 +144,18 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur (${candidats.length})`}
+          content={` Recruter votre prochain développeur (1303)`}
           link={"/collectif"}
         />
         <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
+          content={`Voir les offres de missions ouvertes (1303)`}
           link={"/jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de ${candidats.length} développeurs`}
+          title={`Bénéficiez d'une visibilité auprès de 1303 développeurs`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />
