@@ -151,7 +151,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationLanding />
-      <HeaderEngineer candidats={candidats} />
+      <HeaderEngineer />
       <SectionWrapper id={"why"}>
         {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
         <ContentSection
@@ -175,8 +175,8 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (${candidats.length})`}
-          link={"/collectif"}
+          content={`Recruter un prestataire (1303)`}
+          link={"/entreprise"}
           title={"prestataire"}
         />
       </SectionWrapper>
@@ -276,7 +276,7 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          content={`Tout comme 1303 passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
         />
         <CardsContainer style={"cards-container member"}>
           <FilterProfil
@@ -318,7 +318,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  ${candidats.length}+ abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  1303 abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />

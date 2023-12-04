@@ -136,8 +136,8 @@ export default async function Article({ params }) {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${resProfils.data.data.length})`}
-          link={"/collectif"}
+          content={` Recruter votre prochain développeur C++ (1303 CV)`}
+          link={"/entreprise"}
         />
         <SecondaryBtn
           content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}

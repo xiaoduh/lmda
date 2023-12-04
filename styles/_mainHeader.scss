@@ -17,6 +17,30 @@
       padding: 6rem 0rem 2rem;
     }
 
+    .counter {
+      display: flex;
+      gap: .5rem;
+      background-color: #EBF3FF;
+      padding: 0.75rem 1.2rem;
+      max-width: max-content;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      align-items: center;
+      border: 1px solid #1776ff;
+      transition: all .8s ease;
+
+      &:hover {
+        border: 1px solid #1776ff;
+        background: transparent;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #1776ff;
+      }
+
+    }
+
     h1 {
         font-size: 2.5rem;
         text-align: center;
@@ -136,7 +160,7 @@
               background: #3F3F62;
               padding: .5rem 1rem;
               border-radius: 20px;
-              color: #FD6B3D;
+              color: #fff;
       
   
       p {

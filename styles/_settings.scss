@@ -2,7 +2,8 @@ $accent-black: #1E1E30;
 $black-contrast: #1f1f32;
 $gray: #575765;
 $gray-card: #413f4e;
-$primary: #1776FF;
+$primary: #1776ff;
+$title: #99C3FF;
 $dark-blue: #334D6E;
 $color-cancel: #FFB946;
 $color-cancel-2: #ffb84652;
@@ -10,7 +11,7 @@ $color-confirm: #2ED47A;
 $color-confirm-2: #2ed4794d;
 $color-stop: #F7685B;
 $color-stop-2: #f7685b57;
-$important: #FD6B3D;
+$important: #99C3FF;
 $orange: #FD6B3D;
 
 @font-face {
@@ -137,7 +138,7 @@ body {
         h2 {
             font-size: 1.8rem;
             text-align: center;
-            color: #FD6B3D;
+            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -152,7 +153,7 @@ body {
         h1 {
             font-size: 1.8rem;
             text-align: center;
-            color: #FD6B3D;
+            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -213,6 +214,7 @@ body {
             flex-direction: column;
             justify-content: center;
             gap: 1rem;
+            transition: all .8s ease;
 
             &:hover {
                 background: transparent;
@@ -221,7 +223,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $orange;
+                color: $title;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -332,7 +334,7 @@ body {
                 background: #3F3F62;
                 padding: .5rem 1rem;
                 border-radius: 20px;
-                color: #FD6B3D;
+                color: #fff;
                 max-width: fit-content;
 
                 p {
@@ -388,7 +390,7 @@ body {
         h2 {
             font-size: 1.8rem;
             text-align: center;
-            color: #FD6B3D;
+            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -403,7 +405,7 @@ body {
         h1 {
             font-size: 1.8rem;
             text-align: center;
-            color: #FD6B3D;
+            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -464,6 +466,7 @@ body {
             flex-direction: column;
             justify-content: center;
             gap: 1rem;
+            transition: all .8s ease;
 
             &:hover {
                 background: transparent;
@@ -472,7 +475,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $orange;
+                color: $primary;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -488,6 +491,19 @@ body {
                   }
             }
         }
+
+        
+        #final {
+            color: #2ED47A;
+            }
+
+            #lambda {
+                color: #F7685B;
+            }
+
+            #freelance {
+                    color: rgb(23, 182, 255);
+            }
 
         .final {
             background: #2ed4794d;
@@ -698,7 +714,7 @@ body {
     background: #3F3F62;
     padding: .5rem 1rem;
     border-radius: 20px;
-    color: #FD6B3D;
+    color: $important;
     
 
     p {
