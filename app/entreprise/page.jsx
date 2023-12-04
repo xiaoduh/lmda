@@ -25,21 +25,19 @@ export default async function Home() {
 
   const contentCardsFirstSection = [
     {
-      title: "Freelance ou CDI",
-      content:
-        "Au travers de notre réseau, vous avez accès aux deux types de statut sans coûts supplémentaires. À chaque candidature vous êtes au courant du statut du candidat et la tarification est transparente et la même pour les deux status.",
+      title: "Partenaire de vos recrutement CDI",
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${candidats.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
     },
     {
-      title: "Assistance Technique",
+      title: "Des consultants spécialisés",
       content:
-        "Un nouveau projet ou une montagne de J/H pour votre équipe ? Grâce à notre immense réseau et notre visibilité dans l'écosystème (demain notre notoriété), nous vous proposons une shortlist de 3 candidats dans les 72h.",
+        "Pure player de l'écosystème C/C++, vous trouverez chez Lambda Labs les compétences qu'il vous manque pour délivrer vos projets.",
       className: "lambda",
     },
     {
-      title: "Régie en pré-embauche",
-      content:
-        "Une démission ou des recrutements qui patinent ? Bénéficiez là aussi de notre réseau et de notre visibilité. Nous vous proposons des candidats en mission de pré-embauche.",
+      title: "Un vivier de Freelance spécialisés",
+      content: `Notre CVthèque de + ${candidats.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
     },
   ];
@@ -102,7 +100,7 @@ export default async function Home() {
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Une stratégie de spécialisation"
+          title="Spécialiste et expert de l'écosystème C/C++"
           content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur les usages des langages C et C++."
         />
         <CardsContainer style={"cards-container"}>
