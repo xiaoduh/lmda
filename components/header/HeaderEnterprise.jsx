@@ -163,9 +163,8 @@ export default async function HeaderEnterprise() {
       </h1>
       <p>
         Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda
-        Labs rassemble <span className="important">1303</span>{" "}
-        spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
-        retard à cause du
+        Labs rassemble <span className="important">1303</span> spécialistes prêt
+        à relever vos défis.<br></br> 2 projets sur 3 sont en retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
         vos journées à chercher les bonnes compétences.
         <br></br> Grâce à Lambda Labs, augmentez votre{" "}
@@ -177,7 +176,10 @@ export default async function HeaderEnterprise() {
         content="Publier une mission sur Lambda"
         link={"/partenaire"}
       />
-      <SecondaryBtn content="Recruter un prestataire" link={"/collectif"} />
+      <SecondaryBtn
+        content="Recruter un prestataire (1303 CV)"
+        link={"/entreprise"}
+      />
       <InfiniteScroll Tags={labels} />
     </header>
   );

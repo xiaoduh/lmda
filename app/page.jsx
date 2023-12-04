@@ -176,7 +176,7 @@ export default async function Home() {
         />
         <SecondaryBtn
           content={`Recruter un prestataire (1303)`}
-          link={"/collectif"}
+          link={"/entreprise"}
           title={"prestataire"}
         />
       </SectionWrapper>

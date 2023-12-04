@@ -95,7 +95,10 @@ export default async function Home() {
           content={`Publier une mission sur Lambda`}
           link={"/partenaire"}
         />
-        <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
+        <SecondaryBtn
+          content={`Recruter un prestataire (1303 CV)`}
+          link={"/entreprise"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
@@ -118,7 +121,10 @@ export default async function Home() {
           content={`Publier une mission sur Lambda`}
           link={"/partenaire"}
         />
-        <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
+        <SecondaryBtn
+          content={`Recruter un prestataire (1303 CV)`}
+          link={"/entreprise"}
+        />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
@@ -144,11 +150,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur (1303)`}
-          link={"/collectif"}
+          content={` Recruter votre prochain développeur (1303 CV)`}
+          link={"/entreprise"}
         />
         <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (1303)`}
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />
       </SectionWrapper>
