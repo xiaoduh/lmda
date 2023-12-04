@@ -24,9 +24,6 @@ const HeaderJob = ({
         </div>
       </div>
       <div className="tags">
-        <p className="label">{work_organisation}</p>
-        <p className="label">4 ans d&apos;exp minimum</p>
-        <p className="label">publié le {date}</p>
         <p
           className={`job-type`}
           style={{
@@ -50,6 +47,9 @@ const HeaderJob = ({
             ? `CDI Client Final`
             : `CDI Lambda Labs`}
         </p>
+        <p className="label">{work_organisation}</p>
+        <p className="label">4 ans d&apos;exp minimum</p>
+        <p className="label">publié le {date}</p>
       </div>
       <PrimaryBtn content={"Postuler"} link={`/jobs/postuler/${id}/${title}`} />
     </div>
