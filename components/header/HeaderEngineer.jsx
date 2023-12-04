@@ -16,7 +16,7 @@ export default async function HeaderEngineer() {
       <Link className="counter" href={"/jobs"}>
         <p>7 missions à pourvoir</p>
         <Image
-          src="/croissance.png"
+          src="/mallette.png"
           width={20}
           height={20}
           alt="Nombre de missions disponibles"
