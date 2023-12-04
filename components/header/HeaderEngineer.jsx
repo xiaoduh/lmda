@@ -33,8 +33,9 @@ export default async function HeaderEngineer() {
         coûts. La <span className="important">spécialisation</span>, rend unique
         et visible.
         <br></br>
-        Nous avons une vision horizontale , transparente et équitable de
-        l&apos;ESN pour redonner du sens à celle-ci.
+        Nous incarnons une vision horizontale, transparente et équitable de
+        l&apos;ESN, pour permettre à ceux qui en font la richesse d'en récolter
+        les fruits. Devenez propriétaire de votre entreprise.
       </p>
       <PrimaryBtn
         content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
