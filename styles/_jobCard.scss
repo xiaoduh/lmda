@@ -11,6 +11,7 @@
     background: #3f3f6242;
     animation: fade linear;
     animation-timeline: view();
+    transition: all .8s ease;
 
     &:hover {
         // border: 1px solid #7e7ebba9;
@@ -60,7 +61,7 @@
             background: #3F3F62;
             padding: .5rem 1rem;
             border-radius: 20px;
-            color: #FD6B3D;
+            color: #fff;
     
 
     p {
