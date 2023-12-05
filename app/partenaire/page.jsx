@@ -6,6 +6,7 @@ import React from "react";
 import "../../styles/index.scss";
 import SectionWrapperHeader from "@/components/section/SectionWrapperHeader";
 import axios from "axios";
+import { numberCV } from "@/components/data/data";
 
 export default async function Partner() {
   return (
@@ -13,7 +14,7 @@ export default async function Partner() {
       <SectionWrapperHeader id={"form"}>
         {/* <Label content="Connectez-vous à la seule plateforme spécialisée sur l'écosystème C++" /> */}
         <ContentSection
-          title={`1303 Spécialistes du C++ attendent votre projet`}
+          title={`${numberCV} Spécialistes du C++ attendent votre projet`}
           content="2 projets sur 3 sont en retard à cause du manque de talents. Ne passez plus vos journées à chercher les bonnes compétences. Bénéficiez d'une visibilité auprès du plus large réseau de compétences C++. Augmentez la pertinence de vos candidatures grâce à notre experience et expertise sur l'écosystème C++."
         />
       </SectionWrapperHeader>

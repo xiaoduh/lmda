@@ -14,6 +14,7 @@ import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
 import getCandidats from "./libs/getCandidats";
+import { numberCV } from "@/components/data/data";
 
 export const metadata = {
   title: "ESN et Recrutement spécialiste de l'écosystème C++",
@@ -276,7 +277,7 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme 1303 passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
+          content={`Tout comme ${numberCV} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
         {/* <CardsContainer style={"cards-container member"}>
           <FilterProfil
@@ -327,7 +328,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  1303 abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${numberCV} abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />
