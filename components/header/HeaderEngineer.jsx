@@ -43,7 +43,7 @@ export default async function HeaderEngineer() {
         title={"jobs"}
       />
       <SecondaryBtn
-        content={"Mettre en ligne son CV"}
+        content={"Référencer son CV sur Lambda"}
         link={"/rejoindre"}
         title={"rejoindre"}
       />

@@ -175,7 +175,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (1303)`}
+          content={`Recruter (1303 CV)`}
           link={"/entreprise"}
           title={"prestataire"}
         />
@@ -203,7 +203,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -231,7 +231,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -267,7 +267,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -294,7 +294,7 @@ export default async function Home() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
         <PrimaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -308,7 +308,7 @@ export default async function Home() {
         <ContentSection
           title={"Laboratoire de nouvelles tendances"}
           content={
-            "Chez Lambda, nous croyons au pouvoir de la collaboration, de l'apprentissage et du partage des connaissances. C'est pourquoi nous avons créé nptre blog afin de partager nos expériences."
+            "Chez Lambda, nous croyons au pouvoir de la collaboration, de l'apprentissage et du partage des connaissances. C'est pourquoi nous avons créé notre blog afin de partager nos expériences."
           }
         />
         <CardsContainer style={"articles-container"}>
