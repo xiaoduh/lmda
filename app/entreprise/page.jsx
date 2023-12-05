@@ -12,16 +12,14 @@ import NavigationApp from "@/components/navigation/NavigationApp";
 import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
-import getCandidats from "../libs/getCandidats";
 
 export default async function Home() {
-  const resJobs = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
-  );
-  const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  );
-  const candidats = await getCandidats();
+  // const resJobs = await axios.get(
+  //   "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
+  // );
+  // const resProfils = await axios.get(
+  //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+  // );
 
   const contentCardsFirstSection = [
     {
@@ -97,7 +95,7 @@ export default async function Home() {
         />
         <SecondaryBtn
           content={`Recruter un prestataire (1303 CV)`}
-          link={"/entreprise"}
+          link={"/partenaire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
@@ -123,7 +121,7 @@ export default async function Home() {
         />
         <SecondaryBtn
           content={`Recruter un prestataire (1303 CV)`}
-          link={"/entreprise"}
+          link={"/partenaire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
@@ -133,7 +131,7 @@ export default async function Home() {
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
           Notre réseau rassemble plus de 1303 passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
-        <CardsContainer style={"cards-container"}>
+        {/* <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
             return (
               <CardMember
@@ -148,15 +146,24 @@ export default async function Home() {
               />
             );
           })}
-        </CardsContainer>
+        </CardsContainer> */}
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur (1303 CV)`}
-          link={"/entreprise"}
+          content={`J'ai un projet de recrutement C++ (1303 CV)`}
+          link={"/partenaire"}
         />
-        <SecondaryBtn
+        {/* <SecondaryBtn
           content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
-        />
+          link={"/partenaire"}
+        /> */}
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}

@@ -276,14 +276,23 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme 1303 passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          content={`Tout comme 1303 passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
-        <CardsContainer style={"cards-container member"}>
+        {/* <CardsContainer style={"cards-container member"}>
           <FilterProfil
             filters={resTechnicalSkills.data.data}
             profils={resProfils.data.data}
           />
-        </CardsContainer>
+        </CardsContainer> */}
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
         <PrimaryBtn
           content={`Mettre en ligne son CV`}
           link={"/rejoindre"}
