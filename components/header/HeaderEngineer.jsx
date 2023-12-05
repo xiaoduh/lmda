@@ -14,7 +14,7 @@ export default async function HeaderEngineer() {
   return (
     <header className="main-header" id="header">
       <Link className="counter" href={"/jobs"}>
-        <p>7 missions à pourvoir</p>
+        <p>{`${resJobs.data.data.length} missions à pourvoir`}</p>
         <Image
           src="/mallette.png"
           width={20}
