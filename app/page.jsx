@@ -175,9 +175,9 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter (1303 CV)`}
-          link={"/entreprise"}
-          title={"prestataire"}
+          content={"Référencer son CV sur Lambda"}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
