@@ -12,21 +12,20 @@ import NavigationApp from "@/components/navigation/NavigationApp";
 import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
-import getCandidats from "../libs/getCandidats";
+import { numberCV } from "@/components/data/data";
 
 export default async function Home() {
-  const resJobs = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
-  );
-  const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  );
-  const candidats = await getCandidats();
+  // const resJobs = await axios.get(
+  //   "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
+  // );
+  // const resProfils = await axios.get(
+  //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+  // );
 
   const contentCardsFirstSection = [
     {
       title: "Partenaire de vos recrutement CDI",
-      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + 1303 profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${numberCV} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
     },
     {
@@ -37,7 +36,7 @@ export default async function Home() {
     },
     {
       title: "Un vivier de Freelance spécialisés",
-      content: `Notre CVthèque de + 1303 profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
+      content: `Notre CVthèque de + ${numberCV} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
     },
   ];
@@ -77,7 +76,7 @@ export default async function Home() {
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + 1303 ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${numberCV} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -96,8 +95,8 @@ export default async function Home() {
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (1303 CV)`}
-          link={"/entreprise"}
+          content={`Je recrute (${numberCV} CV)`}
+          link={"/partenaire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
@@ -122,8 +121,8 @@ export default async function Home() {
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (1303 CV)`}
-          link={"/entreprise"}
+          content={`Je recrute (${numberCV} CV)`}
+          link={"/partenaire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
@@ -131,9 +130,9 @@ export default async function Home() {
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de 1303 passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          Notre réseau rassemble plus de ${numberCV} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
-        <CardsContainer style={"cards-container"}>
+        {/* <CardsContainer style={"cards-container"}>
           {resProfils.data.data.slice(0, 6).map((member) => {
             return (
               <CardMember
@@ -148,20 +147,29 @@ export default async function Home() {
               />
             );
           })}
-        </CardsContainer>
+        </CardsContainer> */}
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur (1303 CV)`}
-          link={"/entreprise"}
+          content={`Je recrute (${numberCV} CV)`}
+          link={"/partenaire"}
         />
-        <SecondaryBtn
+        {/* <SecondaryBtn
           content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
-        />
+          link={"/partenaire"}
+        /> */}
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de 1303 développeurs`}
+          title={`Bénéficiez d'une visibilité auprès de ${numberCV} développeurs`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />

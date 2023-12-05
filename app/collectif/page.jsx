@@ -9,16 +9,25 @@ import axios from "axios";
 import HeaderCollectif from "@/components/header/HeaderCollectif";
 
 export default async function collectif() {
-  const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  );
+  // const resProfils = await axios.get(
+  //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
+  // );
 
   return (
     <main>
       {/* <Label content="Spécialiste et passionné par le C++" /> */}
       <HeaderCollectif />
       <SectionWrapper id={"member"}>
-        <CardsContainer style={"cards-container"}>
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
+        {/* <CardsContainer style={"cards-container"}>
           {resProfils.data.data.map((member) => {
             return (
               <CardMember
@@ -33,7 +42,7 @@ export default async function collectif() {
               />
             );
           })}
-        </CardsContainer>
+        </CardsContainer> */}
       </SectionWrapper>
       <FooterApp />
     </main>

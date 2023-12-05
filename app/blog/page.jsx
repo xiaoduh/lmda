@@ -14,10 +14,7 @@ export default async function Blog() {
   return (
     <main>
       <SectionWrapperHeader id={"blog"}>
-        <ContentSection
-          title="Notre blog"
-          content="Découvrez nos articles sur le management."
-        />
+        <ContentSection title="Notre blog" content="Découvrez nos articles." />
         <CardsContainer style={"articles-container"}>
           {resArticles.data.data.slice(0, 6).map((article) => {
             return (

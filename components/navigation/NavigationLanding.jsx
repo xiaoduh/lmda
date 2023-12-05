@@ -84,17 +84,17 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
+            <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  Collectif
+                  CVthèque
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  Collectif
+                  CVthèque
                 </a>
               )}
-            </li> */}
+            </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
@@ -144,17 +144,17 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            {/* <li onClick={(e) => handleModals(e)}>
+            <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  Collectif
+                  CVthèque
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  Collectif
+                  CVthèque
                 </a>
               )}
-            </li> */}
+            </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">

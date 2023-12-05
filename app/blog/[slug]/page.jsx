@@ -12,6 +12,7 @@ import PrimaryBtn from "@/components/button/PrimaryBtn";
 import JobCard from "@/components/job/JobCard";
 import CardMember from "@/components/member/CardMember";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
+import { numberCV } from "@/components/data/data";
 
 export async function generateMetadata({ params }) {
   const data = await axios.get(
@@ -136,7 +137,7 @@ export default async function Article({ params }) {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (1303 CV)`}
+          content={` Recruter votre prochain développeur C++ (${numberCV} CV)`}
           link={"/entreprise"}
         />
         <SecondaryBtn

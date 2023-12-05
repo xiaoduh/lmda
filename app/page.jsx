@@ -14,6 +14,7 @@ import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
 import getCandidats from "./libs/getCandidats";
+import { numberCV } from "@/components/data/data";
 
 export const metadata = {
   title: "ESN et Recrutement spécialiste de l'écosystème C++",
@@ -175,9 +176,9 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Recruter un prestataire (1303)`}
-          link={"/entreprise"}
-          title={"prestataire"}
+          content={"Référencer son CV sur Lambda"}
+          link={"/rejoindre"}
+          title={"rejoindre"}
         />
       </SectionWrapper>
       <SectionWrapper id={"mission"}>
@@ -203,7 +204,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -231,7 +232,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -267,7 +268,7 @@ export default async function Home() {
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -276,16 +277,25 @@ export default async function Home() {
         {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme 1303 passionnés et spécialistes du C/C++, mettez en ligne votre CV anonyme pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences. Freelance ou salarié, mettre en ligne son CV offre plus de visibilité à vos compétences et génère passivement plus d'opportunités pertinentes grâce à notre spécialisation.`}
+          content={`Tout comme ${numberCV} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
-        <CardsContainer style={"cards-container member"}>
+        {/* <CardsContainer style={"cards-container member"}>
           <FilterProfil
             filters={resTechnicalSkills.data.data}
             profils={resProfils.data.data}
           />
-        </CardsContainer>
+        </CardsContainer> */}
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
         <PrimaryBtn
-          content={`Mettre en ligne son CV`}
+          content={`Référencer son CV sur Lambda`}
           link={"/rejoindre"}
           title={"rejoindre"}
         />
@@ -299,7 +309,7 @@ export default async function Home() {
         <ContentSection
           title={"Laboratoire de nouvelles tendances"}
           content={
-            "Chez Lambda, nous croyons au pouvoir de la collaboration, de l'apprentissage et du partage des connaissances. C'est pourquoi nous avons créé nptre blog afin de partager nos expériences."
+            "Chez Lambda, nous croyons au pouvoir de la collaboration, de l'apprentissage et du partage des connaissances. C'est pourquoi nous avons créé notre blog afin de partager nos expériences."
           }
         />
         <CardsContainer style={"articles-container"}>
@@ -318,7 +328,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  1303 abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${numberCV} abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />

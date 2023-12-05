@@ -14,7 +14,7 @@ export default async function HeaderEngineer() {
   return (
     <header className="main-header" id="header">
       <Link className="counter" href={"/jobs"}>
-        <p>7 missions à pourvoir</p>
+        <p>{`${resJobs.data.data.length} missions à pourvoir`}</p>
         <Image
           src="/mallette.png"
           width={20}
@@ -43,7 +43,7 @@ export default async function HeaderEngineer() {
         title={"jobs"}
       />
       <SecondaryBtn
-        content={"Mettre en ligne son CV"}
+        content={"Référencer son CV sur Lambda"}
         link={"/rejoindre"}
         title={"rejoindre"}
       />
