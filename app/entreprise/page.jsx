@@ -93,8 +93,8 @@ export default async function Home() {
       <SectionWrapper id={"member"}>
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${numberCV} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${numberCV} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroitre la qualité des candidatures proposées.
+          `}
         />
 
         <iframe
