@@ -68,10 +68,53 @@ export default async function Home() {
     },
   ];
 
+  const contentCardsTestsSection = [
+    {
+      title: "Qualification de votre besoin",
+      content:
+        "Nous prenons le temps de qualifier avec vous votre besoin technique dans le détail et non seulement en nombre d'années passé sur une techno.",
+    },
+    {
+      title: "Entretien technique sur mesure",
+      content:
+        "Nous évaluons les candidats sur les compétences que vous recherchez réellement et non de manière superficielle par un nombre d'années d'exp.",
+    },
+    {
+      title: "Synthèse détaillée",
+      content:
+        "Vous recevez une synthèse détaillée des entretiens techniques afin de vous informer sur le niveau de compétence du candidat.",
+    },
+  ];
+
   return (
     <main>
       <NavigationApp />
       <HeaderEnterprise />
+      <SectionWrapper id={"member"}>
+        <ContentSection
+          title="Accedez aux meilleurs Freelances et Salariés du secteur"
+          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${numberCV} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
+          `}
+        />
+
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
+        <PrimaryBtn
+          content={`Discutons de votre besoin (${numberCV} CV)`}
+          link={"/partenaire"}
+        />
+        <SecondaryBtn
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
+          link={"/partenaire"}
+        />
+      </SectionWrapper>
       <SectionWrapper id={"why"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
@@ -91,11 +134,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Publier une mission sur Lambda`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Je recrute (${numberCV} CV)`}
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
@@ -117,54 +160,39 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Publier une mission sur Lambda`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Je recrute (${numberCV} CV)`}
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"member"}>
-        {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
+      <SectionWrapper id={"mission"}>
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Accedez aux meilleurs Freelances et Salariés du secteur"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${numberCV} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          title="Fondé par des experts du C++"
+          content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. Lambda est fondée par des experts du C++ afin de vous offrir des solutions qualifiées techniquement selon vos besoins précis et non des tests externalisés en ligne."
         />
-        {/* <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
+        <CardsContainer style={"cards-container"}>
+          {contentCardsTestsSection.map((card) => {
             return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
               />
             );
           })}
-        </CardsContainer> */}
-        <iframe
-          class="airtable-embed"
-          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
-          frameborder="0"
-          onmousewheel=""
-          width="80%"
-          height="533"
-          // style={{"background: transparent, border: 1px solid #ccc"}}
-        ></iframe>
+        </CardsContainer>
         <PrimaryBtn
-          content={`Je recrute (${numberCV} CV)`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
-        {/* <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
+        <SecondaryBtn
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
-        /> */}
+        />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
