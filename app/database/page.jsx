@@ -14,8 +14,6 @@ import {
 import Chart from "@/components/charts/ChartRepartitionGeographique";
 
 export default async function Database() {
-
-
   return (
     <main>
       <HeaderCollectif />
@@ -30,12 +28,12 @@ export default async function Database() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
       </SectionWrapper>
-      <SectionWrapper>
+      <SectionChart>
         <ContentSection
-          title="Notre CVthèque à la loupe"
-          content="Découvrez l'évolution qualitative et quantitative de notre CVthèque via ces graphiques représentatif de notre panel candidats."
+          title="Evolution de notre CVthèque dans le temps"
+          content="Cartographier les compétences C++ est une facette de notre métier pour vous faire gagner du temps. En moyenne, nous référençons 197 nouveaux CV à notre CVthèque par semaine."
         />
-        <Chart id={"localisation"}  />
+        <ChartEvolutionHebdo />
         <PrimaryBtn
           content={`Discutons de votre besoin (${candidatNumber} CV)`}
           link={"/partenaire"}
@@ -44,7 +42,38 @@ export default async function Database() {
           content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
           link={"/partenaire"}
         />
-      </SectionWrapper>
+      </SectionChart>
+      <SectionChart>
+        <ContentSection
+          title="Répartition géographique des compétences"
+          content="3 pôles concentrent l'essentiel des compétences. Sans surprise, l'Île-de-France arrive en tête, suivie des régions Occitanie et PACA."
+        />
+        <ChartRepartitionGeographique />
+        <PrimaryBtn
+          content={`Discutons de votre besoin (${candidatNumber} CV)`}
+          link={"/partenaire"}
+        />
+        <SecondaryBtn
+          content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+          link={"/partenaire"}
+        />
+      </SectionChart>
+      <SectionChart>
+        <ContentSection
+          title="Répartition des compétences par séniorité"
+          content="55 % des CV référencés ont plus de 3 ans d'expérience. 20 % sont entre 1 an et deux ans d'expériences professionnelles."
+        />
+
+        <ChartSeniorite doughnut={"doughnut"} />
+        <PrimaryBtn
+          content={`Discutons de votre besoin (${candidatNumber} CV)`}
+          link={"/partenaire"}
+        />
+        <SecondaryBtn
+          content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+          link={"/partenaire"}
+        />
+      </SectionChart>
       <FooterApp />
     </main>
   );

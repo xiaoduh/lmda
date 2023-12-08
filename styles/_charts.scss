@@ -1,7 +1,21 @@
-.chart {
+.chart-container {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    
+
+    .chart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: 2rem 0; 
+    }
+
+    .doughnut {
+        width: 40%;
+    }
+
 }
