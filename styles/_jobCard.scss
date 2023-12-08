@@ -11,10 +11,33 @@
     background: #3f3f6242;
     animation: fade linear;
     animation-timeline: view();
+    transition: all .8s ease;
 
     &:hover {
         // border: 1px solid #7e7ebba9;
         background: transparent;
+    }
+
+    .job-type {
+            padding: 0.75rem 1.2rem;
+            max-width: max-content;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+    }
+
+    .cdi {
+        background: rgb(138, 241, 198);
+        color: rgb(9, 207, 125);
+    }
+
+    .freelance {
+        background: rgb(241, 214, 138);
+        color: rgb(179, 134, 12);
+    }
+
+    .cdi-prestation {
+        background: rgb(241, 138, 190);
+        color: rgb(223, 13, 118);
     }
 
     h3 {
@@ -38,7 +61,7 @@
             background: #3F3F62;
             padding: .5rem 1rem;
             border-radius: 20px;
-            color: #FD6B3D;
+            color: #fff;
     
 
     p {

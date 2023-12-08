@@ -31,10 +31,9 @@ export default async function Postuler() {
   return (
     <main>
       <SectionWrapperHeader id={"jobs"}>
-        {/* <Label content="Lambda est un agrégateur de missions C++" /> */}
         <ContentSection
           title="Nous vous connectons à l'écosystème C++"
-          content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez nos ${resJobs.data.data.length} missions et postulez un clic aux missions qui vous intéressent.`}
+          content={`Le meilleur moyen de tomber sur un projet C++ est de le chercher sur Lambda. Parcourez nos ${resJobs.data.data.length} missions et postulez en un clic aux missions qui vous intéressent.`}
         />
       </SectionWrapperHeader>
       <SectionWrapper>
@@ -52,6 +51,7 @@ export default async function Postuler() {
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
                 workplace={card.attributes.work_organisation}
+                job_type={card.attributes.job_type}
               />
             );
           })}

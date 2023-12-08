@@ -59,6 +59,26 @@ export default async function Home() {
       content: "Qt, QML, MFC, IlogViews...",
     },
   ];
+  const contentCardsThirdSection = [
+    {
+      title: "CDI Client final",
+      content:
+        "Vous êtes salarié et recherchez un CDI chez une client final ? Nous vous proposons les meilleurs postes au sein de entreprises de l'écosystème C/C++.",
+      className: "final",
+    },
+    {
+      title: "CDI Lambda Labs",
+      content:
+        "Vous êtes salarié et recherchez un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement de votre société. Chaque collaborateur Lambda Labs est un associé en devenir.",
+      className: "lambda",
+    },
+    {
+      title: "Mission Freelance",
+      content:
+        "Vous êtes Freelance et en recherche de mission ? Nous vous portons commercialement chez notre client en toute transparence contre une commission journalière fixe et transparente elle aussi. Une relation commerciale limpide pour tout le monde.",
+      className: "freelance",
+    },
+  ];
   const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
   const resProfils = await axios.get(
     "http://localhost:1337/api/profils?populate=*"
@@ -101,6 +121,33 @@ export default async function Home() {
           link={"/collectif"}
         />
       </SectionWrapper>
+      <SectionWrapper id={"how"}>
+        <ContentSection
+          title={`Des opportunités pour tous`}
+          content="Que vous soyez salarié en recherche d'un CDI pour un client final ou Freelance à la recherche d'une nouvelle mission, en tant que spécialiste du recrutement sur l'écosystème C/C++ nous sommes le partenaire naturel des entreprises qui recrutent."
+        />
+        <CardsContainer style={"cards-container"}>
+          {contentCardsThirdSection.map((card) => {
+            return (
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
+                style={card.className}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length}) `}
+          link={"/jobs"}
+        />
+
+        <SecondaryBtn
+          content={`Recruter votre prochain développeur C++ (${candidats.length})`}
+          link={"/collectif"}
+        />
+      </SectionWrapper>
       <SectionWrapper id={"mission"}>
         <ContentSection
           title="Nous développons des logiciels robustes, performants et efficaces"
@@ -126,27 +173,6 @@ export default async function Home() {
           link={"/collectif"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"member"}>
-        <ContentSection
-          title="Nous sommes un collectif spécialisé sur l'écosystème C++"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
-        />
-        <CardsContainer style={"cards-container member"}>
-          <FilterProfil
-            filters={resTechnicalSkills.data.data}
-            profils={resProfils.data.data}
-          />
-        </CardsContainer>
-        <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${candidats.length})`}
-          link={"/collectif"}
-        />
-        <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
-        />
-      </SectionWrapper>
       <SectionWrapper id={"jobs"}>
         <ContentSection
           title="Votre prochaine mission se trouve ici"
@@ -166,11 +192,32 @@ export default async function Home() {
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
                 workplace={card.attributes.work_organisation}
+                job_type={card.attributes.job_type}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
+      </SectionWrapper>
+      <SectionWrapper id={"member"}>
+        <ContentSection
+          title="Soyez visible sur l'écosystème C/C++"
+          content={`Créez par des spécialiste du C/C++ pour des spécialistes, nous sommes le partenaire naturel et légitime pour accompagner les entreprises dans leurs recrutements. Mettez votre profil en ligne sur Lambda Labs et devenez visible auprès de tout l'écosystème.`}
+        />
+        <CardsContainer style={"cards-container member"}>
+          <FilterProfil
+            filters={resTechnicalSkills.data.data}
+            profils={resProfils.data.data}
+          />
+        </CardsContainer>
+        <PrimaryBtn
+          content={` Recruter votre prochain développeur C++ (${candidats.length})`}
+          link={"/collectif"}
+        />
+        <SecondaryBtn
           content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
           link={"/jobs"}
         />

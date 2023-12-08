@@ -28,7 +28,7 @@
                         background: #3F3F62;
                         padding: .5rem 1rem;
                         border-radius: 20px;
-                        color: #FD6B3D;
+                        color: $title;
                     
     
                     &:not(:last-child) {
@@ -140,7 +140,7 @@
             background: #3F3F62;
             padding: .5rem 1rem;
             border-radius: 20px;
-            color: #FD6B3D;
+            color: $title;
         }
 
         .cta-container {

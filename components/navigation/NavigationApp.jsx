@@ -34,7 +34,7 @@ const NavigationApp = () => {
               <Link href="/carriere">Valeurs</Link>
             </li>
             <li>
-              <Link href="/collectif">Collectif</Link>
+              <Link href="/database">CVthèque</Link>
             </li>
             <li>
               <Link href="/jobs">Jobs</Link>
@@ -49,7 +49,7 @@ const NavigationApp = () => {
               <Link href="/carriere">Valeurs</Link>
             </li>
             <li>
-              <Link href="/collectif">Collectif</Link>
+              <Link href="/database">CVthèque</Link>
             </li>
             <li>
               <Link href="/jobs">Jobs</Link>

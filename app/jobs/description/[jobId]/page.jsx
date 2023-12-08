@@ -32,6 +32,7 @@ export default async function Description({ params }) {
           work_organisation={data.data.data[0].attributes.work_organisation}
           id={params.jobId}
           date={data.data.data[0].attributes.createdAt}
+          job_type={data.data.data[0].attributes.job_type}
         />
         <ContentContainer>
           <SkillsContainer>

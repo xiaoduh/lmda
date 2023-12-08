@@ -43,6 +43,7 @@ const SwiperCard = ({ data }) => {
                 jobId={card.attributes.job_id}
                 jobTitle={card.attributes.title}
                 workplace={card.attributes.work_organisation}
+                job_type={card.attributes.job_type}
               />
             </SwiperSlide>
           );

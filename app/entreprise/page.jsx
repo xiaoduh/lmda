@@ -13,6 +13,7 @@ import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
 import getCandidats from "../libs/getCandidats";
+import { candidatNumber } from "@/components/data/data";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -28,16 +29,19 @@ export default async function Home() {
       title: "Freelance ou CDI",
       content:
         "Au travers de notre réseau, vous avez accès aux deux types de statut sans coûts supplémentaires. À chaque candidature vous êtes au courant du statut du candidat et la tarification est transparente et la même pour les deux status.",
+      className: "final",
     },
     {
       title: "Assistance Technique",
       content:
         "Un nouveau projet ou une montagne de J/H pour votre équipe ? Grâce à notre immense réseau et notre visibilité dans l'écosystème (demain notre notoriété), nous vous proposons une shortlist de 3 candidats dans les 72h.",
+      className: "lambda",
     },
     {
       title: "Régie en pré-embauche",
       content:
         "Une démission ou des recrutements qui patinent ? Bénéficiez là aussi de notre réseau et de notre visibilité. Nous vous proposons des candidats en mission de pré-embauche.",
+      className: "freelance",
     },
   ];
 
@@ -68,10 +72,69 @@ export default async function Home() {
     },
   ];
 
+  const contentCardsTestsSection = [
+    {
+      title: "Qualification de votre besoin",
+      content:
+        "Nous prenons le temps de qualifier avec vous votre besoin technique dans le détail et non seulement en nombre d'années passé sur une techno.",
+    },
+    {
+      title: "Entretien technique sur mesure",
+      content:
+        "Nous évaluons les candidats sur les compétences que vous recherchez réellement et non de manière superficielle par un nombre d'années d'exp.",
+    },
+    {
+      title: "Synthèse détaillée",
+      content:
+        "Vous recevez une synthèse détaillée des entretiens techniques afin de vous informer sur le niveau de compétence du candidat.",
+    },
+  ];
+
   return (
     <main>
       <NavigationApp />
       <HeaderEnterprise candidats={candidats} />
+      <SectionWrapper id={"member"}>
+        {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
+        <ContentSection
+          title="Accedez aux meilleurs Freelance et CDI du secteur"
+          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
+          Notre réseau rassemble plus de ${candidatNumber} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+        />
+        {/* <CardsContainer style={"cards-container"}>
+          {resProfils.data.data.slice(0, 6).map((member) => {
+            return (
+              <CardMember
+                key={member.attributes.profil_id}
+                id={member.attributes.profil_id}
+                img={"/utilisateur.png"}
+                available={member.attributes.available}
+                first_name={member.attributes.first_name}
+                last_name={member.attributes.last_name}
+                title={member.attributes.title}
+                bio={member.attributes.bio}
+              />
+            );
+          })}
+        </CardsContainer> */}
+        <iframe
+          class="airtable-embed"
+          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
+          frameborder="0"
+          onmousewheel=""
+          width="80%"
+          height="533"
+          // style={{"background: transparent, border: 1px solid #ccc"}}
+        ></iframe>
+        <PrimaryBtn
+          content={` Recruter votre prochain développeur C++ (${candidatNumber})`}
+          link={"/collectif"}
+        />
+        <SecondaryBtn
+          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
+          link={"/jobs"}
+        />
+      </SectionWrapper>
       <SectionWrapper id={"why"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
@@ -85,6 +148,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                // style={card.className}
               />
             );
           })}
@@ -118,42 +182,36 @@ export default async function Home() {
         />
         <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
       </SectionWrapper>
-      <SectionWrapper id={"member"}>
-        {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
+      <SectionWrapper id={"mission"}>
+        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
-          title="Accedez aux meilleurs Freelance et CDI du secteur"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${candidats.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
+          title="Fondé par des experts du C++"
+          content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. Lambda est fondée par des experts du C++ afin de vous offrir des solutions qualifiées techniquement selon vos besoins précis et non des tests externalisés en ligne."
         />
         <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
+          {contentCardsTestsSection.map((card) => {
             return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${candidats.length})`}
-          link={"/collectif"}
+          content={`Discutons de votre besoin`}
+          link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
+          content={`Publier une mission ou un Job sur lambda`}
+          link={"/partenaire"}
         />
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de ${candidats.length} développeurs C++`}
+          title={`Bénéficiez d'une visibilité auprès de ${candidatNumber} développeurs C++`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Card = ({ title, content }) => {
+const Card = ({ title, content, style }) => {
   return (
-    <div className="card">
-      <h3>{title}</h3>
+    <div className={`card`}>
+      <h3 id={`${style}`}>{title}</h3>
       <p>{content}</p>
     </div>
   );

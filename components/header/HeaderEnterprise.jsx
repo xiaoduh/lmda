@@ -7,6 +7,9 @@ import ue5 from "../../assets/images/ue5.png";
 import qt from "../../assets/images/qt.png";
 import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
+import Link from "next/link";
+import Image from "next/image";
+import { candidatNumber } from "../data/data";
 
 export default async function HeaderEnterprise({ candidats }) {
   const labels = [
@@ -158,13 +161,22 @@ export default async function HeaderEnterprise({ candidats }) {
 
   return (
     <header className="main-header" id="header">
+      <Link className="counter" href={"/entreprise"}>
+        <p>1303 CV référencés</p>
+        <Image
+          src="/croissance.png"
+          width={20}
+          height={20}
+          alt="Nombre CV disponible"
+        />
+      </Link>
       <h1>
         Des spécialistes du <span className="important">C/C++</span> disponibles
         dès maintenant.
       </h1>
       <p>
         Expert des technologies C/C++ et de ses mises en oeuvres, Lambda
-        rassemble <span className="important">+ {candidats.length} </span>
+        rassemble <span className="important">+ {candidatNumber} </span>
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
