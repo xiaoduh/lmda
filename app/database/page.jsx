@@ -6,12 +6,9 @@ import HeaderCollectif from "@/components/header/HeaderCollectif";
 import ContentSection from "@/components/content/ContentSectionApp";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
-import {
-  candidatNumber,
-  dataLocalisation,
-  labelsLocalisation,
-} from "@/components/data/data";
-import Chart from "@/components/charts/ChartRepartitionGeographique";
+import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
+import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGeographique";
+import ChartSeniorite from "@/components/charts/ChartSeniorite";
 
 export default async function Database() {
   return (
@@ -35,11 +32,11 @@ export default async function Database() {
         />
         <ChartEvolutionHebdo />
         <PrimaryBtn
-          content={`Discutons de votre besoin (${candidatNumber} CV)`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
         />
       </SectionChart>
@@ -50,11 +47,11 @@ export default async function Database() {
         />
         <ChartRepartitionGeographique />
         <PrimaryBtn
-          content={`Discutons de votre besoin (${candidatNumber} CV)`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
         />
       </SectionChart>
@@ -66,11 +63,11 @@ export default async function Database() {
 
         <ChartSeniorite doughnut={"doughnut"} />
         <PrimaryBtn
-          content={`Discutons de votre besoin (${candidatNumber} CV)`}
+          content={`Discutons de votre besoin (${numberCV} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+          content={`Nous transmettre votre recherche (${numberCV} CV)`}
           link={"/partenaire"}
         />
       </SectionChart>
