@@ -32,8 +32,6 @@ footer {
             height: 24px;
             cursor: pointer;
             margin:0% 1%;
-            width: 24px;
-            height: 24px;
 
             &:hover {
               transform: scale(1.1);
@@ -41,6 +39,18 @@ footer {
           }
         }
       }
+
+      @media screen and (max-width: 600px) {
+
+        .list-links {
+          display: flex;
+          flex-direction: column;
+          margin: 2rem 0;
+        }
+      }
+
+
+
     }
 
 }
