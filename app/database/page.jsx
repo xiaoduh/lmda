@@ -9,6 +9,7 @@ import SecondaryBtn from "@/components/button/SecondaryBtn";
 import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGeographique";
 import ChartSeniorite from "@/components/charts/ChartSeniorite";
+import SectionChart from "@/components/section/SectionChart";
 
 export default async function Database() {
   return (
