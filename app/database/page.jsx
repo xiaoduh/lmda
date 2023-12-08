@@ -30,7 +30,7 @@ export default async function Database() {
       <SectionWrapper>
         <SectionChart>
           <ContentSection
-            title="Evolution de notre CVthèque dans le temps"
+            title="Evolution hebdomadaire de notre base CVthèque"
             content="Cartographier les compétences C++ est une facette de notre métier pour vous faire gagner du temps. En moyenne, nous référençons 197 nouveaux CV à notre CVthèque par semaine."
           />
           <ChartEvolutionHebdo />
