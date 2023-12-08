@@ -25,26 +25,31 @@ const NavigationLanding = () => {
       setMission(false);
       setMember(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "2") {
       setWhy(false);
       setMission(true);
       setMember(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "5") {
       setWhy(false);
       setMission(false);
       setMember(false);
       setJob(true);
+      setActive(false);
     }
   };
 
