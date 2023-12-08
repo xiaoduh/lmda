@@ -6,7 +6,7 @@ const FooterApp = () => {
     <footer>
       <div class="footer">
         <div class="row">
-          <ul>
+          <ul className="list-social">
             <li>
               <Link
                 href="https://www.linkedin.com/company/lambda-fr/"
@@ -38,7 +38,7 @@ const FooterApp = () => {
         </div>
 
         <div class="row">
-          <ul>
+          <ul className="list-links">
             <li>
               <Link href="/legal" title="Mentions legales">
                 Mentions legales
@@ -66,8 +66,8 @@ const FooterApp = () => {
         </div>
 
         <div class="row">
-          © 2023 Lambda - Tous droits réservés || Fait avec ❤️ par
-          l&apos;équipe Lambda.
+          © 2023 Lambda - Tous droits réservés || Fait avec ❤️ par l&apos;équipe
+          Lambda.
         </div>
       </div>
     </footer>
