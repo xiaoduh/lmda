@@ -1,7 +1,7 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
-  title: `Offres Emplois et Mission C/C++`,
+  title: `Offres d'emplois et Mission C/C++`,
   description: `Ne ratez plus aucunes missions ou offres d'emplois de développeur C++. Nous vous connectons à l'écosystème C++. Postulez en un clic aux missions qui vous intéressent.`,
   keywords: [
     "emploi dev C++",
