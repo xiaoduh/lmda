@@ -11,6 +11,8 @@ import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGe
 import ChartSeniorite from "@/components/charts/ChartSeniorite";
 import SectionChart from "@/components/section/SectionChart";
 import { numberCV } from "@/components/data/data";
+import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
+import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
 
 export default async function Database() {
   return (
