@@ -74,8 +74,37 @@ export default async function Database() {
             link={"/partenaire"}
           />
         </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition par technologie"
+            content="75 % des profils référencés sont des développeurs C++. 20% sont des développeurs C++ avec des compétences sur le Framework Qt. A noter que ces données sont amenées à évoluer au fur et à mesure de la qualification des profils."
+          />
+          <ChartRepartitionTechno />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${candidatNumber} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition sectorielle"
+            content="La présence notable du C++ dans ces secteurs stratégiques témoigne de sa polyvalence et de sa capacité à répondre aux exigences de développement logiciel dans des domaines sensibles et technologiquement avancés"
+          />
+          <ChartRepartitionSectorielle />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${candidatNumber} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
       </SectionWrapper>
-
       <FooterApp />
     </main>
   );
