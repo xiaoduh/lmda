@@ -20,6 +20,7 @@ import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
 import ChartSeniorite from "@/components/charts/ChartSeniorite";
 import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGeographique";
 import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
+import SectionChart from "@/components/section/SectionChart";
 
 export const metadata = {
   title: "ESN et Recrutement spécialiste de l'écosystème C++",
