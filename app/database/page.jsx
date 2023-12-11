@@ -83,11 +83,11 @@ export default async function Database() {
           />
           <ChartRepartitionTechno />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${candidatNumber} CV)`}
+            content={`Discutons de votre besoin (${numberCV} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -98,11 +98,11 @@ export default async function Database() {
           />
           <ChartRepartitionSectorielle />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${candidatNumber} CV)`}
+            content={`Discutons de votre besoin (${numberCV} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${candidatNumber} CV)`}
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
