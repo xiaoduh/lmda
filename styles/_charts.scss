@@ -1,0 +1,34 @@
+.chart-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+    .chart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: 2rem 0; 
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+          }
+    }
+
+    .doughnut {
+        width: 40%;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+          }
+    }
+
+}

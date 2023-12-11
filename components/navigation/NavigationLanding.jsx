@@ -28,30 +28,35 @@ const NavigationLanding = () => {
       setMember(false);
       setClient(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "2") {
       setWhy(false);
       setMission(true);
       setMember(false);
       setBlog(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "3") {
       setWhy(false);
       setMission(false);
       setMember(true);
       setBlog(false);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "4") {
       setWhy(false);
       setMission(false);
       setMember(false);
       setBlog(true);
       setJob(false);
+      setActive(false);
     } else if (e.target.id === "5") {
       setWhy(false);
       setMission(false);
       setMember(false);
       setBlog(false);
       setJob(true);
+      setActive(false);
     }
   };
 
@@ -114,7 +119,7 @@ const NavigationLanding = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {client ? (
+              {blog ? (
                 <Link href="/blog" className="selected" id="4">
                   Blog
                 </Link>

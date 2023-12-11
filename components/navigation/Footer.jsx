@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <div class="footer">
         <div class="row">
-          <ul>
+          <ul className="list-social">
             <li>
               <Image
                 src="/facebook.png"
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         <div class="row">
-          <ul>
+          <ul className="list-links">
             <li>
               <Link href="/legal">Mentions legales</Link>
             </li>

@@ -8,7 +8,7 @@ const FooterApp = () => {
     <footer>
       <div class="footer">
         <div class="row">
-          <ul>
+          <ul className="list-social">
             <li>
               <Link href="https://www.linkedin.com/company/98544879">
                 <Image
@@ -46,7 +46,7 @@ const FooterApp = () => {
         </div>
 
         <div class="row">
-          <ul>
+          <ul className="list-links">
             <li>
               <Link href="/legal">Mentions legales</Link>
             </li>
