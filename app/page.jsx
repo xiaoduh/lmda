@@ -15,6 +15,11 @@ import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
 import getCandidats from "./libs/getCandidats";
 import { numberCV } from "@/components/data/data";
+import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
+import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
+import ChartSeniorite from "@/components/charts/ChartSeniorite";
+import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGeographique";
+import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 
 export const metadata = {
   title: "ESN et Recrutement spécialiste de l'écosystème C++",
@@ -153,34 +158,7 @@ export default async function Home() {
     <main>
       <NavigationLanding />
       <HeaderEngineer />
-      <SectionWrapper id={"why"}>
-        {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
-        <ContentSection
-          title="Management horizontal et transparence totale"
-          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons en un management nouveau, fondé sur la transparence pour d'avantage de responsabilité et surtout une meilleure maîtrise des coûts de fonctionnement. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
-        />
-        <CardsContainer style={"cards-container"}>
-          {contentCardsFirstSection.map((card) => {
-            return (
-              <Card
-                key={card.index}
-                title={card.title}
-                content={card.content}
-              />
-            );
-          })}
-        </CardsContainer>
-        <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
-          title={"jobs"}
-        />
-        <SecondaryBtn
-          content={"Référencer son CV sur Lambda"}
-          link={"/rejoindre"}
-          title={"rejoindre"}
-        />
-      </SectionWrapper>
+
       <SectionWrapper id={"mission"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
@@ -237,6 +215,34 @@ export default async function Home() {
           title={"rejoindre"}
         />
       </SectionWrapper>
+      <SectionWrapper id={"why"}>
+        {/* <Label content="Un écosystème spécialisé au management horizontal" /> */}
+        <ContentSection
+          title="Management horizontal et transparence totale"
+          content="Nous sommes l'alternative au management pyramidal dernier rempart de l'opacité. Nous croyons en un management nouveau, fondé sur la transparence pour d'avantage de responsabilité et surtout une meilleure maîtrise des coûts de fonctionnement. La transparence est notre pierre angulaire pour grandir ensemble en toute confiance, nos collaborateurs ont une vision transparente de nos orientations stratégiques, CA, marges, coûts..."
+        />
+        <CardsContainer style={"cards-container"}>
+          {contentCardsFirstSection.map((card) => {
+            return (
+              <Card
+                key={card.index}
+                title={card.title}
+                content={card.content}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
+        />
+        <SecondaryBtn
+          content={"Référencer son CV sur Lambda"}
+          link={"/rejoindre"}
+          title={"rejoindre"}
+        />
+      </SectionWrapper>
       <SectionWrapper id={"jobs"}>
         {/* <Label content="Ne ratez plus aucunes opportunités en C++" /> */}
         <ContentSection
@@ -274,17 +280,10 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
-        {/* <Label content="Une communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Soyez visible auprès des entreprises"
           content={`Tout comme ${numberCV} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
-        {/* <CardsContainer style={"cards-container member"}>
-          <FilterProfil
-            filters={resTechnicalSkills.data.data}
-            profils={resProfils.data.data}
-          />
-        </CardsContainer> */}
         <iframe
           class="airtable-embed"
           src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
@@ -304,6 +303,84 @@ export default async function Home() {
           link={"/jobs"}
           title={"jobs"}
         />
+      </SectionWrapper>
+      <SectionWrapper>
+        <SectionChart>
+          <ContentSection
+            title="Evolution hebdomadaire de notre base CVthèque"
+            content="Cartographier les compétences C++ est une facette de notre métier pour vous faire gagner du temps. En moyenne, nous référençons 197 nouveaux CV à notre CVthèque par semaine."
+          />
+          <ChartEvolutionHebdo />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition géographique des compétences"
+            content="3 pôles concentrent l'essentiel des compétences. Sans surprise, l'Île-de-France arrive en tête, suivie des régions Occitanie et PACA."
+          />
+          <ChartRepartitionGeographique />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition des compétences par séniorité"
+            content="55 % des CV référencés ont plus de 3 ans d'expérience. 20 % sont entre 1 an et deux ans d'expériences professionnelles."
+          />
+
+          <ChartSeniorite doughnut={"doughnut"} />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition par technologie"
+            content="75 % des profils référencés sont des développeurs C++. 20% sont des développeurs C++ avec des compétences sur le Framework Qt. A noter que ces données sont amenées à évoluer au fur et à mesure de la qualification des profils."
+          />
+          <ChartRepartitionTechno />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
+        <SectionChart>
+          <ContentSection
+            title="Répartition sectorielle"
+            content="La présence notable du C++ dans ces secteurs stratégiques témoigne de sa polyvalence et de sa capacité à répondre aux exigences de développement logiciel dans des domaines sensibles et technologiquement avancés"
+          />
+          <ChartRepartitionSectorielle />
+          <PrimaryBtn
+            content={`Discutons de votre besoin (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+          <SecondaryBtn
+            content={`Nous transmettre votre recherche (${numberCV} CV)`}
+            link={"/partenaire"}
+          />
+        </SectionChart>
       </SectionWrapper>
       <SectionWrapper id={"blog"}>
         <ContentSection
