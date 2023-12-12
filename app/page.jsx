@@ -178,14 +178,14 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"how"}>
@@ -206,14 +206,14 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"why"}>
@@ -234,14 +234,14 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={"Référencer son CV sur Lambda"}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
@@ -270,14 +270,14 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
@@ -295,12 +295,12 @@ export default async function Home() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
         <PrimaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
@@ -313,12 +313,14 @@ export default async function Home() {
           />
           <ChartEvolutionHebdo />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -328,12 +330,14 @@ export default async function Home() {
           />
           <ChartRepartitionGeographique />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -344,12 +348,14 @@ export default async function Home() {
 
           <ChartSeniorite doughnut={"doughnut"} />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -359,12 +365,14 @@ export default async function Home() {
           />
           <ChartRepartitionTechno />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -374,12 +382,14 @@ export default async function Home() {
           />
           <ChartRepartitionSectorielle />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
       </SectionWrapper>
