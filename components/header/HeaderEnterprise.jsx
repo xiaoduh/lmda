@@ -186,12 +186,12 @@ export default async function HeaderEnterprise() {
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
-        content="Publier une mission sur Lambda"
+        content={`Boostez votre recrutement (${numberCV} CV)`}
         link={"/partenaire"}
       />
       <SecondaryBtn
-        content={`Recruter un prestataire (${numberCV} CV)`}
-        link={"/entreprise"}
+        content={`Optimisez votre process recrutement (${numberCV} CV)`}
+        link={"/partenaire"}
       />
       <InfiniteScroll Tags={labels} />
     </header>
