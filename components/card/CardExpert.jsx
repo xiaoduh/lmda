@@ -3,7 +3,16 @@ import Link from "next/link";
 import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 
-const CardExpert = ({ img, name, title, about, skills, color, link }) => {
+const CardExpert = ({
+  img,
+  name,
+  title,
+  about,
+  skills,
+  color,
+  link,
+  cvArr,
+}) => {
   return (
     <div className={`card-expert ${color}`}>
       <Image
@@ -39,7 +48,7 @@ const CardExpert = ({ img, name, title, about, skills, color, link }) => {
         })}
       </div>
       <PrimaryBtn
-        content={`Fiabilisez votre recrutement (${candidats.length} CV)`}
+        content={`Fiabilisez votre recrutement (${cvArr.length} CV)`}
         link={"/partenaire"}
       />
     </div>
