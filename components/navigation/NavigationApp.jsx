@@ -18,7 +18,7 @@ const NavigationApp = ({ cvArr }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
-  });
+  }, [cvArr]);
 
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
