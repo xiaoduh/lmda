@@ -180,7 +180,7 @@ export default async function Home() {
       <SectionWrapper id={"database"}>
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
-          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${candidats.length} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
+          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${cvArr.length} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
           `}
         />
 
@@ -203,10 +203,9 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"what"}>
-        {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${candidats.length} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${cvArr.length} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -221,11 +220,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          content={`Boostez votre recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          content={`Optimisez votre process recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
@@ -246,11 +245,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          content={`Boostez votre recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          content={`Optimisez votre process recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
