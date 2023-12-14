@@ -4,7 +4,9 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const NavigationApp = ({ cvArr }) => {
+const cvArr = await getCandidats();
+
+const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -18,7 +20,7 @@ const NavigationApp = ({ cvArr }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
-  }, [cvArr]);
+  }, []);
 
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
