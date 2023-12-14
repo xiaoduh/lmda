@@ -39,7 +39,7 @@ const CardExpert = ({ img, name, title, about, skills, color, link }) => {
         })}
       </div>
       <PrimaryBtn
-        content={`Fiabilisez votre recrutement ($${candidats.length} CV)`}
+        content={`Fiabilisez votre recrutement (${candidats.length} CV)`}
         link={"/partenaire"}
       />
     </div>
