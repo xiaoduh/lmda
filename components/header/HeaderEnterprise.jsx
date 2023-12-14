@@ -9,7 +9,7 @@ import InfiniteScroll from "../loopslider/Loop";
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function HeaderEnterprise({ candidats }) {
+export default async function HeaderEnterprise({ cv }) {
   const labels = [
     {
       picto: cpp,
@@ -160,7 +160,7 @@ export default async function HeaderEnterprise({ candidats }) {
   return (
     <header className="main-header" id="header">
       <Link className="counter" href={"/entreprise"}>
-        <p>{candidats.length} CV référencés</p>
+        <p>{cv.length} CV référencés</p>
         <Image
           src="/croissance.png"
           width={20}
@@ -169,12 +169,12 @@ export default async function HeaderEnterprise({ candidats }) {
         />
       </Link>
       <h1>
-        <span className="important">{candidats.length}</span> spécialistes du{" "}
+        <span className="important">{cv.length}</span> spécialistes du{" "}
         <span className="important">C++</span> prêts à relever vos défis.
       </h1>
       <p>
         Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda
-        Labs rassemble <span className="important">{candidats.length}</span>{" "}
+        Labs rassemble <span className="important">{cv.length}</span>{" "}
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
@@ -185,11 +185,11 @@ export default async function HeaderEnterprise({ candidats }) {
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
-        content={`Boostez votre recrutement ($${candidats.length} CV)`}
+        content={`Boostez votre recrutement ($${cv.length} CV)`}
         link={"/partenaire"}
       />
       <SecondaryBtn
-        content={`Optimisez votre process recrutement ($${candidats.length} CV)`}
+        content={`Optimisez votre process recrutement ($${cv.length} CV)`}
         link={"/partenaire"}
       />
       {/* <InfiniteScroll Tags={labels} /> */}

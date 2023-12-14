@@ -30,12 +30,12 @@ export default async function Home() {
   // const resProfils = await axios.get(
   //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   // );
-  const candidats = await getCandidats();
+  const cv = await getCandidats();
 
   const contentCardsFirstSection = [
     {
       title: "Partenaire de vos recrutement CDI",
-      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${candidats.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${cv.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
     },
     {
@@ -46,7 +46,7 @@ export default async function Home() {
     },
     {
       title: "Un vivier de Freelance spécialisés",
-      content: `Notre CVthèque de + ${candidats.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
+      content: `Notre CVthèque de + ${cv.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
     },
   ];
@@ -54,27 +54,33 @@ export default async function Home() {
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
-      content: "Applicatifs, DLL, Library, Simulation numérique...",
+      content:
+        "Qt, Boost C++ Libraries, STL, STLPlus, CMake, fmtlib,  Google Test...",
     },
     {
       title: "3D & Traitement d'images",
-      content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
+      content:
+        "OpenGL, OpenSceneGraph, UnReal Engine, Vulkan, Open3D, OpenCV, Dlib, Halide, CUDA, ITK, PCL, VTK, SimpleITK, ImageJ, VIGRA..",
     },
     {
       title: "Embarqué",
-      content: "Linux, µC, Windows SE",
+      content:
+        "Linux, RTOS, µC, WinCE, ARM, STM, PlatformIO, Keil µVision, GCC, ARM Keil Compiler, CMSIS, I2C, UART, CAN",
     },
     {
       title: "Calcul Scientifique",
-      content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
+      content:
+        "Eigen, Armadillo, Blaze, NT2, Dlib, Boost.Numeric.Odeint, Trilinos, GSL, PETSc, SciPy",
     },
     {
-      title: "Low Latency",
-      content: "STL, Boost, Asio...",
+      title: "Finance",
+      content:
+        "QuantLib, Boost C++, Boost.Math, Boost.Asio, Boost.Multiprecision, MKL, TA-Lib, QuickFIX, RapidJSON, CppNumericalSolvers, C++ AMP, FastFlow, STXXL, ZeroMQ, HPC Toolkit, DPDK,TBB",
     },
     {
       title: "IHM",
-      content: "Qt, QML, MFC, IlogViews...",
+      content:
+        "Qt, QML, MFC, ImGui, JUCE, Nana C++ Library, OpenFrameworks, Cinder, GTK, wxWidgets, SFML, IlogViews...",
     },
   ];
 
@@ -170,7 +176,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationApp />
-      <HeaderEnterprise candidats={candidats} />
+      <HeaderEnterprise cv={cv} />
       <SectionWrapper id={"database"}>
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
@@ -188,11 +194,11 @@ export default async function Home() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          content={`Boostez votre recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          content={`Optimisez votre process recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
@@ -270,11 +276,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          content={`Boostez votre recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          content={`Optimisez votre process recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
@@ -295,11 +301,11 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          content={`Boostez votre recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          content={`Optimisez votre process recrutement (${cv.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
@@ -322,11 +328,11 @@ export default async function Home() {
           />
           <ChartEvolutionHebdo />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${candidats.length} CV)`}
+            content={`Boostez votre recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+            content={`Optimisez votre process recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -337,11 +343,11 @@ export default async function Home() {
           />
           <ChartRepartitionGeographique />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${candidats.length} CV)`}
+            content={`Boostez votre recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+            content={`Optimisez votre process recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -353,11 +359,11 @@ export default async function Home() {
 
           <ChartSeniorite doughnut={"doughnut"} />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${candidats.length} CV)`}
+            content={`Boostez votre recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+            content={`Optimisez votre process recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -368,11 +374,11 @@ export default async function Home() {
           />
           <ChartRepartitionTechno />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${candidats.length} CV)`}
+            content={`Boostez votre recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+            content={`Optimisez votre process recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -383,18 +389,18 @@ export default async function Home() {
           />
           <ChartRepartitionSectorielle />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${candidats.length} CV)`}
+            content={`Boostez votre recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+            content={`Optimisez votre process recrutement (${cv.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
       </SectionWrapper>
       <SectionWrapper id={"form"}>
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de ${candidats.length} développeurs`}
+          title={`Bénéficiez d'une visibilité auprès de ${cv.length} développeurs`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />
