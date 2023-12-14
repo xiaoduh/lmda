@@ -13,7 +13,7 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
-import getCandidats from "./libs/getCandidats";
+import getCandidats from "../components/utils/getCandidats";
 import { numberCV } from "@/components/data/data";
 import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
 import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
@@ -283,7 +283,7 @@ export default async function Home() {
       <SectionWrapper id={"member"}>
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${numberCV} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
+          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
         <iframe
           class="airtable-embed"

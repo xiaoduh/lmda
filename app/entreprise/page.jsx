@@ -20,6 +20,7 @@ import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGe
 import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
 import HeaderCollectif from "@/components/header/HeaderCollectif";
+import getCandidats from "@/components/utils/getCandidats";
 
 export default async function Home() {
   // const resJobs = await axios.get(
@@ -28,11 +29,12 @@ export default async function Home() {
   // const resProfils = await axios.get(
   //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   // );
+  const candidats = await getCandidats();
 
   const contentCardsFirstSection = [
     {
       title: "Partenaire de vos recrutement CDI",
-      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${numberCV} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${candidats.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
     },
     {
@@ -43,7 +45,7 @@ export default async function Home() {
     },
     {
       title: "Un vivier de Freelance spécialisés",
-      content: `Notre CVthèque de + ${numberCV} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
+      content: `Notre CVthèque de + ${candidats.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
     },
   ];
@@ -93,14 +95,85 @@ export default async function Home() {
     },
   ];
 
+  const contentCardsExpertsSection = [
+    {
+      img: "mohamed-expert.png",
+      name: "Mohamed Amine Abidi",
+      title: "Expert Software C++/Qt",
+      about:
+        "Ph.D et Ingénieur logiciel sénior, 8ans d'expertise durant lesquelles j'ai pu collaborer avec SITA, AVSimulation, RATP, Thales, ou encore iXblue.",
+      skills: [
+        "C++ 98",
+        "C++ 11",
+        "C++ 14",
+        "C++ 17",
+        "C++ 20",
+        "Qt",
+        "3D",
+        "Algorithmie",
+        "Protobuf",
+        "MQTT",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "soft",
+    },
+    {
+      img: "embbeded-expert.png",
+      name: "Laurent Blanc",
+      title: "Expert Systèmes & Logiciels Embarqués",
+      about:
+        "Expert en systèmes embarqués, passionné par l'innovation et la conception de solutions intelligentes pour des applications embarquées diverses.",
+      skills: [
+        "C/C++ logiciel",
+        "Drivers",
+        "Kernel",
+        "µC",
+        "Real Time",
+        "Protocoles de communication",
+        "Electronique",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "embbeded",
+    },
+    {
+      img: "finance-expert.png",
+      name: "Alain Souchon",
+      title: "Expert C++ appliqué à la Finance",
+      about:
+        "Expert en C++ dédié à la finance, je façonne des solutions logicielles sophistiquées pour optimiser les opérations financières. Ma passion : allier code et stratégie financière.",
+      skills: [
+        "C++",
+        "QuantLib",
+        "STL",
+        "Boost",
+        "Eigen",
+        "gsl",
+        "glpk",
+        "Finance",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "finance",
+    },
+    {
+      img: "ia-expert.png",
+      name: "Francis Lalanne",
+      title: "Expert C++ appliqué à l'IA",
+      about:
+        "Architecte IA, créateur d'intelligences artificielles performantes et innovantes. Passionné par la convergence tech et l'impact positif sur la société.",
+      skills: ["C++", "OpenCV", "OpenCL", "TensorFlow", "VIGRA"],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "ia",
+    },
+  ];
+
   return (
     <main>
       <NavigationApp />
-      <HeaderEnterprise />
-      <SectionWrapper id={"member"}>
+      <HeaderEnterprise candidats={candidats} />
+      <SectionWrapper id={"database"}>
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
-          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${numberCV} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
+          content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${candidats.length} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
           `}
         />
 
@@ -114,19 +187,19 @@ export default async function Home() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${numberCV} CV)`}
+          content={`Boostez votre recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${numberCV} CV)`}
+          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"why"}>
+      <SectionWrapper id={"what"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${numberCV} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${candidats.length} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -141,19 +214,18 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${numberCV} CV)`}
+          content={`Boostez votre recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${numberCV} CV)`}
+          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"mission"}>
-        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
+      <SectionWrapper id={"positionnement"}>
         <ContentSection
           title="Spécialiste et expert de l'écosystème C/C++"
-          content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur les usages des langages C et C++."
+          content="Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Tout comme Bjarne Stroustrup, nous aimons le développement logiciel efficace et performant. Vous recherchez des compétences autour des langages C/C++, nous vous accompagnons sur le sourcing, la qualification et l'intégration de vos nouvelles recrues."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsSecondSection.map((card) => {
@@ -167,19 +239,48 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${numberCV} CV)`}
+          content={`Boostez votre recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${numberCV} CV)`}
+          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"mission"}>
-        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
+      <SectionWrapper id={"assesment"}>
         <ContentSection
           title="Fondé par des experts du C++"
           content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. Lambda est fondée par des experts du C++ afin de vous offrir des solutions qualifiées techniquement selon vos besoins précis et non des tests externalisés en ligne."
+        />
+        <CardsContainer style={"cards-container cards-expert"}>
+          {contentCardsExpertsSection.map((card) => {
+            return (
+              <CardExpert
+                key={card.index}
+                img={card.img}
+                name={card.name}
+                title={card.title}
+                about={card.about}
+                skills={card.skills}
+                color={card.style}
+                link={card.linkedin}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Boostez votre recrutement (${candidats.length} CV)`}
+          link={"/partenaire"}
+        />
+        <SecondaryBtn
+          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
+          link={"/partenaire"}
+        />
+      </SectionWrapper>
+      <SectionWrapper id={"process"}>
+        <ContentSection
+          title="Un process qualitatif pour tous"
+          content="1 candidature sur 2 est un perte de temps à cause d'une non qualification technique de la part du recruteur. Notre spécialisation sur le C++ nous permet de mobiliser des experts pour rendre le process de recrutement personnalisé et qualitatif afin de réduire les erreurs de casting."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsTestsSection.map((card) => {
@@ -193,16 +294,15 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Boostez votre recrutement (${numberCV} CV)`}
+          content={`Boostez votre recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
         <SecondaryBtn
-          content={`Optimisez votre process recrutement (${numberCV} CV)`}
+          content={`Optimisez votre process recrutement (${candidats.length} CV)`}
           link={"/partenaire"}
         />
       </SectionWrapper>
-      <HeaderCollectif />
-      <SectionWrapper id={"member"}>
+      <SectionWrapper id={"database"}>
         <iframe
           class="airtable-embed"
           src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
@@ -221,11 +321,11 @@ export default async function Home() {
           />
           <ChartEvolutionHebdo />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${numberCV} CV)`}
+            content={`Boostez votre recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${numberCV} CV)`}
+            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -236,11 +336,11 @@ export default async function Home() {
           />
           <ChartRepartitionGeographique />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${numberCV} CV)`}
+            content={`Boostez votre recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${numberCV} CV)`}
+            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -252,11 +352,11 @@ export default async function Home() {
 
           <ChartSeniorite doughnut={"doughnut"} />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${numberCV} CV)`}
+            content={`Boostez votre recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${numberCV} CV)`}
+            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -267,11 +367,11 @@ export default async function Home() {
           />
           <ChartRepartitionTechno />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${numberCV} CV)`}
+            content={`Boostez votre recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${numberCV} CV)`}
+            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
@@ -282,19 +382,18 @@ export default async function Home() {
           />
           <ChartRepartitionSectorielle />
           <PrimaryBtn
-            content={`Boostez votre recrutement (${numberCV} CV)`}
+            content={`Boostez votre recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
           <SecondaryBtn
-            content={`Optimisez votre process recrutement (${numberCV} CV)`}
+            content={`Optimisez votre process recrutement (${candidats.length} CV)`}
             link={"/partenaire"}
           />
         </SectionChart>
       </SectionWrapper>
       <SectionWrapper id={"form"}>
-        {/* <Label content="Connectez-vous à notre réseau de développeurs C++" /> */}
         <ContentSection
-          title={`Bénéficiez d'une visibilité auprès de ${numberCV} développeurs`}
+          title={`Bénéficiez d'une visibilité auprès de ${candidats.length} développeurs`}
           content="Diminuez votre temps de recherche et augmentez la pertinence de vos candidatures grâce à notre spécialisation. Utilisez notre plateforme pour diffuser votre mission au plus large réseau de développeurs C++. Lambda rassemble autour du monde C++ et de ses applications technologiques des milliers de développeurs C++. Discutons de votre recherche et diffusons-la à des milliers de développeurs en veille professionnelle."
         />
         <Form />

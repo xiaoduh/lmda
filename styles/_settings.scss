@@ -1,5 +1,5 @@
-$accent-black: #1E1E30;
-$black-contrast: #1f1f32;
+$accent-black: #121212;
+$black-contrast: #121212;
 $gray: #575765;
 $gray-card: #413f4e;
 $primary: #1776ff;
@@ -489,6 +489,117 @@ body {
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
                   }
+            }
+        }
+
+        .card-expert {
+            background: #3f3f6242;
+            // border: 1px solid #7e7ebba9;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            width: 340px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            transition: all .8s ease;
+
+            .image-expert {
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            .title-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: .5rem auto;
+
+                p {
+                    color: #c7c5c5;
+                }
+            }
+
+            .bio-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .asses {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+
+                .skill-tag {
+                    padding: .4rem;
+                    border-radius: .4rem;
+                }
+            }
+
+            .expert-social {
+                border-radius: 50%;
+                margin: .5rem auto 0;
+            }
+
+            button {
+                display: flex;
+                margin: 1rem auto;
+            }
+        }
+
+        .soft {
+            background: #2ed4790a;
+            border: 1px solid #2ed4795d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #2ED47A;
+            }
+        }
+
+        .embbeded {
+            background: #f7685b07;
+            border: 1px solid #f7685b4d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #F7685B;
+            }
+        }
+
+        .finance {
+            background: rgba(23, 182, 255, 0.048);
+            border: 1px solid rgba(23, 182, 255, 0.397);
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: rgb(23, 182, 255);
+            }
+        }
+
+        .ia {
+            background: #7b2ed40e;
+            border: 1px solid #7b2ed473;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #7b2ed4;
             }
         }
 
