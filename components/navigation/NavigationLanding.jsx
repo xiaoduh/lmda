@@ -104,11 +104,11 @@ const NavigationLanding = ({ cvArr, jobs }) => {
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque ({cvArr.length} CV)
+                  CVthèque (+1500 CV)
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  CVthèque ({cvArr.length} CV)
+                  CVthèque (+1500 CV)
                 </a>
               )}
             </li>
@@ -164,11 +164,11 @@ const NavigationLanding = ({ cvArr, jobs }) => {
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque ({cvArr.length} CV)
+                  CVthèque (+1500 CV)
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  CVthèque ({cvArr.length} CV)
+                  CVthèque (+1500 CV)
                 </a>
               )}
             </li>
@@ -190,10 +190,10 @@ const NavigationLanding = ({ cvArr, jobs }) => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Je recrute ({cvArr.length} CV)
+          Je recrute Je recrute (+1500 CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Jobs ({jobs})
+          Jobs (7)
         </Link>
       </div>
       {active ? (

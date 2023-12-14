@@ -5,8 +5,6 @@ import logo from "../../public/logo.png";
 import Link from "next/link";
 import getCandidats from "../utils/getCandidats";
 
-const cvArr = await getCandidats();
-
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState(false);
@@ -79,7 +77,7 @@ const NavigationApp = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Je recrute ({cvArr.length} CV)
+          Je recrute (+1500 CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
           Jobs (7)
