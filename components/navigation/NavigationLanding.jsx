@@ -190,7 +190,7 @@ const NavigationLanding = ({ cvArr, jobs }) => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Je recrute Je recrute (+1500 CV)
+          Je recrute (+1500 CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
           Jobs (7)
