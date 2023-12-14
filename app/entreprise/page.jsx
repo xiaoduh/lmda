@@ -21,6 +21,7 @@ import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
 import HeaderCollectif from "@/components/header/HeaderCollectif";
 import getCandidats from "@/components/utils/getCandidats";
+import CardExpert from "@/components/card/CardExpert";
 
 export default async function Home() {
   // const resJobs = await axios.get(
