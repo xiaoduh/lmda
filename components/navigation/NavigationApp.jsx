@@ -34,9 +34,9 @@ const NavigationApp = () => {
       <nav>
         {active ? (
           <ul className="open">
-            <li>
+            {/* <li>
               <Link href="/carriere">ADN</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/database">CVthèque</Link>
             </li>
@@ -52,9 +52,9 @@ const NavigationApp = () => {
           </ul>
         ) : (
           <ul>
-            <li>
+            {/* <li>
               <Link href="/carriere">ADN</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/database">CVthèque</Link>
             </li>
@@ -76,10 +76,10 @@ const NavigationApp = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Proposer une mission
+          Je recrute
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Trouver une mission
+          Jobs
         </Link>
       </div>
       {active ? (
