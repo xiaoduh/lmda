@@ -185,11 +185,11 @@ export default async function HeaderEnterprise({ cvArr }) {
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
-        content={`Boostez votre recrutement ($${cvArr.length} CV)`}
+        content={`Boostez votre recrutement (${cvArr.length} CV)`}
         link={"/partenaire"}
       />
       <SecondaryBtn
-        content={`Optimisez votre process recrutement ($${cvArr.length} CV)`}
+        content={`Optimisez votre process recrutement (${cvArr.length} CV)`}
         link={"/partenaire"}
       />
       {/* <InfiniteScroll Tags={labels} /> */}

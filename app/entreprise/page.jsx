@@ -258,7 +258,7 @@ export default async function Home() {
           title="Fondé par des experts du C++"
           content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. Lambda est fondée par des experts du C++ afin de vous offrir des solutions qualifiées techniquement selon vos besoins précis et non des tests externalisés en ligne."
         />
-        <CardsContainer style={"cards-container cards-expert"}>
+        {/* <CardsContainer style={"cards-container cards-expert"}>
           {contentCardsExpertsSection.map((card) => {
             return (
               <CardExpert
@@ -274,7 +274,7 @@ export default async function Home() {
               />
             );
           })}
-        </CardsContainer>
+        </CardsContainer> */}
         <PrimaryBtn
           content={`Boostez votre recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
