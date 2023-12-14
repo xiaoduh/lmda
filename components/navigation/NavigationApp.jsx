@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import getCandidats from "../utils/getCandidats";
 
 const cvArr = await getCandidats();
 

@@ -114,37 +114,6 @@ export default async function Article({ params }) {
           link={"/jobs"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"member"}>
-        <ContentSection
-          title="Nous sommes un collectif spécialisé sur l'écosystème C++"
-          content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
-          Notre réseau rassemble plus de ${resProfils.data.length} passionnés et spécialistes du C++ prêts à vous accompagner.`}
-        />
-        <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
-            return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
-              />
-            );
-          })}
-        </CardsContainer>
-        <PrimaryBtn
-          content={` Recruter votre prochain développeur C++ (${numberCV} CV)`}
-          link={"/entreprise"}
-        />
-        <SecondaryBtn
-          content={`Voir les offres de missions ouvertes (${resJobs.data.data.length})`}
-          link={"/jobs"}
-        />
-      </SectionWrapper>
       <FooterApp />
     </main>
   );
