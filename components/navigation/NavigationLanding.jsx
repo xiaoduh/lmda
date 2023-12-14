@@ -68,6 +68,17 @@ const NavigationLanding = () => {
         {active ? (
           <ul className="open">
             <li onClick={(e) => handleModals(e)}>
+              {mission ? (
+                <a href="#mission" className="selected" id="2" title="mission">
+                  Spécialisation
+                </a>
+              ) : (
+                <a href="#mission" id="2" title="mission">
+                  Spécialisation
+                </a>
+              )}
+            </li>
+            <li onClick={(e) => handleModals(e)}>
               {why ? (
                 <a href="#why" className="selected" id="1" title="why">
                   ADN
@@ -78,14 +89,15 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
+
             <li onClick={(e) => handleModals(e)}>
-              {mission ? (
-                <a href="#mission" className="selected" id="2" title="mission">
-                  Spécialisation
+              {job ? (
+                <a href="#jobs" className="selected" id="5" title="job">
+                  Jobs
                 </a>
               ) : (
-                <a href="#mission" id="2" title="mission">
-                  Spécialisation
+                <a href="#jobs" id="5" title="job">
+                  Jobs
                 </a>
               )}
             </li>
@@ -100,17 +112,6 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
-            <li onClick={(e) => handleModals(e)}>
-              {job ? (
-                <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs
-                </a>
-              ) : (
-                <a href="#jobs" id="5" title="job">
-                  Jobs
-                </a>
-              )}
-            </li>
             <li>
               <Link href="/entreprise" id="4">
                 Partenaire
@@ -122,17 +123,6 @@ const NavigationLanding = () => {
           </ul>
         ) : (
           <ul>
-            <li onClick={(e) => handleModals(e)}>
-              {why ? (
-                <a href="#why" className="selected" id="1" title="values">
-                  ADN
-                </a>
-              ) : (
-                <a href="#why" id="1" title="values">
-                  ADN
-                </a>
-              )}
-            </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a
@@ -150,13 +140,13 @@ const NavigationLanding = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {member ? (
-                <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque
+              {why ? (
+                <a href="#why" className="selected" id="1" title="values">
+                  ADN
                 </a>
               ) : (
-                <a href="#member" id="3" title="collectif">
-                  CVthèque
+                <a href="#why" id="1" title="values">
+                  ADN
                 </a>
               )}
             </li>
@@ -171,6 +161,18 @@ const NavigationLanding = () => {
                 </a>
               )}
             </li>
+            <li onClick={(e) => handleModals(e)}>
+              {member ? (
+                <a href="#member" className="selected" id="3" title="collectif">
+                  CVthèque
+                </a>
+              ) : (
+                <a href="#member" id="3" title="collectif">
+                  CVthèque
+                </a>
+              )}
+            </li>
+
             <li>
               <Link href="/entreprise" id="4">
                 Partenaire
@@ -188,10 +190,10 @@ const NavigationLanding = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Proposer une mission
+          Je recrute
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Trouver une mission
+          Jobs
         </Link>
       </div>
       {active ? (
