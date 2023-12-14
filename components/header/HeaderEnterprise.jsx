@@ -9,7 +9,7 @@ import InfiniteScroll from "../loopslider/Loop";
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function HeaderEnterprise({ cv }) {
+export default async function HeaderEnterprise({ cvArr }) {
   const labels = [
     {
       picto: cpp,
@@ -160,7 +160,7 @@ export default async function HeaderEnterprise({ cv }) {
   return (
     <header className="main-header" id="header">
       <Link className="counter" href={"/entreprise"}>
-        <p>{cv.length} CV référencés</p>
+        <p>{cvArr.length} CV référencés</p>
         <Image
           src="/croissance.png"
           width={20}
@@ -169,12 +169,12 @@ export default async function HeaderEnterprise({ cv }) {
         />
       </Link>
       <h1>
-        <span className="important">{cv.length}</span> spécialistes du{" "}
+        <span className="important">{cvArr.length}</span> spécialistes du{" "}
         <span className="important">C++</span> prêts à relever vos défis.
       </h1>
       <p>
         Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda
-        Labs rassemble <span className="important">{cv.length}</span>{" "}
+        Labs rassemble <span className="important">{cvArr.length}</span>{" "}
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
@@ -185,11 +185,11 @@ export default async function HeaderEnterprise({ cv }) {
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
-        content={`Boostez votre recrutement ($${cv.length} CV)`}
+        content={`Boostez votre recrutement ($${cvArr.length} CV)`}
         link={"/partenaire"}
       />
       <SecondaryBtn
-        content={`Optimisez votre process recrutement ($${cv.length} CV)`}
+        content={`Optimisez votre process recrutement ($${cvArr.length} CV)`}
         link={"/partenaire"}
       />
       {/* <InfiniteScroll Tags={labels} /> */}

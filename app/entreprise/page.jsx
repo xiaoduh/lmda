@@ -176,7 +176,7 @@ export default async function Home() {
   return (
     <main>
       <NavigationApp />
-      <HeaderEnterprise cv={cv} />
+      <HeaderEnterprise cvArr={cvArr} />
       <SectionWrapper id={"database"}>
         <ContentSection
           title="Accedez aux meilleurs Freelances et Salariés du secteur"
