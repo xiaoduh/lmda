@@ -175,7 +175,7 @@ export default async function Home() {
 
   return (
     <main>
-      <NavigationApp />
+      <NavigationApp cvArr={cvArr} />
       <HeaderEnterprise cvArr={cvArr} />
       <SectionWrapper id={"database"}>
         <ContentSection

@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const NavigationApp = () => {
+const NavigationApp = ({ cvArr }) => {
   const [navbar, setNavbar] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -76,10 +76,10 @@ const NavigationApp = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Je recrute
+          Je recrute ({cvArr.length} CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Jobs
+          Jobs (7)
         </Link>
       </div>
       {active ? (

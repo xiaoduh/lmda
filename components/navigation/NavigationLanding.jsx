@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const NavigationLanding = () => {
+const NavigationLanding = ({ cvArr, jobs }) => {
   const [navbar, setNavbar] = useState(false);
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
@@ -93,22 +93,22 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               ) : (
                 <a href="#jobs" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque
+                  CVthèque ({cvArr.length} CV)
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  CVthèque
+                  CVthèque ({cvArr.length} CV)
                 </a>
               )}
             </li>
@@ -153,22 +153,22 @@ const NavigationLanding = () => {
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               ) : (
                 <a href="#jobs" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {member ? (
                 <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque
+                  CVthèque ({cvArr.length} CV)
                 </a>
               ) : (
                 <a href="#member" id="3" title="collectif">
-                  CVthèque
+                  CVthèque ({cvArr.length} CV)
                 </a>
               )}
             </li>
@@ -190,10 +190,10 @@ const NavigationLanding = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Je recrute
+          Je recrute ({cvArr.length} CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Jobs
+          Jobs ({jobs})
         </Link>
       </div>
       {active ? (

@@ -87,7 +87,7 @@ export default async function Home() {
   const resTechnicalSkills = await axios.get(
     "https://strapi-vvjo.onrender.com/api/technical-skills"
   );
-  const candidats = await getCandidats();
+  const cvArr = await getCandidats();
 
   const contentCardsFirstSection = [
     {
@@ -157,7 +157,7 @@ export default async function Home() {
 
   return (
     <main>
-      <NavigationLanding />
+      <NavigationLanding cvArr={cvArr} jobs={resJobs.data.data.length} />
       <HeaderEngineer />
 
       <SectionWrapper id={"mission"}>
@@ -283,7 +283,7 @@ export default async function Home() {
       <SectionWrapper id={"member"}>
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${candidats.length} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
+          content={`Tout comme ${cvArr.length} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
         <iframe
           class="airtable-embed"
@@ -416,7 +416,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  ${numberCV} abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${cvArr.length} abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />
