@@ -1,6 +1,5 @@
 import SectionWrapper from "@/components/section/SectionWrapper";
 import "../../styles/index.scss";
-import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSectionLanding";
 import CardsContainer from "@/components/layout/CardsContainer";
 import Card from "@/components/card/Card";
@@ -9,10 +8,8 @@ import PrimaryBtn from "@/components/button/PrimaryBtn";
 import SecondaryBtn from "@/components/button/SecondaryBtn";
 import Footer from "@/components/navigation/Footer";
 import NavigationApp from "@/components/navigation/NavigationApp";
-import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
-import { numberCV } from "@/components/data/data";
 import SectionChart from "@/components/section/SectionChart";
 import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
 import ChartSeniorite from "@/components/charts/ChartSeniorite";
@@ -24,63 +21,93 @@ import getCandidats from "@/components/utils/getCandidats";
 import CardExpert from "@/components/card/CardExpert";
 
 export default async function Home() {
-  // const resJobs = await axios.get(
-  //   "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
-  // );
-  // const resProfils = await axios.get(
-  //   "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  // );
   const cvArr = await getCandidats();
 
   const contentCardsFirstSection = [
     {
-      title: "Partenaire de vos recrutement CDI",
-      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre CVthèque de + ${cvArr.length} profils et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
+      title: "Partenaire de vos recrutements en CDI",
+      content: `Vous manquez de candidats ou de candidatures qualifiées pour vos recrutement en CDI ? Grâce à notre communauté de + ${cvArr.length} membres et notre expertise technique sur l'écosystème C/C++ nous vous aidons à débloquer vos recrutements.`,
       className: "final",
+      img: {
+        src: "/1.png",
+        alt: "CDI chez un client final",
+      },
     },
     {
       title: "Des consultants spécialisés",
       content:
-        "Pure player de l'écosystème C/C++, vous trouverez chez Lambda Labs les compétences qu'il vous manque pour délivrer vos projets.",
+        "Pure player de l'écosystème C/C++, vous trouverez chez Lambda Labs les compétences qu'ils vous manque pour délivrer vos projets.",
       className: "lambda",
+      img: {
+        src: "/2.png",
+        alt: "CDI chez Lambda Labs",
+      },
     },
     {
       title: "Un vivier de Freelance spécialisés",
-      content: `Notre CVthèque de + ${cvArr.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
+      content: `Notre communauté de + ${cvArr.length} profils vous permet d'accéder et d'être mis en relation avec un grand nombre de Freelance sans surcoûts grâce à notre commission fixe et transparente.`,
       className: "freelance",
+      img: {
+        src: "/3.png",
+        alt: "Mission en freelance",
+      },
     },
   ];
 
   const contentCardsSecondSection = [
     {
-      title: "Logiciel",
+      title: "Logiciels Applicatifs",
       content:
         "Qt, Boost C++ Libraries, STL, STLPlus, CMake, fmtlib,  Google Test...",
+      img: {
+        src: "/soft.png",
+        alt: "Developpement logiciel en C++",
+      },
     },
     {
       title: "3D & Traitement d'images",
       content:
         "OpenGL, OpenSceneGraph, UnReal Engine, Vulkan, Open3D, OpenCV, Dlib, Halide, CUDA, ITK, PCL, VTK, SimpleITK, ImageJ, VIGRA..",
+      img: {
+        src: "/image.png",
+        alt: "Computer Vision et traitement d'images par ordinateur",
+      },
     },
     {
-      title: "Embarqué",
+      title: "Systèmes Embarqués",
       content:
         "Linux, RTOS, µC, WinCE, ARM, STM, PlatformIO, Keil µVision, GCC, ARM Keil Compiler, CMSIS, I2C, UART, CAN",
+      img: {
+        src: "/binairy.png",
+        alt: "Developpement de logiciels embarqués en C/C++",
+      },
     },
     {
-      title: "Calcul Scientifique",
+      title: "Modélisation & Calculs Scientifiques",
       content:
         "Eigen, Armadillo, Blaze, NT2, Dlib, Boost.Numeric.Odeint, Trilinos, GSL, PETSc, SciPy",
+      img: {
+        src: "/microscope.png",
+        alt: "Developpement en C++ pour le calcul scientifique",
+      },
     },
     {
-      title: "Finance",
+      title: "Haute Performance & Finance",
       content:
         "QuantLib, Boost C++, Boost.Math, Boost.Asio, Boost.Multiprecision, MKL, TA-Lib, QuickFIX, RapidJSON, CppNumericalSolvers, C++ AMP, FastFlow, STXXL, ZeroMQ, HPC Toolkit, DPDK,TBB",
+      img: {
+        src: "/perf.png",
+        alt: "Developpement logiciel en C++ à faible latency",
+      },
     },
     {
-      title: "IHM",
+      title: "Graphique et IHM",
       content:
         "Qt, QML, MFC, ImGui, JUCE, Nana C++ Library, OpenFrameworks, Cinder, GTK, wxWidgets, SFML, IlogViews...",
+      img: {
+        src: "/applications.png",
+        alt: "Developpement graphique d'interface homme machine",
+      },
     },
   ];
 
@@ -89,16 +116,28 @@ export default async function Home() {
       title: "Qualification de votre besoin",
       content:
         "Nous prenons le temps de qualifier avec vous votre besoin technique dans le détail et non seulement en nombre d'années passé sur une techno.",
+      img: {
+        src: "/1.png",
+        alt: "Qualification de votre besoin",
+      },
     },
     {
       title: "Entretien technique sur mesure",
       content:
         "Nous évaluons les candidats sur les compétences que vous recherchez réellement et non de manière superficielle par un nombre d'années d'exp.",
+      img: {
+        src: "/2.png",
+        alt: "Entretien technique sur mesure",
+      },
     },
     {
       title: "Synthèse détaillée",
       content:
         "Vous recevez une synthèse détaillée des entretiens techniques afin de vous informer sur le niveau de compétence du candidat.",
+      img: {
+        src: "/3.png",
+        alt: "Synthèse détaillée",
+      },
     },
   ];
 

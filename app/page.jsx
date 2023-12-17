@@ -23,9 +23,9 @@ import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import SectionChart from "@/components/section/SectionChart";
 
 export const metadata = {
-  title: "ESN et Recrutement spécialiste de l'écosystème C++",
+  title: "Emplois et Missions sur l'écosystème C/C++",
   description:
-    "Pure player de l'écosystème C/C++ et Qt, nous facilitons la rencontre entre Talents et Entreprises grâce à notre réseau de +2000 spécialistes du C++.",
+    "Pure player de l'écosystème C/C++ et Qt, nous facilitons la rencontre entre Talents et Entreprises grâce à notre communauté de +2000 spécialistes du C/C++.",
   keywords: [
     "ESN",
     "Plateforme de recrutement",
