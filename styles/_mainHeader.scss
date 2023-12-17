@@ -108,14 +108,15 @@
             cursor: pointer;
             padding: 2rem 1rem;
             border-radius: 20px;
+            border: 1px solid #99c3ff11;
             background: rgba(63, 63, 98, 0.2588235294);
             animation: fade linear;
 
 
-          &:hover {
-              border-color: #FD6B3D;
-              background: transparent;
+            &:hover {
+              border: 1px solid #99c3ff93;
           }
+          
           .job-type {
             padding: 0.75rem 1.2rem;
             max-width: max-content;
