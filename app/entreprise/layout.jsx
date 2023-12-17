@@ -1,9 +1,9 @@
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {
-  title: "Recruteur et ESN spécialiste du C++",
+  title: "ESN et Recrutement spécilisés sur l'écosystème C/C++",
   description:
-    "Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda Labs références 1383 spécialistes prêt à relever vos défis.",
+    "Pure Player des technologies C/C++, Lambda Labs connecte Talents spécialisés sur l'écosystème C/C++ et Entreprises qui recrutent.",
   keywords: [
     "Assistance technique C++",
     "Régie C++",
