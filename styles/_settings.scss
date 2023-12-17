@@ -303,7 +303,7 @@ body {
             background: #171717;
             animation: fade linear;
             animation-timeline: view();
-            transition: all .8s ease;
+            transition: all .3s ease;
 
             &:hover {
                 border: 1px solid #99c3ff93;
@@ -772,7 +772,7 @@ body {
             background: #171717;
             animation: fade linear;
             animation-timeline: view();
-            transition: all .8s ease;
+            transition: all .3s ease;
 
             &:hover {
                 border: 1px solid #99c3ff93;
@@ -848,10 +848,6 @@ body {
     }
 }
 
-p::selection, h1::selection, h2::selection, span::selection {
-        background: #FD6B3D;
-        color: #fff;
-}
 
 .important {
     color: $important;
