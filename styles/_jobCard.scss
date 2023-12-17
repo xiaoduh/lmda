@@ -1,10 +1,11 @@
 .card-job {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;    
     width: 340px;
+    height: 100%;
     cursor: pointer;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 20px;
     border: 1px solid #99c3ff11;
     background: #171717;
