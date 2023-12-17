@@ -212,7 +212,6 @@ body {
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
@@ -467,7 +466,6 @@ body {
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
@@ -607,16 +605,16 @@ body {
         }
 
         
-        #final {
+            #final {
             color: #2ED47A;
             }
 
             #lambda {
-                color: #F7685B;
+                color: #17b6ff;
             }
 
             #freelance {
-                    color: rgb(23, 182, 255);
+                    color: #bd17ff;
             }
 
         .final {
@@ -628,18 +626,18 @@ body {
         }
 
         .lambda {
-            background: #7e3825e3;
+            background: #334D6E;
 
             h3 {
-                color: #FD6B3D;
+                color: #17b6ff;
             }
         }
 
         .freelance {
-            background: #334D6E;
+            background: #59336e;
 
             h3 {
-                color: #1776ff;
+                color: #bd17ff;
             }
         }
         

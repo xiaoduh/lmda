@@ -75,18 +75,10 @@ export default async function Home() {
   const resJobs = await axios.get(
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
-  const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  );
   const resArticles = await axios.get(
     "https://strapi-vvjo.onrender.com/api/articles?populate=*"
   );
-  const resSubscribers = await axios.get(
-    "https://lmdaapi.onrender.com/subscribers"
-  );
-  const resTechnicalSkills = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/technical-skills"
-  );
+
   const cvArr = await getCandidats();
 
   const contentCardsFirstSection = [
@@ -94,44 +86,85 @@ export default async function Home() {
       title: "Transparence",
       content:
         "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur une transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
+      img: {
+        src: "/oeil.png",
+        alt: "100% Transparent pour une confiance sans faille",
+      },
     },
     {
       title: "Spécialiste",
       content:
-        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils et l'assistance techniques sur l'écosystème C++.",
+        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils, l'assistance techniques et le recrutement sur l'écosystème C++.",
+      img: {
+        src: "/specpp.png",
+        alt: "Expert sur l'écosystème C++",
+      },
     },
     {
-      title: "Efficacité",
+      title: "Horizontailité",
       content:
-        "L'efficacité n’est pas un moyen, c’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre collectif.",
+        "Instaurer la transparence permet d'incarner une nouvelle organisation fondée sur la responsabilité et l'émancipation. Notre structure horizontale permet à chacun de reprendre le contrôle sur sa carrière.",
+      img: {
+        src: "/horizontale.png",
+        alt: "Organisation horizontale pour plus de liberté et de responsabilité",
+      },
     },
   ];
 
   const contentCardsSecondSection = [
     {
-      title: "Logiciel",
-      content: "Applicatifs, Frameworks Qt, Simulation numérique, DLL",
+      title: "Logiciels Applicatifs",
+      content:
+        "Qt, Boost C++ Libraries, STL, STLPlus, CMake, fmtlib, Google Test...",
+      img: {
+        src: "/soft.png",
+        alt: "Developpement logiciel en C++",
+      },
     },
     {
       title: "3D & Traitement d'images",
-      content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
-    },
-    {
-      title: "Embarqué",
       content:
-        "Linux, µC ARM, Windows SE, RTOS, Embededd Software, Middleware, Firmware, Drivers",
+        "OpenGL, OpenSceneGraph, UnReal Engine, Vulkan, Open3D, OpenCV, Dlib, Halide, CUDA, ITK, PCL, VTK, SimpleITK, ImageJ, VIGRA..",
+      img: {
+        src: "/image.png",
+        alt: "Computer Vision et traitement d'images par ordinateur",
+      },
     },
     {
-      title: "Calcul Scientifique",
-      content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
+      title: "Systèmes Embarqués",
+      content:
+        "Linux, RTOS, µC, WinCE, ARM, STM, PlatformIO, Keil µVision, GCC, ARM Keil Compiler, CMSIS, I2C, UART, CAN",
+      img: {
+        src: "/binairy.png",
+        alt: "Developpement de logiciels embarqués en C/C++",
+      },
     },
     {
-      title: "Low Latency",
-      content: "Quantlib, Concurrency, Décodage/encodage, STL, Boost, Asio...",
+      title: "Modélisation & Calculs Scientifiques",
+      content:
+        "Eigen, Armadillo, Blaze, NT2, Dlib, Boost.Numeric.Odeint, Trilinos, GSL, PETSc, SciPy",
+      img: {
+        src: "/microscope.png",
+        alt: "Developpement en C++ pour le calcul scientifique",
+      },
     },
     {
-      title: "Graphique",
-      content: "Qt, QML, MFC, WxWidgets, ImGui, Nana, NanoGui, IlogViews...",
+      title: "Haute Performance & Finance",
+      content:
+        "QuantLib, Boost C++, Boost.Math, Boost.Asio, Boost.Multiprecision, MKL, TA-Lib, QuickFIX, RapidJSON, CppNumericalSolvers, C++ AMP, FastFlow, STXXL, ZeroMQ, HPC Toolkit, DPDK,TBB",
+      img: {
+        src: "/perf.png",
+        alt: "Developpement logiciel en C++ à faible latency",
+      },
+    },
+    {
+      title: "Graphique et IHM",
+      content:
+        "Qt, Qt 3D, QML, MFC, ImGui, JUCE, Nana C++ Library, OpenFrameworks, Cinder, GTK, wxWidgets, SFML, IlogViews...",
+      img: {
+        src: "/applications.png",
+        alt: "Developpement graphique d'interface homme machine",
+      },
     },
   ];
   const contentCardsThirdSection = [
@@ -140,18 +173,30 @@ export default async function Home() {
       content:
         "Vous êtes salarié et en recherche d'un CDI pour un client final ? Pure player de l'écosystème C/C++, nous vous proposons un grand nombre de postes de l'écosystème.",
       className: "final",
+      img: {
+        src: "/1.png",
+        alt: "CDI chez un client final",
+      },
     },
     {
       title: "CDI Lambda Labs",
       content:
         "Vous êtes salarié et en recherche d'un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement d'une ESN horizontale où chaque collaborateur Lambda Labs est un associé en devenir. Travaillez pour votre boîte !",
       className: "lambda",
+      img: {
+        src: "/2.png",
+        alt: "CDI chez Lambda Labs",
+      },
     },
     {
       title: "Mission Freelance",
       content:
         "Vous êtes Freelance et en recherche d'une mission ? Nous vous portons commercialement en toute transparence contre une commission journalière fixe et transparente. Une relation commerciale limpide pour vous et notre client.",
       className: "freelance",
+      img: {
+        src: "/3.png",
+        alt: "Mission en freelance",
+      },
     },
   ];
 
@@ -173,6 +218,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
@@ -201,6 +247,7 @@ export default async function Home() {
                 title={card.title}
                 content={card.content}
                 style={card.className}
+                img={card.img}
               />
             );
           })}
@@ -229,6 +276,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
