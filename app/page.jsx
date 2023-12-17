@@ -13,7 +13,7 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import FilterProfil from "@/components/Filter/FilterProfil";
-import getCandidats from "./libs/getCandidats";
+import getCandidats from "../components/utils/getCandidats";
 import { numberCV } from "@/components/data/data";
 import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSectorielle";
 import ChartRepartitionTechno from "@/components/charts/ChartRepartitionTechno";
@@ -23,9 +23,9 @@ import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import SectionChart from "@/components/section/SectionChart";
 
 export const metadata = {
-  title: "ESN et Recrutement spécialiste de l'écosystème C++",
+  title: "Emplois et Missions sur l'écosystème C/C++",
   description:
-    "Pure player de l'écosystème C/C++ et Qt, nous facilitons la rencontre entre Talents et Entreprises grâce à notre réseau de +2000 spécialistes du C++.",
+    "Pure player de l'écosystème C/C++ et Qt, nous facilitons la rencontre entre Talents et Entreprises grâce à notre communauté de +2000 spécialistes du C/C++.",
   keywords: [
     "ESN",
     "Plateforme de recrutement",
@@ -75,63 +75,96 @@ export default async function Home() {
   const resJobs = await axios.get(
     "https://strapi-vvjo.onrender.com/api/jobs/?populate=*"
   );
-  const resProfils = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/profils?populate=*"
-  );
   const resArticles = await axios.get(
     "https://strapi-vvjo.onrender.com/api/articles?populate=*"
   );
-  const resSubscribers = await axios.get(
-    "https://lmdaapi.onrender.com/subscribers"
-  );
-  const resTechnicalSkills = await axios.get(
-    "https://strapi-vvjo.onrender.com/api/technical-skills"
-  );
-  const candidats = await getCandidats();
+
+  const cvArr = await getCandidats();
 
   const contentCardsFirstSection = [
     {
       title: "Transparence",
       content:
         "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Lambda est fondée sur une transparence stratégique, économique et financière avec toutes ses parties prenantes, notamment ses collaborateurs.",
+      img: {
+        src: "/oeil.png",
+        alt: "100% Transparent pour une confiance sans faille",
+      },
     },
     {
       title: "Spécialiste",
       content:
-        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils et l'assistance techniques sur l'écosystème C++.",
+        "Sur un marché dynamique, ne pas se démarquer équivaut à être invisible. Notre objectif est de faire de Lambda la référence dans le conseils, l'assistance techniques et le recrutement sur l'écosystème C++.",
+      img: {
+        src: "/specpp.png",
+        alt: "Expert sur l'écosystème C++",
+      },
     },
     {
-      title: "Efficacité",
+      title: "Horizontailité",
       content:
-        "L'efficacité n’est pas un moyen, c’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre collectif.",
+        "Instaurer la transparence permet d'incarner une nouvelle organisation fondée sur la responsabilité et l'émancipation. Notre structure horizontale permet à chacun de reprendre le contrôle sur sa carrière.",
+      img: {
+        src: "/horizontale.png",
+        alt: "Organisation horizontale pour plus de liberté et de responsabilité",
+      },
     },
   ];
 
   const contentCardsSecondSection = [
     {
-      title: "Logiciel",
-      content: "Applicatifs, Frameworks Qt, Simulation numérique, DLL",
+      title: "Logiciels Applicatifs",
+      content:
+        "Qt, Boost C++ Libraries, STL, STLPlus, CMake, fmtlib, Google Test...",
+      img: {
+        src: "/soft.png",
+        alt: "Developpement logiciel en C++",
+      },
     },
     {
       title: "3D & Traitement d'images",
-      content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
-    },
-    {
-      title: "Embarqué",
       content:
-        "Linux, µC ARM, Windows SE, RTOS, Embededd Software, Middleware, Firmware, Drivers",
+        "OpenGL, OpenSceneGraph, UnReal Engine, Vulkan, Open3D, OpenCV, Dlib, Halide, CUDA, ITK, PCL, VTK, SimpleITK, ImageJ, VIGRA..",
+      img: {
+        src: "/image.png",
+        alt: "Computer Vision et traitement d'images par ordinateur",
+      },
     },
     {
-      title: "Calcul Scientifique",
-      content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
+      title: "Systèmes Embarqués",
+      content:
+        "Linux, RTOS, µC, WinCE, ARM, STM, PlatformIO, Keil µVision, GCC, ARM Keil Compiler, CMSIS, I2C, UART, CAN",
+      img: {
+        src: "/binairy.png",
+        alt: "Developpement de logiciels embarqués en C/C++",
+      },
     },
     {
-      title: "Low Latency",
-      content: "Quantlib, Concurrency, Décodage/encodage, STL, Boost, Asio...",
+      title: "Modélisation & Calculs Scientifiques",
+      content:
+        "Eigen, Armadillo, Blaze, NT2, Dlib, Boost.Numeric.Odeint, Trilinos, GSL, PETSc, SciPy",
+      img: {
+        src: "/microscope.png",
+        alt: "Developpement en C++ pour le calcul scientifique",
+      },
     },
     {
-      title: "Graphique",
-      content: "Qt, QML, MFC, WxWidgets, ImGui, Nana, NanoGui, IlogViews...",
+      title: "Haute Performance & Finance",
+      content:
+        "QuantLib, Boost C++, Boost.Math, Boost.Asio, Boost.Multiprecision, MKL, TA-Lib, QuickFIX, RapidJSON, CppNumericalSolvers, C++ AMP, FastFlow, STXXL, ZeroMQ, HPC Toolkit, DPDK,TBB",
+      img: {
+        src: "/perf.png",
+        alt: "Developpement logiciel en C++ à faible latency",
+      },
+    },
+    {
+      title: "Graphique et IHM",
+      content:
+        "Qt, Qt 3D, QML, MFC, ImGui, JUCE, Nana C++ Library, OpenFrameworks, Cinder, GTK, wxWidgets, SFML, IlogViews...",
+      img: {
+        src: "/applications.png",
+        alt: "Developpement graphique d'interface homme machine",
+      },
     },
   ];
   const contentCardsThirdSection = [
@@ -140,24 +173,36 @@ export default async function Home() {
       content:
         "Vous êtes salarié et en recherche d'un CDI pour un client final ? Pure player de l'écosystème C/C++, nous vous proposons un grand nombre de postes de l'écosystème.",
       className: "final",
+      img: {
+        src: "/1.png",
+        alt: "CDI chez un client final",
+      },
     },
     {
       title: "CDI Lambda Labs",
       content:
         "Vous êtes salarié et en recherche d'un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement d'une ESN horizontale où chaque collaborateur Lambda Labs est un associé en devenir. Travaillez pour votre boîte !",
       className: "lambda",
+      img: {
+        src: "/2.png",
+        alt: "CDI chez Lambda Labs",
+      },
     },
     {
       title: "Mission Freelance",
       content:
         "Vous êtes Freelance et en recherche d'une mission ? Nous vous portons commercialement en toute transparence contre une commission journalière fixe et transparente. Une relation commerciale limpide pour vous et notre client.",
       className: "freelance",
+      img: {
+        src: "/3.png",
+        alt: "Mission en freelance",
+      },
     },
   ];
 
   return (
     <main>
-      <NavigationLanding />
+      <NavigationLanding cvArr={cvArr} jobs={resJobs.data.data.length} />
       <HeaderEngineer />
 
       <SectionWrapper id={"mission"}>
@@ -173,19 +218,20 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"how"}>
@@ -201,19 +247,20 @@ export default async function Home() {
                 title={card.title}
                 content={card.content}
                 style={card.className}
+                img={card.img}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"why"}>
@@ -229,19 +276,20 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={"Référencer son CV sur Lambda"}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"jobs"}>
@@ -270,20 +318,20 @@ export default async function Home() {
           })}
         </CardsContainer>
         <PrimaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
         <SecondaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
       </SectionWrapper>
       <SectionWrapper id={"member"}>
         <ContentSection
           title="Soyez visible auprès des entreprises"
-          content={`Tout comme ${numberCV} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
+          content={`Tout comme ${cvArr.length} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
         <iframe
           class="airtable-embed"
@@ -295,12 +343,12 @@ export default async function Home() {
           // style={{"background: transparent, border: 1px solid #ccc"}}
         ></iframe>
         <PrimaryBtn
-          content={`Référencer son CV sur Lambda`}
-          link={"/rejoindre"}
-          title={"rejoindre"}
+          content={`Je cherche une mission (${resJobs.data.data.length})`}
+          link={"/jobs"}
+          title={"jobs"}
         />
         <SecondaryBtn
-          content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+          content={`Je cherche un CDI (${resJobs.data.data.length})`}
           link={"/jobs"}
           title={"jobs"}
         />
@@ -313,12 +361,14 @@ export default async function Home() {
           />
           <ChartEvolutionHebdo />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -328,12 +378,14 @@ export default async function Home() {
           />
           <ChartRepartitionGeographique />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -344,12 +396,14 @@ export default async function Home() {
 
           <ChartSeniorite doughnut={"doughnut"} />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -359,12 +413,14 @@ export default async function Home() {
           />
           <ChartRepartitionTechno />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
         <SectionChart>
@@ -374,12 +430,14 @@ export default async function Home() {
           />
           <ChartRepartitionSectorielle />
           <PrimaryBtn
-            content={`Discutons de votre besoin (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche une mission (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
           <SecondaryBtn
-            content={`Nous transmettre votre recherche (${numberCV} CV)`}
-            link={"/partenaire"}
+            content={`Je cherche un CDI (${resJobs.data.data.length})`}
+            link={"/jobs"}
+            title={"jobs"}
           />
         </SectionChart>
       </SectionWrapper>
@@ -406,7 +464,7 @@ export default async function Home() {
       <SectionWrapper id={"form"}>
         {/* <Label content="Restez connecté à l'écosystème C++" /> */}
         <ContentSection
-          title={`Aujourd'hui, il y a  ${numberCV} abonnés à notre Newsletter « Mission à pourvoir ».`}
+          title={`Aujourd'hui, il y a  ${cvArr.length} abonnés à notre Newsletter « Mission à pourvoir ».`}
           content="Que vous soyez salarié en veille d'un nouveau poste ou Freelance en recherche active d'une nouvelle mission, inscrivez-vous pour recevoir par email les dernières missions ou emplois sur l'écosystème C/C++."
         />
         <Subscriber />

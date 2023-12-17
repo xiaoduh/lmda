@@ -8,9 +8,8 @@ import linux from "../../assets/images/linux.png";
 import InfiniteScroll from "../loopslider/Loop";
 import Link from "next/link";
 import Image from "next/image";
-import { numberCV } from "../data/data";
 
-export default async function HeaderEnterprise() {
+export default async function HeaderEnterprise({ cvArr }) {
   const labels = [
     {
       picto: cpp,
@@ -161,7 +160,7 @@ export default async function HeaderEnterprise() {
   return (
     <header className="main-header" id="header">
       <Link className="counter" href={"/entreprise"}>
-        <p>{numberCV} CV référencés</p>
+        <p>{cvArr.length} CV référencés</p>
         <Image
           src="/croissance.png"
           width={20}
@@ -170,12 +169,12 @@ export default async function HeaderEnterprise() {
         />
       </Link>
       <h1>
-        <span className="important">{numberCV}</span> spécialistes du{" "}
+        <span className="important">{cvArr.length}</span> spécialistes du{" "}
         <span className="important">C++</span> prêts à relever vos défis.
       </h1>
       <p>
         Pure Player des technologies C/C++ et de ses mises en oeuvres, Lambda
-        Labs rassemble <span className="important">{numberCV}</span>{" "}
+        Labs rassemble <span className="important">{cvArr.length}</span>{" "}
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus
@@ -186,14 +185,14 @@ export default async function HeaderEnterprise() {
         <span className="important"> temps</span> de staffing de vos projets.
       </p>
       <PrimaryBtn
-        content="Publier une mission sur Lambda"
+        content={`Boostez votre recrutement (${cvArr.length} CV)`}
         link={"/partenaire"}
       />
       <SecondaryBtn
-        content={`Recruter un prestataire (${numberCV} CV)`}
-        link={"/entreprise"}
+        content={`Optimisez votre process recrutement (${cvArr.length} CV)`}
+        link={"/partenaire"}
       />
-      <InfiniteScroll Tags={labels} />
+      {/* <InfiniteScroll Tags={labels} /> */}
     </header>
   );
 }

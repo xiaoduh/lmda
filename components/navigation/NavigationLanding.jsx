@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 
-const NavigationLanding = () => {
+const NavigationLanding = ({ cvArr, jobs }) => {
   const [navbar, setNavbar] = useState(false);
   const [why, setWhy] = useState(false);
   const [mission, setMission] = useState(false);
@@ -68,17 +68,6 @@ const NavigationLanding = () => {
         {active ? (
           <ul className="open">
             <li onClick={(e) => handleModals(e)}>
-              {why ? (
-                <a href="#why" className="selected" id="1" title="why">
-                  ADN
-                </a>
-              ) : (
-                <a href="#why" id="1" title="why">
-                  ADN
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a href="#mission" className="selected" id="2" title="mission">
                   Spécialisation
@@ -90,24 +79,36 @@ const NavigationLanding = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {member ? (
-                <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque
+              {why ? (
+                <a href="#why" className="selected" id="1" title="why">
+                  ADN
                 </a>
               ) : (
-                <a href="#member" id="3" title="collectif">
-                  CVthèque
+                <a href="#why" id="1" title="why">
+                  ADN
+                </a>
+              )}
+            </li>
+
+            <li onClick={(e) => handleModals(e)}>
+              {job ? (
+                <a href="#jobs" className="selected" id="5" title="job">
+                  Jobs ({jobs})
+                </a>
+              ) : (
+                <a href="#jobs" id="5" title="job">
+                  Jobs ({jobs})
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {job ? (
-                <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs
+              {member ? (
+                <a href="#member" className="selected" id="3" title="collectif">
+                  CVthèque (+1500 CV)
                 </a>
               ) : (
-                <a href="#jobs" id="5" title="job">
-                  Jobs
+                <a href="#member" id="3" title="collectif">
+                  CVthèque (+1500 CV)
                 </a>
               )}
             </li>
@@ -122,17 +123,6 @@ const NavigationLanding = () => {
           </ul>
         ) : (
           <ul>
-            <li onClick={(e) => handleModals(e)}>
-              {why ? (
-                <a href="#why" className="selected" id="1" title="values">
-                  ADN
-                </a>
-              ) : (
-                <a href="#why" id="1" title="values">
-                  ADN
-                </a>
-              )}
-            </li>
             <li onClick={(e) => handleModals(e)}>
               {mission ? (
                 <a
@@ -150,27 +140,39 @@ const NavigationLanding = () => {
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
-              {member ? (
-                <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque
+              {why ? (
+                <a href="#why" className="selected" id="1" title="values">
+                  ADN
                 </a>
               ) : (
-                <a href="#member" id="3" title="collectif">
-                  CVthèque
+                <a href="#why" id="1" title="values">
+                  ADN
                 </a>
               )}
             </li>
             <li onClick={(e) => handleModals(e)}>
               {job ? (
                 <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               ) : (
                 <a href="#jobs" id="5" title="job">
-                  Jobs
+                  Jobs ({jobs})
                 </a>
               )}
             </li>
+            <li onClick={(e) => handleModals(e)}>
+              {member ? (
+                <a href="#member" className="selected" id="3" title="collectif">
+                  CVthèque (+1500 CV)
+                </a>
+              ) : (
+                <a href="#member" id="3" title="collectif">
+                  CVthèque (+1500 CV)
+                </a>
+              )}
+            </li>
+
             <li>
               <Link href="/entreprise" id="4">
                 Partenaire
@@ -188,10 +190,10 @@ const NavigationLanding = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Proposer une mission
+          Je recrute (+1500 CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Trouver une mission
+          Jobs (7)
         </Link>
       </div>
       {active ? (

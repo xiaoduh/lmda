@@ -1,21 +1,20 @@
 .card-job {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;    
     width: 340px;
+    height: 100%;
     cursor: pointer;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 20px;
-    // border: 1px solid transparent;
-    // border: 1px solid #7e7ebba9;
-    background: #3f3f6242;
+    border: 1px solid #99c3ff11;
+    background: #171717;
     animation: fade linear;
     animation-timeline: view();
     transition: all .8s ease;
 
     &:hover {
-        // border: 1px solid #7e7ebba9;
-        background: transparent;
+        border: 1px solid #99c3ff93;
     }
 
     .job-type {

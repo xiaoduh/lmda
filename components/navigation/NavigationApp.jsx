@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import getCandidats from "../utils/getCandidats";
 
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
@@ -18,7 +19,7 @@ const NavigationApp = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
-  });
+  }, []);
 
   return (
     <div className={navbar ? "navigation active" : "navigation"}>
@@ -34,9 +35,9 @@ const NavigationApp = () => {
       <nav>
         {active ? (
           <ul className="open">
-            <li>
+            {/* <li>
               <Link href="/carriere">ADN</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/database">CVthèque</Link>
             </li>
@@ -52,9 +53,9 @@ const NavigationApp = () => {
           </ul>
         ) : (
           <ul>
-            <li>
+            {/* <li>
               <Link href="/carriere">ADN</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/database">CVthèque</Link>
             </li>
@@ -76,10 +77,10 @@ const NavigationApp = () => {
           href="/entreprise"
           title="Proposer une mission"
         >
-          Proposer une mission
+          Je recrute (+1500 CV)
         </Link>
         <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Trouver une mission
+          Jobs (7)
         </Link>
       </div>
       {active ? (

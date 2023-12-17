@@ -35,6 +35,7 @@ const recursiveFetchContacts = async (link) => {
 };
 
 export default async function getCandidats() {
+  contactsArr = [];
   const res = await recursiveFetchContacts(
     "https://api.hubapi.com/crm/v3/objects/contacts?limit=100&archived=false"
   );

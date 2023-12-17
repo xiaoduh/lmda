@@ -29,23 +29,24 @@ export default async function HeaderEngineer() {
       </h1>
       <p>
         La <span className="important">transparence</span>, change la donne.
-        L&apos; <span className="important">horizontalilté</span>, réduit les
-        coûts. La <span className="important">spécialisation</span>, rend unique
-        et visible.
+        L&apos; <span className="important">horizontalilté</span>, émancipe et
+        responsabilise. La <span className="important">spécialisation</span>,
+        rend unique et visible.
         <br></br>
         Nous incarnons une vision horizontale, transparente et équitable de
         l&apos;ESN, pour permettre à ceux qui en font la richesse d&apos;en
-        récolter les fruits. Devenez propriétaire de votre entreprise.
+        récolter les fruits. Spécialiste du recrutement et des services C/C++,
+        nous connectons Talents et Entreprises qui recrutent.
       </p>
       <PrimaryBtn
-        content={`Voir les missions ouvertes (${resJobs.data.data.length})`}
+        content={`Je cherche une mission (${resJobs.data.data.length})`}
         link={"/jobs"}
         title={"jobs"}
       />
       <SecondaryBtn
-        content={"Référencer son CV sur Lambda"}
-        link={"/rejoindre"}
-        title={"rejoindre"}
+        content={`Je cherche un CDI (${resJobs.data.data.length})`}
+        link={"/jobs"}
+        title={"jobs"}
       />
 
       <SwiperCard data={resJobs.data.data} />

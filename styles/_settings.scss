@@ -1,5 +1,5 @@
-$accent-black: #1E1E30;
-$black-contrast: #1f1f32;
+$accent-black: #121212;
+$black-contrast: #121212;
 $gray: #575765;
 $gray-card: #413f4e;
 $primary: #1776ff;
@@ -192,7 +192,7 @@ body {
         animation: fade linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 50%;
-        margin-top: 4rem;
+        margin: 4rem 0;
 
 
         @media screen and (max-width: 1200px) {
@@ -204,15 +204,14 @@ body {
           }
 
         .card {
-            background: #3f3f6242;
-            // border: 1px solid #7e7ebba9;
+            background: #171717;
+            border: 1px solid #99c3ff11;
             border-radius: 20px;
             padding: 2rem 1rem;
             width: 340px;
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
@@ -223,7 +222,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $title;
+                color: #99C3FF;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -293,17 +292,20 @@ body {
         .article-preview {
             border-radius: 20px;
             padding: 1rem 1rem;
-            width: 350px;
-            height: auto;
+            width: 340px;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; 
             gap: 1rem;
             cursor: pointer;
-            border: 1px solid transparent;
+            background: #171717;
+            animation: fade linear;
+            animation-timeline: view();
+            transition: all .3s ease;
 
             &:hover {
-                background: #3f3f6242;
+                border: 1px solid #99c3ff93;
             }
 
             h3 {
@@ -444,7 +446,7 @@ body {
         animation: fade linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 50%;
-        margin-top: 4rem;
+        margin: 4rem 0;
 
 
         @media screen and (max-width: 1200px) {
@@ -456,15 +458,14 @@ body {
           }
 
         .card {
-            background: #3f3f6242;
-            // border: 1px solid #7e7ebba9;
+            background: #171717;
+            border: 1px solid #99c3ff11;
             border-radius: 20px;
             padding: 2rem 1rem;
             width: 340px;
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
@@ -475,7 +476,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $primary;
+                color: #99C3FF;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -492,17 +493,128 @@ body {
             }
         }
 
+        .card-expert {
+            background: #171717;
+            border: 1px solid #99c3ff11;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            width: 340px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            transition: all .8s ease;
+
+            .image-expert {
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            .title-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: .5rem auto;
+
+                p {
+                    color: #c7c5c5;
+                }
+            }
+
+            .bio-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .asses {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+
+                .skill-tag {
+                    padding: .4rem;
+                    border-radius: .4rem;
+                }
+            }
+
+            .expert-social {
+                border-radius: 50%;
+                margin: .5rem auto 0;
+            }
+
+            button {
+                display: flex;
+                margin: 1rem auto;
+            }
+        }
+
+        .soft {
+            background: #2ed4790a;
+            border: 1px solid #2ed4795d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #2ED47A;
+            }
+        }
+
+        .embbeded {
+            background: #f7685b07;
+            border: 1px solid #f7685b4d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #F7685B;
+            }
+        }
+
+        .finance {
+            background: rgba(23, 182, 255, 0.048);
+            border: 1px solid rgba(23, 182, 255, 0.397);
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: rgb(23, 182, 255);
+            }
+        }
+
+        .ia {
+            background: #7b2ed40e;
+            border: 1px solid #7b2ed473;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #7b2ed4;
+            }
+        }
+
         
-        #final {
+            #final {
             color: #2ED47A;
             }
 
             #lambda {
-                color: #F7685B;
+                color: #17b6ff;
             }
 
             #freelance {
-                    color: rgb(23, 182, 255);
+                    color: #bd17ff;
             }
 
         .final {
@@ -514,18 +626,18 @@ body {
         }
 
         .lambda {
-            background: #7e3825e3;
+            background: #334D6E;
 
             h3 {
-                color: #FD6B3D;
+                color: #17b6ff;
             }
         }
 
         .freelance {
-            background: #334D6E;
+            background: #59336e;
 
             h3 {
-                color: #1776ff;
+                color: #bd17ff;
             }
         }
         
@@ -648,17 +760,20 @@ body {
         .article-preview {
             border-radius: 20px;
             padding: 1rem 1rem;
-            width: 350px;
-            height: auto;
+            width: 340px;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; 
             gap: 1rem;
             cursor: pointer;
-            border: 1px solid transparent;
+            background: #171717;
+            animation: fade linear;
+            animation-timeline: view();
+            transition: all .3s ease;
 
             &:hover {
-                background: #3f3f6242;
+                border: 1px solid #99c3ff93;
             }
 
             h3 {
@@ -731,10 +846,6 @@ body {
     }
 }
 
-p::selection, h1::selection, h2::selection, span::selection {
-        background: #FD6B3D;
-        color: #fff;
-}
 
 .important {
     color: $important;
