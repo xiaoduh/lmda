@@ -254,6 +254,7 @@ export default async function Home() {
                 title={card.title}
                 content={card.content}
                 style={card.className}
+                img={card.img}
               />
             );
           })}
@@ -279,6 +280,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
@@ -335,6 +337,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
