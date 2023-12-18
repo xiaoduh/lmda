@@ -24,7 +24,7 @@ const JobCard = ({
           style={{
             backgroundColor:
               job_type === `Freelance`
-                ? `#2f190f`
+                ? `#1f100a`
                 : job_type === `CDI`
                 ? `#1c3329`
                 : `#24364e`,
@@ -33,7 +33,7 @@ const JobCard = ({
                 ? `#fa824c`
                 : job_type === `CDI`
                 ? `#8dffcd`
-                : `#24364e`,
+                : `#73acf5`,
           }}
         >
           {job_type === `Freelance`
