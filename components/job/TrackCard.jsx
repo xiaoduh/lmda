@@ -43,20 +43,35 @@ const TrackCard = ({
         </p>
         <h3>{title}</h3>
         <div className="infos">
-          <p className="info">{place}</p>
-          {skills.data.map((skill) => {
-            return (
-              <p className="info" key={skill.attributes.name}>
-                {skill.attributes.name}
-              </p>
-            );
-          })}
-          <p className="info">
-            {job_type === `Freelance`
-              ? `${daily_rate}€/j`
-              : `à partir de ${salary}K`}
-          </p>
-          <p className="info">{workplace}</p>
+          <div className="info">
+            <Image
+              src="/marqueur.png"
+              width={16}
+              height={16}
+              alt="localisation"
+            />
+            <p>{place}</p>
+          </div>
+          <div className="info">
+            <Image
+              src="/argent.png"
+              width={16}
+              height={16}
+              alt="salaire ou TJM"
+            />
+            <p>
+              {job_type === `Freelance` ? `${daily_rate}€/j` : `> ${salary}K`}
+            </p>
+          </div>
+          <div className="info">
+            <Image
+              src="/maison.png"
+              width={16}
+              height={16}
+              alt="localisation"
+            />
+            <p>{workplace}</p>
+          </div>
         </div>
         <p>{desc}</p>
         <div className="cta">
