@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import ThirdBtn from "../button/ThirdBtn";
 import PrimaryBtn from "../button/PrimaryBtn";
+import Image from "next/image";
 
 const TrackCard = ({
   title,

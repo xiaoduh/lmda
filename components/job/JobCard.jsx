@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import ThirdBtn from "../button/ThirdBtn";
 import Link from "next/link";
+import Image from "next/image";
 
 const JobCard = ({
   title,
