@@ -24,16 +24,16 @@ const TrackCard = ({
           style={{
             backgroundColor:
               job_type === `Freelance`
-                ? `#59336e`
+                ? `#2f190f`
                 : job_type === `CDI`
-                ? `#2ed4794d`
-                : `#334D6E`,
+                ? `#1c3329`
+                : `#24364e`,
             color:
               job_type === `Freelance`
-                ? `#bd17ff`
+                ? `#fa824c`
                 : job_type === `CDI`
-                ? `#2ED47A`
-                : `#17b6ff`,
+                ? `#8dffcd`
+                : `#24364e`,
           }}
         >
           {job_type === `Freelance`
