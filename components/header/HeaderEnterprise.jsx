@@ -161,8 +161,8 @@ export default async function HeaderEnterprise({ candidats }) {
 
   return (
     <header className="main-header" id="header">
-      <Link className="counter" href={"/entreprise"}>
-        <p>1303 CV référencés</p>
+      <Link className="counter" href={"/database"}>
+        <p>{candidats.length} CV référencés</p>
         <Image
           src="/croissance.png"
           width={20}
@@ -176,7 +176,7 @@ export default async function HeaderEnterprise({ candidats }) {
       </h1>
       <p>
         Expert des technologies C/C++ et de ses mises en oeuvres, Lambda
-        rassemble <span className="important">+ {candidatNumber} </span>
+        rassemble <span className="important">+ {candidats.length} </span>
         spécialistes prêt à relever vos défis.<br></br> 2 projets sur 3 sont en
         retard à cause du
         <span className="important"> manque de talents</span>. Ne passez plus

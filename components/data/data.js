@@ -1,5 +1,21 @@
+import axios from "axios";
+import { contactsArr } from "../utils/getCandidats";
+
 //last update 6/12/23
-export const candidatNumber = 1383;
+export const candidatNumber = contactsArr.length;
+
+const token = "pat-eu1-cd5e23e7-7c86-4103-8404-068321db77da";
+const config = {
+  headers: { Authorization: `Bearer ${token}` },
+};
+
+export default async function fetchData() {
+  const res = await axios.get(
+    "https://api.hubapi.com/crm/v3/objects/contacts?limit=100&archived=false",
+    config
+  );
+  console.log(res.data.results.length);
+}
 
 export const labelsLocalisation = [
   "1",

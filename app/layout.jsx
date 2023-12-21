@@ -1,3 +1,4 @@
+"use client";
 export const metadata = {
   title: "Lambda, seule plateforme spécialisée sur l'écosystème C++",
   description:
@@ -45,7 +46,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body className="dark-mode" data-theme="dark">
+        {children}
+      </body>
     </html>
   );
 }

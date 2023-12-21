@@ -13,7 +13,7 @@ import JobCard from "@/components/job/JobCard";
 import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import FilterProfil from "@/components/Filter/FilterProfil";
-import getCandidats from "./libs/getCandidats";
+import getCandidats from "../components/utils/getCandidats";
 
 export default async function Home() {
   const contentCardsFirstSection = [
@@ -21,42 +21,78 @@ export default async function Home() {
       title: "Transparence",
       content:
         "Nous sommes intimement convaincu que la transparence à tous les niveaux est l'unique moyen d’établir une confiance sans faille et durable. Nous n’avons rien à cacher à nos membres, ni clients.",
+      img: {
+        src: "/oeil.png",
+        alt: "100% Transparent pour une confiance sans faille",
+      },
     },
     {
-      title: "Spécialiste",
+      title: "Spécialisation",
       content:
         "Choisir d’être expert sur les applications du C++, c’est nécessairement reconnaitre qu’on ne peut pas être expert en tout. Il y a tant à faire avec le C++.",
+      img: {
+        src: "/specpp.png",
+        alt: "Expert sur l'écosystème C++",
+      },
     },
     {
-      title: "Efficacité",
+      title: "Horizontailité",
       content:
-        "L'efficacité n’est pas un moyen. C’est un résultat. Nous pronons une transparence totale, un management horizontale et responsabilisant pour que chacun puisse s'exprimer au travers de notre colelctif.",
+        "Instaurer la transparence permet d'incarner une nouvelle organisation fondée sur la responsabilité et l'émancipation. Notre structure horizontale permet à chacun de reprendre le contrôle sur sa carrière.",
+      img: {
+        src: "/horizontale.png",
+        alt: "Organisation horizontale pour plus de liberté et de responsabilité",
+      },
     },
   ];
   const contentCardsSecondSection = [
     {
       title: "Logiciel",
       content: "Applicatifs, DLL, Library, Simulation numérique...",
+      img: {
+        src: "/soft.png",
+        alt: "Developpement logiciel en C++",
+      },
     },
     {
       title: "3D & Traitement d'images",
       content: "OpenGL, UnReal Engine, Vulkan, Open3D, OpenCV, VTK, VIGRA..",
+      img: {
+        src: "/image.png",
+        alt: "Computer Vision et traitement d'images par ordinateur",
+      },
     },
     {
       title: "Embarqué",
       content: "Linux, µC ARM, Windows SE, FreeRTOS, VxWorks",
+      img: {
+        src: "/binairy.png",
+        alt: "Developpement de logiciels embarqués en C/C++",
+      },
     },
     {
       title: "Calcul Scientifique",
       content: "Algo scientifique, Modélisation, Recherche Opérationnelle",
+      img: {
+        src: "/microscope.png",
+        alt: "Developpement en C++ pour le calcul scientifique",
+      },
     },
     {
-      title: "Low Latency",
+      title: "Haute performance",
       content: "STL, Boost, Asio...",
+      img: {
+        src: "/perf.png",
+        alt: "Developpement logiciel en C++ à faible latency",
+      },
     },
     {
       title: "IHM",
       content: "Qt, QML, MFC, IlogViews...",
+      img: {
+        src: "/applications.png",
+        alt: "Developpement graphique d'interface homme machine",
+      },
     },
   ];
   const contentCardsThirdSection = [
@@ -65,18 +101,30 @@ export default async function Home() {
       content:
         "Vous êtes salarié et recherchez un CDI chez une client final ? Nous vous proposons les meilleurs postes au sein de entreprises de l'écosystème C/C++.",
       className: "final",
+      img: {
+        src: "/1.png",
+        alt: "CDI chez un client final",
+      },
     },
     {
       title: "CDI Lambda Labs",
       content:
         "Vous êtes salarié et recherchez un CDI au sein d'une ESN alternative ? Rejoignez Lambda Labs en tant que salarié, participez au développement de votre société. Chaque collaborateur Lambda Labs est un associé en devenir.",
       className: "lambda",
+      img: {
+        src: "/2.png",
+        alt: "CDI chez Lambda Labs",
+      },
     },
     {
       title: "Mission Freelance",
       content:
         "Vous êtes Freelance et en recherche de mission ? Nous vous portons commercialement chez notre client en toute transparence contre une commission journalière fixe et transparente elle aussi. Une relation commerciale limpide pour tout le monde.",
       className: "freelance",
+      img: {
+        src: "/3.png",
+        alt: "Mission en freelance",
+      },
     },
   ];
   const resJobs = await axios.get("http://localhost:1337/api/jobs/?populate=*");
@@ -107,6 +155,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
@@ -134,6 +183,7 @@ export default async function Home() {
                 title={card.title}
                 content={card.content}
                 style={card.className}
+                img={card.img}
               />
             );
           })}
@@ -160,6 +210,7 @@ export default async function Home() {
                 key={card.index}
                 title={card.title}
                 content={card.content}
+                img={card.img}
               />
             );
           })}
@@ -208,10 +259,10 @@ export default async function Home() {
           content={`Créez par des spécialiste du C/C++ pour des spécialistes, nous sommes le partenaire naturel et légitime pour accompagner les entreprises dans leurs recrutements. Mettez votre profil en ligne sur Lambda Labs et devenez visible auprès de tout l'écosystème.`}
         />
         <CardsContainer style={"cards-container member"}>
-          <FilterProfil
+          {/* <FilterProfil
             filters={resTechnicalSkills.data.data}
             profils={resProfils.data.data}
-          />
+          /> */}
         </CardsContainer>
         <PrimaryBtn
           content={` Recruter votre prochain développeur C++ (${candidats.length})`}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import ThemeButton from "../Theme/ThemeButton";
 
 const NavigationLanding = () => {
   const [navbar, setNavbar] = useState(false);
@@ -12,6 +13,23 @@ const NavigationLanding = () => {
   const [blog, setBlog] = useState(false);
   const [job, setJob] = useState(false);
   const [active, setActive] = useState(false);
+  const [light, setLight] = useState(false);
+  const [dark, setDark] = useState(true);
+  const [theme, setTheme] = useState("dark");
+
+  const handleTheme = () => {
+    setLight(!light);
+    setDark(!dark);
+    if (light) {
+      setTheme("light");
+      document.querySelector("body").setAttribute("data-theme", "light");
+      document.getElementsById("card-1").setAttribute("data-theme", "light");
+    } else {
+      setTheme("dark");
+      document.querySelector("body").setAttribute("data-theme", "dark");
+      document.getElementsById("card-1").setAttribute("data-theme", "dark");
+    }
+  };
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -71,6 +89,7 @@ const NavigationLanding = () => {
           <Image src={logo} width={120} height={18} alt="logo de lambda" />
         </a>
       </div>
+
       <nav>
         {active ? (
           <ul className="open">
@@ -190,13 +209,15 @@ const NavigationLanding = () => {
           </ul>
         )}
       </nav>
+
       <div className="cta-container">
-        <Link className="cta-secondary" href="#form">
+        {/* <Link className="cta-secondary" href="#form">
           Mettre en ligne son CV
         </Link>
         <Link className="btn-blue" href="#form">
           Recevoir les nouvelles missions
-        </Link>
+        </Link> */}
+        <ThemeButton handleTheme={handleTheme} theme={theme} />
       </div>
 
       {active ? (

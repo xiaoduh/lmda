@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 import ThirdBtn from "../button/ThirdBtn";
 import Link from "next/link";
+import Image from "next/image";
 
 const JobCard = ({
   title,
@@ -23,16 +24,16 @@ const JobCard = ({
           style={{
             backgroundColor:
               job_type === `Freelance`
-                ? `#334D6E`
+                ? `#59336e`
                 : job_type === `CDI`
                 ? `#2ed4794d`
-                : `#7e3825e3`,
+                : `#334D6E`,
             color:
               job_type === `Freelance`
-                ? `#17b6ff`
+                ? `#bd17ff`
                 : job_type === `CDI`
                 ? `#2ED47A`
-                : `#FD6B3D`,
+                : `#17b6ff`,
           }}
         >
           {job_type === `Freelance`
@@ -45,20 +46,43 @@ const JobCard = ({
         <p>{desc}</p>
 
         <div className="infos">
-          <p className="info">{place}</p>
-          {skills.data.map((skill) => {
+          <div className="info">
+            <Image
+              src="/marqueur.png"
+              width={16}
+              height={16}
+              alt="localisation"
+            />
+            <p>{place}</p>
+          </div>
+
+          {/* {skills.data.map((skill) => {
             return (
               <p className="info" key={skill.attributes.name}>
                 {skill.attributes.name}
               </p>
             );
-          })}
-          <p className="info">
-            {job_type === `Freelance`
-              ? `${daily_rate}€/j`
-              : `à partir de ${salary}K`}
-          </p>
-          <p className="info">{workplace}</p>
+          })} */}
+          <div className="info">
+            <Image
+              src="/argent.png"
+              width={16}
+              height={16}
+              alt="salaire ou TJM"
+            />
+            <p>
+              {job_type === `Freelance` ? `${daily_rate}€/j` : `> ${salary}K`}
+            </p>
+          </div>
+          <div className="info">
+            <Image
+              src="/maison.png"
+              width={16}
+              height={16}
+              alt="localisation"
+            />
+            <p>{workplace}</p>
+          </div>
         </div>
         <div className="cta">
           <PrimaryBtn

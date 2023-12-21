@@ -1,3 +1,4 @@
+"use client";
 import NavigationApp from "@/components/navigation/NavigationApp";
 
 export const metadata = {

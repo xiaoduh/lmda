@@ -45,7 +45,6 @@
         font-size: 2.5rem;
         text-align: center;
         margin: 2rem 0 1rem;
-        color: #99C3FF;
 
         @media screen and (max-width: 1300px) {
             font-size: 2rem;
@@ -111,16 +110,18 @@
             flex-direction: column;
             justify-content: center;
             width: 340px;
-            height: 500px;
+            height: 90%;
             cursor: pointer;
             padding: 2rem 1rem;
             border-radius: 20px;
-            background: rgba(63, 63, 98, 0.2588235294);
+            // background: rgba(63, 63, 98, 0.2588235294);
+            background: var(--card_background);
             animation: fade linear;
+            border: 1px solid var(--border);
 
 
           &:hover {
-              border-color: #FD6B3D;
+              border-color: var(--border);
               background: transparent;
           }
 
@@ -149,11 +150,11 @@
           h3 {
             font-size: 1rem;
             margin-bottom: 1rem;
-            color: #fff;
+            color: var(--title_color);
         }
     
         p {
-            color: #fff;
+            color: var(--body_color);
             font-size: .8rem;
             text-align: left;
         }
@@ -175,7 +176,7 @@
       p {
           font-size: 1rem;
           text-align: center;
-          color: #fff;
+          color: var(--body_color);
   
           @media screen and (max-width: 1300px) {
               font-size: .8rem;

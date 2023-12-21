@@ -3,15 +3,17 @@
     flex-direction: column;
     justify-content: center;
     width: 340px;
+    height: 100%;
     cursor: pointer;
     padding: 2rem 1rem;
     border-radius: 20px;
     // border: 1px solid transparent;
     // border: 1px solid #7e7ebba9;
-    background: #3f3f6242;
+    background: var(--card_background);
+    border: 1px solid var(--border);
     animation: fade linear;
     animation-timeline: view();
-    transition: all .8s ease;
+    transition: all .3s ease;
 
     &:hover {
         // border: 1px solid #7e7ebba9;
@@ -47,36 +49,38 @@
     }
 
     p {
-        color: #fff;
+        color: #adadad;
     }
 
     .infos {
         margin: 1rem 0;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        gap: .5rem;
+        gap: 1rem;
         flex-wrap: wrap;
 
         .info {
-            background: #3F3F62;
-            padding: .5rem 1rem;
-            border-radius: 20px;
-            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .8rem !important;
+            
     
 
-    p {
-        font-size: 1rem;
-        text-align: center;
-        color: #fff;
+                p {
+                    font-size: .8rem;
+                    text-align: center;
+                    color: #adadad;
 
-        @media screen and (max-width: 1300px) {
-            font-size: .8rem;
-          }
+                    @media screen and (max-width: 1300px) {
+                        font-size: .8rem;
+                    }
 
-          @media screen and (max-width: 414px) {
-            font-size: .6rem;
-        }
-    }
+                    @media screen and (max-width: 414px) {
+                        font-size: .6rem;
+                    }
+                }
         }
     }
 

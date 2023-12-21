@@ -12,8 +12,9 @@ import NavigationApp from "@/components/navigation/NavigationApp";
 import axios from "axios";
 import HeaderEnterprise from "@/components/header/HeaderEnterprise";
 import Form from "@/components/form/Form";
-import getCandidats from "../libs/getCandidats";
+import getCandidats from "../../components/utils/getCandidats";
 import { candidatNumber } from "@/components/data/data";
+import CardExpert from "@/components/card/CardExpert";
 
 export default async function Home() {
   const resJobs = await axios.get(
@@ -23,6 +24,7 @@ export default async function Home() {
     "https://strapi-vvjo.onrender.com/api/profils?populate=*"
   );
   const candidats = await getCandidats();
+  console.log(candidats.length);
 
   const contentCardsFirstSection = [
     {
@@ -90,33 +92,93 @@ export default async function Home() {
     },
   ];
 
+  const contentCardsExpertsSection = [
+    {
+      img: "mohamed-expert.png",
+      name: "Mohamed Amine Abidi",
+      title: "Expert Software C++/Qt",
+      about:
+        "Ph.D et Ingénieur logiciel sénior, 8ans d'expertise durant lesquelles j'ai pu collaborer avec SITA, AVSimulation, RATP, Thales, ou encore iXblue.",
+      skills: [
+        "C++ 98",
+        "C++ 11",
+        "C++ 14",
+        "C++ 17",
+        "C++ 20",
+        "Qt",
+        "3D",
+        "Algorithmie",
+        "Protobuf",
+        "MQTT",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "soft",
+    },
+    {
+      img: "embbeded-expert.png",
+      name: "Laurent Blanc",
+      title: "Expert Systèmes & Logiciels Embarqués",
+      about:
+        "Expert en systèmes embarqués, passionné par l'innovation et la conception de solutions intelligentes pour des applications embarquées diverses.",
+      skills: [
+        "C/C++ logiciel",
+        "Drivers",
+        "Kernel",
+        "µC",
+        "Real Time",
+        "Protocoles de communication",
+        "Electronique",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "embbeded",
+    },
+    {
+      img: "finance-expert.png",
+      name: "Alain Souchon",
+      title: "Expert C++ appliqué à la Finance",
+      about:
+        "Expert en C++ dédié à la finance, je façonne des solutions logicielles sophistiquées pour optimiser les opérations financières. Ma passion : allier code et stratégie financière.",
+      skills: [
+        "C++",
+        "QuantLib",
+        "STL",
+        "Boost",
+        "Eigen",
+        "gsl",
+        "glpk",
+        "Finance",
+      ],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "finance",
+    },
+    {
+      img: "ia-expert.png",
+      name: "Francis Lalanne",
+      title: "Expert C++ appliqué à l'IA",
+      about:
+        "Architecte IA, créateur d'intelligences artificielles performantes et innovantes. Passionné par la convergence tech et l'impact positif sur la société.",
+      skills: ["C++", "OpenCV", "OpenCL", "TensorFlow", "VIGRA"],
+      linkedin: "https://www.linkedin.com/in/mohamed-amine-abidi-53272633/",
+      style: "ia",
+    },
+  ];
+
   return (
     <main>
       <NavigationApp />
       <HeaderEnterprise candidats={candidats} />
-      <SectionWrapper id={"member"}>
+      <SectionWrapper id={"database"}>
         {/* <Label content="La plus grande communauté dédiée au C++ et son ecosytème" /> */}
         <ContentSection
           title="Accedez aux meilleurs Freelance et CDI du secteur"
           content={`Parcourez les différents membres de notre collectif pour découvrir leurs parcours ainsi que leurs disponibilités.
           Notre réseau rassemble plus de ${candidatNumber} passionnés et spécialistes du C++ prêts à vous accompagner.`}
         />
-        {/* <CardsContainer style={"cards-container"}>
-          {resProfils.data.data.slice(0, 6).map((member) => {
-            return (
-              <CardMember
-                key={member.attributes.profil_id}
-                id={member.attributes.profil_id}
-                img={"/utilisateur.png"}
-                available={member.attributes.available}
-                first_name={member.attributes.first_name}
-                last_name={member.attributes.last_name}
-                title={member.attributes.title}
-                bio={member.attributes.bio}
-              />
-            );
+        <CardsContainer style={"cards-container"}>
+          {candidats.slice(0, 24).map((cv, index) => {
+            return <CardMember cv={cv} key={index} />;
           })}
-        </CardsContainer> */}
+        </CardsContainer>
         <iframe
           class="airtable-embed"
           src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
@@ -135,7 +197,7 @@ export default async function Home() {
           link={"/jobs"}
         />
       </SectionWrapper>
-      <SectionWrapper id={"why"}>
+      <SectionWrapper id={"what"}>
         {/* <Label content="Le plus grand réseau de compétences C/C++ pour vos projets" /> */}
         <ContentSection
           title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
@@ -159,7 +221,7 @@ export default async function Home() {
         />
         <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
       </SectionWrapper>
-      <SectionWrapper id={"mission"}>
+      <SectionWrapper id={"positionnement"}>
         {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
         <ContentSection
           title="Une stratégie de spécialisation verticale"
@@ -182,11 +244,40 @@ export default async function Home() {
         />
         <SecondaryBtn content={`Recruter un prestataire`} link={"/collectif"} />
       </SectionWrapper>
-      <SectionWrapper id={"mission"}>
-        {/* <Label content="Spécialiste du C++ et ses mises en pratique" /> */}
+      <SectionWrapper id={"assesment"}>
         <ContentSection
           title="Fondé par des experts du C++"
-          content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. Lambda est fondée par des experts du C++ afin de vous offrir des solutions qualifiées techniquement selon vos besoins précis et non des tests externalisés en ligne."
+          content="1 recrutement sur 2 se termine en échec ou n'aboutit pas à cause d'une erreur de casting sur les compétences techniques. En tant que candidat réaliser un test technique en, ligne est plus stressant et chronophage que révélateur des compétences techniques du candidats. Chaque candidat proposé est validé techniquement en amont par un de nos experts durant une évaluation conçue sur-mesure pour votre besoin."
+        />
+        <CardsContainer style={"cards-container cards-expert"}>
+          {contentCardsExpertsSection.map((card) => {
+            return (
+              <CardExpert
+                key={card.index}
+                img={card.img}
+                name={card.name}
+                title={card.title}
+                about={card.about}
+                skills={card.skills}
+                color={card.style}
+                link={card.linkedin}
+              />
+            );
+          })}
+        </CardsContainer>
+        <PrimaryBtn
+          content={`Discutons de votre besoin`}
+          link={"/partenaire"}
+        />
+        <SecondaryBtn
+          content={`Publier une mission ou un Job sur lambda`}
+          link={"/partenaire"}
+        />
+      </SectionWrapper>
+      <SectionWrapper id={"process"}>
+        <ContentSection
+          title="Un process qualitatif pour tous"
+          content="1 candidature sur 2 est un perte de temps à cause d'une non qualification technique de la part du recruteur. Notre spécialisation sur le C++ nous permet de mobiliser des experts pour rendre le process de recrutement personnalisé et qualitatif afin de réduire les erreurs de casting."
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsTestsSection.map((card) => {
@@ -216,6 +307,7 @@ export default async function Home() {
         />
         <Form />
       </SectionWrapper>
+
       <Footer />
     </main>
   );

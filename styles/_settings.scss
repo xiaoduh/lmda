@@ -1,5 +1,5 @@
-$accent-black: #1E1E30;
-$black-contrast: #1f1f32;
+$accent-black: #121212;
+$black-contrast: #121212;
 $gray: #575765;
 $gray-card: #413f4e;
 $primary: #1776ff;
@@ -16,6 +16,37 @@ $orange: #FD6B3D;
 $lambda-orange: #FD6B3D;
 $lambda-orange-2: #7e3825e3;
 
+
+[data-theme="dark"] {
+    --body_background: #121212;
+    --body_color: #fff;
+    --title_color: #99C3FF;
+    --title_h1_color: #fff;
+    --card_background: #171717;
+    --border: #99c3ff11;
+}
+
+[data-theme="light"] {
+    --body_background: #fff;
+    --body_color: #3f3f3f;
+    --title_color: #121212;
+    --title_h1_color: #121212;
+    --card_background: #f0f0f0;
+    --border: #99C3FF;
+}
+
+* {
+    transition:  all 0.3s ease-in-out !important;
+}
+
+.theme-btn {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 
 @font-face {
     font-family: "poppins-sm";
@@ -66,10 +97,21 @@ html {
 body {
     font-family: $regular;
     font-size: .8rem;
-    color: #fff;
-    background-color: $accent-black;
+    color: var(--body_color);
+    background-color: var(--body_background);
     padding: 0 14rem;
 
+    a {
+        color: var(--body_color);
+    }
+
+    h1 {
+        color: var(--title_h1_color);
+    }
+
+    h2, h3, h4 {
+        color: var(--title_color);
+    }
 
     @media screen and (max-width: 1500px) {
         padding: 0 7rem;
@@ -83,9 +125,6 @@ body {
         padding: 0 2rem;
     }
 
-    // &::-webkit-scrollbar {
-    //  display: none;
-    // }
 }
 
 .btn-blue {
@@ -117,7 +156,6 @@ body {
 }
 
 .section-container-header {
-    background: $accent-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +179,6 @@ body {
         h2 {
             font-size: 1.8rem;
             text-align: center;
-            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -156,7 +193,6 @@ body {
         h1 {
             font-size: 1.8rem;
             text-align: center;
-            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -195,7 +231,7 @@ body {
         animation: fade linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 50%;
-        margin-top: 4rem;
+        margin: 4rem 0;
 
 
         @media screen and (max-width: 1200px) {
@@ -207,15 +243,14 @@ body {
           }
 
         .card {
-            background: #3f3f6242;
-            // border: 1px solid #7e7ebba9;
+            background: var(--card_background);
+            border: 1px solid var(--border);
             border-radius: 20px;
             padding: 2rem 1rem;
             width: 340px;
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
@@ -226,7 +261,7 @@ body {
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $title;
+                // color: #575765;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -236,7 +271,6 @@ body {
             p {
                 font-size: 1rem;
                 text-align: left;
-                color: #fff;
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
@@ -253,32 +287,6 @@ body {
         }
         
     }
-
-    // .member {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     .display-filter-profil {
-    //         width: 50%;
-    //         margin: 0 auto;
-    //         padding: 0.75rem 1.2rem;
-    //         cursor: pointer;
-    //         transition: all 0.4s ease;
-    //         border-radius: 0.4rem;
-    //     }
-
-    //     .wrapper-cards-members {
-    //         display: grid;
-    //         grid-template-columns: repeat(3, 1fr);
-    //         grid-template-rows: 1fr;
-    //         grid-column-gap: 40px;
-    //         grid-row-gap: 40px;
-    //         animation: fade linear both;
-    //         animation-timeline: view();
-    //         animation-range: entry 20% cover 50%;
-    //         margin-top: 4rem;
-    //     }
-    // }
 
     .articles-container {
         display: grid;
@@ -312,15 +320,16 @@ body {
             gap: 1rem;
             cursor: pointer;
             border: 1px solid transparent;
+            background: var(--card_background);
 
             &:hover {
-                background: #3f3f6242;
+                background: transparent;
             }
 
             h3 {
                 font-size: 1rem;
                 text-align: left;
-                color: #fff;
+                // color: #fff;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -330,7 +339,7 @@ body {
             p {
                 font-size: .8rem;
                 text-align: left;
-                color: #fff;
+                color: var(--body_color);
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
@@ -368,7 +377,6 @@ body {
 }
 
 .section-container-profil {
-    background: $accent-black;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -381,7 +389,6 @@ body {
 }
 
 .section-container {
-    background: $accent-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -416,7 +423,6 @@ body {
         h1 {
             font-size: 1.8rem;
             text-align: center;
-            color: $title;
             margin-bottom: .5rem;
 
             @media screen and (max-width: 1300px) {
@@ -455,7 +461,7 @@ body {
         animation: fade linear both;
         animation-timeline: view();
         animation-range: entry 20% cover 50%;
-        margin-top: 4rem;
+        margin: 4rem 0;
 
 
         @media screen and (max-width: 1200px) {
@@ -467,26 +473,25 @@ body {
           }
 
         .card {
-            background: #3f3f6242;
-            // border: 1px solid #7e7ebba9;
+            background: var(--card_background);
+            border: 1px solid var(--border);
             border-radius: 20px;
             padding: 2rem 1rem;
             width: 340px;
             height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 1rem;
             transition: all .8s ease;
 
             &:hover {
                 background: transparent;
+                border: 1px solid #33334da9;
             }
 
             h3 {
                 font-size: 1.2rem;
                 text-align: left;
-                color: $primary;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -503,6 +508,117 @@ body {
             }
         }
 
+        .card-expert {
+            background: #3f3f6242;
+            // border: 1px solid #7e7ebba9;
+            border-radius: 20px;
+            padding: 2rem 1rem;
+            width: 340px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            transition: all .8s ease;
+
+            .image-expert {
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            .title-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: .5rem auto;
+
+                p {
+                    color: #c7c5c5;
+                }
+            }
+
+            .bio-expert {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .asses {
+                display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
+
+                .skill-tag {
+                    padding: .4rem;
+                    border-radius: .4rem;
+                }
+            }
+
+            .expert-social {
+                border-radius: 50%;
+                margin: .5rem auto 0;
+            }
+
+            button {
+                display: flex;
+                margin: 1rem auto;
+            }
+        }
+
+        .soft {
+            background: #2ed4790a;
+            border: 1px solid #2ed4795d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #2ED47A;
+            }
+        }
+
+        .embbeded {
+            background: #f7685b07;
+            border: 1px solid #f7685b4d;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #F7685B;
+            }
+        }
+
+        .finance {
+            background: rgba(23, 182, 255, 0.048);
+            border: 1px solid rgba(23, 182, 255, 0.397);
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: rgb(23, 182, 255);
+            }
+        }
+
+        .ia {
+            background: #7b2ed40e;
+            border: 1px solid #7b2ed473;
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            h3 {
+                color: #7b2ed4;
+            }
+        }
+
         #final {
                 color: #2ED47A;
         }
@@ -515,6 +631,22 @@ body {
                 color: rgb(23, 182, 255);
         }
         
+    }
+
+    .cards-expert {
+        grid-template-columns: repeat(4, 1fr);
+
+        @media screen and (max-width: 1400px) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+        @media screen and (max-width: 740px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
     }
 
     .member {
@@ -643,15 +775,15 @@ body {
             gap: 1rem;
             cursor: pointer;
             border: 1px solid transparent;
+            background: var(--card_background);
 
             &:hover {
-                background: #3f3f6242;
+                background: transparent;
             }
 
             h3 {
                 font-size: 1rem;
                 text-align: left;
-                color: #fff;
 
             @media screen and (max-width: 1300px) {
                 font-size: 1rem;
@@ -661,7 +793,6 @@ body {
             p {
                 font-size: .8rem;
                 text-align: left;
-                color: #fff;
         
                 @media screen and (max-width: 1300px) {
                     font-size: .8rem;
@@ -716,11 +847,6 @@ body {
             font-size: .6rem;
         }
     }
-}
-
-p::selection, h1::selection, h2::selection, span::selection {
-        background: #FD6B3D;
-        color: #fff;
 }
 
 .important {

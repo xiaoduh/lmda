@@ -18,22 +18,22 @@ const JobCard = ({
 }) => {
   return (
     <Link href={`/jobs/description/${jobId}`}>
-      <div className="card-job-trackslider">
+      <div className="card-job-trackslider" id="card-1">
         <p
           className={`job-type`}
           style={{
             backgroundColor:
               job_type === `Freelance`
-                ? `#334D6E`
+                ? `#59336e`
                 : job_type === `CDI`
                 ? `#2ed4794d`
-                : `#7e3825e3`,
+                : `#334D6E`,
             color:
               job_type === `Freelance`
-                ? `#17b6ff`
+                ? `#bd17ff`
                 : job_type === `CDI`
                 ? `#2ED47A`
-                : `#FD6B3D`,
+                : `#17b6ff`,
           }}
         >
           {job_type === `Freelance`
@@ -45,13 +45,13 @@ const JobCard = ({
         <h3>{title}</h3>
         <div className="infos">
           <p className="info">{place}</p>
-          {skills.data.map((skill) => {
+          {/* {skills.data.map((skill) => {
             return (
               <p className="info" key={skill.attributes.name}>
                 {skill.attributes.name}
               </p>
             );
-          })}
+          })} */}
           <p className="info">
             {job_type === `Freelance`
               ? `${daily_rate}€/j`

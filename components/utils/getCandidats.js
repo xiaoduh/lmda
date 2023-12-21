@@ -1,10 +1,6 @@
 import axios from "axios";
 
-let contactsArr = [];
-const token = "pat-eu1-cd5e23e7-7c86-4103-8404-068321db77da";
-const config = {
-  headers: { Authorization: `Bearer ${token}` },
-};
+export let contactsArr = [];
 
 const recursiveFetchContacts = async (link) => {
   const token = "pat-eu1-cd5e23e7-7c86-4103-8404-068321db77da";
@@ -21,7 +17,7 @@ const recursiveFetchContacts = async (link) => {
       let res = await promise;
       res.data.results.map((candidat) => {
         contactsArr.push(candidat);
-      }); 
+      });
 
       if (res.data.paging)
         return recursiveFetchContacts(res.data.paging.next.link);
@@ -35,6 +31,7 @@ const recursiveFetchContacts = async (link) => {
 };
 
 export default async function getCandidats() {
+  contactsArr = [];
   const res = await recursiveFetchContacts(
     "https://api.hubapi.com/crm/v3/objects/contacts?limit=100&archived=false"
   );
