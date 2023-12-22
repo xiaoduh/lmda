@@ -19,6 +19,7 @@ import ChartRepartitionSectorielle from "@/components/charts/ChartRepartitionSec
 import HeaderCollectif from "@/components/header/HeaderCollectif";
 import getCandidats from "@/components/utils/getCandidats";
 import CardExpert from "@/components/card/CardExpert";
+import Grid from "@/components/database/Grid";
 
 export default async function Home() {
   const cvArr = await getCandidats();
@@ -222,16 +223,7 @@ export default async function Home() {
           content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${cvArr.length} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
           `}
         />
-
-        <iframe
-          class="airtable-embed"
-          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
-          frameborder="0"
-          onmousewheel=""
-          width="80%"
-          height="533"
-          // style={{"background: transparent, border: 1px solid #ccc"}}
-        ></iframe>
+        <Grid candidats={cvArr} />
         <PrimaryBtn
           content={`Boostez votre recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}

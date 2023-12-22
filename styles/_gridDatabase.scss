@@ -1,0 +1,79 @@
+.database-container {
+    height: 100vh;
+    width: 100%;
+    background-color: #171717;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: scroll;
+
+    .row-database {
+        display: flex;
+        gap: 0.5rem;
+        padding: .5rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        align-items: start;
+        border-bottom: 1px solid var(--border);
+        margin: 1px 0;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--border);
+        }
+
+        .position {
+            width: 30%;
+        }
+
+        .exp {
+            width: 10%;
+
+            p {
+                width: max-content;
+                padding: .3rem;
+                border-radius: 4px;
+            }
+
+        }
+
+        .dpt {
+            width: 10%;
+
+            p {
+                width: max-content;
+                padding: .3rem;
+                border-radius: 4px;
+            }
+        }
+
+        .skills {
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            p {
+                width: max-content;
+                padding: .3rem;
+                border-radius: 4px;
+            }
+        }
+
+        .domains {
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: .5rem;
+
+            p {
+                width: max-content;
+                padding: .3rem;
+                border-radius: 4px;
+            }
+        }
+    }
+}
