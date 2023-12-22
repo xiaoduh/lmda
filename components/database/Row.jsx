@@ -344,7 +344,7 @@ const Row = ({ profil }) => {
                       style={{ backgroundColor: skillBackgroundColor(skill) }}
                       key={index}
                     >
-                      Traitement d'images/Vision par ordinateur
+                      Traitement d&apos;images/Vision par ordinateur
                     </p>
                   );
                 } else
