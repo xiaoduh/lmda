@@ -20,6 +20,7 @@ import HeaderCollectif from "@/components/header/HeaderCollectif";
 import getCandidats from "@/components/utils/getCandidats";
 import CardExpert from "@/components/card/CardExpert";
 import Grid from "@/components/database/Grid";
+import PlanSubscription from "@/components/plan/PlanSubscription";
 
 export default async function Home() {
   const cvArr = await getCandidats();
@@ -213,6 +214,146 @@ export default async function Home() {
     },
   ];
 
+  const subscriptionPlans = [
+    {
+      id: 1,
+      name: "Annonce de recrutement",
+      content:
+        "Profitez d'une visibilité unique auprès d'une audience qualifiée.",
+      price: "Gratuit",
+      features: [
+        { name: "Publication illimitée d'annonces", image: "ok.png" },
+        { name: "Collecte illimitée de candidatures", image: "ok.png" },
+        { name: "Espace utilisateur", image: "ok.png" },
+        {
+          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          image: "cross.png",
+        },
+        {
+          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          image: "cross.png",
+        },
+        {
+          name: `Recherche de candidats hors CVthèque Lambda`,
+          image: "cross.png",
+        },
+        {
+          name: `Pré-qualification technique sur mesure`,
+          image: "cross.png",
+        },
+        {
+          name: `Synthèse détaillée sur chaque candidature`,
+          image: "cross.png",
+        },
+        {
+          name: `Formation accélerée sur mesure`,
+          image: "cross.png",
+        },
+        {
+          name: `Suivi de l'intégration & Formations`,
+          image: "cross.png",
+        },
+      ],
+      btn: "Commencer gratuitement",
+      img: "annonce.png",
+      link: "/partenaire",
+    },
+    {
+      id: 2,
+      name: "Recrutement CDI",
+      content:
+        "Profitez de notre CVthèque et notre expertise pour accelerer et optimiser votre recrutement.",
+      price: "Devis",
+      features: [
+        { name: "Publication illimitée d'annonces", image: "ok.png" },
+        { name: "Collecte illimitée de candidatures", image: "ok.png" },
+        { name: "Espace utilisateur", image: "ok.png" },
+        {
+          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          image: "ok.png",
+        },
+        {
+          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          image: "ok.png",
+        },
+        {
+          name: `Recherche de candidats hors CVthèque Lambda`,
+          image: "ok.png",
+        },
+        {
+          name: `Pré-qualification technique sur mesure`,
+          image: "ok.png",
+        },
+        {
+          name: `Synthèse détaillée sur chaque candidature`,
+          image: "ok.png",
+        },
+        {
+          name: `Formation accélerée Pré-intégration`,
+          image: "ok.png",
+        },
+        {
+          name: `Suivi de l'intégration & Formations`,
+          image: "ok.png",
+        },
+        {
+          name: `Commission fixe et transparente`,
+          image: "cross.png",
+        },
+      ],
+      btn: "Je recrute",
+      img: "cdi.png",
+      link: "/partenaire",
+    },
+    {
+      id: 3,
+      name: "Assistance Technique en Régie",
+      content:
+        "Profitez de notre réseau de Freelance et Consultants pour staffer votre équipe en toute transparence.",
+      price: "80€/jour",
+      features: [
+        { name: "Publication illimitée d'annonces", image: "ok.png" },
+        { name: "Collecte illimitée de candidatures", image: "ok.png" },
+        { name: "Espace utilisateur", image: "ok.png" },
+        {
+          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          image: "ok.png",
+        },
+        {
+          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          image: "ok.png",
+        },
+        {
+          name: `Recherche de candidats hors CVthèque Lambda`,
+          image: "ok.png",
+        },
+        {
+          name: `Pré-qualification technique sur mesure`,
+          image: "ok.png",
+        },
+        {
+          name: `Synthèse détaillée sur chaque candidature`,
+          image: "ok.png",
+        },
+        {
+          name: `Formation accélerée Pré-intégration`,
+          image: "ok.png",
+        },
+        {
+          name: `Suivi de l'intégration & Formations`,
+          image: "ok.png",
+        },
+        {
+          name: `Commission fixe et transparente`,
+          image: "ok.png",
+        },
+      ],
+      btn: "Je recrute",
+      img: "regie.png",
+      link: "/partenaire",
+    },
+  ];
+
   return (
     <main>
       <NavigationApp cvArr={cvArr} />
@@ -342,6 +483,17 @@ export default async function Home() {
           content={`Optimisez votre process recrutement (${cvArr.length} CV)`}
           link={"/partenaire"}
         />
+      </SectionWrapper>
+      <SectionWrapper id={"plan"}>
+        <ContentSection
+          title="Partenaire à 360° de vos recrutements"
+          content="Notre offre de recrutement à 360° offre à votre entreprise une panoplie complète de services pour dénicher les meilleurs talents dans l'écosystème C++. Mettez à profit notre expertise technique pointue et bénéficiez de services variés, dont certains gratuits, pour optimiser votre processus de recrutement. Des évaluations techniques approfondies à la mise en relation avec des experts, nous vous proposons une expérience complète pour vous assurer de choisir la meilleure équipe qui répond parfaitement à vos besoins. Avec notre approche holistique, vous pouvez minimiser les risques et maximiser la réussite de vos recrutements."
+        />
+        <CardsContainer style={"cards-container"}>
+          {subscriptionPlans.map((plan, index) => {
+            return <PlanSubscription plan={plan} key={index} />;
+          })}
+        </CardsContainer>
       </SectionWrapper>
       <SectionWrapper id={"database"}>
         <Grid candidats={cvArr} />
