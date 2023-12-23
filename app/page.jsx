@@ -21,6 +21,7 @@ import ChartSeniorite from "@/components/charts/ChartSeniorite";
 import ChartRepartitionGeographique from "@/components/charts/ChartRepartitionGeographique";
 import ChartEvolutionHebdo from "@/components/charts/ChartEvolutionHebdo";
 import SectionChart from "@/components/section/SectionChart";
+import Grid from "@/components/database/Grid";
 
 export const metadata = {
   title: "Emplois et Missions sur l'écosystème C/C++",
@@ -333,15 +334,7 @@ export default async function Home() {
           title="Soyez visible auprès des entreprises"
           content={`Tout comme ${cvArr.length} passionnés et spécialistes du C/C++, référencez votre CV sur Lambda Labs pour gagner en visibilité auprès des entreprises ayant recours à vos compéntences.`}
         />
-        <iframe
-          class="airtable-embed"
-          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
-          frameborder="0"
-          onmousewheel=""
-          width="80%"
-          height="533"
-          // style={{"background: transparent, border: 1px solid #ccc"}}
-        ></iframe>
+        <Grid candidats={cvArr} />
         <PrimaryBtn
           content={`Je cherche une mission (${resJobs.data.data.length})`}
           link={"/jobs"}
