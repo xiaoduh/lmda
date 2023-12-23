@@ -3,7 +3,6 @@ import React from "react";
 import PrimaryBtn from "../button/PrimaryBtn";
 
 const PlanSubscription = ({ plan }) => {
-  console.log(plan);
   return (
     <div className="card card-plan">
       <div className="content">

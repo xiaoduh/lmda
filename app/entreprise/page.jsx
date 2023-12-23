@@ -226,11 +226,11 @@ export default async function Home() {
         { name: "Collecte illimitée de candidatures", image: "ok.png" },
         { name: "Espace utilisateur", image: "ok.png" },
         {
-          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          name: `Accès CVthèque Lambda (+${cvArr.length} profils)`,
           image: "cross.png",
         },
         {
-          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          name: `Accès au réseau Freelance Lambda (+${cvArr.length} profils)`,
           image: "cross.png",
         },
         {
@@ -269,11 +269,11 @@ export default async function Home() {
         { name: "Collecte illimitée de candidatures", image: "ok.png" },
         { name: "Espace utilisateur", image: "ok.png" },
         {
-          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          name: `Accès CVthèque Lambda (+${cvArr.length} profils)`,
           image: "ok.png",
         },
         {
-          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          name: `Accès au réseau Freelance Lambda (+${cvArr.length} profils)`,
           image: "ok.png",
         },
         {
@@ -316,11 +316,11 @@ export default async function Home() {
         { name: "Collecte illimitée de candidatures", image: "ok.png" },
         { name: "Espace utilisateur", image: "ok.png" },
         {
-          name: `Accès CVthèque Lambda (+${candidats.length} membres)`,
+          name: `Accès CVthèque Lambda (+${cvArr.length} profils)`,
           image: "ok.png",
         },
         {
-          name: `Accès au réseau Freelance Lambda (+${candidats.length} membres)`,
+          name: `Accès au réseau Freelance Lambda (+${cvArr.length} profils)`,
           image: "ok.png",
         },
         {
