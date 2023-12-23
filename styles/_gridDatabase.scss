@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     background-color: #171717;
-    border: 1px solid var(--border);
+    border: 1px solid #99c3ff11;
     padding: 1rem;
     border-radius: 8px;
     overflow-y: scroll;
@@ -19,12 +19,12 @@
         align-items: center;
         width: 100%;
         align-items: start;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid #99c3ff11;
         margin: 1px 0;
         cursor: pointer;
 
         &:hover {
-            background: var(--border);
+            background: #99c3ff11;
         }
 
         .position {

@@ -219,7 +219,7 @@ export default async function Home() {
       <HeaderEnterprise cvArr={cvArr} />
       <SectionWrapper id={"database"}>
         <ContentSection
-          title="Accedez aux meilleurs Freelances et Salariés du secteur"
+          title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
           content={`Sourcer des compétences est chronophage et incertain. Notre CVthèque rassemble aujourd'hui ${cvArr.length} spécialistes du C/C++. Grâce à Lambda Labs, accédez à notre base de données pour réduire votre process de staffing et accroître la qualité des candidatures proposées.
           `}
         />
@@ -235,8 +235,8 @@ export default async function Home() {
       </SectionWrapper>
       <SectionWrapper id={"what"}>
         <ContentSection
-          title={`Le plus grand réseau de compétences C/C++ pour vos projets`}
-          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${cvArr.length} ingénieurs référencés, +987 abonnés à notre newsletter « New Job » et +5k de visiteurs uniques mensuels.`}
+          title="Accedez aux meilleurs Freelances et Salariés du secteur"
+          content={`Notre plateforme des services numériques spécialisée en C/C++ vous permet d'accéder à des milliers de Freelance ou salariés rapidement. Lambda c'est aujourd'hui, + ${cvArr.length} ingénieurs référencés, +987 abonnés à notre newsletter et +5k de visiteurs uniques mensuels.`}
         />
         <CardsContainer style={"cards-container"}>
           {contentCardsFirstSection.map((card) => {
@@ -344,15 +344,7 @@ export default async function Home() {
         />
       </SectionWrapper>
       <SectionWrapper id={"database"}>
-        <iframe
-          class="airtable-embed"
-          src="https://airtable.com/embed/app0QAe7GwEdhIEbZ/shrz9c3azi6rsHW4b?backgroundColor=orangeDusty&viewControls=on"
-          frameborder="0"
-          onmousewheel=""
-          width="80%"
-          height="533"
-          // style={{"background: transparent, border: 1px solid #ccc"}}
-        ></iframe>
+        <Grid candidats={cvArr} />
       </SectionWrapper>
       <SectionWrapper>
         <SectionChart>
