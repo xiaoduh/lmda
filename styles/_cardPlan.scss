@@ -1,0 +1,43 @@
+.card-plan {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+        margin-bottom: 1rem;
+
+        h3 {
+            margin-bottom: .5rem;
+        }
+
+        img {
+            margin: 1rem 0;
+        }
+    }
+
+    .price {
+        margin: 1rem auto;
+
+        p {
+            font-size: 1.5rem !important;
+            color: #575765;
+        }
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .feature {
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+            align-items: center;
+        }
+    }
+
+    a {
+        margin: 0 auto;
+    }
+    
+}

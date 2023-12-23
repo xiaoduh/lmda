@@ -14,6 +14,7 @@ import axios from "axios";
 import HeaderEngineer from "@/components/header/HeaderEngineer";
 import FilterProfil from "@/components/Filter/FilterProfil";
 import getCandidats from "../components/utils/getCandidats";
+import Grid from "@/components/database/Grid";
 
 export default async function Home() {
   const contentCardsFirstSection = [
@@ -138,6 +139,7 @@ export default async function Home() {
     "http://localhost:1337/api/technical-skills"
   );
   const candidats = await getCandidats();
+  // console.log(candidats[1000]);
 
   return (
     <main>
@@ -258,12 +260,7 @@ export default async function Home() {
           title="Soyez visible sur l'écosystème C/C++"
           content={`Créez par des spécialiste du C/C++ pour des spécialistes, nous sommes le partenaire naturel et légitime pour accompagner les entreprises dans leurs recrutements. Mettez votre profil en ligne sur Lambda Labs et devenez visible auprès de tout l'écosystème.`}
         />
-        <CardsContainer style={"cards-container member"}>
-          {/* <FilterProfil
-            filters={resTechnicalSkills.data.data}
-            profils={resProfils.data.data}
-          /> */}
-        </CardsContainer>
+        <Grid candidats={candidats} />
         <PrimaryBtn
           content={` Recruter votre prochain développeur C++ (${candidats.length})`}
           link={"/collectif"}
