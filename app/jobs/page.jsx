@@ -2,7 +2,7 @@ import ContentSection from "@/components/content/ContentSectionApp";
 import Subscriber from "@/components/form/Subscriber";
 import JobCard from "@/components/job/JobCard";
 import Label from "@/components/label/Label";
-import CardsContainer from "@/components/layout/CardsContainer";
+import CardsContainer from "@/components/container/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import React from "react";

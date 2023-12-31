@@ -156,15 +156,15 @@
                 display: none;
             }
 
-            a:first-child {
-                color: #1776FF;
-                border: 1px solid #1776FF;
+            // a:first-child {
+            //     color: #1776FF;
+            //     border: 1px solid #1776FF;
 
-                &:hover {
-                    background: #1776FF;
-                    color: #fff;
-                }
-            }
+            //     &:hover {
+            //         background: #1776FF;
+            //         color: #fff;
+            //     }
+            // }
 
             .cta {
                 display: flex;
@@ -173,6 +173,24 @@
     
                 @media (max-width: 750px) {
                     display: none;
+                }
+            }
+
+            .user-info {
+                display: flex;
+                gap: 1.5rem;
+
+                .bonjour {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                }
+
+                button {
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
                 }
             }
 

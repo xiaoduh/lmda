@@ -6,7 +6,7 @@ import axios from "axios";
 import ContentArticle from "@/components/blog/ContentArticle";
 import SectionWrapper from "@/components/section/SectionWrapper";
 import ContentSection from "@/components/content/ContentSectionApp";
-import CardsContainer from "@/components/layout/CardsContainer";
+import CardsContainer from "@/components/container/CardsContainer";
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
 import JobCard from "@/components/job/JobCard";

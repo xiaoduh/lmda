@@ -2,7 +2,7 @@ import SectionWrapper from "@/components/section/SectionWrapper";
 import "../../styles/index.scss";
 import Label from "@/components/label/Label";
 import ContentSection from "@/components/content/ContentSectionLanding";
-import CardsContainer from "@/components/layout/CardsContainer";
+import CardsContainer from "@/components/container/CardsContainer";
 import Card from "@/components/card/Card";
 import CardMember from "@/components/member/CardMember";
 import PrimaryBtn from "@/components/button/PrimaryBtn";
