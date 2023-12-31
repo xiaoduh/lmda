@@ -1,4 +1,5 @@
 "use client";
+
 export const metadata = {
   title: "Lambda, seule plateforme spécialisée sur l'écosystème C++",
   description:

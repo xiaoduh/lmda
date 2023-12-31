@@ -4,6 +4,8 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 import ThemeButton from "../Theme/ThemeButton";
+import Signup from "../log/SignupBtn";
+import Login from "../log/LoginBtn";
 
 const NavigationLanding = () => {
   const [navbar, setNavbar] = useState(false);
@@ -217,7 +219,8 @@ const NavigationLanding = () => {
         <Link className="btn-blue" href="#form">
           Recevoir les nouvelles missions
         </Link> */}
-        <ThemeButton handleTheme={handleTheme} theme={theme} />
+        <Signup />
+        <Login />
       </div>
 
       {active ? (

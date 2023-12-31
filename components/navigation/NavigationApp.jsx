@@ -4,6 +4,8 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 import ThemeButton from "../Theme/ThemeButton";
+import Signup from "../log/SignupBtn";
+import Login from "../log/LoginBtn";
 
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
@@ -85,7 +87,8 @@ const NavigationApp = () => {
         <Link className="btn-blue" href="/partenaire">
           Publier une mission
         </Link> */}
-        <ThemeButton handleTheme={handleTheme} theme={theme} />
+        <Signup />
+        <Login />
       </div>
       {active ? (
         <div

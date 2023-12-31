@@ -1,6 +1,6 @@
 import ArticleCardContainer from "@/components/blog/ArticleCardContainer";
 import ContentSection from "@/components/content/ContentSectionApp";
-import CardsContainer from "@/components/layout/CardsContainer";
+import CardsContainer from "@/components/container/CardsContainer";
 import FooterApp from "@/components/navigation/FooterApp";
 import React from "react";
 import "../../styles/index.scss";

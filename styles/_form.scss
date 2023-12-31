@@ -1,11 +1,64 @@
 .form-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 50%;
     margin: 6rem auto;
 
     @media screen and (max-width: 414px) {
         width: 100%;
+    }
+
+    .success-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .sucess-icon-message {
+            margin: 0 auto;
+        }
+
+        a {
+            background: $color-confirm-2;
+            padding: 1rem;
+            border-radius: 8px;
+            color: $color-confirm;
+            font-size: .8rem;
+            font-family: $regular;
+            cursor: pointer;
+            padding: 0.75rem 1.2rem;
+            transition: all .8s ease;
+            border: 1px solid $color-confirm;
+            margin: 0 auto;
+        
+        
+            @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+        
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
+        
+            &:hover {
+                border: 1px solid $color-confirm;
+                color: $color-confirm;
+                background: transparent;
+            }
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;        }
+    }
+
+    .error {
+        margin: 1rem 0;
+        background: $color-stop-2;
+        padding: 1rem;
+        border-radius: 8px;
+        color: $color-stop;
+        border: 1px solid $color-stop;
     }
 
     form {
@@ -47,6 +100,14 @@
             border-color: #1776ff;
         }
         }
+    }
+
+    .input-green {
+        border: 1px solid #2ED47A;
+    }
+
+    .input-red {
+        border: 1px solid #F7685B;
     }
 
     .success  {

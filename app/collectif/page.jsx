@@ -1,6 +1,6 @@
 import ContentSection from "@/components/content/ContentSectionApp";
 import Label from "@/components/label/Label";
-import CardsContainer from "@/components/layout/CardsContainer";
+import CardsContainer from "@/components/container/CardsContainer";
 import CardMember from "@/components/member/CardMember";
 import FooterApp from "@/components/navigation/FooterApp";
 import SectionWrapper from "@/components/section/SectionWrapper";
