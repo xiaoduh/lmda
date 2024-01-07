@@ -58,7 +58,7 @@ const DisplayDomainData = ({ data }) => {
           <div className="legend-container">
             <div className="legend">
               <Image src="/code.png" width={24} height={24} alt="TJM moyenne" />
-              <p>Domaine d'applications du C++ des répondants.</p>
+              <p>Domaine d&apos;applications du C++ des répondants.</p>
             </div>
             <div className="legend">
               <div className="track-legend"></div>

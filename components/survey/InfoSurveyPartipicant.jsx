@@ -41,7 +41,7 @@ const InfoSurveyPartipicant = ({ text }) => {
       </div>
 
       <p>
-        Aujourd'hui, {dateParser(currentDate)},{" "}
+        Aujourd&apos;hui, {dateParser(currentDate)},{" "}
         <span className="green">{data?.count}</span> {text} ont participés au
         sondage.
       </p>

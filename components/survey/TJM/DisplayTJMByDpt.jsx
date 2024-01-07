@@ -64,7 +64,7 @@ const DisplayTJMByDpt = ({ data }) => {
                 height={24}
                 alt="TJM moyen par départements français"
               />
-              <p>Moyenne des TJM selon le département des donneurs d'ordre.</p>
+              <p>Moyenne des TJM selon le département des donneurs d&apos;ordre.</p>
             </div>
           </div>
           <div className="legend">

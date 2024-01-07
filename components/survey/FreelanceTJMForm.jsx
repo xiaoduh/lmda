@@ -232,7 +232,7 @@ const FreelanceTJMForm = () => {
           {/* Question 2: Domaines d'application du C++ */}
           {true && (
             <>
-              <label htmlFor="cppDomains">Domaine d'application du C++</label>
+              <label htmlFor="cppDomains">Domaine d&apos;application du C++</label>
               <select
                 id="cppDomains"
                 value={cppDomains}

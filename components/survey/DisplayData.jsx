@@ -10,7 +10,7 @@ import DisplayTJMByDomain from "./TJM/DisplayTJMByDomain";
 const DisplayData = ({ data }) => {
   return (
     <SectionDataSurveyWrapper>
-      <h2 className="title">Baromètre de l'écosystème C/C++ Freelances.</h2>
+      <h2 className="title">Baromètre de l&apos;écosystème C/C++ Freelances.</h2>
       <DisplayTjmData />
       <DisplayExpData />
       <DisplayDomainData data={data} />
