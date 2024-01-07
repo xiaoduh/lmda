@@ -58,158 +58,175 @@ const NavigationLanding = ({ cvArr, jobs }) => {
   });
 
   return (
-    <div className={navbar ? "navigation active" : "navigation"}>
-      <div className="logo">
-        <a href="#header" title="introduction">
-          <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
-        </a>
-      </div>
-      <nav>
+    <nav>
+      <div className={navbar ? "navigation active" : "navigation"}>
+        <div className="logo">
+          <a href="#header" title="introduction">
+            <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
+          </a>
+        </div>
+        <nav>
+          {active ? (
+            <ul className="open">
+              <li onClick={(e) => handleModals(e)}>
+                {mission ? (
+                  <a
+                    href="#mission"
+                    className="selected"
+                    id="2"
+                    title="mission"
+                  >
+                    Spécialisation
+                  </a>
+                ) : (
+                  <a href="#mission" id="2" title="mission">
+                    Spécialisation
+                  </a>
+                )}
+              </li>
+              <li onClick={(e) => handleModals(e)}>
+                {why ? (
+                  <a href="#why" className="selected" id="1" title="why">
+                    ADN
+                  </a>
+                ) : (
+                  <a href="#why" id="1" title="why">
+                    ADN
+                  </a>
+                )}
+              </li>
+
+              <li onClick={(e) => handleModals(e)}>
+                {job ? (
+                  <a href="#jobs" className="selected" id="5" title="job">
+                    Jobs ({jobs})
+                  </a>
+                ) : (
+                  <a href="#jobs" id="5" title="job">
+                    Jobs ({jobs})
+                  </a>
+                )}
+              </li>
+              <li onClick={(e) => handleModals(e)}>
+                {member ? (
+                  <a
+                    href="#member"
+                    className="selected"
+                    id="3"
+                    title="collectif"
+                  >
+                    CVthèque (+1500 CV)
+                  </a>
+                ) : (
+                  <a href="#member" id="3" title="collectif">
+                    CVthèque (+1500 CV)
+                  </a>
+                )}
+              </li>
+              <li>
+                <Link href="/entreprise" id="4">
+                  Partenaire
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+            </ul>
+          ) : (
+            <ul>
+              <li onClick={(e) => handleModals(e)}>
+                {mission ? (
+                  <a
+                    href="#mission"
+                    className="selected"
+                    id="2"
+                    title="expertise"
+                  >
+                    Spécialiste
+                  </a>
+                ) : (
+                  <a href="#mission" id="2" title="expertise">
+                    Spécialiste
+                  </a>
+                )}
+              </li>
+              <li onClick={(e) => handleModals(e)}>
+                {why ? (
+                  <a href="#why" className="selected" id="1" title="values">
+                    ADN
+                  </a>
+                ) : (
+                  <a href="#why" id="1" title="values">
+                    ADN
+                  </a>
+                )}
+              </li>
+              <li onClick={(e) => handleModals(e)}>
+                {job ? (
+                  <a href="#jobs" className="selected" id="5" title="job">
+                    Jobs ({jobs})
+                  </a>
+                ) : (
+                  <a href="#jobs" id="5" title="job">
+                    Jobs ({jobs})
+                  </a>
+                )}
+              </li>
+              <li onClick={(e) => handleModals(e)}>
+                {member ? (
+                  <a
+                    href="#member"
+                    className="selected"
+                    id="3"
+                    title="collectif"
+                  >
+                    CVthèque (+1500 CV)
+                  </a>
+                ) : (
+                  <a href="#member" id="3" title="collectif">
+                    CVthèque (+1500 CV)
+                  </a>
+                )}
+              </li>
+
+              <li>
+                <Link href="/entreprise" id="4">
+                  Partenaire
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+            </ul>
+          )}
+        </nav>
+        <div className="cta-container">
+          <Link
+            className="cta-secondary"
+            href="/entreprise"
+            title="Proposer une mission"
+          >
+            Je recrute (+1500 CV)
+          </Link>
+          <Link className="btn-blue" href="/jobs" title="Trouver une mission">
+            Jobs (7)
+          </Link>
+        </div>
         {active ? (
-          <ul className="open">
-            <li onClick={(e) => handleModals(e)}>
-              {mission ? (
-                <a href="#mission" className="selected" id="2" title="mission">
-                  Spécialisation
-                </a>
-              ) : (
-                <a href="#mission" id="2" title="mission">
-                  Spécialisation
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
-              {why ? (
-                <a href="#why" className="selected" id="1" title="why">
-                  ADN
-                </a>
-              ) : (
-                <a href="#why" id="1" title="why">
-                  ADN
-                </a>
-              )}
-            </li>
-
-            <li onClick={(e) => handleModals(e)}>
-              {job ? (
-                <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs ({jobs})
-                </a>
-              ) : (
-                <a href="#jobs" id="5" title="job">
-                  Jobs ({jobs})
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
-              {member ? (
-                <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque (+1500 CV)
-                </a>
-              ) : (
-                <a href="#member" id="3" title="collectif">
-                  CVthèque (+1500 CV)
-                </a>
-              )}
-            </li>
-            <li>
-              <Link href="/entreprise" id="4">
-                Partenaire
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
+          <div
+            className="burger-menu active"
+            id="burger"
+            onClick={() => setActive(!active)}
+          ></div>
         ) : (
-          <ul>
-            <li onClick={(e) => handleModals(e)}>
-              {mission ? (
-                <a
-                  href="#mission"
-                  className="selected"
-                  id="2"
-                  title="expertise"
-                >
-                  Spécialiste
-                </a>
-              ) : (
-                <a href="#mission" id="2" title="expertise">
-                  Spécialiste
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
-              {why ? (
-                <a href="#why" className="selected" id="1" title="values">
-                  ADN
-                </a>
-              ) : (
-                <a href="#why" id="1" title="values">
-                  ADN
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
-              {job ? (
-                <a href="#jobs" className="selected" id="5" title="job">
-                  Jobs ({jobs})
-                </a>
-              ) : (
-                <a href="#jobs" id="5" title="job">
-                  Jobs ({jobs})
-                </a>
-              )}
-            </li>
-            <li onClick={(e) => handleModals(e)}>
-              {member ? (
-                <a href="#member" className="selected" id="3" title="collectif">
-                  CVthèque (+1500 CV)
-                </a>
-              ) : (
-                <a href="#member" id="3" title="collectif">
-                  CVthèque (+1500 CV)
-                </a>
-              )}
-            </li>
-
-            <li>
-              <Link href="/entreprise" id="4">
-                Partenaire
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
+          <div
+            className="burger-menu"
+            id="burger"
+            onClick={() => setActive(!active)}
+          ></div>
         )}
-      </nav>
-      <div className="cta-container">
-        <Link
-          className="cta-secondary"
-          href="/entreprise"
-          title="Proposer une mission"
-        >
-          Je recrute (+1500 CV)
-        </Link>
-        <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Jobs (7)
-        </Link>
       </div>
-      {active ? (
-        <div
-          className="burger-menu active"
-          id="burger"
-          onClick={() => setActive(!active)}
-        ></div>
-      ) : (
-        <div
-          className="burger-menu"
-          id="burger"
-          onClick={() => setActive(!active)}
-        ></div>
-      )}
-    </div>
+    </nav>
   );
 };
 
