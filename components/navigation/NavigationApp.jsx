@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
-import getCandidats from "../utils/getCandidats";
 
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
@@ -26,10 +25,11 @@ const NavigationApp = () => {
       <div className={navbar ? "navigation active" : "navigation"}>
         <div className="logo">
           <Link href="/" title="home">
-            <img
-              src="/logo.png"
-              alt="logo_lambda"
-              title="lambda_plateforme_services_numerique_c_cpp"
+            <Image
+              src={"/logo.png"}
+              width={120}
+              height={18}
+              alt="logo de lambda"
             />
           </Link>
         </div>

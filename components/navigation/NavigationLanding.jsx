@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavigationLanding = ({ cvArr, jobs }) => {
   const [navbar, setNavbar] = useState(false);
@@ -61,9 +62,14 @@ const NavigationLanding = ({ cvArr, jobs }) => {
     <nav>
       <div className={navbar ? "navigation active" : "navigation"}>
         <div className="logo">
-          <a href="#header" title="introduction">
-            <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
-          </a>
+          <Link href="/">
+            <Image
+              src={"/logo.png"}
+              width={120}
+              height={18}
+              alt="logo de lambda"
+            />
+          </Link>
         </div>
         <div className="links">
           {active ? (
