@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
+import Signup from "../log/SignupBtn";
+import Login from "../log/LoginBtn";
 
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
@@ -73,16 +75,8 @@ const NavigationApp = () => {
           )}
         </div>
         <div className="cta-container">
-          <Link
-            className="cta-secondary"
-            href="/entreprise"
-            title="Proposer une mission"
-          >
-            Je recrute (+1500 CV)
-          </Link>
-          <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-            Jobs (7)
-          </Link>
+          <Signup />
+          <Login />
         </div>
         {active ? (
           <div
