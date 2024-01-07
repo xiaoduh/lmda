@@ -23,13 +23,13 @@ export default async function DataForFreelance() {
   return (
     <main>
       <header className="main-header" id="header">
-        <h1>Découvrez les dernières évolutions sur le marché.</h1>
+        <h1>Découvrez notre baromètre communautaire sur l'écosystème C/C++.</h1>
         <p>
           Notre communauté fournit des données précieuses pour renforcer votre
           compétitivité sur le marché des freelances. Découvrez
           trimestriellement des informations sur les Taux Journaliers Moyens
           (TJM) pratiqués en fonction de la situation géographique du donneur
-          d'ordre, des pratiques courantes et de l'expérience des
+          d&apos;ordre, des pratiques courantes et de l&apos;expérience des
           professionnels.
         </p>
       </header>
