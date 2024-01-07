@@ -23,7 +23,7 @@ export default async function DataForFreelance() {
   return (
     <main>
       <header className="main-header" id="header">
-        <h1>Découvrez notre baromètre communautaire sur l'écosystème C/C++.</h1>
+        <h1>Découvrez notre baromètre communautaire sur l&apos;écosystème C/C++.</h1>
         <p>
           Notre communauté fournit des données précieuses pour renforcer votre
           compétitivité sur le marché des freelances. Découvrez
