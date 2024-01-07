@@ -65,7 +65,7 @@ const NavigationLanding = ({ cvArr, jobs }) => {
             <img src="/logo.png" alt="logo_lambda" title="logo_lambda" />
           </a>
         </div>
-        <nav>
+        <div className="links">
           {active ? (
             <ul className="open">
               <li onClick={(e) => handleModals(e)}>
@@ -199,7 +199,7 @@ const NavigationLanding = ({ cvArr, jobs }) => {
               </li>
             </ul>
           )}
-        </nav>
+        </div>
         <div className="cta-container">
           <Link
             className="cta-secondary"

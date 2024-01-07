@@ -33,7 +33,7 @@ const NavigationApp = () => {
             />
           </Link>
         </div>
-        <nav>
+        <div className="links">
           {active ? (
             <ul className="open">
               {/* <li>
@@ -71,7 +71,7 @@ const NavigationApp = () => {
               </li>
             </ul>
           )}
-        </nav>
+        </div>
         <div className="cta-container">
           <Link
             className="cta-secondary"
