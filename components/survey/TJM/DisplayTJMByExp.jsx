@@ -101,10 +101,10 @@ const DisplayTJMByExp = ({ data }) => {
               />
               <p>Moyenne des TJM réparties par séniorité des répondants.</p>
             </div>
-          </div>
-          <div className="legend">
-            <div className="track-legend"></div>
-            <p>% de répondants</p>
+            <div className="legend">
+              <div className="track-legend"></div>
+              <p>% de répondants</p>
+            </div>
           </div>
         </>
       ) : (
