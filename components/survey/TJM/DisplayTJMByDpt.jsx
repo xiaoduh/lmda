@@ -52,7 +52,7 @@ const DisplayTJMByDpt = ({ data }) => {
                   style={{
                     width: `${(countByDpt[dpt] / data.length) * 100}%`,
                   }}
-                >{`Moyenne TJM : ${averageTJMByDpt[dpt].toFixed(2)} €`}</div>
+                >{`Moyenne : ${averageTJMByDpt[dpt].toFixed(2)} €`}</div>
               </div>
             </div>
           ))}
@@ -65,7 +65,7 @@ const DisplayTJMByDpt = ({ data }) => {
                 alt="TJM moyen par départements français"
               />
               <p>
-                Moyenne des TJM selon le département des donneurs d&apos;ordre.
+                Moyenne des TJ selon le département des donneurs d&apos;ordre.
               </p>
             </div>
             <div className="legend">

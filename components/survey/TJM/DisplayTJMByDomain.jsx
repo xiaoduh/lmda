@@ -98,7 +98,7 @@ const DisplayTJMByDomain = ({ data }) => {
                   style={{
                     width: `${(countByDomains[domain] / data.length) * 100}%`,
                   }}
-                >{`Moyenne TJM : ${averageTJMByDomains[domain].toFixed(
+                >{`Moyenne : ${averageTJMByDomains[domain].toFixed(
                   2
                 )} €`}</div>
               </div>
@@ -107,7 +107,7 @@ const DisplayTJMByDomain = ({ data }) => {
           <div className="legend-container">
             <div className="legend">
               <Image src="/code.png" width={24} height={24} alt="TJM moyenne" />
-              <p>Moyenne des TJM selon les types de missions des répondants.</p>
+              <p>Moyenne des TJ selon les types de missions des répondants.</p>
             </div>
             <div className="legend">
               <div className="track-legend"></div>

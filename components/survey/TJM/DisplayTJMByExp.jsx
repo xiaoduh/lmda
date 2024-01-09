@@ -87,7 +87,7 @@ const DisplayTJMByExp = ({ data }) => {
                       (countByExperience[experience] / data.length) * 100
                     }%`,
                   }}
-                >{`Moyenne TJM : ${groupedData[experience].toFixed(2)} €`}</div>
+                >{`Moyenne : ${groupedData[experience].toFixed(2)} €`}</div>
               </div>
             </div>
           ))}
@@ -99,7 +99,7 @@ const DisplayTJMByExp = ({ data }) => {
                 height={24}
                 alt="TJM moyen par niveau d'experience"
               />
-              <p>Moyenne des TJM réparties par séniorité des répondants.</p>
+              <p>Moyenne des TJ réparties par séniorité des répondants.</p>
             </div>
             <div className="legend">
               <div className="track-legend"></div>
