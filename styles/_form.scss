@@ -165,7 +165,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10rem 10rem;
     gap: 5rem;
     align-items: center;
     
@@ -228,7 +227,7 @@
         animation: fade linear;
         animation-timeline: view();
         transition: all .3s ease;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
 
@@ -377,7 +376,6 @@
     }
 
     .info-survey-freelance {
-        width: 30%;
         height: max-content;
         display: flex;
         flex-direction: column;

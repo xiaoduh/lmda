@@ -1,10 +1,25 @@
 .section-data-survey-wrapper {
-    padding: 10rem 10rem;
+    padding: 5rem 15rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     // grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
+    width: 100%;
+
+    @media screen and (max-width: 1300px) {
+        padding: 5rem 5rem;
+      }
+
+      @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 900px) {
+        padding: 1rem;
+      }
+
 
     .loading-data {
         display: flex;
@@ -20,8 +35,12 @@
         grid-area: 1 / 1 / 2 / 4;
         font-size: 2.5rem;
         text-align: center;
-        margin: 2rem 0 1rem;
+        margin: 2rem 0 5rem;
         color: #fff;
+
+        @media screen and (max-width: 900px) {
+            font-size: 1.2rem;
+          }
      }
 
 
@@ -39,7 +58,7 @@
         animation: fade linear;
         animation-timeline: view();
         transition: all .3s ease;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
 
@@ -64,7 +83,11 @@
             .green {
                 color: #2ED47A;
             }
-        } 
+        }
+
+        p {
+            text-align: center;
+        }
     }
 
     .display-data-exp { 
@@ -79,7 +102,7 @@
         animation: fade linear;
         animation-timeline: view();
         transition: all .3s ease;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
 
@@ -104,7 +127,11 @@
             .green {
                 color: #2ED47A;
             }
-        } 
+        }
+
+        p {
+            text-align: center;
+        }
      }
 
     .display-data-domain { 
@@ -127,7 +154,7 @@
             flex-direction: row;
 
             .label-domain {
-                width: 30%;
+                width: 40%;
             }
 
             .chart-track {
@@ -187,7 +214,7 @@
             flex-direction: row;
 
             .label-domain {
-                width: 10%;
+                width: 15%;
             }
 
             .chart-track {
@@ -247,7 +274,7 @@
             flex-direction: row;
 
             .label-domain {
-                width: 10%;
+                width: 15%;
             }
 
             .chart-track {
@@ -287,7 +314,6 @@
                 }
             }
         }
-        
      }
 
     .display-data-tjm-by-domain { 
@@ -308,7 +334,7 @@
             flex-direction: row;
 
             .label-domain {
-                width: 10%;
+                width: 15%;
             }
 
             .chart-track {

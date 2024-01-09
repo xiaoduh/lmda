@@ -1,37 +1,55 @@
-.banner-info {
-    height: 12em;
-    margin: 10rem 25rem;
-    cursor: pointer;
-    border-radius: 20px;
-    background: var(--card_background);
-    border: 1px solid var(--border);
-    animation: fade linear;
-    animation-timeline: view();
-    transition: all .3s ease;
-    display: flex;
 
-    .content-text {
-        width: 50%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2em 1em 2em 3em;
+.banner-container {
+    margin: 10rem 0;
+
+    @media screen and (max-width: 900px) {
+        width: 80%;
+      }
+
+    .banner-info {
+        height: auto;
+        cursor: pointer;
+        border-radius: 20px;
+        background: var(--card_background);
+        border: 1px solid var(--border);
+        animation: fade linear;
+        animation-timeline: view();
+        transition: all .3s ease;
         display: flex;
 
-        h2 {
-            color: #fff;
-            font-size: 1.625em;
-            margin-bottom: 1rem;
-        }
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+          }
+    
+        .content-text {
+            width: 50%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 2em 1em 2em 3em;
+            display: flex;
 
-        p {
-            color: #fff;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                height: 50%;
+              }
+    
+            h2 {
+                color: #fff;
+                font-size: 1.625em;
+                margin-bottom: 1rem;
+            }
         }
-    }
+    
+        .content-image {
+            border-radius: 0 20px 20px 0 ;
+            width: 50%;
+            background: #19ff9f;
 
-    .content-image {
-        border-radius: 0 20px 20px 0 ;
-        width: 50%;
-        background: #19ff9f;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                height: 50%;
+              }
+        }
     }
 }
