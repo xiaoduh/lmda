@@ -280,9 +280,6 @@ body {
             animation-timeline: view();
             transition: all .3s ease;
 
-            &:hover {
-                border: 1px solid #99c3ff93;
-            }
 
             h3 {
                 font-size: 1rem;
@@ -747,10 +744,6 @@ body {
             animation: fade linear;
             animation-timeline: view();
             transition: all .3s ease;
-
-            &:hover {
-                border: 1px solid #99c3ff93;
-            }
 
             h3 {
                 font-size: 1rem;
