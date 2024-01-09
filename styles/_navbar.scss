@@ -2,7 +2,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: fixed;
-    padding: 2rem;
+    padding: 2rem 5%;
     width: 100%;
     z-index: 10000;
 
@@ -126,7 +126,7 @@ nav {
         border: none;
         min-height: 100vh;
         justify-content: flex-start;
-        padding-top: 2rem 5%;
+        padding-top: 2rem;
     }
 
     .selected {
