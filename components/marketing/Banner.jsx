@@ -3,7 +3,7 @@ import React from "react";
 
 const Banner = ({ content }) => {
   return (
-    <Link href={content.link}>
+    <Link className="banner-container " href={content.link}>
       <div className="banner-info">
         <div className="content-text">
           <h2>{content.title}</h2>
