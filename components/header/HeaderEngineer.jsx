@@ -49,7 +49,7 @@ export default async function HeaderEngineer() {
         title={"jobs"}
       />
 
-      <SwiperCard data={resJobs.data.data} />
+      {/* <SwiperCard data={resJobs.data.data} /> */}
     </header>
   );
 }
