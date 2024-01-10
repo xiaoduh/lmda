@@ -1,5 +1,6 @@
 .form-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 50%;
     margin: 6rem auto;
@@ -8,13 +9,81 @@
         width: 100%;
     }
 
+    .success-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .sucess-icon-message {
+            margin: 0 auto;
+        }
+
+        a {
+            background: $color-confirm-2;
+            padding: 1rem;
+            border-radius: 8px;
+            color: $color-confirm;
+            font-size: .8rem;
+            font-family: $regular;
+            cursor: pointer;
+            padding: 0.75rem 1.2rem;
+            transition: all .8s ease;
+            border: 1px solid $color-confirm;
+            margin: 0 auto;
+        
+        
+            @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+        
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
+        
+            &:hover {
+                border: 1px solid $color-confirm;
+                color: $color-confirm;
+                background: transparent;
+            }
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;        }
+    }
+
+    .loading-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .error {
+        width: 50%;
+        margin: 1rem auto;
+        background: $color-stop-2;
+        padding: 1rem;
+        border-radius: 8px;
+        color: $color-stop;
+        border: 1px solid $color-stop;
+    }
+
+    .credential {
+       width: 50%;
+       margin: 0 auto;
+    }
+
     form {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
         justify-content: center;
         width: 100%;
-        margin: 0 auto;
     
         @media screen and (max-width: 414px) {
             font-size: .8rem;
@@ -22,13 +91,13 @@
         }
     
         input,
-        textarea {
+        textarea, select {
         padding: 1rem;
         width: 100%;
         margin: 0 auto;
         border-radius: 0.5rem;
         background: transparent;
-        border: 2px solid $primary;
+        border: 1px solid #99C3FF;
         resize: none;
         color: #fff;
         font-family: $regular;
@@ -45,9 +114,17 @@
         }
     
         &:focus {
-            border-color: #FD6B3D;
+            border-color: #1776ff;
         }
         }
+    }
+
+    .input-green {
+        border: 1px solid #2ED47A;
+    }
+
+    .input-red {
+        border: 1px solid #F7685B;
     }
 
     .success  {
@@ -72,6 +149,267 @@
         border: 1px solid #F7685B;
         border-radius: .4rem;
         width: 100%;
+    }
+
+    .survey-freelance {
+        margin: 0 auto;
+
+        label {
+            font-size: 1rem;
+        }
+    }
+}
+
+.form-container-survey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    
+
+    @media screen and (max-width: 414px) {
+        width: 100%;
+    }
+
+    .success-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .sucess-icon-message {
+            margin: 0 auto;
+        }
+
+        a {
+            background: $color-confirm-2;
+            padding: 1rem;
+            border-radius: 8px;
+            color: $color-confirm;
+            font-size: .8rem;
+            font-family: $regular;
+            cursor: pointer;
+            padding: 0.75rem 1.2rem;
+            transition: all .8s ease;
+            border: 1px solid $color-confirm;
+            margin: 0 auto;
+        
+        
+            @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+        
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
+        
+            &:hover {
+                border: 1px solid $color-confirm;
+                color: $color-confirm;
+                background: transparent;
+            }
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;        }
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        border-radius: 20px;
+        background: var(--card_background);
+        border: 1px solid var(--border);
+        animation: fade linear;
+        animation-timeline: view();
+        transition: all .3s ease;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .sucess-icon-message {
+            margin: 0 auto;
+        }
+
+        a {
+            background: #1778ff28;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #1776ff;
+            font-size: .8rem;
+            font-family: $regular;
+            cursor: pointer;
+            padding: 0.75rem 1.2rem;
+            transition: all .8s ease;
+            border: 1px solid #1776ff;
+            margin: 0 auto;
+        
+        
+            @media screen and (max-width: 1300px) {
+                font-size: .8rem;
+              }
+        
+              @media screen and (max-width: 414px) {
+                font-size: .6rem;
+            }
+        
+            &:hover {
+                border: 1px solid #1776ff;
+                color: #1776ff;
+                background: transparent;
+            }
+        }
+
+        p {
+            margin: 0 auto;
+            text-align: center;        }
+    }
+
+    .loading-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .error {
+        width: 50%;
+        margin: 1rem auto;
+        background: $color-stop-2;
+        padding: 1rem;
+        border-radius: 8px;
+        color: $color-stop;
+        border: 1px solid $color-stop;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        border-radius: 20px;
+        // border: 1px solid transparent;
+        // border: 1px solid #7e7ebba9;
+        background: var(--card_background);
+        border: 1px solid var(--border);
+        animation: fade linear;
+        animation-timeline: view();
+        transition: all .3s ease;
+    
+        @media screen and (max-width: 414px) {
+            font-size: .8rem;
+            padding: .5rem;
+        }
+    
+        input,
+        textarea, select {
+        padding: 1rem;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+        background: transparent;
+        border: 1px solid #99C3FF;
+        resize: none;
+        color: #fff;
+        font-family: $regular;
+        cursor: pointer;
+    
+        @media screen and (max-width: 414px) {
+            font-size: .6rem;
+            padding: .5rem;
+        }
+    
+        &::placeholder {
+            color: #fff;
+            font-family: $regular;
+        }
+    
+        &:focus {
+            border-color: #1776ff;
+            color: #fff;
+        }
+        }
+    }
+  
+
+    .success  {
+        display: flex;
+        margin-top: 2rem;
+        justify-content: center;
+        background-color: #2ed4794d;
+        color: #2ED47A;
+        padding: 1rem;
+        border: 1px solid #2ED47A;
+        border-radius: .4rem;
+        width: 100%;
+    }
+
+    .failed  {
+        display: flex;
+        margin-top: 2rem;
+        justify-content: center;
+        background-color: #f7685b57;
+        color: #F7685B;
+        padding: 1rem;
+        border: 1px solid #F7685B;
+        border-radius: .4rem;
+        width: 100%;
+    }
+
+    .survey-freelance {
+
+
+        label {
+            font-size: 1rem;
+        }
+    }
+
+    .info-survey-freelance {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        border-radius: 20px;
+        // border: 1px solid transparent;
+        // border: 1px solid #7e7ebba9;
+        background: var(--card_background);
+        border: 1px solid var(--border);
+        animation: fade linear;
+        animation-timeline: view();
+        transition: all .3s ease;
+
+        .green {
+            color: #2ED47A;
+        }
+
+        .data {
+            display: flex;
+            align-items: center;
+
+            img {
+                margin-right: 1rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+                
+            }
+
+            .green {
+                color: #2ED47A;
+            }
+        }
     }
 }
 

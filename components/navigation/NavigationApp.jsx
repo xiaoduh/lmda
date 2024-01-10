@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
-import getCandidats from "../utils/getCandidats";
+import Signup from "../log/SignupBtn";
+import Login from "../log/LoginBtn";
 
 const NavigationApp = () => {
   const [navbar, setNavbar] = useState(false);
@@ -22,81 +23,76 @@ const NavigationApp = () => {
   }, []);
 
   return (
-    <div className={navbar ? "navigation active" : "navigation"}>
-      <div className="logo">
-        <Link href="/" title="home">
-          <img
-            src="/logo.png"
-            alt="logo_lambda"
-            title="lambda_plateforme_services_numerique_c_cpp"
-          />
-        </Link>
-      </div>
-      <nav>
+    <nav>
+      <div className={navbar ? "navigation active" : "navigation"}>
+        <div className="logo">
+          <Link href="/" title="home">
+            <Image
+              src={"/logo.png"}
+              width={120}
+              height={18}
+              alt="logo de lambda"
+            />
+          </Link>
+        </div>
+        <div className="links">
+          {active ? (
+            <ul className="open">
+              {/* <li>
+              <Link href="/carriere">ADN</Link>
+            </li> */}
+              <li>
+                <Link href="/database">CVthèque</Link>
+              </li>
+              <li>
+                <Link href="/jobs">Jobs</Link>
+              </li>
+              <li>
+                <Link href="/entreprise">Partenaire</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+            </ul>
+          ) : (
+            <ul>
+              {/* <li>
+              <Link href="/carriere">ADN</Link>
+            </li> */}
+              <li>
+                <Link href="/database">CVthèque</Link>
+              </li>
+              <li>
+                <Link href="/jobs">Jobs</Link>
+              </li>
+              <li>
+                <Link href="/entreprise">Partenaire</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+            </ul>
+          )}
+        </div>
+        <div className="cta-container">
+          <Signup />
+          <Login />
+        </div>
         {active ? (
-          <ul className="open">
-            {/* <li>
-              <Link href="/carriere">ADN</Link>
-            </li> */}
-            <li>
-              <Link href="/database">CVthèque</Link>
-            </li>
-            <li>
-              <Link href="/jobs">Jobs</Link>
-            </li>
-            <li>
-              <Link href="/entreprise">Partenaire</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
+          <div
+            className="burger-menu active"
+            id="burger"
+            onClick={() => setActive(!active)}
+          ></div>
         ) : (
-          <ul>
-            {/* <li>
-              <Link href="/carriere">ADN</Link>
-            </li> */}
-            <li>
-              <Link href="/database">CVthèque</Link>
-            </li>
-            <li>
-              <Link href="/jobs">Jobs</Link>
-            </li>
-            <li>
-              <Link href="/entreprise">Partenaire</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
+          <div
+            className="burger-menu"
+            id="burger"
+            onClick={() => setActive(!active)}
+          ></div>
         )}
-      </nav>
-      <div className="cta-container">
-        <Link
-          className="cta-secondary"
-          href="/entreprise"
-          title="Proposer une mission"
-        >
-          Je recrute (+1500 CV)
-        </Link>
-        <Link className="btn-blue" href="/jobs" title="Trouver une mission">
-          Jobs (7)
-        </Link>
       </div>
-      {active ? (
-        <div
-          className="burger-menu active"
-          id="burger"
-          onClick={() => setActive(!active)}
-        ></div>
-      ) : (
-        <div
-          className="burger-menu"
-          id="burger"
-          onClick={() => setActive(!active)}
-        ></div>
-      )}
-    </div>
+    </nav>
   );
 };
 

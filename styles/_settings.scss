@@ -14,6 +14,15 @@ $color-stop-2: #f7685b57;
 $important: #99C3FF;
 $orange: #FD6B3D;
 
+:root {
+    --body_background: #121212;
+    --body_color: #fff;
+    --title_color: #99C3FF;
+    --title_h1_color: #fff;
+    --card_background: #171717;
+    --border: #99c3ff11;
+  }
+
 @font-face {
     font-family: "poppins-sm";
     src: url(../fonts/Poppins-SemiBold.ttf);
@@ -64,20 +73,12 @@ body {
     font-family: $regular;
     font-size: .8rem;
     color: #fff;
-    background-color: $accent-black;
-    padding: 0 14rem;
+    background-color: var(--body_background);
 
-
-    @media screen and (max-width: 1500px) {
-        padding: 0 7rem;
-      }
-
-    @media screen and (max-width: 950px) {
-        padding: 0 5rem;
-      }
-
-    @media screen and (max-width: 850px) {
-        padding: 0 2rem;
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     // &::-webkit-scrollbar {
@@ -86,17 +87,18 @@ body {
 }
 
 .btn-blue {
-        background: $primary;
-        padding: 1rem;
-        border-radius: 8px;
-        color: #fff;
-        font-size: .8rem;
-        font-family: $regular;
-        cursor: pointer;
-        padding: 0.75rem 1.2rem;
-        transition: all .4s ease;
-        border: 1px solid $primary;
-        align-items: end;
+    border: none;
+    background: #1778ff23;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #1776ff;
+    font-size: .8rem;
+    font-family: $regular;
+    cursor: pointer;
+    padding: 0.75rem 1.2rem;
+    transition: all .8s ease;
+    margin: 2rem 0 1rem;
+    border: 1px solid $primary;
     
         @media screen and (max-width: 1300px) {
             font-size: .8rem;
@@ -242,32 +244,6 @@ body {
         
     }
 
-    // .member {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     .display-filter-profil {
-    //         width: 50%;
-    //         margin: 0 auto;
-    //         padding: 0.75rem 1.2rem;
-    //         cursor: pointer;
-    //         transition: all 0.4s ease;
-    //         border-radius: 0.4rem;
-    //     }
-
-    //     .wrapper-cards-members {
-    //         display: grid;
-    //         grid-template-columns: repeat(3, 1fr);
-    //         grid-template-rows: 1fr;
-    //         grid-column-gap: 40px;
-    //         grid-row-gap: 40px;
-    //         animation: fade linear both;
-    //         animation-timeline: view();
-    //         animation-range: entry 20% cover 50%;
-    //         margin-top: 4rem;
-    //     }
-    // }
-
     .articles-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -304,9 +280,6 @@ body {
             animation-timeline: view();
             transition: all .3s ease;
 
-            &:hover {
-                border: 1px solid #99c3ff93;
-            }
 
             h3 {
                 font-size: 1rem;
@@ -377,7 +350,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 6rem 0 6rem;
+    padding: 6rem 7rem 6rem;
 
     @media screen and (max-width: 414px) {
         padding: 2rem 0;
@@ -771,10 +744,6 @@ body {
             animation: fade linear;
             animation-timeline: view();
             transition: all .3s ease;
-
-            &:hover {
-                border: 1px solid #99c3ff93;
-            }
 
             h3 {
                 font-size: 1rem;
